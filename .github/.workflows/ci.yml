@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [master]
+
+env:
+  node_version: 16
+  pnpm_version: 6.14.7
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      hasChanges: ${{ steps.affected.outputs.hasChanges }}
+      matrix: ${{ steps.affected.outputs.matrix }}
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Cache pnpm modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
+      - name: Install and execute pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: ${{ env.pnpm_version }}
+          run_install: true
+      - name: Calculate affected projects
+        uses: e-square-io/nx-affected-matrix@v2
+        id: affected
+        with:
+          targets: 'test,lint,e2e,build'
+
+  execute:
+    name: ${{ matrix.target }} (${{ matrix.distribution }})
+    if: ${{ needs.setup.outputs.hasChanges == 'true' }}
+    needs: [setup]
+    runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.target == 'test' }}
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Cache pnpm modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
+      - name: Install and execute pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: ${{ env.pnpm_version }}
+          run_install: true
+      - name: Execute
+        uses: e-square-io/nx-distributed-task@v2
+        id: execute
+        with:
+          target: ${{ matrix.target }}
+          projects: ${{ matrix.projects }}
+          distribution: ${{ matrix.distribution }}
+          uploadOutputs: true
+          nxCloud: false
