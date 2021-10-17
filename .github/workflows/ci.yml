@@ -40,7 +40,7 @@ jobs:
   execute:
     name: ${{ matrix.target }} (${{ matrix.distribution }})
     if: ${{ needs.setup.outputs.hasChanges == 'true' }}
-    needs: [setup]
+    needs: [prepare]
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.target == 'test' }}
     strategy:
