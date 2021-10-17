@@ -39,13 +39,13 @@ jobs:
 
   execute:
     name: ${{ matrix.target }} (${{ matrix.distribution }})
-    if: ${{ needs.setup.outputs.hasChanges == 'true' }}
+    if: ${{ needs.prepare.outputs.hasChanges == 'true' }}
     needs: [prepare]
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.target == 'test' }}
     strategy:
       fail-fast: false
-      matrix: ${{ fromJSON(needs.setup.outputs.matrix) }}
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
     steps:
       - name: Checkout the code
         uses: actions/checkout@v2
@@ -70,5 +70,5 @@ jobs:
           target: ${{ matrix.target }}
           projects: ${{ matrix.projects }}
           distribution: ${{ matrix.distribution }}
-          uploadOutputs: true
+          uploadOutputs: false
           nxCloud: false

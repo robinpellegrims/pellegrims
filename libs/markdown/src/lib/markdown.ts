@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
-import { MarkdownDocument } from './markdown.model';
+import { FrontMatter, MarkdownDocument } from './markdown.model';
 import { markdownToHtml } from './markdown-to-html';
 
 export const getParsedFileContentBySlug = (
@@ -14,7 +14,7 @@ export const getParsedFileContentBySlug = (
   const { data, content } = matter(fileContents);
 
   return {
-    frontMatter: data,
+    frontMatter: data as FrontMatter,
     content,
   };
 };

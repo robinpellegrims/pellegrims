@@ -1,5 +1,5 @@
 export { getParsedFileContentBySlug, renderMarkdown } from './lib/markdown';
-export {
+export type {
   MarkdownDocument,
   FrontMatter,
   MarkdownRenderingResult,
