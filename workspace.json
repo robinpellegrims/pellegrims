@@ -1,0 +1,101 @@
+{
+  "version": 2,
+  "projects": {
+    "pellegrims-dev": {
+      "root": "apps/pellegrims-dev",
+      "sourceRoot": "apps/pellegrims-dev",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/next:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "root": "apps/pellegrims-dev",
+            "outputPath": "dist/apps/pellegrims-dev"
+          },
+          "configurations": {
+            "production": {}
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/next:server",
+          "options": {
+            "buildTarget": "pellegrims-dev:build",
+            "dev": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "pellegrims-dev:build:production",
+              "dev": false
+            }
+          }
+        },
+        "export": {
+          "executor": "@nrwl/next:export",
+          "options": {
+            "buildTarget": "pellegrims-dev:build:production"
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/pellegrims-dev"],
+          "options": {
+            "jestConfig": "apps/pellegrims-dev/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/pellegrims-dev/**/*.{ts,tsx,js,jsx}"]
+          }
+        }
+      }
+    },
+    "pellegrims-dev-e2e": {
+      "root": "apps/pellegrims-dev-e2e",
+      "sourceRoot": "apps/pellegrims-dev-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/pellegrims-dev-e2e/cypress.json",
+            "devServerTarget": "pellegrims-dev:serve",
+            "tsConfig": "apps/pellegrims-dev-e2e/tsconfig.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "pellegrims-dev:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/pellegrims-dev-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/next"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
+    },
+    "@nrwl/next": {
+      "application": {
+        "style": "css",
+        "linter": "eslint"
+      }
+    }
+  },
+  "defaultProject": "pellegrims-dev"
+}
