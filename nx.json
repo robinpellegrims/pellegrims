@@ -28,6 +28,9 @@
     ]
   },
   "projects": {
+    "markdown": {
+      "tags": []
+    },
     "pellegrims-dev": {
       "tags": []
     },
