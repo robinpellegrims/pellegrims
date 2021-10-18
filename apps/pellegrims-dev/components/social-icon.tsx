@@ -3,7 +3,7 @@ export interface SocialIconProps {
   children: unknown;
 }
 
-export function SocialIcon(props: SocialIconProps) {
+export default function SocialIcon(props: SocialIconProps) {
   return (
     <a
       className="text-gray-500"
@@ -24,5 +24,3 @@ export function SocialIcon(props: SocialIconProps) {
     </a>
   );
 }
-
-export default SocialIcon;

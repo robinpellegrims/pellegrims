@@ -12,6 +12,7 @@ specifiers:
   '@nrwl/tao': 12.10.0
   '@nrwl/web': 12.10.0
   '@nrwl/workspace': 12.10.0
+  '@tailwindcss/typography': ^0.4.1
   '@testing-library/react': 11.2.6
   '@testing-library/react-hooks': 7.0.1
   '@types/jest': 27.0.2
@@ -48,6 +49,7 @@ specifiers:
 
 dependencies:
   '@nrwl/next': 12.10.0_afbbbc14df21c666c7d0d04f2e4cb91a
+  '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.17
   autoprefixer: 10.3.7_postcss@8.3.9
   core-js: 3.18.3
   gray-matter: 4.0.3
@@ -2950,6 +2952,18 @@ packages:
       loader-utils: 2.0.0
     transitivePeerDependencies:
       - supports-color
+
+  /@tailwindcss/typography/0.4.1_tailwindcss@2.2.17:
+    resolution: {integrity: sha512-ovPPLUhs7zAIJfr0y1dbGlyCuPhpuv/jpBoFgqAc658DWGGrOBWBMpAWLw2KlzbNeVk4YBJMzue1ekvIbdw6XA==}
+    peerDependencies:
+      tailwindcss: '>=2.0.0'
+    dependencies:
+      lodash.castarray: 4.4.0
+      lodash.isplainobject: 4.0.6
+      lodash.merge: 4.6.2
+      lodash.uniq: 4.5.0
+      tailwindcss: 2.2.17_96f83969316717847b3edf58a3f353f3
+    dev: false
 
   /@testing-library/dom/7.31.2:
     resolution: {integrity: sha512-3UqjCpey6HiTZT92vODYLPxTBWlM8ZOOjr3LX5F37/VRipW2M1kX6I/Cm4VXzteZqfGfagg8yXywpcOgQBlNsQ==}
@@ -8737,14 +8751,26 @@ packages:
   /lodash.camelcase/4.3.0:
     resolution: {integrity: sha1-soqmKIorn8ZRA1x3EfZathkDMaY=}
 
+  /lodash.castarray/4.4.0:
+    resolution: {integrity: sha1-wCUTUV4wna3dTCTGDP3c9ZdtkRU=}
+    dev: false
+
   /lodash.clonedeep/4.5.0:
     resolution: {integrity: sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=}
 
   /lodash.debounce/4.0.8:
     resolution: {integrity: sha1-gteb/zCmfEAF/9XiUVMArZyk168=}
 
+  /lodash.isplainobject/4.0.6:
+    resolution: {integrity: sha1-fFJqUtibRcRcxpC4gWO+BJf1UMs=}
+    dev: false
+
   /lodash.memoize/4.1.2:
     resolution: {integrity: sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=}
+
+  /lodash.merge/4.6.2:
+    resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
+    dev: false
 
   /lodash.once/4.1.1:
     resolution: {integrity: sha1-DdOXEhPHxW34gJd9UEyI+0cal6w=}

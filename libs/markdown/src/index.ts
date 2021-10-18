@@ -1,4 +1,9 @@
-export { getParsedFileContentBySlug, renderMarkdown } from './lib/markdown';
+export {
+  getMarkdownDocumentBySlug,
+  renderMarkdown,
+  getMarkdownDocuments,
+  getSlugsForMarkdownFiles,
+} from './lib/markdown';
 export type {
   MarkdownDocument,
   FrontMatter,
