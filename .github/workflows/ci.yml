@@ -30,8 +30,7 @@ jobs:
         with:
           version: ${{ env.pnpm_version }}
           run_install: |
-            - recursive: false
-              args: [--frozen-lockfile, --prefer-offline]
+            - args: [--frozen-lockfile, --prefer-offline]
       - name: Calculate affected projects
         uses: e-square-io/nx-affected-matrix@v2
         id: affected
@@ -64,8 +63,7 @@ jobs:
         with:
           version: ${{ env.pnpm_version }}
           run_install: |
-            - recursive: false
-              args: [--frozen-lockfile, --prefer-offline]
+            - args: [--frozen-lockfile, --prefer-offline]
       - name: Execute
         uses: e-square-io/nx-distributed-task@v2
         id: execute
