@@ -1,1 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
+
+h1, h2 {
+    @apply text-gray-900
+}

@@ -1,23 +1,39 @@
-import { AppProps } from 'next/app';
 import './styles.css';
 import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
 import Header from '../components/header';
 import Footer from '../components/footer';
+import {
+  facebookSvgIcon,
+  facebookUrl,
+  linkedInSvgIcon,
+  linkedInUrl,
+  name,
+  twitterHandle,
+  twitterSvgIcon,
+  twitterUrl,
+} from '../constants';
 
-export default function CustomApp({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
         <title>Pellegrims</title>
       </Head>
-      <div className="app">
-        <Header></Header>
-        <main>
-          <Component {...pageProps} />
-        </main>
-        <Footer></Footer>
-      </div>
+      <Header />
+      <main>
+        <Component {...pageProps} />
+      </main>
+      <Footer
+        name={name}
+        twitterHandle={twitterHandle}
+        facebookSvgIcon={facebookSvgIcon}
+        facebookUrl={facebookUrl}
+        linkedInSvgIcon={linkedInSvgIcon}
+        linkedInUrl={linkedInUrl}
+        twitterSvgIcon={twitterSvgIcon}
+        twitterUrl={twitterUrl}
+      />
     </>
   );
 }

@@ -11,6 +11,7 @@
   "private": true,
   "dependencies": {
     "@nrwl/next": "12.10.0",
+    "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.7",
     "core-js": "^3.6.5",
     "gray-matter": "^4.0.3",
@@ -20,6 +21,7 @@
     "react-dom": "17.0.2",
     "regenerator-runtime": "0.13.7",
     "remark": "^14.0.1",
+    "remark-html": "^15.0.0",
     "tailwindcss": "^2.2.17",
     "tslib": "^2.0.0"
   },
