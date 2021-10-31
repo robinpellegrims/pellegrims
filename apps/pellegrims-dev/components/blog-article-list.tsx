@@ -7,11 +7,9 @@ export interface BlogArticleListProps {
 
 export default function BlogArticleList(props: BlogArticleListProps) {
   return (
-    <section className="text-gray-600 body-font overflow-hidden">
-      <div className="container px-5 py-12 mx-auto flex flex-col gap-12">
-        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4">
-          Blog
-        </h1>
+    <section className="overflow-hidden">
+      <div className="px-5 py-12 flex flex-col gap-12">
+        <h1 className="sm:text-3xl text-2xl font-medium mb-4">Blog</h1>
         <div className="-my-8 divide-y-2 divide-gray-100">
           {props.posts.map((post) => (
             <BlogArticleSummary

@@ -1,16 +1,11 @@
 export interface SocialIconProps {
   href: string;
-  children: unknown;
+  children: React.ReactNode;
 }
 
 export default function SocialIcon(props: SocialIconProps) {
   return (
-    <a
-      className="text-gray-500"
-      href={props.href}
-      rel="noopener noreferrer"
-      target="_blank"
-    >
+    <a href={props.href} rel="noopener noreferrer" target="_blank">
       <svg
         fill="currentColor"
         strokeLinecap="round"
