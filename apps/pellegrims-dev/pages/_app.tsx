@@ -1,5 +1,5 @@
-import './styles.css';
 import 'tailwindcss/tailwind.css';
+import './styles.css';
 import Head from 'next/head';
 import Header from '../components/header';
 import Footer from '../components/footer';
@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }) {
         <title>Pellegrims</title>
       </Head>
       <Header />
-      <main>
+      <main className="flex-grow">
         <Component {...pageProps} />
       </main>
       <Footer

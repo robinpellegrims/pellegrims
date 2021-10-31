@@ -1,33 +1,40 @@
 import Image from 'next/image';
+import { Highlight } from './highlight';
+import { RoughNotationGroup } from 'react-rough-notation';
+import { amber, green, blue } from 'tailwindcss/colors';
+import Section from './section';
+
+const colors = [amber['300'], green['300'], blue['300']];
+const avataaarSrc =
+  'https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=BrownDark&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=Hoodie&clotheColor=Red&eyeType=Happy&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light';
 
 export default function HeroHome() {
   return (
-    <section className="text-gray-600 body-font">
-      <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium">
-            Robin Pellegrims
-          </h1>
-          <p className="mb-8 leading-relaxed">Lorem Ipsum</p>
-          <div className="flex justify-center">
-            <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-              Button
-            </button>
-            <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-              Button
-            </button>
-          </div>
-        </div>
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          <Image
-            className="object-cover object-center rounded"
-            alt="hero"
-            src="https://dummyimage.com/720x600"
-            width="720"
-            height="600"
-          />
-        </div>
+    <Section>
+      <div className="mx-auto flex items-center justify-center flex-col gap-6 text-center">
+        <Image
+          className="object-cover object-center rounded"
+          alt="hero"
+          src={avataaarSrc}
+          width="264"
+          height="280"
+        />
+        <h1 className="sm:text-4xl text-3xl font-medium text-gray-900">
+          Hello! My name is{' '}
+          <span className="font-semibold">Robin Pellegrims</span>.
+        </h1>
+        <p className="leading-relaxed">
+          <RoughNotationGroup show={true}>
+            I&apos;m a professional{' '}
+            <Highlight color={colors[0]}>application developer</Highlight> &{' '}
+            <Highlight color={colors[1]}>front-end technical lead</Highlight>.{' '}
+            <br />
+            As a freelance{' '}
+            <Highlight color={colors[2]}>web developer</Highlight>, I also help
+            various clients to develop their web presence.
+          </RoughNotationGroup>
+        </p>
       </div>
-    </section>
+    </Section>
   );
 }

@@ -5,6 +5,7 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
+    "lint": "nx lint",
     "test": "nx test",
     "e2e": "nx e2e"
   },
@@ -19,11 +20,14 @@
     "postcss": "^8.3.9",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-rough-notation": "^1.0.1",
+    "react-typist": "^2.0.5",
     "regenerator-runtime": "0.13.7",
     "remark": "^14.0.1",
     "remark-html": "^15.0.0",
     "tailwindcss": "^2.2.17",
-    "tslib": "^2.0.0"
+    "tslib": "^2.0.0",
+    "typewriting-react": "^1.0.8"
   },
   "devDependencies": {
     "@nrwl/cli": "12.10.0",

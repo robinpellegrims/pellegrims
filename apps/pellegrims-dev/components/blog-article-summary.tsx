@@ -18,12 +18,12 @@ export default function BlogArticleSummary(props: BlogArticleSummaryProps) {
         </span>
       </div>
       <div className="md:flex-grow">
-        <h2 className="text-2xl font-medium title-font mb-2">
+        <h2 className="text-2xl font-medium mb-2">
           {props.post.frontMatter.title}
         </h2>
         <p className="leading-relaxed">{props.post.frontMatter.excerpt}</p>
         <Link href={`${props.path}/${props.post.slug}`}>
-          <a className="text-indigo-500 inline-flex items-center mt-4">
+          <a className="text-primary-500 inline-flex items-center mt-4">
             Learn More
             <RightArrow />
           </a>
