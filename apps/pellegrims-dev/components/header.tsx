@@ -6,9 +6,9 @@ export default function Header() {
   return (
     <Container>
       <header>
-        <div className="flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <div className="flex py-12 flex-col md:flex-row items-center">
           <Link href="/">
-            <a className="flex font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <a>
               <Logo />
             </a>
           </Link>
