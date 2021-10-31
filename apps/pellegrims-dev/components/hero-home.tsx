@@ -25,7 +25,7 @@ export default function HeroHome() {
           Hello! My name is{' '}
           <span className="font-semibold">Robin Pellegrims</span>.
         </h1>
-        <p className="leading-relaxed">
+        <p className="leading-relaxed sm:text-2xl text-xl">
           <RoughNotationGroup show={true}>
             I&apos;m a professional{' '}
             <Highlight color={colors[0]}>application developer</Highlight> &{' '}
