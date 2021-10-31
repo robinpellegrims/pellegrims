@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import { Highlight } from './highlight';
 import { RoughNotationGroup } from 'react-rough-notation';
-import { amber, green, blue } from 'tailwindcss/colors';
+import { amber, blue, green } from 'tailwindcss/colors';
 import Section from './section';
+import Button from './button';
+import Obfuscate from 'react-obfuscate';
 
 const colors = [amber['300'], green['300'], blue['300']];
 const avataaarSrc =
@@ -31,9 +33,15 @@ export default function HeroHome() {
             <br />
             As a freelance{' '}
             <Highlight color={colors[2]}>web developer</Highlight>, I also help
-            various clients to develop their web presence.
+            various clients building modern responsive websites.
           </RoughNotationGroup>
         </p>
+        <Obfuscate
+          email="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#111;&#98;&#105;&#110;&#46;&#112;&#101;&#108;&#108;&#101;&#103;&#114;&#105;&#109;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;"
+          headers={{ subject: 'Contact from website' }}
+        >
+          <Button text="Contact me" type="primary" />
+        </Obfuscate>
       </div>
     </Section>
   );
