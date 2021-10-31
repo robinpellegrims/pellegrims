@@ -9,7 +9,6 @@ import {
   linkedInSvgIcon,
   linkedInUrl,
   name,
-  twitterHandle,
   twitterSvgIcon,
   twitterUrl,
 } from '../constants';
@@ -26,7 +25,6 @@ export default function App({ Component, pageProps }) {
       </main>
       <Footer
         name={name}
-        twitterHandle={twitterHandle}
         facebookSvgIcon={facebookSvgIcon}
         facebookUrl={facebookUrl}
         linkedInSvgIcon={linkedInSvgIcon}
