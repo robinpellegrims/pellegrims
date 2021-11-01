@@ -6,7 +6,7 @@ import {
   renderMarkdown,
 } from '@pellegrims/markdown';
 import { ParsedUrlQuery } from 'querystring';
-import { POSTS_PATH } from '../../constants';
+import { SNIPPETS_PATH } from '../../constants';
 import BlogArticle from '../../components/blog-article';
 import Container from '../../components/container';
 
@@ -23,7 +23,7 @@ export default function Article(props: MarkdownRenderingResult) {
 }
 
 export const getStaticPaths: GetStaticPaths<ArticleProps> = async () => {
-  const paths = getSlugsForMarkdownFiles(POSTS_PATH).map((slug) => ({
+  const paths = getSlugsForMarkdownFiles(SNIPPETS_PATH).map((slug) => ({
     params: { slug },
   }));
   return {
@@ -39,7 +39,7 @@ export const getStaticProps: GetStaticProps<MarkdownRenderingResult> = async ({
 }) => {
   const articleMarkdownContent = getMarkdownDocumentBySlug(
     params.slug,
-    POSTS_PATH
+    SNIPPETS_PATH
   );
 
   const renderedHTML = await renderMarkdown(articleMarkdownContent.content);
