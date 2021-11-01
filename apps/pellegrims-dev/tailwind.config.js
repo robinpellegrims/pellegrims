@@ -21,18 +21,6 @@ module.exports = {
       fontFamily: {
         logo: ["'Caveat', cursive"],
       },
-      typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            h1: {
-              color: theme('colors.gray.900'),
-            },
-            h2: {
-              color: theme('colors.gray.900'),
-            },
-          },
-        },
-      }),
     },
   },
   variants: {

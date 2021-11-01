@@ -7,10 +7,10 @@ export interface BlogProps {
   posts: MarkdownDocument[];
 }
 
-export default function Blog(props: BlogProps) {
+export default function Blog({ posts }: BlogProps) {
   return (
     <Container>
-      <BlogArticleList posts={props.posts} />
+      <BlogArticleList posts={posts} title="Blog" path="/blog" />
     </Container>
   );
 }

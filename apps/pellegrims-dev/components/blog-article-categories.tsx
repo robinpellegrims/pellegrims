@@ -6,7 +6,7 @@ export interface BlogArticleCategoriesProps {
 
 export function BlogArticleCategories(props: BlogArticleCategoriesProps) {
   return (
-    <div className="uppercase flex gap-1">
+    <div className="uppercase flex flex-wrap gap-1">
       {props.tags.map((tag) => (
         <Chip key={tag} text={tag} />
       ))}

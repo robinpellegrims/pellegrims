@@ -2,6 +2,11 @@ import Logo from './logo';
 import Link from 'next/link';
 import Container from './container';
 
+const links: { text: string; href: string }[] = [
+  // { text: 'Blog', href: '/blog' },
+  { text: 'Snippets', href: '/snippets' },
+];
+
 export default function Header() {
   return (
     <Container>
@@ -13,11 +18,11 @@ export default function Header() {
             </a>
           </Link>
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            {false && (
-              <a className="mr-5 hover:text-gray-900" href={'/blog'}>
-                Blog
-              </a>
-            )}
+            {links.map((link) => (
+              <Link key={link.href} href={link.href}>
+                <a className="mr-5 hover:text-gray-900">{link.text}</a>
+              </Link>
+            ))}
           </nav>
         </div>
       </header>
