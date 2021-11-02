@@ -1,32 +1,31 @@
 import 'tailwindcss/tailwind.css';
 import './styles.css';
-import Head from 'next/head';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import {
+  defaultSeoConfig,
+  facebookProfileUrl,
   facebookSvgIcon,
-  facebookUrl,
   linkedInSvgIcon,
   linkedInUrl,
   name,
   twitterSvgIcon,
   twitterUrl,
 } from '../constants';
+import { DefaultSeo } from 'next-seo';
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <title>Pellegrims</title>
-      </Head>
+      <DefaultSeo {...defaultSeoConfig} />
       <Header />
-      <main className="flex-grow">
+      <main>
         <Component {...pageProps} />
       </main>
       <Footer
         name={name}
         facebookSvgIcon={facebookSvgIcon}
-        facebookUrl={facebookUrl}
+        facebookUrl={facebookProfileUrl}
         linkedInSvgIcon={linkedInSvgIcon}
         linkedInUrl={linkedInUrl}
         twitterSvgIcon={twitterSvgIcon}

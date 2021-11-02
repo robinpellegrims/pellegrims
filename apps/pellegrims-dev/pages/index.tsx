@@ -3,9 +3,11 @@ import Container from '../components/container';
 
 export function Index() {
   return (
-    <Container>
-      <HeroHome />
-    </Container>
+    <>
+      <Container>
+        <HeroHome />
+      </Container>
+    </>
   );
 }
 

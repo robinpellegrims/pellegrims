@@ -9,6 +9,7 @@ import { ParsedUrlQuery } from 'querystring';
 import { POSTS_PATH } from '../../constants';
 import BlogArticle from '../../components/blog-article';
 import Container from '../../components/container';
+import { NextSeo } from 'next-seo';
 
 interface ArticleProps extends ParsedUrlQuery {
   slug: string;
@@ -16,9 +17,15 @@ interface ArticleProps extends ParsedUrlQuery {
 
 export default function Article(props: MarkdownRenderingResult) {
   return (
-    <Container>
-      <BlogArticle post={props} />
-    </Container>
+    <>
+      <NextSeo
+        title={props.frontMatter.title}
+        description={props.frontMatter.description}
+      />
+      <Container>
+        <BlogArticle post={props} />
+      </Container>
+    </>
   );
 }
 
