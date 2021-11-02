@@ -36,6 +36,7 @@ specifiers:
   gray-matter: ^4.0.3
   jest: 27.2.3
   next: 11.1.1
+  next-seo: ^4.28.1
   postcss: ^8.3.9
   prettier: ^2.3.1
   react: 17.0.2
@@ -60,6 +61,7 @@ dependencies:
   core-js: 3.18.3
   gray-matter: 4.0.3
   next: 11.1.1_f31b35bdaa3b7c2fce82404f09d2dac4
+  next-seo: 4.28.1_f3620c6312d46621130ecc739365f4ae
   postcss: 8.3.9
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -80,7 +82,7 @@ devDependencies:
   '@nrwl/eslint-plugin-nx': 12.10.0_49c2c561dfdbd5e2a67e050771fdf16e
   '@nrwl/jest': 12.10.0
   '@nrwl/linter': 12.10.0
-  '@nrwl/nx-cloud': 12.5.1
+  '@nrwl/nx-cloud': 12.5.2
   '@nrwl/react': 12.10.0_8de39b7236c69aca058abfe18b37409c
   '@nrwl/tao': 12.10.0
   '@nrwl/web': 12.10.0_7f0d7cdf6c0034a1b72c41363e97aadb
@@ -2258,8 +2260,8 @@ packages:
       - webpack-plugin-serve
     dev: false
 
-  /@nrwl/nx-cloud/12.5.1:
-    resolution: {integrity: sha512-014+QYtQmNuKVB06Rrs7fpxob4sOi+3mKdyksNT6r7MY6mEiWETAIL4wursfpg9fUpD0yG6af/I/CxiCP3fsTQ==}
+  /@nrwl/nx-cloud/12.5.2:
+    resolution: {integrity: sha512-Ut1/UR2RiRM79mYpKNKqmQtvPpxzGl3Hyka9TlmyIlciUtkK25cp/ou38+B1oe0wil9OY0wHr3omcVm2OUwZKg==}
     hasBin: true
     dependencies:
       axios: 0.21.4
@@ -9530,6 +9532,18 @@ packages:
 
   /neo-async/2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
+
+  /next-seo/4.28.1_f3620c6312d46621130ecc739365f4ae:
+    resolution: {integrity: sha512-WZgwdM+UhpNF3A37zFllzmPhnOVJ9vYeYlc0n3Z/kYfz/QQgy8NEdncNNggS9dU4JD8xriaCcyknhy5OsrFsJw==}
+    peerDependencies:
+      next: ^8.1.1-canary.54 || >=9.0.0
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+    dependencies:
+      next: 11.1.1_f31b35bdaa3b7c2fce82404f09d2dac4
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
 
   /next/11.1.1_f31b35bdaa3b7c2fce82404f09d2dac4:
     resolution: {integrity: sha512-vfLJDkwAHsZUho5R1K4w49nfYhftUMWNmeNSjCtulOvnRBuEFb7ROyRZOQk7f29rMz02eLQrPZ9yiAmPsexL2g==}
