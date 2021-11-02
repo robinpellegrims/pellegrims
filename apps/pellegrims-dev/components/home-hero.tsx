@@ -10,7 +10,7 @@ const colors = [amber['300'], green['300'], blue['300']];
 const avataaarSrc =
   'https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=BrownDark&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=Hoodie&clotheColor=Red&eyeType=Happy&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light';
 
-export default function HeroHome() {
+export default function HomeHero() {
   return (
     <Section>
       <div className="mx-auto flex items-center justify-center flex-col gap-6 text-center">

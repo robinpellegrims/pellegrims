@@ -11,7 +11,7 @@ export interface BlogArticleSummaryProps {
 
 export default function BlogArticleSummary(props: BlogArticleSummaryProps) {
   return (
-    <article className="flex flex-col md:flex-row md:flex-nowrap gap-6">
+    <article className="flex flex-col md:flex-row md:flex-nowrap gap-12">
       <div className="md:w-1/5 flex-shrink-0 flex flex-col gap-2">
         <BlogArticleDate date={props.post.frontMatter.date} />
         <BlogArticleCategories tags={props.post.frontMatter.tags} />

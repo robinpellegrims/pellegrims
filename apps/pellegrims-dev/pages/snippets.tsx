@@ -1,12 +1,16 @@
-import { getMarkdownDocuments, MarkdownDocument } from '@pellegrims/markdown';
+import {
+  getMarkdownDocuments,
+  MarkdownRenderingResult,
+  renderMarkdown,
+} from '@pellegrims/markdown';
 import { SNIPPETS_PATH } from '../constants';
-import BlogArticleList from '../components/blog-article-list';
 import Container from '../components/container';
 import { GetStaticProps } from 'next';
 import { NextSeo } from 'next-seo';
+import SnippetArticleList from '../components/snippet-article-list';
 
 export interface SnippetsProps {
-  snippets: MarkdownDocument[];
+  snippets: MarkdownRenderingResult[];
 }
 
 export default function Snippets({ snippets }: SnippetsProps) {
@@ -14,13 +18,20 @@ export default function Snippets({ snippets }: SnippetsProps) {
     <>
       <NextSeo title="Snippets" />
       <Container>
-        <BlogArticleList posts={snippets} title="Snippets" path="/snippets" />
+        <SnippetArticleList snippets={snippets} />
       </Container>
     </>
   );
 }
 
 export const getStaticProps: GetStaticProps<SnippetsProps> = async () => {
-  const snippets = getMarkdownDocuments(SNIPPETS_PATH);
+  const snippets = await Promise.all(
+    getMarkdownDocuments(SNIPPETS_PATH).map((markDownDocument) =>
+      renderMarkdown(markDownDocument.content).then((renderedHtml) => ({
+        frontMatter: markDownDocument.frontMatter,
+        html: renderedHtml,
+      }))
+    )
+  );
   return { props: { snippets } };
 };
