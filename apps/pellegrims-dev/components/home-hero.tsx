@@ -5,10 +5,9 @@ import { amber, blue, green } from 'tailwindcss/colors';
 import Section from './section';
 import Button from './button';
 import Obfuscate from 'react-obfuscate';
+import { avataaarUrl } from '../constants';
 
 const colors = [amber['300'], green['300'], blue['300']];
-const avataaarSrc =
-  'https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=BrownDark&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=Hoodie&clotheColor=Red&eyeType=Happy&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light';
 
 export default function HomeHero() {
   return (
@@ -17,7 +16,7 @@ export default function HomeHero() {
         <Image
           className="object-cover object-center rounded"
           alt="hero"
-          src={avataaarSrc}
+          src={avataaarUrl}
           width="264"
           height="280"
         />

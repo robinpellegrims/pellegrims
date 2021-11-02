@@ -24,12 +24,15 @@ export const productionUrl = 'https://www.pellegrims.dev/';
 const firstName = 'Robin';
 const lastName = 'Pellegrims';
 export const name = `${firstName} ${lastName}`;
+export const avataaarUrl =
+  'https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=BrownDark&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=Hoodie&clotheColor=Red&eyeType=Happy&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light';
 export const defaultSeoConfig: NextSeoProps = {
   defaultTitle: name,
   titleTemplate: `${name} | %s`,
   description:
     'Professional software developer, front-end technical lead and freelance web developer',
   openGraph: {
+    title: name,
     type: 'website',
     locale: 'en_BE',
     url: productionUrl,
@@ -39,6 +42,7 @@ export const defaultSeoConfig: NextSeoProps = {
       lastName: lastName,
       username: facebookProfileUrl,
     },
+    images: [{ url: avataaarUrl, height: 280, width: 264 }],
   },
   twitter: {
     handle: twitterHandle,
