@@ -20,7 +20,7 @@ export const twitterSvgIcon =
   'M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z';
 export const twitterUrl = 'https://twitter.com/robinpel';
 export const twitterHandle = '@robinpel';
-export const productionUrl = 'https://www.pellegrims.dev/';
+export const productionUrl = 'https://www.pellegrims.dev';
 const firstName = 'Robin';
 const lastName = 'Pellegrims';
 export const name = `${firstName} ${lastName}`;
@@ -42,7 +42,7 @@ export const defaultSeoConfig: NextSeoProps = {
       lastName: lastName,
       username: facebookProfileUrl,
     },
-    images: [{ url: avataaarUrl, height: 280, width: 264 }],
+    images: [{ url: `${productionUrl}/avataaar.svg`, height: 280, width: 264 }],
   },
   twitter: {
     handle: twitterHandle,
