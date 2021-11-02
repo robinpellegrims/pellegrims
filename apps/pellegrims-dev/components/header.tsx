@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Container from './container';
 
 const links: { text: string; href: string }[] = [
-  // { text: 'Blog', href: '/blog' },
+  { text: 'Blog', href: '/blog' },
   { text: 'Snippets', href: '/snippets' },
 ];
 
@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <Container>
       <header>
-        <div className="flex py-12 flex-col md:flex-row items-center">
+        <div className="flex py-6 flex-col md:flex-row items-center gap-3">
           <Link href="/">
             <a>
               <Logo />

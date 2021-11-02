@@ -18,13 +18,13 @@ export default function Footer(props: FooterProps) {
     <Container>
       <footer className="py-12 flex flex-col items-center sm:flex-row gap-3 justify-between">
         <span className="inline-flex gap-3">
-          <SocialIcon href={props.twitterUrl}>
+          <SocialIcon href={props.twitterUrl} label="Twitter">
             <path d={props.twitterSvgIcon} />
           </SocialIcon>
-          <SocialIcon href={props.facebookUrl}>
+          <SocialIcon href={props.facebookUrl} label="Facebook">
             <path d={props.facebookSvgIcon} />
           </SocialIcon>
-          <SocialIcon href={props.linkedInUrl}>
+          <SocialIcon href={props.linkedInUrl} label="LinkedIn">
             <path stroke="none" d={props.linkedInSvgIcon} />
             <circle cx="4" cy="4" r="2" stroke="none" />
           </SocialIcon>
