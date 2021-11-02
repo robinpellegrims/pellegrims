@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Container from './container';
 
 const links: { text: string; href: string }[] = [
-  { text: 'Blog', href: '/blog' },
+  // { text: 'Blog', href: '/blog' },
   { text: 'Snippets', href: '/snippets' },
 ];
 
