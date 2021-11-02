@@ -13,6 +13,10 @@ const nextConfig = {
   images: {
     domains: ['dummyimage.com', 'avataaars.io'],
   },
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
+  },
 };
 
 module.exports = withNx(nextConfig);

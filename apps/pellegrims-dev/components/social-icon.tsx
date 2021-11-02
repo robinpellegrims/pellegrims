@@ -1,21 +1,26 @@
+import Link from 'next/link';
+
 export interface SocialIconProps {
   href: string;
   children: React.ReactNode;
+  label: string;
 }
 
 export default function SocialIcon(props: SocialIconProps) {
   return (
-    <a href={props.href} rel="noopener noreferrer" target="_blank">
-      <svg
-        fill="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        className="w-5 h-5"
-        viewBox="0 0 24 24"
-      >
-        {props.children}
-      </svg>
-    </a>
+    <Link href={props.href}>
+      <a rel="noopener noreferrer" target="_blank" aria-label={props.label}>
+        <svg
+          fill="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          className="w-5 h-5"
+          viewBox="0 0 24 24"
+        >
+          {props.children}
+        </svg>
+      </a>
+    </Link>
   );
 }
