@@ -3,8 +3,10 @@ const { createGlobPatternsForDependencies } = require('@nrwl/next/tailwind');
 const colors = require('tailwindcss/colors');
 
 module.exports = {
+  mode: 'jit',
   purge: [
     join(__dirname, 'pages/**/*.{js,ts,jsx,tsx}'),
+    join(__dirname, 'components/**/*.{js,ts,jsx,tsx}'),
     ...createGlobPatternsForDependencies(__dirname),
   ],
   darkMode: false, // or 'media' or 'class'
