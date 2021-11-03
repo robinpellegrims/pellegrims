@@ -42,7 +42,7 @@ export const defaultSeoConfig: NextSeoProps = {
       lastName: lastName,
       username: facebookProfileUrl,
     },
-    images: [{ url: `${productionUrl}/avataaar.svg`, height: 280, width: 264 }],
+    images: [{ url: `${productionUrl}/avataaar.png`, height: 560, width: 548 }],
   },
   twitter: {
     handle: twitterHandle,
