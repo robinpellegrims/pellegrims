@@ -1,4 +1,9 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import {
+  GetStaticPaths,
+  GetStaticProps,
+  GetStaticPropsContext,
+  GetStaticPropsResult,
+} from 'next';
 import {
   getMarkdownDocumentBySlug,
   getSlugsForMarkdownFiles,
@@ -6,30 +11,39 @@ import {
   renderMarkdown,
 } from '@pellegrims/markdown';
 import { ParsedUrlQuery } from 'querystring';
-import { POSTS_PATH } from '../../constants';
+import { POSTS_PATH, productionUrl } from '../../constants';
 import BlogArticle from '../../components/blog-article';
 import Container from '../../components/container';
 import { NextSeo } from 'next-seo';
 
-interface ArticleProps extends ParsedUrlQuery {
+interface BlogArticleUrlQuery extends ParsedUrlQuery {
   slug: string;
 }
 
-export default function Article(props: MarkdownRenderingResult) {
+interface ArticleProps {
+  markdownRenderingResult: MarkdownRenderingResult;
+  slug: string;
+}
+
+export default function Article({
+  markdownRenderingResult,
+  slug,
+}: ArticleProps) {
   return (
     <>
       <NextSeo
-        title={props.frontMatter.title}
-        description={props.frontMatter.description}
+        title={markdownRenderingResult.frontMatter.title}
+        description={markdownRenderingResult.frontMatter.description}
+        canonical={`${productionUrl}/blog/${slug}`}
       />
       <Container>
-        <BlogArticle post={props} />
+        <BlogArticle post={markdownRenderingResult} />
       </Container>
     </>
   );
 }
 
-export const getStaticPaths: GetStaticPaths<ArticleProps> = async () => {
+export const getStaticPaths: GetStaticPaths<BlogArticleUrlQuery> = async () => {
   const paths = getSlugsForMarkdownFiles(POSTS_PATH).map((slug) => ({
     params: { slug },
   }));
@@ -39,11 +53,11 @@ export const getStaticPaths: GetStaticPaths<ArticleProps> = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<MarkdownRenderingResult> = async ({
+export const getStaticProps: GetStaticProps<ArticleProps> = async ({
   params,
-}: {
-  params: ArticleProps;
-}) => {
+}: GetStaticPropsContext<BlogArticleUrlQuery>): Promise<
+  GetStaticPropsResult<ArticleProps>
+> => {
   const articleMarkdownContent = getMarkdownDocumentBySlug(
     params.slug,
     POSTS_PATH
@@ -53,8 +67,11 @@ export const getStaticProps: GetStaticProps<MarkdownRenderingResult> = async ({
 
   return {
     props: {
-      frontMatter: articleMarkdownContent.frontMatter,
-      html: renderedHTML,
+      slug: params.slug,
+      markdownRenderingResult: {
+        frontMatter: articleMarkdownContent.frontMatter,
+        html: renderedHTML,
+      },
     },
   };
 };
