@@ -8,16 +8,21 @@ import {
   linkedInSvgIcon,
   linkedInUrl,
   name,
+  productionUrl,
   twitterSvgIcon,
   twitterUrl,
 } from '../constants';
 import { DefaultSeo } from 'next-seo';
+import { useRouter } from 'next/router';
 import { AppProps } from 'next/app';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <DefaultSeo {...defaultSeoConfig} />
+      <DefaultSeo
+        {...defaultSeoConfig}
+        canonical={productionUrl + useRouter().pathname}
+      />
       <Header />
       <main>
         <Component {...pageProps} />
