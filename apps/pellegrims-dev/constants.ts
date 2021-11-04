@@ -49,5 +49,4 @@ export const defaultSeoConfig: NextSeoProps = {
     site: twitterHandle,
     cardType: 'summary_large_image',
   },
-  canonical: productionUrl,
 };
