@@ -30,7 +30,7 @@ export const defaultSeoConfig: NextSeoProps = {
   defaultTitle: name,
   titleTemplate: `${name} | %s`,
   description:
-    'Professional software developer, front-end technical lead and freelance web developer',
+    'Professional software developer, front-end technical lead and freelance web developer.',
   openGraph: {
     title: name,
     type: 'website',
