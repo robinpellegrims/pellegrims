@@ -1,9 +1,4 @@
-import {
-  GetStaticPaths,
-  GetStaticProps,
-  GetStaticPropsContext,
-  GetStaticPropsResult,
-} from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import {
   getMarkdownDocumentBySlug,
   getSlugsForMarkdownFiles,
@@ -53,25 +48,18 @@ export const getStaticPaths: GetStaticPaths<BlogArticleUrlQuery> = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<ArticleProps> = async ({
-  params,
-}: GetStaticPropsContext<BlogArticleUrlQuery>): Promise<
-  GetStaticPropsResult<ArticleProps>
-> => {
-  const articleMarkdownContent = getMarkdownDocumentBySlug(
-    params.slug,
-    POSTS_PATH
-  );
-
-  const renderedHTML = await renderMarkdown(articleMarkdownContent.content);
-
-  return {
-    props: {
-      slug: params.slug,
-      markdownRenderingResult: {
-        frontMatter: articleMarkdownContent.frontMatter,
-        html: renderedHTML,
+export const getStaticProps: GetStaticProps<ArticleProps, BlogArticleUrlQuery> =
+  async ({ params }) => {
+    const slug = params?.slug ?? '';
+    const articleMarkdownContent = getMarkdownDocumentBySlug(slug, POSTS_PATH);
+    const renderedHTML = await renderMarkdown(articleMarkdownContent.content);
+    return {
+      props: {
+        slug: slug,
+        markdownRenderingResult: {
+          frontMatter: articleMarkdownContent.frontMatter,
+          html: renderedHTML,
+        },
       },
-    },
+    };
   };
-};

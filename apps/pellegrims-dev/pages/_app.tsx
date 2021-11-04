@@ -12,8 +12,9 @@ import {
   twitterUrl,
 } from '../constants';
 import { DefaultSeo } from 'next-seo';
+import { AppProps } from 'next/app';
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <DefaultSeo {...defaultSeoConfig} />

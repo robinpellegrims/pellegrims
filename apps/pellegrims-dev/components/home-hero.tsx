@@ -4,7 +4,7 @@ import { RoughNotationGroup } from 'react-rough-notation';
 import { amber, blue, green } from 'tailwindcss/colors';
 import Section from './section';
 import Button from './button';
-import Obfuscate from 'react-obfuscate';
+import { Email } from 'react-obfuscate-email';
 import { avataaarUrl } from '../constants';
 
 const colors = [amber['300'], green['300'], blue['300']];
@@ -35,12 +35,12 @@ export default function HomeHero() {
             various clients building modern websites.
           </RoughNotationGroup>
         </p>
-        <Obfuscate
-          email="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#111;&#98;&#105;&#110;&#46;&#112;&#101;&#108;&#108;&#101;&#103;&#114;&#105;&#109;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;"
-          headers={{ subject: 'Contact from website' }}
+        <Email
+          email="robin.pellegrims@gmail.com"
+          subject="Contact from website"
         >
           <Button text="Contact me" type="primary" />
-        </Obfuscate>
+        </Email>
       </div>
     </Section>
   );

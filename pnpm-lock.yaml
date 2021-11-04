@@ -19,6 +19,7 @@ specifiers:
   '@types/node': 14.14.33
   '@types/react': 17.0.3
   '@types/react-dom': 17.0.3
+  '@types/tailwindcss': ^2.2.3
   '@typescript-eslint/eslint-plugin': ~4.31.1
   '@typescript-eslint/parser': ~4.31.1
   autoprefixer: ^10.3.7
@@ -41,7 +42,7 @@ specifiers:
   prettier: ^2.3.1
   react: 17.0.2
   react-dom: 17.0.2
-  react-obfuscate: ^3.6.8
+  react-obfuscate-email: ^1.0.12
   react-rough-notation: ^1.0.1
   react-typist: ^2.0.5
   regenerator-runtime: 0.13.7
@@ -65,7 +66,7 @@ dependencies:
   postcss: 8.3.9
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
-  react-obfuscate: 3.6.8_react-dom@17.0.2+react@17.0.2
+  react-obfuscate-email: 1.0.12_react@17.0.2
   react-rough-notation: 1.0.1_react-dom@17.0.2+react@17.0.2
   react-typist: 2.0.5_react-dom@17.0.2+react@17.0.2
   regenerator-runtime: 0.13.7
@@ -93,6 +94,7 @@ devDependencies:
   '@types/node': 14.14.33
   '@types/react': 17.0.3
   '@types/react-dom': 17.0.3
+  '@types/tailwindcss': 2.2.3
   '@typescript-eslint/eslint-plugin': 4.31.2_6946eb0249059a7613730d6dec5d13ce
   '@typescript-eslint/parser': 4.31.2_eslint@7.22.0+typescript@4.3.5
   babel-jest: 27.2.3
@@ -3203,6 +3205,10 @@ packages:
 
   /@types/stack-utils/2.0.1:
     resolution: {integrity: sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==}
+
+  /@types/tailwindcss/2.2.3:
+    resolution: {integrity: sha512-TVUPMsaHn0vreZPRE1nCo7c3AKNz1tXSxvgbBmPE9eN2RXKCUONlnDyHGX82iGWQz8t43XBIqqWKkJaVWcjAZQ==}
+    dev: true
 
   /@types/unist/2.0.6:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
@@ -11152,16 +11158,13 @@ packages:
   /react-is/17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
 
-  /react-obfuscate/3.6.8_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-Pc47sbOJEGqOQ65y22ZFwCGHlSwGn0tykl+sQ64wHy/ALcyZxK6zsNYD8Fp3YBcU2EhmJPSKR7BypBYtnAqqyA==}
-    engines: {node: '>= 0.10.0'}
+  /react-obfuscate-email/1.0.12_react@17.0.2:
+    resolution: {integrity: sha512-qqUEEssv4/SD7MDgoEA7c2yt8tEgzQJz672K0q53Hp/YSSAKFxSA+GFCtJHhCtSqk1fjIHdOFhj0P90D7kyh9A==}
+    engines: {node: '>=12'}
     peerDependencies:
-      prop-types: '>= 15'
-      react: '>= 16.8'
-      react-dom: '>= 16.8'
+      react: '>=16'
     dependencies:
       react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
     dev: false
 
   /react-refresh/0.8.3:

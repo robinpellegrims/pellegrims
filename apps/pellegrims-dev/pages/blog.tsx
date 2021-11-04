@@ -3,6 +3,7 @@ import { POSTS_PATH } from '../constants';
 import BlogArticleList from '../components/blog-article-list';
 import Container from '../components/container';
 import { NextSeo } from 'next-seo';
+import { GetStaticProps } from 'next';
 
 export interface BlogProps {
   posts: MarkdownDocument[];
@@ -19,7 +20,7 @@ export default function Blog({ posts }: BlogProps) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const posts = getMarkdownDocuments(POSTS_PATH);
   return { props: { posts } };
 };
