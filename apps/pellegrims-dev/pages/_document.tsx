@@ -7,6 +7,10 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta charSet="utf-8" />
+          <link
+            href="https://fonts.googleapis.com/css?family=Caveat&display=optional"
+            rel="stylesheet"
+          />
           <Favicon />
         </Head>
         <body>
