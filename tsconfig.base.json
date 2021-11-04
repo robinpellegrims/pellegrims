@@ -16,7 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@pellegrims/markdown": ["libs/markdown/src/index.ts"]
-    }
+    },
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
   },
   "exclude": ["node_modules", "tmp"]
 }
