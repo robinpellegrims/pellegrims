@@ -8,7 +8,7 @@ export function CodeBlock({ className, children }: CodeProps) {
     <SyntaxHighlighter
       language={language}
       showLineNumbers={true}
-      customStyle={{ 'background-color': 'transparent', margin: 0, padding: 0 }}
+      customStyle={{ backgroundColor: 'transparent', margin: 0, padding: 0 }}
       style={darcula}
     >
       {children}

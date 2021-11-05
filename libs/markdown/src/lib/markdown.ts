@@ -11,7 +11,7 @@ export const getMarkdownDocumentBySlug = (
   slug: string,
   postsPath: string
 ): MarkdownDocument => {
-  const postFilePath = join(postsPath, `${slug}.mdx`);
+  const postFilePath = join(postsPath, `${slug}.md`);
   return { ...getMarkdownDocument(postFilePath), slug };
 };
 
@@ -33,4 +33,4 @@ const getMarkdownDocument = (filePath: string): MarkdownDocumentWithoutSlug => {
 };
 
 export const getSlugsForMarkdownFiles = (directoryPath: string) =>
-  fs.readdirSync(directoryPath).map((path) => path.replace(/\.mdx?$/, ''));
+  fs.readdirSync(directoryPath).map((path) => path.replace(/\.md?$/, ''));
