@@ -3,10 +3,9 @@ import { join } from 'path';
 import matter from 'gray-matter';
 import {
   FrontMatter,
-  MarkdownDocumentWithoutSlug,
   MarkdownDocument,
+  MarkdownDocumentWithoutSlug,
 } from './markdown.model';
-import { markdownToHtml } from './markdown-to-html';
 
 export const getMarkdownDocumentBySlug = (
   slug: string,
@@ -35,9 +34,3 @@ const getMarkdownDocument = (filePath: string): MarkdownDocumentWithoutSlug => {
 
 export const getSlugsForMarkdownFiles = (directoryPath: string) =>
   fs.readdirSync(directoryPath).map((path) => path.replace(/\.mdx?$/, ''));
-
-export const renderMarkdown = async (
-  markdownContent: string
-): Promise<string> => {
-  return await markdownToHtml(markdownContent ?? '');
-};

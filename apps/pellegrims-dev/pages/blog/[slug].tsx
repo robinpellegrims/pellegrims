@@ -2,8 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import {
   getMarkdownDocumentBySlug,
   getSlugsForMarkdownFiles,
-  MarkdownRenderingResult,
-  renderMarkdown,
+  MarkdownDocument,
 } from '@pellegrims/markdown';
 import { ParsedUrlQuery } from 'querystring';
 import { POSTS_PATH, productionUrl } from '../../constants';
@@ -16,23 +15,20 @@ interface BlogArticleUrlQuery extends ParsedUrlQuery {
 }
 
 interface ArticleProps {
-  markdownRenderingResult: MarkdownRenderingResult;
+  markDown: MarkdownDocument;
   slug: string;
 }
 
-export default function Article({
-  markdownRenderingResult,
-  slug,
-}: ArticleProps) {
+export default function Article({ slug, markDown }: ArticleProps) {
   return (
     <>
       <NextSeo
-        title={markdownRenderingResult.frontMatter.title}
-        description={markdownRenderingResult.frontMatter.description}
+        title={markDown.frontMatter.title}
+        description={markDown.frontMatter.description}
         canonical={`${productionUrl}/blog/${slug}`}
       />
       <Container>
-        <BlogArticle post={markdownRenderingResult} />
+        <BlogArticle markDown={markDown} />
       </Container>
     </>
   );
@@ -51,15 +47,10 @@ export const getStaticPaths: GetStaticPaths<BlogArticleUrlQuery> = async () => {
 export const getStaticProps: GetStaticProps<ArticleProps, BlogArticleUrlQuery> =
   async ({ params }) => {
     const slug = params?.slug ?? '';
-    const articleMarkdownContent = getMarkdownDocumentBySlug(slug, POSTS_PATH);
-    const renderedHTML = await renderMarkdown(articleMarkdownContent.content);
     return {
       props: {
         slug: slug,
-        markdownRenderingResult: {
-          frontMatter: articleMarkdownContent.frontMatter,
-          html: renderedHTML,
-        },
+        markDown: getMarkdownDocumentBySlug(slug, POSTS_PATH),
       },
     };
   };

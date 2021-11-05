@@ -13,8 +13,3 @@ export interface MarkdownDocumentWithoutSlug {
 export interface MarkdownDocument extends MarkdownDocumentWithoutSlug {
   slug: string;
 }
-
-export interface MarkdownRenderingResult {
-  frontMatter: FrontMatter;
-  html: string;
-}
