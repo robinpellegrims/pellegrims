@@ -1,8 +1,8 @@
 ---
-title: "Next.js tailwindcss styles are lost in production mode"
-description: "When building a NextJs 11 application in production mode, all the tailwindcss styling is lost."
-date: "2021-11-02"
-tags: ["next.js", "tailwindcss"]
+title: 'Next.js tailwindcss styles are lost in production mode'
+description: 'When building a NextJs 11 application in production mode, all the tailwindcss styling is lost.'
+date: '2021-11-02'
+tags: ['next.js', 'tailwindcss']
 published: true
 ---
 
@@ -16,9 +16,8 @@ The purge property in my tailwind.config.js configuration file looked like this:
 
 ```javascript
 module.exports = {
-  purge: [
-    join(__dirname, 'pages/**/*.{js,ts,jsx,tsx}'),
-  ],
+  purge: [join(__dirname, 'pages/**/*.{js,ts,jsx,tsx}')],
+};
 ```
 
 The official tailwindcss documentation explicitly states the following on the purge array:
@@ -33,8 +32,10 @@ module.exports = {
     join(__dirname, 'pages/**/*.{js,ts,jsx,tsx}'),
     join(__dirname, 'components/**/*.{js,ts,jsx,tsx}'),
   ],
+};
 ```
 
 ## Source
-[https://github.com/vercel/next.js/issues/14595](https://github.com/vercel/next.js/issues/14595)
-[https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html](https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html)
+
+- [https://github.com/vercel/next.js/issues/14595](https://github.com/vercel/next.js/issues/14595)
+- [https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html](https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html)
