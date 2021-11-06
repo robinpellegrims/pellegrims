@@ -1,0 +1,5 @@
+{
+  "name": "@pellegrims/nx-remotecache-s3",
+  "main": "src/index.js",
+  "version": "0.0.0"
+}
