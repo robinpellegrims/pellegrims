@@ -35,6 +35,7 @@
     "typewriting-react": "^1.0.8"
   },
   "devDependencies": {
+    "@jscutlery/semver": "^2.13.0",
     "@nrwl/cli": "12.10.0",
     "@nrwl/cypress": "12.10.0",
     "@nrwl/eslint-plugin-nx": "12.10.0",
