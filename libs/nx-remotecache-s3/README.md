@@ -49,7 +49,7 @@ Built Angular Package
  - to:   /Users/name/example-workspace/dist/libs/example-lib
 ------------------------------------------------------------------------
 ------------------------------------------------------------------------
-Stored output to remote cache: s3 Storage
+Stored output to remote cache: s3 storage
 Hash: d3d2bea71ea0f3004304c5cc88cf91be50b02bb636ebbdfcc927626fd8edf1ae
 ------------------------------------------------------------------------
 ```
