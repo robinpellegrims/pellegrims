@@ -1,5 +1,29 @@
 {
   "name": "@pellegrims/nx-remotecache-s3",
   "main": "src/index.js",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "description": "Remote caching for @nrwl/nx using S3 storage",
+  "scripts": {
+    "test": "nx test nx-remotecache-s3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robinpellegrims/pellegrims.git",
+    "directory": "libs/nx-remotecache-s3"
+  },
+  "keywords": [
+    "nx",
+    "remote",
+    "cache",
+    "remotecache",
+    "s3",
+    "storage",
+    "typescript"
+  ],
+  "author": "Robin Pellegrims",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robinpellegrims/pellegrims/issues"
+  },
+  "homepage": "https://github.com/robinpellegrims/pellegrims/tree/master/libs/nx-remotecache-s3"
 }
