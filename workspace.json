@@ -21,7 +21,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "nx-remotecache-s3": {
       "root": "libs/nx-remotecache-s3",
@@ -57,7 +58,10 @@
         "version": {
           "executor": "@jscutlery/semver:version",
           "options": {
-            "postTargets": ["nx-remotecache-s3:github","nx-remotecache-s3:deploy"]
+            "postTargets": [
+              "nx-remotecache-s3:github",
+              "nx-remotecache-s3:deploy"
+            ]
           }
         },
         "github": {
@@ -73,7 +77,8 @@
             "access": "public"
           }
         }
-      }
+      },
+      "tags": []
     },
     "pellegrims-dev": {
       "root": "apps/pellegrims-dev",
@@ -125,7 +130,8 @@
             "lintFilePatterns": ["apps/pellegrims-dev/**/*.{ts,tsx,js,jsx}"]
           }
         }
-      }
+      },
+      "tags": []
     },
     "pellegrims-dev-e2e": {
       "root": "apps/pellegrims-dev-e2e",
@@ -152,7 +158,9 @@
             "lintFilePatterns": ["apps/pellegrims-dev-e2e/**/*.{js,ts}"]
           }
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["pellegrims-dev"]
     }
   }
 }
