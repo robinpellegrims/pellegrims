@@ -27,21 +27,6 @@
       }
     ]
   },
-  "projects": {
-    "markdown": {
-      "tags": []
-    },
-    "nx-remotecache-s3": {
-      "tags": []
-    },
-    "pellegrims-dev": {
-      "tags": []
-    },
-    "pellegrims-dev-e2e": {
-      "tags": [],
-      "implicitDependencies": ["pellegrims-dev"]
-    }
-  },
   "cli": {
     "defaultCollection": "@nrwl/next"
   },
