@@ -5,7 +5,7 @@ export = {
   ],
   extends: ['plugin:@angular-eslint/template/recommended'],
   rules: {
-    'angular-template-consistent-this/eslint-plugin/angular-template-consistent-this':
+    'angular-template-consistent-this/eslint-plugin-angular-template-consistent-this':
       ['error', { properties: 'implicit' }],
   },
 };
