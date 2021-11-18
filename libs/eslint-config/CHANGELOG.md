@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.1](https://github.com/robinpellegrims/pellegrims/compare/eslint-config-0.2.0...eslint-config-0.2.1) (2021-11-18)
+
+
+### Bug Fixes
+
+* **eslint-config:** fix angular-template-consistent-this declaration syntax ([5b457b7](https://github.com/robinpellegrims/pellegrims/commit/5b457b718d507d76ec6249ccd70bc84e0a2889e7))
+
+
+
 # [0.2.0](https://github.com/robinpellegrims/pellegrims/compare/eslint-config-0.1.0...eslint-config-0.2.0) (2021-11-18)
 
 
