@@ -1,1 +1,1 @@
-export const getHeading1 = () => cy.get('h1');
+export const getHeading1 = (): Cypress.Chainable => cy.get('h1');

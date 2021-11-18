@@ -1,17 +1,18 @@
 import Chip from './chip';
+import { FunctionComponent } from 'react';
 
-export interface BlogArticleCategoriesProps {
+interface BlogArticleCategoriesProps {
   tags: string[];
 }
 
-export function BlogArticleCategories(props: BlogArticleCategoriesProps) {
-  return (
-    <div className="uppercase flex flex-wrap gap-1">
-      {props.tags.map((tag) => (
-        <Chip key={tag} text={tag} />
-      ))}
-    </div>
-  );
-}
+const BlogArticleCategories: FunctionComponent<BlogArticleCategoriesProps> = (
+  props
+) => (
+  <div className="uppercase flex flex-wrap gap-1">
+    {props.tags.map((tag) => (
+      <Chip key={tag} text={tag} />
+    ))}
+  </div>
+);
 
 export default BlogArticleCategories;

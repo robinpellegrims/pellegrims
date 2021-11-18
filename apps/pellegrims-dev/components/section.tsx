@@ -1,9 +1,11 @@
-export interface SectionProps {
+import { FunctionComponent } from 'react';
+
+interface SectionProps {
   children: React.ReactNode;
 }
 
-export function Section(props: SectionProps) {
-  return <section>{props.children}</section>;
-}
+const Section: FunctionComponent<SectionProps> = (props) => (
+  <section>{props.children}</section>
+);
 
 export default Section;

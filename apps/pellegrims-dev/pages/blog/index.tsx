@@ -4,21 +4,22 @@ import BlogArticleList from '../../components/blog-article-list';
 import Container from '../../components/container';
 import { NextSeo } from 'next-seo';
 import { GetStaticProps } from 'next';
+import { FunctionComponent } from 'react';
 
-export interface BlogProps {
+interface BlogProps {
   posts: MarkdownDocument[];
 }
 
-export default function Blog({ posts }: BlogProps) {
-  return (
-    <>
-      <NextSeo title="Blog" />
-      <Container>
-        <BlogArticleList posts={posts} title="Blog" path="/blog" />
-      </Container>
-    </>
-  );
-}
+const Blog: FunctionComponent<BlogProps> = ({ posts }) => (
+  <>
+    <NextSeo title="Blog" />
+    <Container>
+      <BlogArticleList posts={posts} title="Blog" path="/blog" />
+    </Container>
+  </>
+);
+
+export default Blog;
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = getMarkdownDocuments(POSTS_PATH);

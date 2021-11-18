@@ -23,14 +23,23 @@
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nrwl/nx/typescript"],
+      "extends": [
+        "plugin:@nrwl/nx/typescript",
+        "@pellegrims/eslint-config/typescript"
+      ],
       "rules": {
-        "@typescript-eslint/no-explicit-any": ["error", { "fixToUnknown": true }]
+        "@typescript-eslint/no-explicit-any": [
+          "error",
+          { "fixToUnknown": true }
+        ]
       }
     },
     {
       "files": ["*.js", "*.jsx"],
-      "extends": ["plugin:@nrwl/nx/javascript"],
+      "extends": [
+        "plugin:@nrwl/nx/javascript",
+        "@pellegrims/eslint-config/javascript"
+      ],
       "rules": {}
     }
   ]
