@@ -1,11 +1,13 @@
+import { FunctionComponent } from 'react';
+
 interface LogoProps {
   end?: boolean;
 }
 
-export default function Logo({ end }: LogoProps) {
-  return (
-    <div className="font-logo text-4xl font-thin">
-      &lt;pellegrims.dev {end ? '/' : ''}&gt;
-    </div>
-  );
-}
+const Logo: FunctionComponent<LogoProps> = ({ end }) => (
+  <div className="font-logo text-4xl font-thin">
+    &lt;pellegrims.dev {end ? '/' : ''}&gt;
+  </div>
+);
+
+export default Logo;

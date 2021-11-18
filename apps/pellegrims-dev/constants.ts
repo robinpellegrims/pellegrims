@@ -36,10 +36,11 @@ export const defaultSeoConfig: NextSeoProps = {
     type: 'website',
     locale: 'en_BE',
     url: productionUrl,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     site_name: name,
     profile: {
-      firstName: firstName,
-      lastName: lastName,
+      firstName,
+      lastName,
       username: facebookProfileUrl,
     },
     images: [{ url: `${productionUrl}/avataaar.png`, height: 560, width: 548 }],

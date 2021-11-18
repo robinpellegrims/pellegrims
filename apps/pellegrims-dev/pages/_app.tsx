@@ -15,27 +15,28 @@ import {
 import { DefaultSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import { AppProps } from 'next/app';
+import { FunctionComponent } from 'react';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <DefaultSeo
-        {...defaultSeoConfig}
-        canonical={productionUrl + useRouter().pathname}
-      />
-      <Header />
-      <main>
-        <Component {...pageProps} />
-      </main>
-      <Footer
-        name={name}
-        facebookSvgIcon={facebookSvgIcon}
-        facebookUrl={facebookProfileUrl}
-        linkedInSvgIcon={linkedInSvgIcon}
-        linkedInUrl={linkedInUrl}
-        twitterSvgIcon={twitterSvgIcon}
-        twitterUrl={twitterUrl}
-      />
-    </>
-  );
-}
+const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
+  <>
+    <DefaultSeo
+      {...defaultSeoConfig}
+      canonical={productionUrl + useRouter().pathname}
+    />
+    <Header />
+    <main>
+      <Component {...pageProps} />
+    </main>
+    <Footer
+      name={name}
+      facebookSvgIcon={facebookSvgIcon}
+      facebookUrl={facebookProfileUrl}
+      linkedInSvgIcon={linkedInSvgIcon}
+      linkedInUrl={linkedInUrl}
+      twitterSvgIcon={twitterSvgIcon}
+      twitterUrl={twitterUrl}
+    />
+  </>
+);
+
+export default App;

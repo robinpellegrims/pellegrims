@@ -43,8 +43,10 @@ export default createCustomRunner<S3Options>(async (options) => {
     fileExists: async (filename) => {
       try {
         const result = await s3Storage.headObject({
+          /* eslint-disable @typescript-eslint/naming-convention */
           Bucket: getEnv(ENV_BUCKET) ?? options.bucket,
           Key: filename,
+          /* eslint-enable @typescript-eslint/naming-convention */
         });
         return !!result;
       } catch (error) {
@@ -57,16 +59,20 @@ export default createCustomRunner<S3Options>(async (options) => {
     },
     retrieveFile: async (filename) => {
       const result = await s3Storage.getObject({
+        /* eslint-disable @typescript-eslint/naming-convention */
         Bucket: options.bucket,
         Key: filename,
+        /* eslint-enable @typescript-eslint/naming-convention */
       });
       return getStream.buffer(result.Body as Stream);
     },
     storeFile: async (filename, buffer) =>
       await s3Storage.putObject({
+        /* eslint-disable @typescript-eslint/naming-convention */
         Bucket: options.bucket,
         Key: filename,
         Body: buffer,
+        /* eslint-enable @typescript-eslint/naming-convention */
       }),
   };
 });

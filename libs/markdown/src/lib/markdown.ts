@@ -32,5 +32,5 @@ const getMarkdownDocument = (filePath: string): MarkdownDocumentWithoutSlug => {
   };
 };
 
-export const getSlugsForMarkdownFiles = (directoryPath: string) =>
+export const getSlugsForMarkdownFiles = (directoryPath: string): string[] =>
   fs.readdirSync(directoryPath).map((path) => path.replace(/\.md?$/, ''));

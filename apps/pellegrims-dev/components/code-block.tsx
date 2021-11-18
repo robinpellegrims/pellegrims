@@ -1,8 +1,9 @@
 import { CodeProps } from 'react-markdown/lib/ast-to-react';
 import { PrismAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { FunctionComponent } from 'react';
 
-export function CodeBlock({ className, children }: CodeProps) {
+const CodeBlock: FunctionComponent<CodeProps> = ({ className, children }) => {
   const language = className?.split('-')[1];
   return (
     <SyntaxHighlighter
@@ -14,6 +15,6 @@ export function CodeBlock({ className, children }: CodeProps) {
       {children}
     </SyntaxHighlighter>
   );
-}
+};
 
 export default CodeBlock;
