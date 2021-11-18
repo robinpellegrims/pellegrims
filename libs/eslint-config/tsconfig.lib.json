@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "../../dist/out-tsc",
+    "types": ["node"]
+  },
+  "exclude": ["**/*.spec.ts"],
+  "include": [
+    "**/*.ts",
+    "../../node_modules/.pnpm/@types+node@14.14.33/node_modules/@types/node/globals.d.ts"
+  ]
+}

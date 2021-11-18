@@ -1,6 +1,59 @@
 {
   "version": 2,
   "projects": {
+    "eslint-config": {
+      "root": "libs/eslint-config",
+      "sourceRoot": "libs/eslint-config/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/eslint-config/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/eslint-config"],
+          "options": {
+            "jestConfig": "libs/eslint-config/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/eslint-config",
+            "tsConfig": "libs/eslint-config/tsconfig.lib.json",
+            "packageJson": "libs/eslint-config/package.json",
+            "main": "libs/eslint-config/src/index.ts",
+            "assets": ["libs/eslint-config/*.md"]
+          }
+        },
+        "version": {
+          "executor": "@jscutlery/semver:version",
+          "options": {
+            "postTargets": ["eslint-config:github", "eslint-config:deploy"]
+          }
+        },
+        "github": {
+          "executor": "@jscutlery/semver:github",
+          "options": {
+            "tag": "${tag}",
+            "notesFile": "libs/eslint-config/CHANGELOG.md"
+          }
+        },
+        "deploy": {
+          "executor": "ngx-deploy-npm:deploy",
+          "options": {
+            "access": "public"
+          }
+        }
+      },
+      "tags": []
+    },
     "markdown": {
       "root": "libs/markdown",
       "sourceRoot": "libs/markdown/src",
