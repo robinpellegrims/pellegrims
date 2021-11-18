@@ -2,6 +2,20 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.2.0](https://github.com/robinpellegrims/pellegrims/compare/eslint-config-0.1.0...eslint-config-0.2.0) (2021-11-18)
+
+
+### Bug Fixes
+
+* **eslint-config:** @angular-eslint/recommended not correctly extended ([ca54b58](https://github.com/robinpellegrims/pellegrims/commit/ca54b583d1934d8268a937843faad585f63eb9eb))
+
+
+### Features
+
+* **eslint-config:** add @angular-eslint/template/process-inline-templates ([d436bb5](https://github.com/robinpellegrims/pellegrims/commit/d436bb559c61456c515f7edf16d069886cd7ddfc))
+
+
+
 # 0.1.0 (2021-11-18)
 
 
