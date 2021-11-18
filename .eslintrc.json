@@ -26,21 +26,14 @@
       "extends": [
         "plugin:@nrwl/nx/typescript",
         "@pellegrims/eslint-config/typescript"
-      ],
-      "rules": {
-        "@typescript-eslint/no-explicit-any": [
-          "error",
-          { "fixToUnknown": true }
-        ]
-      }
+      ]
     },
     {
       "files": ["*.js", "*.jsx"],
       "extends": [
         "plugin:@nrwl/nx/javascript",
         "@pellegrims/eslint-config/javascript"
-      ],
-      "rules": {}
+      ]
     }
   ]
 }
