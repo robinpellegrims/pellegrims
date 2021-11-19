@@ -22,6 +22,8 @@ jobs:
         id: affected
         with:
           targets: 'test,lint,e2e,build'
+      - name: Check format
+        run: pnpm nx format:check --all
 
   execute:
     name: ${{ matrix.target }} (${{ matrix.distribution }})
