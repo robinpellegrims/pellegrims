@@ -4,8 +4,6 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ## [0.2.2](https://github.com/robinpellegrims/pellegrims/compare/eslint-config-0.2.1...eslint-config-0.2.2) (2021-11-19)
 
-
-
 ## [0.2.1](https://github.com/robinpellegrims/pellegrims/compare/eslint-config-0.2.0...eslint-config-0.2.1) (2021-11-18)
 
 ### Bug Fixes
