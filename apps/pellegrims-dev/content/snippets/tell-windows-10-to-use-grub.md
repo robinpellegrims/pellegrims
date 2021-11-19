@@ -1,8 +1,8 @@
 ---
-title: "Tell Windows 10 to use Grub"
-description: "The BIOS no longer displays Grub but boots directly into Windows 10."
-date: "2021-10-29"
-tags: ["manjaro", "linux", "windows", "grub"]
+title: 'Tell Windows 10 to use Grub'
+description: 'The BIOS no longer displays Grub but boots directly into Windows 10.'
+date: '2021-10-29'
+tags: ['manjaro', 'linux', 'windows', 'grub']
 published: true
 ---
 
@@ -19,4 +19,5 @@ bcdedit /set {bootmgr} path \EFI\Manjaro\grubx64.efi
 ```
 
 ## Source
+
 [https://forum.manjaro.org/t/drive-not-shown-as-bootable-by-motherboard-works-on-live-usb/53200/8](https://forum.manjaro.org/t/drive-not-shown-as-bootable-by-motherboard-works-on-live-usb/53200/8)
