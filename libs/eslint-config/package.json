@@ -30,19 +30,19 @@
   },
   "homepage": "https://github.com/robinpellegrims/pellegrims/tree/master/libs/eslint-config",
   "peerDependencies": {
-    "@angular-eslint/eslint-plugin": "^12.6.1",
-    "@angular-eslint/eslint-plugin-template": "^12.6.1",
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
-    "@typescript-eslint/parser": "^4.33.0",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.1.0",
+    "@angular-eslint/eslint-plugin": "^13.0.1",
+    "@angular-eslint/eslint-plugin-template": "^13.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-angular-template-consistent-this": "^0.0.11",
     "eslint-plugin-etc": "^2.0.1",
     "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-ngrx": "^1.17.4",
+    "eslint-plugin-ngrx": "^2.0.1",
     "eslint-plugin-rxjs": "^4.0.2",
     "eslint-plugin-rxjs-angular": "^2.0.0",
-    "eslint-plugin-unicorn": "^38.0.1"
+    "eslint-plugin-unicorn": "^39.0.0"
   },
   "exports": {
     "./": "./src/index.js",
