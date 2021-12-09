@@ -2,6 +2,20 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [1.0.0](https://github.com/robinpellegrims/pellegrims/compare/eslint-config-0.2.2...eslint-config-1.0.0) (2021-12-09)
+
+### Features
+
+- **eslint-config:** v1 release ([163b266](https://github.com/robinpellegrims/pellegrims/commit/163b266d771344a3607270735f229b6b98773ec8))
+
+### BREAKING CHANGES
+
+- **eslint-config:** Peer dependencies updated:
+  ESLint v8
+  @angular-eslint v13
+  TypeScript ESLint v5
+  eslint-plugin-ngrx v2
+
 ## [0.2.2](https://github.com/robinpellegrims/pellegrims/compare/eslint-config-0.2.1...eslint-config-0.2.2) (2021-12-09)
 
 ## [0.2.2](https://github.com/robinpellegrims/pellegrims/compare/eslint-config-0.2.1...eslint-config-0.2.2) (2021-11-19)
