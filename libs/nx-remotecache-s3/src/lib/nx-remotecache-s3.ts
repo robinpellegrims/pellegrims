@@ -38,13 +38,15 @@ export default createCustomRunner<S3Options>(async (options) => {
     credentials: { accessKeyId, secretAccessKey },
   });
 
+  const bucket = getEnv(ENV_BUCKET) ?? options.bucket;
+
   return {
     name: 'S3',
     fileExists: async (filename) => {
       try {
         const result = await s3Storage.headObject({
           /* eslint-disable @typescript-eslint/naming-convention */
-          Bucket: getEnv(ENV_BUCKET) ?? options.bucket,
+          Bucket: bucket,
           Key: filename,
           /* eslint-enable @typescript-eslint/naming-convention */
         });
@@ -60,7 +62,7 @@ export default createCustomRunner<S3Options>(async (options) => {
     retrieveFile: async (filename) => {
       const result = await s3Storage.getObject({
         /* eslint-disable @typescript-eslint/naming-convention */
-        Bucket: options.bucket,
+        Bucket: bucket,
         Key: filename,
         /* eslint-enable @typescript-eslint/naming-convention */
       });
@@ -69,7 +71,7 @@ export default createCustomRunner<S3Options>(async (options) => {
     storeFile: async (filename, buffer) =>
       await s3Storage.putObject({
         /* eslint-disable @typescript-eslint/naming-convention */
-        Bucket: options.bucket,
+        Bucket: bucket,
         Key: filename,
         Body: buffer,
         /* eslint-enable @typescript-eslint/naming-convention */
