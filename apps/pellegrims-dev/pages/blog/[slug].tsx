@@ -45,13 +45,15 @@ export const getStaticPaths: GetStaticPaths<BlogArticleUrlQuery> = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<ArticleProps, BlogArticleUrlQuery> =
-  async ({ params }) => {
-    const slug = params?.slug ?? '';
-    return {
-      props: {
-        slug,
-        markDown: getMarkdownDocumentBySlug(slug, POSTS_PATH),
-      },
-    };
+export const getStaticProps: GetStaticProps<
+  ArticleProps,
+  BlogArticleUrlQuery
+> = async ({ params }) => {
+  const slug = params?.slug ?? '';
+  return {
+    props: {
+      slug,
+      markDown: getMarkdownDocumentBySlug(slug, POSTS_PATH),
+    },
   };
+};
