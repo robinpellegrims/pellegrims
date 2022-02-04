@@ -16,6 +16,7 @@ import { DefaultSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import { AppProps } from 'next/app';
 import { FunctionComponent } from 'react';
+import Analytics from '../components/analytics';
 
 const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
   <>
@@ -23,6 +24,7 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
       {...defaultSeoConfig}
       canonical={productionUrl + useRouter().pathname}
     />
+    <Analytics />
     <Header />
     <main>
       <Component {...pageProps} />
