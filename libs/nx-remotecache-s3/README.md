@@ -18,6 +18,7 @@ npm install --save-dev @pellegrims/nx-remotecache-s3
 | Secret Key    | Required. S3 secret access key                                                                                          | `NX_CACHE_S3_SECRET_KEY`    | `secretKey`   |
 | Endpoint      | Optional. The fully qualified endpoint of the webservice. This is only required when using a custom (non-AWS) endpoint. | `NX_CACHE_S3_ENDPOINT`      | `endpoint`    |
 | Bucket        | Optional. Specify which bucket should be used for storing the cache.                                                    | `NX_CACHE_S3_BUCKET`        | `bucket`      |
+| Prefix        | Optional. Specify prefix path of target object key.                                                                     | `NX_CACHE_S3_PREFIX`        | `prefix`      |
 | Region        | Optional. The AWS region to which this client will send requests.                                                       | `NX_CACHE_S3_REGION`        | `region`      |
 
 ```json
@@ -31,6 +32,7 @@ npm install --save-dev @pellegrims/nx-remotecache-s3
         "secretKey": "mySecretKey",
         "endpoint": "https://some-endpoint.com",
         "bucket": "name-of-bucket",
+        "prefix": "prefix/",
         "region": "us-west-000"
       }
     }
