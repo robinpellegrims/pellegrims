@@ -25,19 +25,16 @@ export default createCustomRunner<S3Options>(async (options) => {
   initEnv(options);
 
   const accessKeyId = getEnv(ENV_ACCESS_KEY_ID) ?? options.accessKeyId;
-  if (!accessKeyId) {
-    throw new Error('missing access key');
-  }
 
   const secretAccessKey = getEnv(ENV_SECRET_KEY) ?? options.secretKey;
-  if (!secretAccessKey) {
-    throw new Error('missing secret access key');
-  }
 
   const s3Storage = new S3({
     endpoint: getEnv(ENV_ENDPOINT) ?? options.endpoint,
     region: getEnv(ENV_REGION) ?? options.region,
-    credentials: { accessKeyId, secretAccessKey },
+    credentials:
+      accessKeyId && secretAccessKey
+        ? { accessKeyId, secretAccessKey }
+        : undefined,
   });
 
   const bucket = getEnv(ENV_BUCKET) ?? options.bucket;
