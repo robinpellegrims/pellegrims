@@ -5,7 +5,6 @@ import { amber, blue, green } from 'tailwindcss/colors';
 import Section from './section';
 import Button from './button';
 import { Email } from 'react-obfuscate-email';
-import { avataaarUrl } from '../constants';
 import { FunctionComponent } from 'react';
 
 const colors = { amber: amber['300'], green: green['300'], blue: blue['300'] };
@@ -16,7 +15,7 @@ const HomeHero: FunctionComponent = () => (
       <Image
         className="object-cover object-center rounded"
         alt="hero"
-        src={avataaarUrl}
+        src="/avataaar.svg"
         width="264"
         height="280"
       />

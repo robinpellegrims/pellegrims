@@ -24,8 +24,6 @@ export const productionUrl = 'https://www.pellegrims.dev';
 const firstName = 'Robin';
 const lastName = 'Pellegrims';
 export const name = `${firstName} ${lastName}`;
-export const avataaarUrl =
-  'https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=BrownDark&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=Hoodie&clotheColor=Red&eyeType=Happy&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light';
 export const defaultSeoConfig: NextSeoProps = {
   defaultTitle: name,
   titleTemplate: `${name} | %s`,
