@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.2.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.1.8...nx-remotecache-s3-0.2.0) (2022-02-18)
+
+### Bug Fixes
+
+- **nx-remotecache-s3:** fallback to aws-sdk-v3 credentials provider ([d6ba139](https://github.com/robinpellegrims/pellegrims/commit/d6ba139fc21f7f86a39e351cfb72b4c925c4f264))
+
+### Features
+
+- **nx-remotecache-s3:** add prefix path option ([bbf1727](https://github.com/robinpellegrims/pellegrims/commit/bbf172729779546d0e03eaae310c5164a231304d))
+
 ## [0.1.8](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.1.7...nx-remotecache-s3-0.1.8) (2022-02-04)
 
 ## [0.1.7](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.1.6...nx-remotecache-s3-0.1.7) (2021-12-20)
