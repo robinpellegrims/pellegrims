@@ -38,5 +38,5 @@ export default Bookmarks;
 
 export const getStaticProps: GetStaticProps<BookmarksProps> = async () => {
   const bookmarks = await fetchRaindropBookmarks();
-  return { props: { bookmarks } };
+  return { props: { bookmarks }, revalidate: 10 };
 };
