@@ -15,6 +15,7 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.40.0",
     "@nrwl/next": "13.8.2",
+    "@tailwindcss/line-clamp": "^0.3.1",
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.7",
     "core-js": "^3.6.5",

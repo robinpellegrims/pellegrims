@@ -1,5 +1,5 @@
 import BlogArticleCategories from './blog-article-categories';
-import BlogArticleDate from './blog-article-date';
+import DateFormatted from './date-formatted';
 import { MarkdownDocument } from '@pellegrims/markdown';
 import Markdown from './markdown';
 import { FunctionComponent } from 'react';
@@ -11,7 +11,7 @@ interface BlogArticleProps {
 const BlogArticle: FunctionComponent<BlogArticleProps> = ({ markDown }) => (
   <article className="mx-auto prose lg:prose-xl">
     <header className="flex flex-col gap-1">
-      <BlogArticleDate date={markDown.frontMatter.date} />
+      <DateFormatted date={markDown.frontMatter.date} />
       <BlogArticleCategories tags={markDown.frontMatter.tags} />
       <h1 className="pt-6">{markDown.frontMatter.title}</h1>
     </header>

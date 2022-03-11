@@ -3,7 +3,7 @@ import { FunctionComponent } from 'react';
 type ButtonType = 'primary' | 'secondary';
 
 const buttonTypeClasses: Record<ButtonType, string> = {
-  primary: ' text-white bg-primary-600 hover:bg-primary-600',
+  primary: ' text-white bg-primary-500 hover:bg-primary-600',
   secondary: 'text-gray-700 bg-gray-100 hover:bg-gray-200 ml-4 ',
 };
 

@@ -5,6 +5,7 @@ import { GetStaticProps } from 'next';
 import { NextSeo } from 'next-seo';
 import SnippetArticleList from '../components/snippet-article-list';
 import { FunctionComponent } from 'react';
+import PageHero from '../components/page-hero';
 
 interface SnippetsProps {
   snippets: MarkdownDocument[];
@@ -14,6 +15,10 @@ const Snippets: FunctionComponent<SnippetsProps> = ({ snippets }) => (
   <>
     <NextSeo title="Snippets" />
     <Container>
+      <PageHero
+        title="Snippets"
+        description="Short notes for future reference."
+      />
       <SnippetArticleList snippets={snippets} />
     </Container>
   </>
