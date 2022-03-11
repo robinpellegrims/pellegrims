@@ -5,16 +5,23 @@ import Container from '../../components/container';
 import { NextSeo } from 'next-seo';
 import { GetStaticProps } from 'next';
 import { FunctionComponent } from 'react';
+import PageHero from '../../components/page-hero';
 
 interface BlogProps {
   posts: MarkdownDocument[];
 }
 
+const title = 'Blog';
+
 const Blog: FunctionComponent<BlogProps> = ({ posts }) => (
   <>
-    <NextSeo title="Blog" />
+    <NextSeo title={title} />
     <Container>
-      <BlogArticleList posts={posts} title="Blog" path="/blog" />
+      <PageHero
+        title={title}
+        description="Articles about things that I found interesting enough to share."
+      />
+      <BlogArticleList posts={posts} path="/blog" />
     </Container>
   </>
 );

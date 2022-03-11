@@ -19,6 +19,7 @@ specifiers:
   '@nrwl/workspace': 13.8.2
   '@pellegrims/eslint-config': 1.0.0
   '@pellegrims/nx-remotecache-s3': ^0.1.6
+  '@tailwindcss/line-clamp': ^0.3.1
   '@tailwindcss/typography': ^0.4.1
   '@testing-library/react': 12.1.2
   '@testing-library/react-hooks': 7.0.2
@@ -78,6 +79,7 @@ specifiers:
 dependencies:
   '@aws-sdk/client-s3': 3.40.0
   '@nrwl/next': 13.8.2_b06289d5ebea938b6f532a3e14178c1e
+  '@tailwindcss/line-clamp': 0.3.1_tailwindcss@2.2.17
   '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.17
   autoprefixer: 10.3.7_postcss@8.3.9
   core-js: 3.18.3
@@ -5221,6 +5223,17 @@ packages:
       '@swc/core-win32-ia32-msvc': 1.2.136
       '@swc/core-win32-x64-msvc': 1.2.136
     dev: true
+
+  /@tailwindcss/line-clamp/0.3.1_tailwindcss@2.2.17:
+    resolution:
+      {
+        integrity: sha512-pNr0T8LAc3TUx/gxCfQZRe9NB2dPEo/cedPHzUGIPxqDMhgjwNm6jYxww4W5l0zAsAddxr+XfZcqttGiFDgrGg==,
+      }
+    peerDependencies:
+      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
+    dependencies:
+      tailwindcss: 2.2.17_96f83969316717847b3edf58a3f353f3
+    dev: false
 
   /@tailwindcss/typography/0.4.1_tailwindcss@2.2.17:
     resolution:

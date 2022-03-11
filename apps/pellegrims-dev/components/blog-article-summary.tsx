@@ -2,7 +2,7 @@ import { MarkdownDocument } from '@pellegrims/markdown';
 import RightArrow from './right-arrow';
 import Link from 'next/link';
 import BlogArticleCategories from './blog-article-categories';
-import BlogArticleDate from './blog-article-date';
+import DateFormatted from './date-formatted';
 import { FunctionComponent } from 'react';
 
 interface BlogArticleSummaryProps {
@@ -15,7 +15,7 @@ const BlogArticleSummary: FunctionComponent<BlogArticleSummaryProps> = (
 ) => (
   <article className="flex flex-col md:flex-row md:flex-nowrap gap-12">
     <div className="md:w-1/5 flex-shrink-0 flex flex-col gap-2">
-      <BlogArticleDate date={props.post.frontMatter.date} />
+      <DateFormatted date={props.post.frontMatter.date} />
       <BlogArticleCategories tags={props.post.frontMatter.tags} />
     </div>
     <div className="flex flex-col gap-6 md:flex-grow  prose lg:prose-xl">

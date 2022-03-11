@@ -26,7 +26,7 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
     />
     <Analytics />
     <Header />
-    <main>
+    <main className="py-12">
       <Component {...pageProps} />
     </main>
     <Footer

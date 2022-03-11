@@ -5,6 +5,7 @@ import { FunctionComponent } from 'react';
 
 const links: { text: string; href: string }[] = [
   { text: 'Snippets', href: '/snippets' },
+  { text: 'Bookmarks', href: '/bookmarks' },
 ];
 
 const Header: FunctionComponent = () => (
