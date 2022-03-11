@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         uses: robinpellegrims/composite-actions/pnpm-install@main
       - name: Calculate affected projects
-        uses: e-square-io/nx-affected-matrix@v2
+        uses: e-square-io/nx-affected-matrix@v2.3.4
         id: affected
         with:
           targets: 'test,lint,e2e,build'
@@ -43,7 +43,7 @@ jobs:
       - name: Install dependencies
         uses: robinpellegrims/composite-actions/pnpm-install@main
       - name: Execute
-        uses: e-square-io/nx-distributed-task@v2
+        uses: e-square-io/nx-distributed-task@v2.3.4
         id: execute
         with:
           target: ${{ matrix.target }}
