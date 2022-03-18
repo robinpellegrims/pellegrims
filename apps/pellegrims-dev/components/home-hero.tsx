@@ -4,8 +4,8 @@ import { RoughNotationGroup } from 'react-rough-notation';
 import { amber, blue, green } from 'tailwindcss/colors';
 import Section from './section';
 import Button from './button';
-import { Email } from 'react-obfuscate-email';
 import { FunctionComponent } from 'react';
+import Link from 'next/link';
 
 const colors = { amber: amber['300'], green: green['300'], blue: blue['300'] };
 
@@ -20,7 +20,7 @@ const HomeHero: FunctionComponent = () => (
         height="280"
       />
       <h1 className="sm:text-4xl text-3xl font-medium text-gray-900">
-        Hi! My name is <span className="font-semibold">Robin Pellegrims</span>.
+        Hi! I&apos;m <span className="font-semibold">Robin Pellegrims</span> 👋
       </h1>
       <p className="leading-relaxed sm:text-2xl text-xl">
         <RoughNotationGroup show={true}>
@@ -33,9 +33,11 @@ const HomeHero: FunctionComponent = () => (
           various clients building modern websites.
         </RoughNotationGroup>
       </p>
-      <Email email="robin.pellegrims@gmail.com" subject="Contact from website">
-        <Button text="Contact me" type="primary" />
-      </Email>
+      <Link href="contact">
+        <a>
+          <Button text="Get in touch" type="primary" />
+        </a>
+      </Link>
     </div>
   </Section>
 );

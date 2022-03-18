@@ -26,6 +26,7 @@ specifiers:
   '@testing-library/react-hooks': 7.0.2
   '@types/jest': 27.0.2
   '@types/node': 14.14.33
+  '@types/nodemailer': ^6.4.4
   '@types/react': 17.0.30
   '@types/react-dom': 17.0.9
   '@types/react-syntax-highlighter': ^13.5.2
@@ -57,13 +58,13 @@ specifiers:
   next: 12.1.0
   next-seo: ^4.28.1
   ngx-deploy-npm: ^3.0.5
+  nodemailer: ^6.7.2
   nx-remotecache-custom: ^1.0.0
   postcss: ^8.3.9
   prettier: 2.5.1
   react: 17.0.2
   react-dom: 17.0.2
   react-markdown: ^7.1.0
-  react-obfuscate-email: ^1.0.12
   react-rough-notation: ^1.0.1
   react-syntax-highlighter: ^15.4.4
   react-typist: ^2.0.5
@@ -88,12 +89,12 @@ dependencies:
   gray-matter: 4.0.3
   next: 12.1.0_react-dom@17.0.2+react@17.0.2
   next-seo: 4.28.1_caa633a00319350dbda42996613fe26c
+  nodemailer: 6.7.2
   nx-remotecache-custom: 1.0.0_@nrwl+workspace@13.8.7
   postcss: 8.3.9
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-markdown: 7.1.0_0d9ae6029f9b6856f7d6fb45bd27ecc7
-  react-obfuscate-email: 1.0.12_react@17.0.2
   react-rough-notation: 1.0.1_react-dom@17.0.2+react@17.0.2
   react-syntax-highlighter: 15.4.4_react@17.0.2
   react-typist: 2.0.5_react-dom@17.0.2+react@17.0.2
@@ -127,6 +128,7 @@ devDependencies:
   '@testing-library/react-hooks': 7.0.2_react-dom@17.0.2+react@17.0.2
   '@types/jest': 27.0.2
   '@types/node': 14.14.33
+  '@types/nodemailer': 6.4.4
   '@types/react': 17.0.30
   '@types/react-dom': 17.0.9
   '@types/react-syntax-highlighter': 13.5.2
@@ -5550,6 +5552,15 @@ packages:
       {
         integrity: sha512-oJqcTrgPUF29oUP8AsUqbXGJNuPutsetaa9kTQAQce5Lx5dTYWV02ScBiT/k1BX/Z7pKeqedmvp39Wu4zR7N7g==,
       }
+
+  /@types/nodemailer/6.4.4:
+    resolution:
+      {
+        integrity: sha512-Ksw4t7iliXeYGvIQcSIgWQ5BLuC/mljIEbjf615svhZL10PE9t+ei8O9gDaD3FPCasUJn9KTLwz2JFJyiiyuqw==,
+      }
+    dependencies:
+      '@types/node': 14.14.33
+    dev: true
 
   /@types/normalize-package-data/2.4.1:
     resolution:
@@ -13719,6 +13730,14 @@ packages:
         integrity: sha512-aA87l0flFYMzCHpTM3DERFSYxc6lv/BltdbRTOMZuxZ0cwZCD3mejE5n9vLhSJCN++/eOqr77G1IO5uXxlQYWA==,
       }
 
+  /nodemailer/6.7.2:
+    resolution:
+      {
+        integrity: sha512-Dz7zVwlef4k5R71fdmxwR8Q39fiboGbu3xgswkzGwczUfjp873rVxt1O46+Fh0j1ORnAC6L9+heI8uUpO6DT7Q==,
+      }
+    engines: { node: '>=6.0.0' }
+    dev: false
+
   /normalize-package-data/2.5.0:
     resolution:
       {
@@ -15298,18 +15317,6 @@ packages:
       vfile: 5.1.1
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /react-obfuscate-email/1.0.12_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-qqUEEssv4/SD7MDgoEA7c2yt8tEgzQJz672K0q53Hp/YSSAKFxSA+GFCtJHhCtSqk1fjIHdOFhj0P90D7kyh9A==,
-      }
-    engines: { node: '>=12' }
-    peerDependencies:
-      react: '>=16'
-    dependencies:
-      react: 17.0.2
     dev: false
 
   /react-refresh/0.10.0:

@@ -1,24 +1,32 @@
 import { FunctionComponent } from 'react';
+import { LoadingSpinner } from './loadingSpinner';
 
 type ButtonType = 'primary' | 'secondary';
 
 const buttonTypeClasses: Record<ButtonType, string> = {
-  primary: ' text-white bg-primary-500 hover:bg-primary-600',
-  secondary: 'text-gray-700 bg-gray-100 hover:bg-gray-200 ml-4 ',
+  primary:
+    'text-white bg-primary-500 hover:bg-primary-600 disabled:bg-primary-400',
+  secondary:
+    'text-gray-700 bg-gray-100 hover:bg-gray-200 ml-4 disabled:text-gray-600',
 };
 
 interface ButtonProps {
   type: ButtonType;
   text: string;
+  loading?: boolean;
 }
 
-const Button: FunctionComponent<ButtonProps> = (props) => (
+const Button: FunctionComponent<ButtonProps> = ({ loading, type, text }) => (
   <button
-    className={`inline-flex border-0 py-2 px-6 focus:outline-none rounded text-lg ${
-      buttonTypeClasses[props.type]
-    }`}
+    className={`inline-flex border-0 py-2 px-6 focus:outline-none rounded text-lg disabled:cursor-not-allowed ${buttonTypeClasses[type]}`}
+    disabled={loading}
   >
-    {props.text}
+    {loading ? (
+      <div className="mt-1">
+        <LoadingSpinner />
+      </div>
+    ) : null}
+    {text}
   </button>
 );
 
