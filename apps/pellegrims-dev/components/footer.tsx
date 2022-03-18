@@ -12,6 +12,8 @@ interface FooterProps {
   name: string;
   twitterSvgIcon: string;
   twitterUrl: string;
+  githubSvgIcon: string;
+  githubUrl: string;
 }
 
 const Footer: FunctionComponent<FooterProps> = (props) => (
@@ -27,6 +29,9 @@ const Footer: FunctionComponent<FooterProps> = (props) => (
         <SocialIcon href={props.linkedInUrl} label="LinkedIn">
           <path stroke="none" d={props.linkedInSvgIcon} />
           <circle cx="4" cy="4" r="2" stroke="none" />
+        </SocialIcon>
+        <SocialIcon href={props.githubUrl} label="Github">
+          <path d={props.githubSvgIcon} />
         </SocialIcon>
       </span>
       <p className="text-sm text-gray-500">

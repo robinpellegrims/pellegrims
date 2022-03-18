@@ -5,6 +5,8 @@ import {
   defaultSeoConfig,
   facebookProfileUrl,
   facebookSvgIcon,
+  githubUrl,
+  githubSvgIcon,
   linkedInSvgIcon,
   linkedInUrl,
   name,
@@ -37,6 +39,8 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
       linkedInUrl={linkedInUrl}
       twitterSvgIcon={twitterSvgIcon}
       twitterUrl={twitterUrl}
+      githubSvgIcon={githubSvgIcon}
+      githubUrl={githubUrl}
     />
   </>
 );
