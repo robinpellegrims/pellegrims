@@ -17,7 +17,7 @@ const Header: FunctionComponent = () => (
             <Logo />
           </a>
         </Link>
-        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center text-gray-600">
           {links.map((link) => (
             <Link key={link.href} href={link.href}>
               <a className="mr-5 hover:text-gray-900">{link.text}</a>
