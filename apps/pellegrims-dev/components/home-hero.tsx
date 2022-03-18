@@ -13,11 +13,11 @@ const HomeHero: FunctionComponent = () => (
   <Section>
     <div className="mx-auto flex items-center justify-center flex-col gap-6 text-center">
       <Image
-        className="object-cover object-center rounded"
         alt="hero"
         src="/avataaar.svg"
         width="264"
         height="280"
+        layout="fixed"
       />
       <h1 className="sm:text-4xl text-3xl font-medium text-gray-900">
         Hi! I&apos;m <span className="font-semibold">Robin Pellegrims</span> 👋
@@ -33,7 +33,7 @@ const HomeHero: FunctionComponent = () => (
           various clients building modern websites.
         </RoughNotationGroup>
       </p>
-      <Link href="contact">
+      <Link href="/contact">
         <a>
           <Button text="Get in touch" type="primary" />
         </a>
