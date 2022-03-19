@@ -9,7 +9,7 @@ interface BlogArticleProps {
 }
 
 const BlogArticle: FunctionComponent<BlogArticleProps> = ({ markDown }) => (
-  <article className="mx-auto prose lg:prose-xl">
+  <article className="mx-auto prose lg:prose-xl dark:prose-invert">
     <header className="flex flex-col gap-1">
       <DateFormatted date={markDown.frontMatter.date} />
       <BlogArticleCategories tags={markDown.frontMatter.tags} />

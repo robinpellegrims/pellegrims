@@ -10,10 +10,10 @@ export const Bookmark = (props: { bookmark: RaindropBookmark }) => (
       loading="lazy"
     />
     <div className="p-6 flex flex-col flex-grow">
-      <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+      <h2 className="tracking-widest text-xs title-font font-medium text-dark-600 dark:text-dark-300 mb-1">
         {props.bookmark.tags.map((tag) => `#${tag}`.toUpperCase()).join(' ')}
       </h2>
-      <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+      <h1 className="title-font text-lg font-medium mb-3">
         {props.bookmark.title}
       </h1>
       <p className="leading-relaxed mb-3 grow line-clamp-3">
@@ -40,7 +40,7 @@ export const Bookmark = (props: { bookmark: RaindropBookmark }) => (
             <path d="M12 5l7 7-7 7" />
           </svg>
         </a>
-        <span className="text-gray-400 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1">
+        <span className="text-dark-400 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1">
           <DateFormatted date={props.bookmark.created} />
         </span>
       </div>

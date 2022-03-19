@@ -1,13 +1,17 @@
 import Image from 'next/image';
 import { Highlight } from './highlight';
 import { RoughNotationGroup } from 'react-rough-notation';
-import { amber, blue, green } from 'tailwindcss/colors';
+import { amber, green, indigo } from 'tailwindcss/colors';
 import Section from './section';
 import Button from './button';
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
 
-const colors = { amber: amber['300'], green: green['300'], blue: blue['300'] };
+const colors = {
+  amber: amber['400'],
+  green: green['400'],
+  blue: indigo['400'],
+};
 
 const HomeHero: FunctionComponent = () => (
   <Section>
@@ -19,7 +23,7 @@ const HomeHero: FunctionComponent = () => (
         height="280"
         layout="fixed"
       />
-      <h1 className="sm:text-4xl text-3xl font-medium text-gray-900">
+      <h1 className="sm:text-4xl text-3xl font-medium">
         Hi! I&apos;m <span className="font-semibold">Robin Pellegrims</span> 👋
       </h1>
       <p className="leading-relaxed sm:text-2xl text-xl">

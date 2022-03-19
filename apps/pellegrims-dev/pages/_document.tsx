@@ -4,7 +4,7 @@ import { Favicon } from '../components/favicon';
 class MyDocument extends Document {
   render(): JSX.Element {
     return (
-      <Html>
+      <Html className="bg-white dark:bg-dark-800 text-dark-900 dark:text-dark-100">
         <Head>
           <meta charSet="utf-8" />
           <link

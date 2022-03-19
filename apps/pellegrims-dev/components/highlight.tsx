@@ -21,7 +21,7 @@ export const Highlight: FunctionComponent<HighlightProps> = ({
       animationDuration={animationDuration}
       color={color}
     >
-      {children}
+      <span>{children}</span>
     </RoughNotation>
   );
 };

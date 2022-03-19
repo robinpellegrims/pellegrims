@@ -34,7 +34,7 @@ const Footer: FunctionComponent<FooterProps> = (props) => (
           <path d={props.githubSvgIcon} />
         </SocialIcon>
       </span>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-dark-500">
         © {new Date().getFullYear()} {props.name}
       </p>
       <Link href="/">
