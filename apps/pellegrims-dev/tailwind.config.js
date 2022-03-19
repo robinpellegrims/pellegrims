@@ -9,18 +9,16 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
-    colors: {
-      primary: colors.blue,
-      gray: colors.gray,
-      white: colors.white,
-      red: colors.red,
-    },
     container: {
       center: true,
     },
     extend: {
       fontFamily: {
         logo: ["'Caveat', cursive"],
+      },
+      colors: {
+        primary: colors.blue,
+        dark: colors.zinc,
       },
     },
   },

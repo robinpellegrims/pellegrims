@@ -18,7 +18,7 @@ const BlogArticleSummary: FunctionComponent<BlogArticleSummaryProps> = (
       <DateFormatted date={props.post.frontMatter.date} />
       <BlogArticleCategories tags={props.post.frontMatter.tags} />
     </div>
-    <div className="flex flex-col gap-6 md:flex-grow  prose lg:prose-xl">
+    <div className="flex flex-col gap-6 md:flex-grow prose lg:prose-xl dark:prose-invert">
       <h2>{props.post.frontMatter.title}</h2>
       <p className="leading-relaxed">{props.post.frontMatter.description}</p>
       <Link href={`${props.path}/${props.post.slug}`}>

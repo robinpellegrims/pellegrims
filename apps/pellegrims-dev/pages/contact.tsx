@@ -33,7 +33,7 @@ export const Contact = () => {
             formFieldNames={contactFieldNames}
             handleLoading={(requestLoading) => setLoading(requestLoading)}
           >
-            <div className="flex flex-wrap text-gray-600 lg:w-1/2 md:w-2/3 mx-auto">
+            <div className="flex flex-wrap text-dark-600 lg:w-1/2 md:w-2/3 mx-auto">
               <input
                 className="hidden"
                 name={contactFieldsRecord.honey}

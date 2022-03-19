@@ -7,7 +7,7 @@ const buttonTypeClasses: Record<ButtonType, string> = {
   primary:
     'text-white bg-primary-600 hover:bg-primary-700 disabled:bg-primary-500',
   secondary:
-    'text-gray-700 bg-gray-100 hover:bg-gray-200 ml-4 disabled:text-gray-600',
+    'text-dark-700 bg-gray-100 hover:bg-gray-200 ml-4 disabled:text-dark-600',
 };
 
 interface ButtonProps {

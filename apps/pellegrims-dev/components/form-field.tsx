@@ -18,7 +18,7 @@ type InputFieldProps = FormFieldProps<'input'>;
 type TextAreaFieldProps = FormFieldProps<'textarea'>;
 
 const inputClassNames =
-  'w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out';
+  'w-full bg-dark-50 dark:bg-dark-700 bg-opacity-50 rounded border border-gray-300 focus:border-primary-500 focus:bg-white dark:focus:bg-dark-600 focus:ring-2 focus:ring-primary-200 text-base outline-none text-dark-700 dark:text-dark-200 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out';
 
 export const FormField: FunctionComponent<
   InputFieldProps | TextAreaFieldProps
