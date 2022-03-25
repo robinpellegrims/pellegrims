@@ -51,6 +51,7 @@ jobs:
           distribution: ${{ matrix.distribution }}
           uploadOutputs: false
           nxCloud: false
+          args: --runner=remotecache-s3
         env:
           NX_CACHE_S3_ACCESS_KEY_ID: ${{ secrets.NX_CACHE_S3_ACCESS_KEY_ID }}
           NX_CACHE_S3_SECRET_KEY: ${{ secrets.NX_CACHE_S3_SECRET_KEY }}
