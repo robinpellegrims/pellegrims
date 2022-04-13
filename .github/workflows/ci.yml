@@ -28,6 +28,7 @@ jobs:
 
   execute:
     name: ${{ matrix.target }} (${{ matrix.distribution }})
+    if: ${{ needs.prepare.outputs.hasChanges == 'true' }}
     needs: [prepare]
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.target == 'test' }}
