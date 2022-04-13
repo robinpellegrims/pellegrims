@@ -1,6 +1,6 @@
 {
   "name": "@pellegrims/eslint-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ESLint shareable configuration",
   "repository": {
     "type": "git",
