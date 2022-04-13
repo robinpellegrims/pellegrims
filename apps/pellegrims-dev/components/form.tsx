@@ -1,9 +1,15 @@
-import { FormEventHandler, FunctionComponent, useState } from 'react';
+import {
+  FormEventHandler,
+  FunctionComponent,
+  ReactNode,
+  useState,
+} from 'react';
 
 export const Form: FunctionComponent<{
   actionUrl: string;
   formFieldNames: readonly string[];
   handleLoading?: (loading: boolean) => void;
+  children: ReactNode;
 }> = ({ children, actionUrl, formFieldNames, handleLoading }) => {
   const [responseOk, setResponseOk] = useState<boolean>();
   const [errorMessage, setErrorMessage] = useState();
