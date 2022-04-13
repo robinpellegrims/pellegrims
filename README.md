@@ -1,5 +1,7 @@
 # Pellegrims
 
+[![CI](https://github.com/robinpellegrims/pellegrims/actions/workflows/ci.yml/badge.svg)](https://github.com/robinpellegrims/pellegrims/actions/workflows/ci.yml)
+
 Nx monorepo containing following projects:
 
 | Package                                                   | Description                                                                                   | Version                                                                                                                                        |
