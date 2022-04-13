@@ -28,7 +28,6 @@ jobs:
 
   execute:
     name: ${{ matrix.target }} (${{ matrix.distribution }})
-    if: ${{ needs.prepare.outputs.hasChanges == 'true' }}
     needs: [prepare]
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.target == 'test' }}
@@ -55,3 +54,6 @@ jobs:
         env:
           NX_CACHE_S3_ACCESS_KEY_ID: ${{ secrets.NX_CACHE_S3_ACCESS_KEY_ID }}
           NX_CACHE_S3_SECRET_KEY: ${{ secrets.NX_CACHE_S3_SECRET_KEY }}
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v2
+        if: ${{ matrix.target == 'test' }}
