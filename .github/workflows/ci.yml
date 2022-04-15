@@ -1,30 +1,29 @@
 name: CI
 
 on:
+  push:
+    branches: [master]
   pull_request:
     branches: [master]
 
 jobs:
   prepare:
     runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.head_commit.message, 'chore(release)') }}
     outputs:
       hasChanges: ${{ steps.affected.outputs.hasChanges }}
       matrix: ${{ steps.affected.outputs.matrix }}
     steps:
-      - name: Checkout the code
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Install dependencies
-        uses: robinpellegrims/composite-actions/pnpm-install@main
       - name: Calculate affected projects
-        uses: e-square-io/nx-affected-matrix@v2.2.6
+        uses: e-square-io/nx-affected-matrix@v2
         id: affected
         with:
           targets: 'test,lint,e2e,build'
           main-branch: 'master'
+      - name: Install dependencies
+        uses: robinpellegrims/composite-actions/pnpm-install@main
       - name: Check format
-        run: pnpm nx format:check --all
+        run: pnpm nx format:check
 
   execute:
     name: ${{ matrix.target }} (${{ matrix.distribution }})
@@ -38,12 +37,10 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
       - name: Install dependencies
         uses: robinpellegrims/composite-actions/pnpm-install@main
       - name: Execute
-        uses: e-square-io/nx-distributed-task@v2.2.6
+        uses: e-square-io/nx-distributed-task@v2
         id: execute
         with:
           target: ${{ matrix.target }}
@@ -58,3 +55,6 @@ jobs:
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v2
         if: ${{ matrix.target == 'test' }}
+        with:
+          directory: ./coverage
+          flags: ${{ matrix.projects }}
