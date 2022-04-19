@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.2.1...nx-remotecache-s3-0.2.2) (2022-04-19)
+
+### Bug Fixes
+
+- **nx-remotecache-s3:** add package dependencies ([c15e608](https://github.com/robinpellegrims/pellegrims/commit/c15e60834b5e6bde995e23138d487d3229957d85)), closes [#88](https://github.com/robinpellegrims/pellegrims/issues/88)
+
 ## [0.2.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.2.0...nx-remotecache-s3-0.2.1) (2022-04-13)
 
 # [0.2.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.1.8...nx-remotecache-s3-0.2.0) (2022-02-18)
