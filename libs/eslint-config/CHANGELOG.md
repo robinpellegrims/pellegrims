@@ -4,6 +4,12 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ## [1.0.4](https://github.com/robinpellegrims/pellegrims/compare/eslint-config-1.0.3...eslint-config-1.0.4) (2022-04-24)
 
+### Reverts
+
+- Revert "test(eslint-config): add basic test" ([2904247](https://github.com/robinpellegrims/pellegrims/commit/2904247e520138fe345f8882bcfaef751682aed4))
+
+## [1.0.4](https://github.com/robinpellegrims/pellegrims/compare/eslint-config-1.0.3...eslint-config-1.0.4) (2022-04-24)
+
 ## [1.0.3](https://github.com/robinpellegrims/pellegrims/compare/eslint-config-1.0.2...eslint-config-1.0.3) (2022-04-13)
 
 ## [1.0.2](https://github.com/robinpellegrims/pellegrims/compare/eslint-config-1.0.1...eslint-config-1.0.2) (2022-02-18)
