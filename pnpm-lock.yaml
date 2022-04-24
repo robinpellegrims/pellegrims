@@ -9,6 +9,7 @@ specifiers:
   '@babel/core': ^7.17.9
   '@babel/preset-env': ^7.16.11
   '@babel/runtime': ^7.16.0
+  '@commitlint/config-angular': ^16.2.3
   '@jscutlery/semver': ^2.13.0
   '@nrwl/cli': 13.8.7
   '@nrwl/cypress': 13.10.2
@@ -128,6 +129,7 @@ devDependencies:
   '@babel/core': 7.17.9
   '@babel/preset-env': 7.16.11_@babel+core@7.17.9
   '@babel/runtime': 7.16.0
+  '@commitlint/config-angular': 16.2.3
   '@jscutlery/semver': 2.13.0
   '@nrwl/cli': 13.8.7
   '@nrwl/cypress': 13.10.2_af98af922d11a94ec934067b7be59fcf
@@ -3302,6 +3304,24 @@ packages:
       {
         integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==,
       }
+    dev: true
+
+  /@commitlint/config-angular-type-enum/16.2.1:
+    resolution:
+      {
+        integrity: sha512-RvYyBKXswXt/rg3y9T966a8bWWhwlfPIdmrJ7jmnGSHOlVYQUKOeVOTd9KWfEN0I+YrJdgB1piH1xoLBo/HQXw==,
+      }
+    engines: { node: '>=v12' }
+    dev: true
+
+  /@commitlint/config-angular/16.2.3:
+    resolution:
+      {
+        integrity: sha512-XU6c7qCovKZSat9azF1RF0p9D7gYvxghY5QBWlXN2vSQzdbBVg6RsYEJ0DRMnMq2wSijauf9b13jh8l79IEkzg==,
+      }
+    engines: { node: '>=v12' }
+    dependencies:
+      '@commitlint/config-angular-type-enum': 16.2.1
     dev: true
 
   /@cypress/request/2.88.6:
