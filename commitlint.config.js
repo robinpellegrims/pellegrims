@@ -4,7 +4,7 @@ module.exports = {
     'scope-enum': [
       2,
       'always',
-      ['repo', 'pellegrims-dev', 'eslint-config', 'nx-remotecache-s3'],
+      ['pellegrims-dev', 'eslint-config', 'nx-remotecache-s3', 'release'],
     ],
     'type-enum': [
       2,
@@ -20,7 +20,6 @@ module.exports = {
         'revert',
         'style',
         'test',
-        'release',
       ],
     ],
   },
