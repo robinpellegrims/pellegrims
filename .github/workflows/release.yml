@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: pnpm nx affected -- --target=version --base=$BEFORE_SHA --baseBranch=master --push
+      - run: pnpm nx affected -- --target=version --parallel=1 --base=$BEFORE_SHA --baseBranch=master --push
         env:
           BEFORE_SHA: ${{ github.event.before }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
