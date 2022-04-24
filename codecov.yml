@@ -1,0 +1,13 @@
+flags:
+  pellegrims-dev:
+    paths:
+      - apps/pellegrims-dev/
+    carryforward: true
+  eslint-config:
+    paths:
+      - libs/eslint-config/
+    carryforward: true
+  nx-remotecache-s3:
+    paths:
+      - libs/nx-remotecache-s3/
+    carryforward: true
