@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.3.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.2.3...nx-remotecache-s3-0.3.0) (2022-04-24)
+
+### Features
+
+- **nx-remotecache-s3:** Add support for aws profile credential resolution. ([#93](https://github.com/robinpellegrims/pellegrims/issues/93)) ([c8e295b](https://github.com/robinpellegrims/pellegrims/commit/c8e295b0a1174470b93651b74b7b194012b107ea))
+
 ## [0.2.3](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.2.2...nx-remotecache-s3-0.2.3) (2022-04-19)
 
 ## [0.2.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.2.1...nx-remotecache-s3-0.2.2) (2022-04-19)
