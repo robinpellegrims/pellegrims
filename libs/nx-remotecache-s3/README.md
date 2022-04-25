@@ -1,4 +1,5 @@
 [![npm package link](https://img.shields.io/npm/v/@pellegrims/nx-remotecache-s3)](https://www.npmjs.com/package/@pellegrims/nx-remotecache-s3)
+[![codecov](https://codecov.io/gh/robinpellegrims/pellegrims/branch/master/graph/badge.svg?token=ZMFMQFBXR7&flag=nx-remotecache-s3)](https://codecov.io/gh/robinpellegrims/pellegrims/tree/master/libs/nx-remotecache-s3)
 
 # @pellegrims/nx-remotecache-s3
 
