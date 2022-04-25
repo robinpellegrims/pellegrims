@@ -2,6 +2,22 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [1.0.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.3.1...nx-remotecache-s3-1.0.0) (2022-04-25)
+
+### Features
+
+- **nx-remotecache-s3:** swap to standard AWS credentials ([#100](https://github.com/robinpellegrims/pellegrims/issues/100)) ([5e8038e](https://github.com/robinpellegrims/pellegrims/commit/5e8038efecfbb3485fdecf589146472bdacde937)), closes [#95](https://github.com/robinpellegrims/pellegrims/issues/95)
+
+### BREAKING CHANGES
+
+- **nx-remotecache-s3:** authentication is now handled by @aws-sdk/credential-provider-node
+
+Following environment variables were removed:
+
+- NX_CACHE_S3_ACCESS_KEY_ID (replace by AWS_ACCESS_KEY_ID)
+- NX_CACHE_S3_SECRET_KEY (replace by AWS_SECRET_ACCESS_KEY)
+- NX_CACHE_S3_PROFILE
+
 ## [0.3.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.3.0...nx-remotecache-s3-0.3.1) (2022-04-24)
 
 # [0.3.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.2.3...nx-remotecache-s3-0.3.0) (2022-04-24)
