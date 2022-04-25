@@ -1,17 +1,15 @@
 import { createCustomRunner, initEnv } from 'nx-remotecache-custom';
 import { S3 } from '@aws-sdk/client-s3';
-import { fromIni } from '@aws-sdk/credential-provider-ini';
+import { defaultProvider } from '@aws-sdk/credential-provider-node';
+import { getDefaultRoleAssumerWithWebIdentity } from '@aws-sdk/client-sts';
 import * as getStream from 'get-stream';
 import { Stream } from 'stream';
 import defaultTasksRunner from 'nx/src/tasks-runner/default-tasks-runner';
 
-const ENV_ACCESS_KEY_ID = 'NX_CACHE_S3_ACCESS_KEY_ID';
-const ENV_SECRET_KEY = 'NX_CACHE_S3_SECRET_KEY';
 const ENV_BUCKET = 'NX_CACHE_S3_BUCKET';
 const ENV_PREFIX = 'NX_CACHE_S3_PREFIX';
 const ENV_ENDPOINT = 'NX_CACHE_S3_ENDPOINT';
 const ENV_REGION = 'NX_CACHE_S3_REGION';
-const ENV_PROFILE = 'NX_CACHE_S3_PROFILE';
 
 const getEnv = (key: string) => process.env[key];
 
@@ -20,32 +18,20 @@ interface S3Options {
   prefix?: string;
   endpoint?: string;
   region?: string;
-  accessKeyId?: string;
-  secretKey?: string;
-  profile?: string;
 }
 
 const runner: typeof defaultTasksRunner = createCustomRunner<S3Options>(
   async (options) => {
     initEnv(options);
 
-    const accessKeyId = getEnv(ENV_ACCESS_KEY_ID) ?? options.accessKeyId;
-    const secretAccessKey = getEnv(ENV_SECRET_KEY) ?? options.secretKey;
-    const profile = getEnv(ENV_PROFILE) ?? options.profile;
-
-    let awsCreds;
-    if (accessKeyId && secretAccessKey) {
-      awsCreds = { accessKeyId, secretAccessKey };
-    } else if (profile) {
-      awsCreds = fromIni({ profile });
-    } else {
-      awsCreds = undefined;
-    }
+    const provider = defaultProvider({
+      roleAssumerWithWebIdentity: getDefaultRoleAssumerWithWebIdentity(),
+    });
 
     const s3Storage = new S3({
       endpoint: getEnv(ENV_ENDPOINT) ?? options.endpoint,
       region: getEnv(ENV_REGION) ?? options.region,
-      credentials: awsCreds,
+      credentials: provider,
     });
 
     const bucket = getEnv(ENV_BUCKET) ?? options.bucket;
