@@ -12,15 +12,12 @@ This package was built with [nx-remotecache-custom](https://www.npmjs.com/packag
 npm install --save-dev @pellegrims/nx-remotecache-s3
 ```
 
-| Parameter     | Description                                                                                                             | Environment Variable / .env | `nx.json`     |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------- | ------------- |
-| Access Key Id | Required. S3 access key ID                                                                                              | `NX_CACHE_S3_ACCESS_KEY_ID` | `accessKeyId` |
-| Secret Key    | Required. S3 secret access key                                                                                          | `NX_CACHE_S3_SECRET_KEY`    | `secretKey`   |
-| Endpoint      | Optional. The fully qualified endpoint of the webservice. This is only required when using a custom (non-AWS) endpoint. | `NX_CACHE_S3_ENDPOINT`      | `endpoint`    |
-| Bucket        | Optional. Specify which bucket should be used for storing the cache.                                                    | `NX_CACHE_S3_BUCKET`        | `bucket`      |
-| Prefix        | Optional. Specify prefix path of target object key.                                                                     | `NX_CACHE_S3_PREFIX`        | `prefix`      |
-| Region        | Optional. The AWS region to which this client will send requests.                                                       | `NX_CACHE_S3_REGION`        | `region`      |
-| Profile       | Optional. The AWS profile to use for credentials resolution.                                                            | `NX_CACHE_S3_PROFILE`       | `profile`     |
+| Parameter | Description                                                                                                             | Environment Variable / .env | `nx.json`  |
+| --------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------- | ---------- |
+| Endpoint  | Optional. The fully qualified endpoint of the webservice. This is only required when using a custom (non-AWS) endpoint. | `NX_CACHE_S3_ENDPOINT`      | `endpoint` |
+| Bucket    | Optional. Specify which bucket should be used for storing the cache.                                                    | `NX_CACHE_S3_BUCKET`        | `bucket`   |
+| Prefix    | Optional. Specify prefix path of target object key.                                                                     | `NX_CACHE_S3_PREFIX`        | `prefix`   |
+| Region    | Optional. The AWS region to which this client will send requests.                                                       | `NX_CACHE_S3_REGION`        | `region`   |
 
 ```json
 {
@@ -29,8 +26,6 @@ npm install --save-dev @pellegrims/nx-remotecache-s3
       "runner": "@pellegrims/nx-remotecache-s3",
       "options": {
         "cacheableOperations": ["build", "test", "lint", "e2e"],
-        "accessKeyId": "myAccessKey",
-        "secretKey": "mySecretKey",
         "endpoint": "https://some-endpoint.com",
         "bucket": "name-of-bucket",
         "prefix": "prefix/",
@@ -40,6 +35,14 @@ npm install --save-dev @pellegrims/nx-remotecache-s3
   }
 }
 ```
+
+Authentication is handled by [@aws-sdk/credential-provider-node](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/modules/_aws_sdk_credential_provider_node.html), so credentials will be attempted to be found from the following sources (listed in order of precedence):
+
+- Environment variables exposed via process.env (example: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY)
+- SSO credentials from token cache
+- Web identity token credentials
+- Shared credentials and config ini files
+- The EC2/ECS Instance Metadata Service
 
 ## Run it 🚀
 
