@@ -26,11 +26,11 @@ export const getMarkdownDocuments = (
 const getMarkdownDocument = (filePath: string): MarkdownDocumentWithoutSlug => {
   const fileContents = fs.readFileSync(filePath);
   const { data, content } = matter(fileContents);
-  return {
-    frontMatter: data as FrontMatter,
-    content,
-  };
+  return { frontMatter: data as FrontMatter, content };
 };
 
 export const getSlugsForMarkdownFiles = (directoryPath: string): string[] =>
-  fs.readdirSync(directoryPath).map((path) => path.replace(/\.md?$/, ''));
+  fs
+    .readdirSync(directoryPath)
+    .filter((path) => path.endsWith('.md'))
+    .map((path) => path.replace(/\.md?$/, ''));
