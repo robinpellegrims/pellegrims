@@ -1,4 +1,5 @@
-module.exports = {
+/* eslint-disable */
+export default {
   displayName: 'pellegrims-dev',
   preset: '../../jest.preset.js',
   transform: {

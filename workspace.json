@@ -17,7 +17,7 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/eslint-config"],
           "options": {
-            "jestConfig": "libs/eslint-config/jest.config.js",
+            "jestConfig": "libs/eslint-config/jest.config.ts",
             "passWithNoTests": true
           }
         },
@@ -70,7 +70,7 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/markdown"],
           "options": {
-            "jestConfig": "libs/markdown/jest.config.js",
+            "jestConfig": "libs/markdown/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -93,7 +93,7 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/nx-remotecache-s3"],
           "options": {
-            "jestConfig": "libs/nx-remotecache-s3/jest.config.js",
+            "jestConfig": "libs/nx-remotecache-s3/jest.config.ts",
             "passWithNoTests": true
           }
         },
@@ -147,8 +147,10 @@
             "outputPath": "dist/apps/pellegrims-dev"
           },
           "configurations": {
-            "production": {}
-          }
+            "production": {},
+            "development": {}
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
           "executor": "@nrwl/next:server",
@@ -160,8 +162,13 @@
             "production": {
               "buildTarget": "pellegrims-dev:build:production",
               "dev": false
+            },
+            "development": {
+              "buildTarget": "pellegrims-dev:build:development",
+              "dev": true
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "export": {
           "executor": "@nrwl/next:export",
@@ -173,7 +180,7 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/pellegrims-dev"],
           "options": {
-            "jestConfig": "apps/pellegrims-dev/jest.config.js",
+            "jestConfig": "apps/pellegrims-dev/jest.config.ts",
             "passWithNoTests": true
           }
         },
