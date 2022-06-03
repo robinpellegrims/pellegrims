@@ -8,7 +8,7 @@ describe('nx-remotecache-s3', () => {
   });
 
   test('should have a defined runner', async () => {
-    const runner$ = await runner(
+    const s3Runner = await runner(
       [],
       { lifeCycle: { startCommand: jest.fn(), endCommand: jest.fn() } },
       {
@@ -16,6 +16,6 @@ describe('nx-remotecache-s3', () => {
         projectGraph: { nodes: {}, dependencies: {} },
       }
     );
-    expect(runner$).toBeDefined();
+    expect(s3Runner).toBeDefined();
   });
 });

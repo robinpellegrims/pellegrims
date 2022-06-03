@@ -1,5 +1,6 @@
-module.exports = {
-  displayName: 'eslint-config',
+/* eslint-disable */
+export default {
+  displayName: 'nx-remotecache-s3',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,5 +12,5 @@ module.exports = {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/eslint-config',
+  coverageDirectory: '../../coverage/libs/nx-remotecache-s3',
 };
