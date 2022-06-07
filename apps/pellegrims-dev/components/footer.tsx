@@ -1,5 +1,5 @@
 import Logo from './logo';
-import SocialIcon from './social-icon';
+import SocialIconLink from './social-icon-link';
 import Link from 'next/link';
 import Container from './container';
 import { FunctionComponent } from 'react';
@@ -20,19 +20,19 @@ const Footer: FunctionComponent<FooterProps> = (props) => (
   <Container>
     <footer className="py-12 flex flex-col items-center sm:flex-row gap-3 justify-between">
       <span className="inline-flex gap-3">
-        <SocialIcon href={props.twitterUrl} label="Twitter">
+        <SocialIconLink href={props.twitterUrl} label="Twitter">
           <path d={props.twitterSvgIcon} />
-        </SocialIcon>
-        <SocialIcon href={props.facebookUrl} label="Facebook">
+        </SocialIconLink>
+        <SocialIconLink href={props.facebookUrl} label="Facebook">
           <path d={props.facebookSvgIcon} />
-        </SocialIcon>
-        <SocialIcon href={props.linkedInUrl} label="LinkedIn">
+        </SocialIconLink>
+        <SocialIconLink href={props.linkedInUrl} label="LinkedIn">
           <path stroke="none" d={props.linkedInSvgIcon} />
           <circle cx="4" cy="4" r="2" stroke="none" />
-        </SocialIcon>
-        <SocialIcon href={props.githubUrl} label="Github">
+        </SocialIconLink>
+        <SocialIconLink href={props.githubUrl} label="Github">
           <path d={props.githubSvgIcon} />
-        </SocialIcon>
+        </SocialIconLink>
       </span>
       <p className="text-sm text-dark-500">
         © {new Date().getFullYear()} {props.name}

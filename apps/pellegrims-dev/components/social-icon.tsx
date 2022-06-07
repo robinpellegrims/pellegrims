@@ -1,27 +1,16 @@
-import Link from 'next/link';
-import { FunctionComponent } from 'react';
+import { FunctionComponent, ReactNode } from 'react';
 
-interface SocialIconProps {
-  href: string;
-  children: React.ReactNode;
-  label: string;
-}
-
-const SocialIcon: FunctionComponent<SocialIconProps> = (props) => (
-  <Link href={props.href}>
-    <a rel="noopener noreferrer" target="_blank" aria-label={props.label}>
-      <svg
-        fill="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        className="w-5 h-5"
-        viewBox="0 0 24 24"
-      >
-        {props.children}
-      </svg>
-    </a>
-  </Link>
+const SocialIcon: FunctionComponent<{ children: ReactNode }> = (props) => (
+  <svg
+    fill="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    className="w-5 h-5"
+    viewBox="0 0 24 24"
+  >
+    {props.children}
+  </svg>
 );
 
 export default SocialIcon;
