@@ -5,11 +5,12 @@ import {
   MarkdownDocument,
 } from '@pellegrims/markdown';
 import { ParsedUrlQuery } from 'querystring';
-import { POSTS_PATH, productionUrl } from '../../constants';
+import { POSTS_PATH } from '../../constants';
 import BlogArticle from '../../components/blog-article';
 import Container from '../../components/container';
 import { NextSeo } from 'next-seo';
 import { FunctionComponent } from 'react';
+import { buildCanonicalUrl } from '../../utils/url';
 
 interface BlogArticleUrlQuery extends ParsedUrlQuery {
   slug: string;
@@ -25,7 +26,7 @@ const Article: FunctionComponent<ArticleProps> = ({ slug, markDown }) => (
     <NextSeo
       title={markDown.frontMatter.title}
       description={markDown.frontMatter.description}
-      canonical={`${productionUrl}/blog/${slug}`}
+      canonical={buildCanonicalUrl(slug)}
     />
     <Container>
       <BlogArticle markDown={markDown} />
