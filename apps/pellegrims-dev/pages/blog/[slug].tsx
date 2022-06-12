@@ -1,4 +1,9 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import {
+  GetStaticPaths,
+  GetStaticProps,
+  InferGetStaticPropsType,
+  NextPage,
+} from 'next';
 import {
   getMarkdownDocumentBySlug,
   getSlugsForMarkdownFiles,
@@ -9,7 +14,6 @@ import { POSTS_PATH } from '../../constants';
 import BlogArticle from '../../components/blog-article';
 import Container from '../../components/container';
 import { NextSeo } from 'next-seo';
-import { FunctionComponent } from 'react';
 import { buildCanonicalUrl } from '../../utils/url';
 
 interface BlogArticleUrlQuery extends ParsedUrlQuery {
@@ -21,7 +25,10 @@ interface ArticleProps {
   slug: string;
 }
 
-const Article: FunctionComponent<ArticleProps> = ({ slug, markDown }) => (
+const Article: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  slug,
+  markDown,
+}) => (
   <>
     <NextSeo
       title={markDown.frontMatter.title}
@@ -33,8 +40,6 @@ const Article: FunctionComponent<ArticleProps> = ({ slug, markDown }) => (
     </Container>
   </>
 );
-
-export default Article;
 
 export const getStaticPaths: GetStaticPaths<BlogArticleUrlQuery> = async () => {
   const paths = getSlugsForMarkdownFiles(POSTS_PATH).map((slug) => ({
@@ -58,3 +63,5 @@ export const getStaticProps: GetStaticProps<
     },
   };
 };
+
+export default Article;

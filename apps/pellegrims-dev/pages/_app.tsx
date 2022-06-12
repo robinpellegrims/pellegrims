@@ -17,10 +17,10 @@ import {
 import { DefaultSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import { AppProps } from 'next/app';
-import { FunctionComponent } from 'react';
+import { NextPage } from 'next';
 import Analytics from '../components/analytics';
 
-const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
+const App: NextPage<AppProps> = ({ Component, pageProps }) => (
   <>
     <DefaultSeo
       {...defaultSeoConfig}
