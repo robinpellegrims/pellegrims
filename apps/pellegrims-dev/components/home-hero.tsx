@@ -1,9 +1,7 @@
 import Image from 'next/image';
-import { Highlight } from './highlight';
+import { Button, Highlight } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { RoughNotationGroup } from 'react-rough-notation';
 import { amber, green, indigo } from 'tailwindcss/colors';
-import Section from './section';
-import Button from './button';
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
 
@@ -14,7 +12,7 @@ const colors = {
 };
 
 const HomeHero: FunctionComponent = () => (
-  <Section>
+  <section>
     <div className="mx-auto flex items-center justify-center flex-col gap-6 text-center">
       <Image
         alt="hero"
@@ -43,7 +41,7 @@ const HomeHero: FunctionComponent = () => (
         </a>
       </Link>
     </div>
-  </Section>
+  </section>
 );
 
 export default HomeHero;

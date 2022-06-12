@@ -1,5 +1,5 @@
 import { RaindropBookmark } from '../utils/raindrop';
-import DateFormatted from './date-formatted';
+import { DateFormatted } from '@pellegrims/pellegrims-dev/ui/atoms';
 
 export const Bookmark = (props: { bookmark: RaindropBookmark }) => (
   <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">

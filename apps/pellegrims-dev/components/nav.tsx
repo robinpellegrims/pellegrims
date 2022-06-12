@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import { NavItem, NavItemProps } from './navItem';
+import { NavItem, NavItemProps } from '@pellegrims/pellegrims-dev/ui/atoms';
 
 interface NavProps {
   links: NavItemProps[];

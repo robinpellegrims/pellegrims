@@ -12,7 +12,7 @@ import {
 import { ParsedUrlQuery } from 'querystring';
 import { POSTS_PATH } from '../../constants';
 import BlogArticle from '../../components/blog-article';
-import Container from '../../components/container';
+import { Container } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { NextSeo } from 'next-seo';
 import { buildCanonicalUrl } from '../../utils/url';
 

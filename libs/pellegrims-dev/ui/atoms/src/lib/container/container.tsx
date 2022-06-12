@@ -4,8 +4,6 @@ interface ContainerProps {
   children: ReactNode;
 }
 
-const Container: FunctionComponent<ContainerProps> = (props) => (
+export const Container: FunctionComponent<ContainerProps> = (props) => (
   <div className="container px-6">{props.children}</div>
 );
-
-export default Container;

@@ -4,7 +4,9 @@ interface DateFormattedProps {
   date: Date;
 }
 
-const DateFormatted: FunctionComponent<DateFormattedProps> = ({ date }) => (
+export const DateFormatted: FunctionComponent<DateFormattedProps> = ({
+  date,
+}) => (
   <time dateTime={new Date(date).toISOString()}>
     {new Date(date).toLocaleDateString('en', {
       day: 'numeric',
@@ -13,5 +15,3 @@ const DateFormatted: FunctionComponent<DateFormattedProps> = ({ date }) => (
     })}
   </time>
 );
-
-export default DateFormatted;

@@ -1,5 +1,5 @@
-import Chip from './chip';
 import { FunctionComponent } from 'react';
+import { Chip } from '@pellegrims/pellegrims-dev/ui/atoms';
 
 interface BlogArticleCategoriesProps {
   tags: string[];

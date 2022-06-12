@@ -1,6 +1,8 @@
 import { FunctionComponent, ReactNode } from 'react';
 
-const SocialIcon: FunctionComponent<{ children: ReactNode }> = (props) => (
+export const SocialIcon: FunctionComponent<{ children: ReactNode }> = (
+  props
+) => (
   <svg
     fill="currentColor"
     strokeLinecap="round"
@@ -12,5 +14,3 @@ const SocialIcon: FunctionComponent<{ children: ReactNode }> = (props) => (
     {props.children}
   </svg>
 );
-
-export default SocialIcon;

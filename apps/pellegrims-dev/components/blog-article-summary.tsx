@@ -1,9 +1,8 @@
 import { MarkdownDocument } from '@pellegrims/markdown';
-import RightArrow from './right-arrow';
 import Link from 'next/link';
 import BlogArticleCategories from './blog-article-categories';
-import DateFormatted from './date-formatted';
 import { FunctionComponent } from 'react';
+import { DateFormatted, RightArrow } from '@pellegrims/pellegrims-dev/ui/atoms';
 
 interface BlogArticleSummaryProps {
   post: MarkdownDocument;

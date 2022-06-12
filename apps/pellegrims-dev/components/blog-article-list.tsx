@@ -1,6 +1,5 @@
 import BlogArticleSummary from './blog-article-summary';
 import { MarkdownDocument } from '@pellegrims/markdown';
-import Section from './section';
 import { FunctionComponent } from 'react';
 
 interface BlogArticleListProps {
@@ -12,7 +11,7 @@ const BlogArticleList: FunctionComponent<BlogArticleListProps> = ({
   posts,
   path,
 }) => (
-  <Section>
+  <section>
     <div className="flex flex-col gap-12">
       <div className="divide-y-2 divide-gray-100 flex flex-col gap-6">
         {posts.map((post, index) => (
@@ -25,7 +24,7 @@ const BlogArticleList: FunctionComponent<BlogArticleListProps> = ({
         ))}
       </div>
     </div>
-  </Section>
+  </section>
 );
 
 export default BlogArticleList;

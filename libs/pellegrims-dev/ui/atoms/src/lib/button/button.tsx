@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import { LoadingSpinner } from './loadingSpinner';
+import { LoadingSpinner } from '../loading-spinner/loading-spinner';
 
 type ButtonType = 'primary' | 'secondary';
 
@@ -16,7 +16,11 @@ interface ButtonProps {
   loading?: boolean;
 }
 
-const Button: FunctionComponent<ButtonProps> = ({ loading, type, text }) => (
+export const Button: FunctionComponent<ButtonProps> = ({
+  loading,
+  type,
+  text,
+}) => (
   <button
     className={`inline-flex border-0 py-2 px-6 focus:outline-none rounded text-lg disabled:cursor-not-allowed ${buttonTypeClasses[type]}`}
     disabled={loading}
@@ -29,5 +33,3 @@ const Button: FunctionComponent<ButtonProps> = ({ loading, type, text }) => (
     {text}
   </button>
 );
-
-export default Button;

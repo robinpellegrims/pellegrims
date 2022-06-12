@@ -1,8 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import { MarkdownDocument } from '@pellegrims/markdown';
-import CodeBlock from './code-block';
 import { FunctionComponent } from 'react';
-import MarkdownImage from './markdown-image';
+import { CodeBlock, MarkdownImage } from '@pellegrims/pellegrims-dev/ui/atoms';
 
 interface MarkdownProps {
   markDown: MarkdownDocument;

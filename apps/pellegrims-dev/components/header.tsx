@@ -1,6 +1,5 @@
-import Logo from './logo';
 import Link from 'next/link';
-import Container from './container';
+import { Container, Logo } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { FunctionComponent } from 'react';
 import { Nav } from './nav';
 
