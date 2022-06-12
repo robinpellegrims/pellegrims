@@ -1,5 +1,5 @@
 import HomeHero from '../components/home-hero';
-import Container from '../components/container';
+import { Container } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { NextPage } from 'next';
 
 const Index: NextPage = () => (

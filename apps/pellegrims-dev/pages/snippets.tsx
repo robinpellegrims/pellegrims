@@ -1,6 +1,6 @@
 import { getMarkdownDocuments, MarkdownDocument } from '@pellegrims/markdown';
 import { SNIPPETS_PATH } from '../constants';
-import Container from '../components/container';
+import { Container } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 import SnippetArticleList from '../components/snippet-article-list';

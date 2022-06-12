@@ -1,10 +1,9 @@
 import { NextSeo } from 'next-seo';
-import Container from '../components/container';
+import { Container } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { fetchRaindropBookmarks, RaindropBookmark } from '../utils/raindrop';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import PageHero from '../components/page-hero';
 import { Bookmark } from '../components/bookmark';
-import Section from '../components/section';
 
 export interface BookmarksProps {
   bookmarks: RaindropBookmark[];
@@ -22,7 +21,7 @@ export const Bookmarks: NextPage<
         title={pageTitle}
         description="Collection of links to articles and other resources I recently liked."
       />
-      <Section>
+      <section>
         <div className="flex flex-wrap">
           {props.bookmarks.map((bookmark) => (
             <div key={bookmark._id} className="p-4 md:w-1/3">
@@ -30,7 +29,7 @@ export const Bookmarks: NextPage<
             </div>
           ))}
         </div>
-      </Section>
+      </section>
     </Container>
   </>
 );

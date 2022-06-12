@@ -1,12 +1,11 @@
 import BlogArticleCategories from './blog-article-categories';
-import DateFormatted from './date-formatted';
 import { MarkdownDocument } from '@pellegrims/markdown';
 import Markdown from './markdown';
 import { FunctionComponent } from 'react';
 import { twitterSvgIcon, twitterUserName } from '../constants';
 import { buildCanonicalUrl } from '../utils/url';
-import SocialIcon from './social-icon';
 import Link from 'next/link';
+import { DateFormatted, SocialIcon } from '@pellegrims/pellegrims-dev/ui/atoms';
 
 interface BlogArticleProps {
   markDown: MarkdownDocument;

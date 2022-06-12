@@ -1,5 +1,4 @@
 import { MarkdownDocument } from '@pellegrims/markdown';
-import Section from './section';
 import BlogArticle from './blog-article';
 import { FunctionComponent } from 'react';
 
@@ -10,7 +9,7 @@ interface SnippetArticleListProps {
 const SnippetArticleList: FunctionComponent<SnippetArticleListProps> = ({
   snippets,
 }) => (
-  <Section>
+  <section>
     <div className="flex flex-col gap-12">
       <div className="divide-y-2 divide-gray-100 flex flex-col gap-6">
         {snippets.filter(Boolean).map((snippet, index) => (
@@ -23,7 +22,7 @@ const SnippetArticleList: FunctionComponent<SnippetArticleListProps> = ({
         ))}
       </div>
     </div>
-  </Section>
+  </section>
 );
 
 export default SnippetArticleList;

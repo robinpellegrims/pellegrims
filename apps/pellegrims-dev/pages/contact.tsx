@@ -1,9 +1,10 @@
 import { NextSeo } from 'next-seo';
-import Container from '../components/container';
+import {
+  Button,
+  Container,
+  FormField,
+} from '@pellegrims/pellegrims-dev/ui/atoms';
 import PageHero from '../components/page-hero';
-import Section from '../components/section';
-import { FormField } from '../components/form-field';
-import Button from '../components/button';
 import { Form } from '../components/form';
 import { contactFieldNames } from '../utils/contact';
 import { useState } from 'react';
@@ -27,7 +28,7 @@ export const Contact = () => {
       <NextSeo title={pageTitle} />
       <Container>
         <PageHero title={pageTitle} description="Leave me a message!" />
-        <Section>
+        <section>
           <Form
             actionUrl="/api/contact"
             formFieldNames={contactFieldNames}
@@ -79,7 +80,7 @@ export const Contact = () => {
               </div>
             </div>
           </Form>
-        </Section>
+        </section>
       </Container>
     </>
   );

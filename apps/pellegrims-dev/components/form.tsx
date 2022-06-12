@@ -4,6 +4,7 @@ import {
   ReactNode,
   useState,
 } from 'react';
+import { ErrorMessage } from '@pellegrims/pellegrims-dev/ui/atoms';
 
 export const Form: FunctionComponent<{
   actionUrl: string;
@@ -12,7 +13,7 @@ export const Form: FunctionComponent<{
   children: ReactNode;
 }> = ({ children, actionUrl, formFieldNames, handleLoading }) => {
   const [responseOk, setResponseOk] = useState<boolean>();
-  const [errorMessage, setErrorMessage] = useState();
+  const [errorMessage, setErrorMessage] = useState<string>();
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     handleLoading?.(true);
@@ -56,10 +57,7 @@ export const Form: FunctionComponent<{
         children
       )}
       {responseOk === false ? (
-        <div className="text-center text-red-500">
-          Something went wrong, try again later.
-          {errorMessage ? <div>({errorMessage})</div> : null}
-        </div>
+        <ErrorMessage errorMessage={errorMessage} />
       ) : null}
     </form>
   );
