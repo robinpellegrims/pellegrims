@@ -1,8 +1,7 @@
 import { NextSeo } from 'next-seo';
 import Container from '../components/container';
 import { fetchRaindropBookmarks, RaindropBookmark } from '../utils/raindrop';
-import { FunctionComponent } from 'react';
-import { GetStaticProps } from 'next';
+import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import PageHero from '../components/page-hero';
 import { Bookmark } from '../components/bookmark';
 import Section from '../components/section';
@@ -13,7 +12,9 @@ export interface BookmarksProps {
 
 const pageTitle = 'Bookmarks';
 
-export const Bookmarks: FunctionComponent<BookmarksProps> = (props) => (
+export const Bookmarks: NextPage<
+  InferGetStaticPropsType<typeof getStaticProps>
+> = (props) => (
   <>
     <NextSeo title={pageTitle} />
     <Container>

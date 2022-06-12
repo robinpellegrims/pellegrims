@@ -1,8 +1,8 @@
 import HomeHero from '../components/home-hero';
 import Container from '../components/container';
-import { FunctionComponent } from 'react';
+import { NextPage } from 'next';
 
-const Index: FunctionComponent = () => (
+const Index: NextPage = () => (
   <>
     <Container>
       <HomeHero />

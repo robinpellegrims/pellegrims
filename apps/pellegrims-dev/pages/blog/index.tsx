@@ -3,8 +3,7 @@ import { POSTS_PATH } from '../../constants';
 import BlogArticleList from '../../components/blog-article-list';
 import Container from '../../components/container';
 import { NextSeo } from 'next-seo';
-import { GetStaticProps } from 'next';
-import { FunctionComponent } from 'react';
+import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import PageHero from '../../components/page-hero';
 
 interface BlogProps {
@@ -13,7 +12,9 @@ interface BlogProps {
 
 const title = 'Blog';
 
-const Blog: FunctionComponent<BlogProps> = ({ posts }) => (
+const Blog: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  posts,
+}) => (
   <>
     <NextSeo title={title} />
     <Container>
@@ -28,7 +29,7 @@ const Blog: FunctionComponent<BlogProps> = ({ posts }) => (
 
 export default Blog;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<BlogProps> = async () => {
   const posts = getMarkdownDocuments(POSTS_PATH);
   return { props: { posts } };
 };
