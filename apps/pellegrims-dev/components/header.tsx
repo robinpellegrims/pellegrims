@@ -2,14 +2,13 @@ import Logo from './logo';
 import Link from 'next/link';
 import Container from './container';
 import { FunctionComponent } from 'react';
+import { Nav } from './nav';
 
-const links: { text: string; href: string }[] = [
-  { text: 'Snippets', href: '/snippets' },
-  { text: 'Bookmarks', href: '/bookmarks' },
-  { text: 'Contact', href: '/contact' },
-];
+interface HeaderProps {
+  links: { text: string; href: string }[];
+}
 
-const Header: FunctionComponent = () => (
+const Header: FunctionComponent<HeaderProps> = ({ links }) => (
   <Container>
     <header>
       <div className="flex py-6 flex-col md:flex-row items-center gap-3">
@@ -18,15 +17,7 @@ const Header: FunctionComponent = () => (
             <Logo />
           </a>
         </Link>
-        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center text-dark-600 dark:text-dark-300">
-          {links.map((link) => (
-            <Link key={link.href} href={link.href}>
-              <a className="mr-5 hover:text-dark-900 dark:hover:text-white">
-                {link.text}
-              </a>
-            </Link>
-          ))}
-        </nav>
+        <Nav links={links} />
       </div>
     </header>
   </Container>
