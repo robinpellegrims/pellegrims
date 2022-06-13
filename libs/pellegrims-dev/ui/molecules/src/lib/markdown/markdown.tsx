@@ -7,10 +7,8 @@ interface MarkdownProps {
   markDown: MarkdownDocument;
 }
 
-const Markdown: FunctionComponent<MarkdownProps> = ({ markDown }) => (
+export const Markdown: FunctionComponent<MarkdownProps> = ({ markDown }) => (
   <ReactMarkdown components={{ code: CodeBlock, img: MarkdownImage }}>
     {markDown.content}
   </ReactMarkdown>
 );
-
-export default Markdown;

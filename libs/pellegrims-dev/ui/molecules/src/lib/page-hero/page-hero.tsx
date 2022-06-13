@@ -6,11 +6,12 @@ interface HeroPageProps {
   description?: string;
 }
 
-const PageHero: FunctionComponent<HeroPageProps> = ({ title, description }) => (
+export const PageHero: FunctionComponent<HeroPageProps> = ({
+  title,
+  description,
+}) => (
   <div className="flex flex-wrap w-full py-12 mb-6 flex-col items-center text-center">
     <PageTitle title={title} />
     {description ? <PageSubtitle subTitle={description} /> : null}
   </div>
 );
-
-export default PageHero;

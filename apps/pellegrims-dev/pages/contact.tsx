@@ -4,10 +4,10 @@ import {
   Container,
   FormField,
 } from '@pellegrims/pellegrims-dev/ui/atoms';
-import PageHero from '../components/page-hero';
 import { Form } from '../components/form';
 import { contactFieldNames } from '../utils/contact';
 import { useState } from 'react';
+import { PageHero } from '@pellegrims/pellegrims-dev/ui/molecules';
 
 const pageTitle = 'Contact';
 
