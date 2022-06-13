@@ -20,6 +20,12 @@ import { AppProps } from 'next/app';
 import { NextPage } from 'next';
 import Analytics from '../components/analytics';
 
+const headerNavLinks: { text: string; href: string }[] = [
+  { text: 'Snippets', href: '/snippets' },
+  { text: 'Bookmarks', href: '/bookmarks' },
+  { text: 'Contact', href: '/contact' },
+];
+
 const App: NextPage<AppProps> = ({ Component, pageProps }) => (
   <>
     <DefaultSeo
@@ -27,7 +33,7 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => (
       canonical={productionUrl + useRouter().pathname}
     />
     <Analytics />
-    <Header />
+    <Header links={headerNavLinks} />
     <main className="py-12">
       <Component {...pageProps} />
     </main>
