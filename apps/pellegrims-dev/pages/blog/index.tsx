@@ -4,7 +4,7 @@ import BlogArticleList from '../../components/blog-article-list';
 import { Container } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { NextSeo } from 'next-seo';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
-import PageHero from '../../components/page-hero';
+import { PageHero } from '@pellegrims/pellegrims-dev/ui/molecules';
 
 interface BlogProps {
   posts: MarkdownDocument[];

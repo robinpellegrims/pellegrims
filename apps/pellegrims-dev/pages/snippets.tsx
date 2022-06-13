@@ -4,7 +4,7 @@ import { Container } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 import SnippetArticleList from '../components/snippet-article-list';
-import PageHero from '../components/page-hero';
+import { PageHero } from '@pellegrims/pellegrims-dev/ui/molecules';
 
 interface SnippetsProps {
   snippets: MarkdownDocument[];
