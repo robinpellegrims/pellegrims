@@ -20,6 +20,9 @@
       "@pellegrims/nx-remotecache-s3": ["libs/nx-remotecache-s3/src/index.ts"],
       "@pellegrims/pellegrims-dev/ui/atoms": [
         "libs/pellegrims-dev/ui/atoms/src/index.ts"
+      ],
+      "@pellegrims/pellegrims-dev/ui/molecules": [
+        "libs/pellegrims-dev/ui/molecules/src/index.ts"
       ]
     },
     "strict": true,
