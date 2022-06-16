@@ -1,5 +1,6 @@
 import { RaindropBookmark } from '../utils/raindrop';
 import { DateFormatted } from '@pellegrims/pellegrims-dev/ui/atoms';
+import { ChipList } from '@pellegrims/pellegrims-dev/ui/molecules';
 
 export const Bookmark = (props: { bookmark: RaindropBookmark }) => (
   <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
@@ -10,9 +11,9 @@ export const Bookmark = (props: { bookmark: RaindropBookmark }) => (
       loading="lazy"
     />
     <div className="p-6 flex flex-col flex-grow">
-      <h2 className="tracking-widest text-xs title-font font-medium text-dark-600 dark:text-dark-300 mb-1">
-        {props.bookmark.tags.map((tag) => `#${tag}`.toUpperCase()).join(' ')}
-      </h2>
+      <ChipList
+        tags={props.bookmark.tags.map((tag) => `#${tag}`.toUpperCase())}
+      />
       <h1 className="title-font text-lg font-medium mb-3">
         {props.bookmark.title}
       </h1>
