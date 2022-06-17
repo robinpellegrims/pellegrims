@@ -1,13 +1,8 @@
-import { CodeProps } from 'react-markdown/lib/ast-to-react';
 import { PrismAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import { FunctionComponent } from 'react';
+import { CodeComponent } from 'react-markdown/src/ast-to-react';
 
-export const CodeBlock: FunctionComponent<CodeProps> = ({
-  className,
-  children,
-  inline,
-}) => {
+export const CodeBlock: CodeComponent = ({ className, children, inline }) => {
   const language = className?.split('-')[1];
   return inline ? (
     <code className={className}>{children}</code>

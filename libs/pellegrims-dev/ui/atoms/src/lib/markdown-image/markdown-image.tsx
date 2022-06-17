@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 import Image from 'next/image';
-import { ReactMarkdownProps } from 'react-markdown/lib/complex-types';
+import { ReactMarkdownProps } from 'react-markdown/src/ast-to-react';
 
 const isDefined = <SomeType,>(
   val: SomeType | undefined | null
