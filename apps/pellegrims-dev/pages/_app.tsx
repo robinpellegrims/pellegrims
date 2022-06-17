@@ -18,7 +18,7 @@ import { DefaultSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import { AppProps } from 'next/app';
 import { NextPage } from 'next';
-import Analytics from '../components/analytics';
+import { CounterDevAnalytics } from '../components/counter-dev-analytics';
 
 const headerNavLinks: { text: string; href: string }[] = [
   { text: 'Snippets', href: '/snippets' },
@@ -32,7 +32,7 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => (
       {...defaultSeoConfig}
       canonical={productionUrl + useRouter().pathname}
     />
-    <Analytics />
+    <CounterDevAnalytics user="RobinPel" />
     <Header links={headerNavLinks} />
     <main className="py-12">
       <Component {...pageProps} />
