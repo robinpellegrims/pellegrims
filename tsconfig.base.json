@@ -26,6 +26,9 @@
       ],
       "@pellegrims/pellegrims-dev/ui/organisms": [
         "libs/pellegrims-dev/ui/organisms/src/index.ts"
+      ],
+      "@pellegrims/pellegrims-dev/ui/templates": [
+        "libs/pellegrims-dev/ui/templates/src/index.ts"
       ]
     },
     "strict": true,
