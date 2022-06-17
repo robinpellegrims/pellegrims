@@ -1,6 +1,8 @@
 import { MarkdownDocument } from '@pellegrims/markdown';
-import BlogArticle from './blog-article';
 import { FunctionComponent } from 'react';
+import { BlogArticle } from '@pellegrims/pellegrims-dev/ui/organisms';
+import { twitterSvgIcon, twitterUserName } from '../constants';
+import { buildCanonicalUrl } from '../utils/url';
 
 interface SnippetArticleListProps {
   snippets: MarkdownDocument[];
@@ -17,7 +19,12 @@ const SnippetArticleList: FunctionComponent<SnippetArticleListProps> = ({
             key={snippet.frontMatter.title}
             className={index !== 0 ? 'pt-6' : ''}
           >
-            <BlogArticle markDown={snippet} />
+            <BlogArticle
+              markDown={snippet}
+              twitterUserName={twitterUserName}
+              canonicalUrl={buildCanonicalUrl(snippet.slug)}
+              twitterSvgIcon={twitterSvgIcon}
+            />
           </span>
         ))}
       </div>

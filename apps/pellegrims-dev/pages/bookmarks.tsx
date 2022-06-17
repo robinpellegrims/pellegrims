@@ -2,7 +2,7 @@ import { NextSeo } from 'next-seo';
 import { Container } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { fetchRaindropBookmarks, RaindropBookmark } from '../utils/raindrop';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
-import { Bookmark } from '../components/bookmark';
+import { Bookmark } from '@pellegrims/pellegrims-dev/ui/organisms';
 import { PageHero } from '@pellegrims/pellegrims-dev/ui/molecules';
 
 export interface BookmarksProps {

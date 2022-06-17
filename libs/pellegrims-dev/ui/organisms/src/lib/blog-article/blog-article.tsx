@@ -1,18 +1,24 @@
 import { MarkdownDocument } from '@pellegrims/markdown';
 import { ChipList, Markdown } from '@pellegrims/pellegrims-dev/ui/molecules';
 import { FunctionComponent } from 'react';
-import { twitterSvgIcon, twitterUserName } from '../constants';
-import { buildCanonicalUrl } from '../utils/url';
 import Link from 'next/link';
 import { DateFormatted, SocialIcon } from '@pellegrims/pellegrims-dev/ui/atoms';
 
 interface BlogArticleProps {
   markDown: MarkdownDocument;
+  twitterUserName: string;
+  canonicalUrl: string;
+  twitterSvgIcon: string;
 }
 
 const shareOnTwitter = 'Share on twitter' as const;
 
-const BlogArticle: FunctionComponent<BlogArticleProps> = ({ markDown }) => (
+export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
+  markDown,
+  twitterUserName,
+  canonicalUrl,
+  twitterSvgIcon,
+}) => (
   <article className="mx-auto prose lg:prose-xl dark:prose-invert">
     <header className="flex flex-col gap-1">
       <DateFormatted date={markDown.frontMatter.date} />
@@ -22,9 +28,7 @@ const BlogArticle: FunctionComponent<BlogArticleProps> = ({ markDown }) => (
     <Markdown markDown={markDown} />
     <footer className="mt-24">
       <Link
-        href={`https://twitter.com/intent/tweet?text=${
-          markDown.frontMatter.title
-        }&via=${twitterUserName}&url=${buildCanonicalUrl(markDown.slug)}`}
+        href={`https://twitter.com/intent/tweet?text=${markDown.frontMatter.title}&via=${twitterUserName}&url=${canonicalUrl}`}
       >
         <a
           rel="noopener noreferrer"
@@ -41,5 +45,3 @@ const BlogArticle: FunctionComponent<BlogArticleProps> = ({ markDown }) => (
     </footer>
   </article>
 );
-
-export default BlogArticle;

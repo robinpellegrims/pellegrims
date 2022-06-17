@@ -1,8 +1,16 @@
-import { RaindropBookmark } from '../utils/raindrop';
 import { DateFormatted } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { ChipList } from '@pellegrims/pellegrims-dev/ui/molecules';
 
-export const Bookmark = (props: { bookmark: RaindropBookmark }) => (
+export interface BookmarkProps {
+  title: string;
+  link: string;
+  cover: string;
+  tags: string[];
+  excerpt: string;
+  created: Date;
+}
+
+export const Bookmark = (props: { bookmark: BookmarkProps }) => (
   <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
     <img
       className="lg:h-48 md:h-36 w-full object-cover object-center"

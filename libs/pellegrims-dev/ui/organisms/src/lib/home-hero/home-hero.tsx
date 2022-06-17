@@ -11,18 +11,28 @@ const colors = {
   blue: indigo['400'],
 };
 
-const HomeHero: FunctionComponent = () => (
+interface HomeHeroProps {
+  imageSrc: string;
+  name: string;
+  contactPath: string;
+}
+
+export const HomeHero: FunctionComponent<HomeHeroProps> = ({
+  imageSrc,
+  name,
+  contactPath,
+}) => (
   <section>
     <div className="mx-auto flex items-center justify-center flex-col gap-6 text-center">
       <Image
         alt="hero"
-        src="/avataaar.svg"
+        src={imageSrc}
         width="264"
         height="280"
         layout="fixed"
       />
       <h1 className="sm:text-4xl text-3xl font-medium">
-        Hi! I&apos;m <span className="font-semibold">Robin Pellegrims</span> 👋
+        Hi! I&apos;m <span className="font-semibold">{name}</span> 👋
       </h1>
       <p className="leading-relaxed sm:text-2xl text-xl">
         <RoughNotationGroup show={true}>
@@ -35,7 +45,7 @@ const HomeHero: FunctionComponent = () => (
           various clients building modern websites.
         </RoughNotationGroup>
       </p>
-      <Link href="/contact">
+      <Link href={contactPath}>
         <a>
           <Button text="Get in touch" type="primary" />
         </a>
@@ -43,5 +53,3 @@ const HomeHero: FunctionComponent = () => (
     </div>
   </section>
 );
-
-export default HomeHero;

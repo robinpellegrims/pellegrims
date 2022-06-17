@@ -10,8 +10,8 @@ import {
   MarkdownDocument,
 } from '@pellegrims/markdown';
 import { ParsedUrlQuery } from 'querystring';
-import { POSTS_PATH } from '../../constants';
-import BlogArticle from '../../components/blog-article';
+import { POSTS_PATH, twitterSvgIcon, twitterUserName } from '../../constants';
+import { BlogArticle } from '@pellegrims/pellegrims-dev/ui/organisms';
 import { Container } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { NextSeo } from 'next-seo';
 import { buildCanonicalUrl } from '../../utils/url';
@@ -36,7 +36,12 @@ const Article: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       canonical={buildCanonicalUrl(slug)}
     />
     <Container>
-      <BlogArticle markDown={markDown} />
+      <BlogArticle
+        markDown={markDown}
+        twitterUserName={twitterUserName}
+        canonicalUrl={buildCanonicalUrl(markDown.slug)}
+        twitterSvgIcon={twitterSvgIcon}
+      />
     </Container>
   </>
 );

@@ -1,11 +1,15 @@
-import HomeHero from '../components/home-hero';
+import { HomeHero } from '@pellegrims/pellegrims-dev/ui/organisms';
 import { Container } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { NextPage } from 'next';
 
 const Index: NextPage = () => (
   <>
     <Container>
-      <HomeHero />
+      <HomeHero
+        imageSrc="/avataaar.svg"
+        name="Robin Pellegrims"
+        contactPath="/contact"
+      />
     </Container>
   </>
 );

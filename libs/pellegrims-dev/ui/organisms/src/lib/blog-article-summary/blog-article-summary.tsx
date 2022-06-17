@@ -9,7 +9,7 @@ interface BlogArticleSummaryProps {
   path: string;
 }
 
-const BlogArticleSummary: FunctionComponent<BlogArticleSummaryProps> = (
+export const BlogArticleSummary: FunctionComponent<BlogArticleSummaryProps> = (
   props
 ) => (
   <article className="flex flex-col md:flex-row md:flex-nowrap gap-12">
@@ -29,5 +29,3 @@ const BlogArticleSummary: FunctionComponent<BlogArticleSummaryProps> = (
     </div>
   </article>
 );
-
-export default BlogArticleSummary;
