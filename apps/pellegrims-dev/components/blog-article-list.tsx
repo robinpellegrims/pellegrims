@@ -1,4 +1,4 @@
-import BlogArticleSummary from './blog-article-summary';
+import { BlogArticleSummary } from '@pellegrims/pellegrims-dev/ui/organisms';
 import { MarkdownDocument } from '@pellegrims/markdown';
 import { FunctionComponent } from 'react';
 

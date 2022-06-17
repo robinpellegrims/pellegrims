@@ -18,7 +18,7 @@ interface FooterProps {
   githubUrl: string;
 }
 
-const Footer: FunctionComponent<FooterProps> = (props) => (
+export const Footer: FunctionComponent<FooterProps> = (props) => (
   <Container>
     <footer className="py-12 flex flex-col items-center sm:flex-row gap-3 justify-between">
       <span className="inline-flex gap-3">
@@ -39,7 +39,7 @@ const Footer: FunctionComponent<FooterProps> = (props) => (
       <p className="text-sm text-dark-500">
         © {new Date().getFullYear()} {props.name}
       </p>
-      <Link href="/">
+      <Link href="/apps/pellegrims-dev/public">
         <a>
           <Logo end={true} />
         </a>
@@ -47,5 +47,3 @@ const Footer: FunctionComponent<FooterProps> = (props) => (
     </footer>
   </Container>
 );
-
-export default Footer;

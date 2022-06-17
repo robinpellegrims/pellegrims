@@ -1,12 +1,11 @@
 import 'tailwindcss/tailwind.css';
-import Header from '../components/header';
-import Footer from '../components/footer';
+import { Footer, Header } from '@pellegrims/pellegrims-dev/ui/organisms';
 import {
   defaultSeoConfig,
   facebookProfileUrl,
   facebookSvgIcon,
-  githubUrl,
   githubSvgIcon,
+  githubUrl,
   linkedInSvgIcon,
   linkedInUrl,
   name,

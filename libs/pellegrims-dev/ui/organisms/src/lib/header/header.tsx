@@ -7,7 +7,7 @@ interface HeaderProps {
   links: { text: string; href: string }[];
 }
 
-const Header: FunctionComponent<HeaderProps> = ({ links }) => (
+export const Header: FunctionComponent<HeaderProps> = ({ links }) => (
   <Container>
     <header>
       <div className="flex py-6 flex-col md:flex-row items-center gap-3">
@@ -21,5 +21,3 @@ const Header: FunctionComponent<HeaderProps> = ({ links }) => (
     </header>
   </Container>
 );
-
-export default Header;
