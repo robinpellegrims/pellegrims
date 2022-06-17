@@ -1,22 +1,31 @@
 import {
+  ComponentType,
   FormEventHandler,
   FunctionComponent,
-  ReactNode,
   useState,
 } from 'react';
-import { ErrorMessage } from '@pellegrims/pellegrims-dev/ui/atoms';
 
-export const Form: FunctionComponent<{
+interface FormContainerProps {
   actionUrl: string;
   formFieldNames: readonly string[];
-  handleLoading?: (loading: boolean) => void;
-  children: ReactNode;
-}> = ({ children, actionUrl, formFieldNames, handleLoading }) => {
+  FormComponent: ComponentType<{ loading: boolean }>;
+  SuccessComponent: ComponentType;
+  FailureComponent: ComponentType<{ errorMessage?: string }>;
+}
+
+export const FormContainer: FunctionComponent<FormContainerProps> = ({
+  actionUrl,
+  formFieldNames,
+  FormComponent,
+  SuccessComponent,
+  FailureComponent,
+}) => {
+  const [loading, setLoading] = useState(false);
   const [responseOk, setResponseOk] = useState<boolean>();
   const [errorMessage, setErrorMessage] = useState<string>();
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
-    handleLoading?.(true);
+    setLoading(true);
     event.preventDefault();
 
     const fields = event.target as unknown as Record<
@@ -46,18 +55,14 @@ export const Form: FunctionComponent<{
       setErrorMessage(error);
       console.error('Error:', error);
     }
-    handleLoading?.(false);
+    setLoading(false);
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      {responseOk ? (
-        <div className="text-center">Message succesfully sent, thank you!</div>
-      ) : (
-        children
-      )}
+      {responseOk ? <SuccessComponent /> : <FormComponent loading={loading} />}
       {responseOk === false ? (
-        <ErrorMessage errorMessage={errorMessage} />
+        <FailureComponent errorMessage={errorMessage} />
       ) : null}
     </form>
   );

@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
-import { contactFieldNames } from '../../utils/contact';
+import { contactFieldNames } from '@pellegrims/pellegrims-dev/ui/organisms';
 import Mail from 'nodemailer/lib/mailer/index';
 
 export interface ContactApiResponseBody {
