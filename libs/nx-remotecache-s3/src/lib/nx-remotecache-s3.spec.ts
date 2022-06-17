@@ -12,6 +12,12 @@ describe('nx-remotecache-s3', () => {
       [],
       { lifeCycle: { startCommand: jest.fn(), endCommand: jest.fn() } },
       {
+        taskGraph: {
+          tasks: {},
+          dependencies: {},
+          roots: [],
+        },
+        nxArgs: {},
         nxJson: { npmScope: 'proj' },
         projectGraph: { nodes: {}, dependencies: {} },
       }
