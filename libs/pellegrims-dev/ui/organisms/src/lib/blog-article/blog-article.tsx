@@ -1,5 +1,5 @@
 import { MarkdownDocument } from '@pellegrims/markdown';
-import { ChipList, Markdown } from '@pellegrims/pellegrims-dev/ui/molecules';
+import { Tags, Markdown } from '@pellegrims/pellegrims-dev/ui/molecules';
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
 import { DateFormatted, SocialIcon } from '@pellegrims/pellegrims-dev/ui/atoms';
@@ -22,7 +22,7 @@ export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
   <article className="mx-auto prose lg:prose-xl dark:prose-invert">
     <header className="flex flex-col gap-1">
       <DateFormatted date={markDown.frontMatter.date} />
-      <ChipList tags={markDown.frontMatter.tags} />
+      <Tags tags={markDown.frontMatter.tags} />
       <h1 className="pt-6">{markDown.frontMatter.title}</h1>
     </header>
     <Markdown markDown={markDown} />
