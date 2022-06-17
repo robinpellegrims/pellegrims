@@ -297,6 +297,31 @@
           }
         }
       }
+    },
+    "pellegrims-dev-ui-templates": {
+      "root": "libs/pellegrims-dev/ui/templates",
+      "sourceRoot": "libs/pellegrims-dev/ui/templates/src",
+      "projectType": "library",
+      "tags": ["platform:react", "type:ui", "atomic-design:templates"],
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": [
+              "libs/pellegrims-dev/ui/templates/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/pellegrims-dev/ui/templates"],
+          "options": {
+            "jestConfig": "libs/pellegrims-dev/ui/templates/jest.config.ts",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
