@@ -23,6 +23,9 @@
       ],
       "@pellegrims/pellegrims-dev/ui/molecules": [
         "libs/pellegrims-dev/ui/molecules/src/index.ts"
+      ],
+      "@pellegrims/pellegrims-dev/ui/organisms": [
+        "libs/pellegrims-dev/ui/organisms/src/index.ts"
       ]
     },
     "strict": true,
