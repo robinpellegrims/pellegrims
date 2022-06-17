@@ -1,13 +1,15 @@
-import { getMarkdownDocuments, MarkdownDocument } from '@pellegrims/markdown';
+import { getMarkdownDocuments } from '@pellegrims/markdown';
 import { POSTS_PATH } from '../../constants';
-import BlogArticleList from '../../components/blog-article-list';
-import { Container } from '@pellegrims/pellegrims-dev/ui/atoms';
-import { NextSeo } from 'next-seo';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import { PageHero } from '@pellegrims/pellegrims-dev/ui/molecules';
+import { List, PageTemplate } from '@pellegrims/pellegrims-dev/ui/templates';
+import {
+  BlogArticleSummary,
+  BlogArticleSummaryProps,
+} from '@pellegrims/pellegrims-dev/ui/organisms';
 
 interface BlogProps {
-  posts: MarkdownDocument[];
+  posts: BlogArticleSummaryProps[];
 }
 
 const title = 'Blog';
@@ -15,21 +17,22 @@ const title = 'Blog';
 const Blog: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   posts,
 }) => (
-  <>
-    <NextSeo title={title} />
-    <Container>
+  <PageTemplate
+    seoProps={{ title }}
+    header={
       <PageHero
         title={title}
         description="Articles about things that I found interesting enough to share."
       />
-      <BlogArticleList posts={posts} path="/blog" />
-    </Container>
-  </>
+    }
+  >
+    <List ItemComponent={BlogArticleSummary} items={posts} />
+  </PageTemplate>
 );
 
 export default Blog;
 
 export const getStaticProps: GetStaticProps<BlogProps> = async () => {
   const posts = getMarkdownDocuments(POSTS_PATH);
-  return { props: { posts } };
+  return { props: { posts: posts.map((post) => ({ post, path: '/blog' })) } };
 };

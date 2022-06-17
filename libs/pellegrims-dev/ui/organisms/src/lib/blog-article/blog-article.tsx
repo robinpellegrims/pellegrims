@@ -4,7 +4,7 @@ import { FunctionComponent } from 'react';
 import Link from 'next/link';
 import { DateFormatted, SocialIcon } from '@pellegrims/pellegrims-dev/ui/atoms';
 
-interface BlogArticleProps {
+export interface BlogArticleProps {
   markDown: MarkdownDocument;
   twitterUserName: string;
   canonicalUrl: string;

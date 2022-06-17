@@ -1,5 +1,5 @@
 import { HomeHero } from '@pellegrims/pellegrims-dev/ui/organisms';
-import { Container } from '@pellegrims/pellegrims-dev/ui/atoms';
+import { Container } from '@pellegrims/pellegrims-dev/ui/templates';
 import { NextPage } from 'next';
 
 const Index: NextPage = () => (
