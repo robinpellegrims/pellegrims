@@ -3,6 +3,8 @@ export type { BlogArticleProps } from './lib/blog-article/blog-article';
 export { BlogArticleSummary } from './lib/blog-article-summary/blog-article-summary';
 export type { BlogArticleSummaryProps } from './lib/blog-article-summary/blog-article-summary';
 export { Bookmark } from './lib/bookmark/bookmark';
+export { contactFieldNames } from './lib/contact-form/contact-form.constants';
+export { ContactForm } from './lib/contact-form/contact-form';
 export { Footer } from './lib/footer/footer';
 export { Header } from './lib/header/header';
 export { HomeHero } from './lib/home-hero/home-hero';
