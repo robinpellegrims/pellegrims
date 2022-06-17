@@ -28,17 +28,6 @@
       }
     }
   },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ]
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/next"
-  },
   "generators": {
     "@nrwl/react": {
       "application": {
@@ -52,5 +41,11 @@
       }
     }
   },
-  "defaultProject": "pellegrims-dev"
+  "defaultProject": "pellegrims-dev",
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"]
+    }
+  }
 }
