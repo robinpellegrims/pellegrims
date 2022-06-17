@@ -1,5 +1,6 @@
 import { DateFormatted } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { ChipList } from '@pellegrims/pellegrims-dev/ui/molecules';
+import { FunctionComponent } from 'react';
 
 export interface BookmarkProps {
   title: string;
@@ -10,27 +11,21 @@ export interface BookmarkProps {
   created: Date;
 }
 
-export const Bookmark = (props: { bookmark: BookmarkProps }) => (
+export const Bookmark: FunctionComponent<BookmarkProps> = (props) => (
   <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
     <img
       className="lg:h-48 md:h-36 w-full object-cover object-center"
-      src={props.bookmark.cover}
+      src={props.cover}
       alt="cover image"
       loading="lazy"
     />
     <div className="p-6 flex flex-col flex-grow">
-      <ChipList
-        tags={props.bookmark.tags.map((tag) => `#${tag}`.toUpperCase())}
-      />
-      <h1 className="title-font text-lg font-medium mb-3">
-        {props.bookmark.title}
-      </h1>
-      <p className="leading-relaxed mb-3 grow line-clamp-3">
-        {props.bookmark.excerpt}
-      </p>
+      <ChipList tags={props.tags.map((tag) => `#${tag}`.toUpperCase())} />
+      <h1 className="title-font text-lg font-medium mb-3">{props.title}</h1>
+      <p className="leading-relaxed mb-3 grow line-clamp-3">{props.excerpt}</p>
       <div className="flex items-center justify-between mt-auto">
         <a
-          href={props.bookmark.link}
+          href={props.link}
           target="_blank"
           className="text-primary-500 inline-flex items-center md:mb-2 lg:mb-0"
           rel="noreferrer"
@@ -50,7 +45,7 @@ export const Bookmark = (props: { bookmark: BookmarkProps }) => (
           </svg>
         </a>
         <span className="text-dark-400 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1">
-          <DateFormatted date={props.bookmark.created} />
+          <DateFormatted date={props.created} />
         </span>
       </div>
     </div>

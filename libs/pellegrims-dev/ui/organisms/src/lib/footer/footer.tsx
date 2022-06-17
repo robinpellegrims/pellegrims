@@ -1,10 +1,7 @@
 import Link from 'next/link';
 import { FunctionComponent } from 'react';
-import {
-  Container,
-  Logo,
-  SocialIconLink,
-} from '@pellegrims/pellegrims-dev/ui/atoms';
+import { Logo, SocialIconLink } from '@pellegrims/pellegrims-dev/ui/atoms';
+import { Container } from '@pellegrims/pellegrims-dev/ui/templates';
 
 interface FooterProps {
   facebookSvgIcon: string;

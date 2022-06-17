@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import { Container, Logo } from '@pellegrims/pellegrims-dev/ui/atoms';
+import { Logo } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { FunctionComponent } from 'react';
 import { Nav } from '@pellegrims/pellegrims-dev/ui/molecules';
+import { Container } from '@pellegrims/pellegrims-dev/ui/templates';
 
 interface HeaderProps {
   links: { text: string; href: string }[];

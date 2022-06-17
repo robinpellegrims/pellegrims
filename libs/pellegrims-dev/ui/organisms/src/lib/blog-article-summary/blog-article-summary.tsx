@@ -4,7 +4,7 @@ import { FunctionComponent } from 'react';
 import { DateFormatted, RightArrow } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { ChipList } from '@pellegrims/pellegrims-dev/ui/molecules';
 
-interface BlogArticleSummaryProps {
+export interface BlogArticleSummaryProps {
   post: MarkdownDocument;
   path: string;
 }

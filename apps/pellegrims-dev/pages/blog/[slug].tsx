@@ -12,7 +12,7 @@ import {
 import { ParsedUrlQuery } from 'querystring';
 import { POSTS_PATH, twitterSvgIcon, twitterUserName } from '../../constants';
 import { BlogArticle } from '@pellegrims/pellegrims-dev/ui/organisms';
-import { Container } from '@pellegrims/pellegrims-dev/ui/atoms';
+import { Container } from '@pellegrims/pellegrims-dev/ui/templates';
 import { NextSeo } from 'next-seo';
 import { buildCanonicalUrl } from '../../utils/url';
 

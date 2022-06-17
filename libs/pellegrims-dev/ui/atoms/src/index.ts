@@ -1,7 +1,6 @@
 export { Button } from './lib/button/button';
 export { Chip } from './lib/chip/chip';
 export { CodeBlock } from './lib/code-block/code-block';
-export { Container } from './lib/container/container';
 export { DateFormatted } from './lib/date-formatted/date-formatted';
 export { ErrorMessage } from './lib/error-message/error-message';
 export { FormField } from './lib/form-field/form-field';

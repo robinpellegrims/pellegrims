@@ -1,5 +1,4 @@
-import { NextSeo } from 'next-seo';
-import { Container } from '@pellegrims/pellegrims-dev/ui/atoms';
+import { Grid, PageTemplate } from '@pellegrims/pellegrims-dev/ui/templates';
 import { fetchRaindropBookmarks, RaindropBookmark } from '../utils/raindrop';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import { Bookmark } from '@pellegrims/pellegrims-dev/ui/organisms';
@@ -9,29 +8,22 @@ export interface BookmarksProps {
   bookmarks: RaindropBookmark[];
 }
 
-const pageTitle = 'Bookmarks';
+const title = 'Bookmarks';
 
 export const Bookmarks: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
 > = (props) => (
-  <>
-    <NextSeo title={pageTitle} />
-    <Container>
+  <PageTemplate
+    header={
       <PageHero
-        title={pageTitle}
+        title={title}
         description="Collection of links to articles and other resources I recently liked."
       />
-      <section>
-        <div className="flex flex-wrap">
-          {props.bookmarks.map((bookmark) => (
-            <div key={bookmark._id} className="p-4 md:w-1/3">
-              <Bookmark bookmark={bookmark} />
-            </div>
-          ))}
-        </div>
-      </section>
-    </Container>
-  </>
+    }
+    seoProps={{ title }}
+  >
+    <Grid items={props.bookmarks} ItemComponent={Bookmark} />
+  </PageTemplate>
 );
 
 export default Bookmarks;
