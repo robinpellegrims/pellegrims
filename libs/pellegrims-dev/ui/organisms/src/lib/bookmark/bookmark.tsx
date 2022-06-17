@@ -1,5 +1,5 @@
 import { DateFormatted } from '@pellegrims/pellegrims-dev/ui/atoms';
-import { ChipList } from '@pellegrims/pellegrims-dev/ui/molecules';
+import { Tags } from '@pellegrims/pellegrims-dev/ui/molecules';
 import { FunctionComponent } from 'react';
 
 export interface BookmarkProps {
@@ -20,7 +20,7 @@ export const Bookmark: FunctionComponent<BookmarkProps> = (props) => (
       loading="lazy"
     />
     <div className="p-6 flex flex-col flex-grow">
-      <ChipList tags={props.tags.map((tag) => `#${tag}`.toUpperCase())} />
+      <Tags tags={props.tags} />
       <h1 className="title-font text-lg font-medium mb-3">{props.title}</h1>
       <p className="leading-relaxed mb-3 grow line-clamp-3">{props.excerpt}</p>
       <div className="flex items-center justify-between mt-auto">
