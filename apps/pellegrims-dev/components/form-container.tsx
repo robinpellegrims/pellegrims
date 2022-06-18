@@ -47,14 +47,20 @@ export const FormContainer: FunctionComponent<FormContainerProps> = ({
     const response = await fetch(actionUrl, options);
     setResponseOk(response.ok);
 
-    const { error } = await response
-      .json()
-      .catch(() => ({ error: response.statusText }));
+    const handleError = (error?: string) => {
+      if (error) {
+        setErrorMessage(error);
+        console.error('Error:', error);
+      }
+    };
 
-    if (error) {
-      setErrorMessage(error);
-      console.error('Error:', error);
+    if (!response.ok) {
+      await response
+        .json()
+        .then(({ error }) => handleError(error))
+        .catch(() => handleError(response.statusText));
     }
+
     setLoading(false);
   };
 
