@@ -11,7 +11,7 @@ specifiers:
   '@babel/preset-env': ^7.16.11
   '@babel/runtime': ^7.16.0
   '@commitlint/cli': ^17.0.2
-  '@commitlint/config-angular': ^17.0.0
+  '@commitlint/config-conventional': ^17.0.2
   '@jscutlery/semver': 2.25.1
   '@nrwl/cli': 14.3.6
   '@nrwl/cypress': 14.3.6
@@ -136,7 +136,7 @@ devDependencies:
   '@babel/preset-env': 7.16.11_@babel+core@7.17.9
   '@babel/runtime': 7.16.0
   '@commitlint/cli': 17.0.2
-  '@commitlint/config-angular': 17.0.0
+  '@commitlint/config-conventional': 17.0.2
   '@jscutlery/semver': 2.25.1_@nrwl+devkit@14.3.6
   '@nrwl/cli': 14.3.6
   '@nrwl/cypress': 14.3.6_t4cg7ybtwht2y227q76efgxdky
@@ -3322,22 +3322,14 @@ packages:
       - '@swc/wasm'
     dev: true
 
-  /@commitlint/config-angular-type-enum/17.0.0:
+  /@commitlint/config-conventional/17.0.2:
     resolution:
       {
-        integrity: sha512-OJrxpzszJ+jF0RvqLjsM/iZ94IfJ33NVCFFGVmkzuHjKxPt/i/+yJKJ5lzGhlsp5YV2F2Ui5ECIf5Sor2/OZvQ==,
-      }
-    engines: { node: '>=v14' }
-    dev: true
-
-  /@commitlint/config-angular/17.0.0:
-    resolution:
-      {
-        integrity: sha512-OngMpL/DpCHCebiQEVripTn/STqzbzwcP8jiwnCftXvUAaNQvAEBqbf7IbVPAvkj00WQsjvMQqRZD8D9NY7QaQ==,
+        integrity: sha512-MfP0I/JbxKkzo+HXWB7B3WstGS4BiniotU3d3xQ9gK8cR0DbeZ4MuyGCWF65YDyrcDTS3WlrJ3ndSPA1pqhoPw==,
       }
     engines: { node: '>=v14' }
     dependencies:
-      '@commitlint/config-angular-type-enum': 17.0.0
+      conventional-changelog-conventionalcommits: 5.0.0
     dev: true
 
   /@commitlint/config-validator/17.0.0:
@@ -8601,6 +8593,18 @@ packages:
     resolution:
       {
         integrity: sha512-LTTQV4fwOM4oLPad317V/QNQ1FY4Hju5qeBIM1uTHbrnCE+Eg4CdRZ3gO2pUeR+tzWdp80M2j3qFFEDWVqOV4g==,
+      }
+    engines: { node: '>=10' }
+    dependencies:
+      compare-func: 2.0.0
+      lodash: 4.17.21
+      q: 1.5.1
+    dev: true
+
+  /conventional-changelog-conventionalcommits/5.0.0:
+    resolution:
+      {
+        integrity: sha512-lCDbA+ZqVFQGUj7h9QBKoIpLhl8iihkO0nCTyRNzuXtcd7ubODpYB04IFy31JloiJgG0Uovu8ot8oxRzn7Nwtw==,
       }
     engines: { node: '>=10' }
     dependencies:

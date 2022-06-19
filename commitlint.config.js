@@ -1,26 +1,10 @@
 module.exports = {
-  extends: ['@commitlint/config-angular'],
+  extends: ['@commitlint/config-conventional'],
   rules: {
     'scope-enum': [
       2,
       'always',
       ['pellegrims-dev', 'eslint-config', 'nx-remotecache-s3', 'markdown'],
-    ],
-    'type-enum': [
-      2,
-      'always',
-      [
-        'build',
-        'ci',
-        'docs',
-        'feat',
-        'fix',
-        'perf',
-        'refactor',
-        'revert',
-        'style',
-        'test',
-      ],
     ],
   },
 };
