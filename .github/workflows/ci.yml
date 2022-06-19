@@ -52,8 +52,22 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+  codecov:
+    needs: [prepare]
+    #    if: ${{ needs.prepare.outputs.hasChanges == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        uses: robinpellegrims/composite-actions/pnpm-install@main
+      - name: Run all tests
+        run: pnpm nx run-many -- --all --target=test --runner=remotecache-s3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v2
-        if: ${{ matrix.target == 'test' }}
         with:
           directory: ./coverage
