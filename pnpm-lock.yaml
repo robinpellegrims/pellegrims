@@ -43,6 +43,7 @@ specifiers:
   autoprefixer: ^10.4.4
   babel-jest: 27.5.1
   babel-loader: ^8.2.4
+  caniuse-lite: ^1.0.30001356
   core-js: ^3.6.5
   cypress: ^8.3.0
   eslint: 8.15.0
@@ -164,6 +165,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.24.0_dirlon5mihsay42fpwhjobmlby
   babel-jest: 27.5.1_@babel+core@7.17.9
   babel-loader: 8.2.4_vs5hf2sl7hjtttp43d2vzw3qay
+  caniuse-lite: 1.0.30001356
   cypress: 8.6.0
   eslint: 8.15.0
   eslint-config-next: 12.1.6_4mift7mwllw2ktvoux666e2hui
@@ -4911,7 +4913,7 @@ packages:
       babel-plugin-transform-typescript-metadata: 0.3.2
       browserslist: 4.20.2
       bytes: 3.1.0
-      caniuse-lite: 1.0.30001319
+      caniuse-lite: 1.0.30001356
       chalk: 4.1.0
       chokidar: 3.5.3
       copy-webpack-plugin: 9.0.1_webpack@5.72.0
@@ -7277,7 +7279,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.20.2
-      caniuse-lite: 1.0.30001319
+      caniuse-lite: 1.0.30001356
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -7806,7 +7808,7 @@ packages:
     engines: { node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7 }
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001319
+      caniuse-lite: 1.0.30001356
       electron-to-chromium: 1.4.88
       escalade: 3.1.1
       node-releases: 2.0.2
@@ -7978,21 +7980,15 @@ packages:
       }
     dependencies:
       browserslist: 4.20.2
-      caniuse-lite: 1.0.30001355
+      caniuse-lite: 1.0.30001356
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
-  /caniuse-lite/1.0.30001319:
+  /caniuse-lite/1.0.30001356:
     resolution:
       {
-        integrity: sha512-xjlIAFHucBRSMUo1kb5D4LYgcN1M45qdKP++lhqowDpwJwGkpIRTt5qQqnhxjj1vHcI7nrJxWhCC1ATrCEBTcw==,
-      }
-
-  /caniuse-lite/1.0.30001355:
-    resolution:
-      {
-        integrity: sha512-Sd6pjJHF27LzCB7pT7qs+kuX2ndurzCzkpJl6Qct7LPSZ9jn0bkOA8mdgMgmqnQAWLVOOGjLpc+66V57eLtb1g==,
+        integrity: sha512-/30854bktMLhxtjieIxsrJBfs2gTM1pel6MXKF3K+RdIVJZcsn2A2QdhsuR4/p9+R204fZw0zCBBhktX8xWuyQ==,
       }
 
   /caseless/0.12.0:
@@ -15275,7 +15271,7 @@ packages:
         optional: true
     dependencies:
       '@next/env': 12.1.6
-      caniuse-lite: 1.0.30001355
+      caniuse-lite: 1.0.30001356
       postcss: 8.4.5
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
