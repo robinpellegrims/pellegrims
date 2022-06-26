@@ -88,6 +88,7 @@ specifiers:
   react-syntax-highlighter: ^15.4.4
   react-test-renderer: 18.2.0
   react-typist: ^2.0.5
+  reading-time: ^1.5.0
   regenerator-runtime: 0.13.7
   remark: ^14.0.1
   remark-external-links: ^9.0.1
@@ -130,6 +131,7 @@ dependencies:
   react-rough-notation: 1.0.1_biqbaboplfbrettd7655fr4n2y
   react-syntax-highlighter: 15.4.4_react@18.2.0
   react-typist: 2.0.5_biqbaboplfbrettd7655fr4n2y
+  reading-time: 1.5.0
   regenerator-runtime: 0.13.7
   remark: 14.0.1
   remark-external-links: 9.0.1
@@ -17546,6 +17548,13 @@ packages:
     engines: { node: '>=8.10.0' }
     dependencies:
       picomatch: 2.3.0
+
+  /reading-time/1.5.0:
+    resolution:
+      {
+        integrity: sha512-onYyVhBNr4CmAxFsKS7bz+uTLRakypIe4R+5A824vBSkQy/hB3fZepoVEf8OVAxzLvK+H/jm9TzpI3ETSm64Kg==,
+      }
+    dev: false
 
   /redent/3.0.0:
     resolution:

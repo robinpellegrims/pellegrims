@@ -26,10 +26,13 @@ const Row: FunctionComponent<PropsWithChildren> = ({ children }) => (
   </div>
 );
 
-const Header = (props: { date: string }) => (
+const Header = (props: { date: string; readMinutes: string }) => (
   <Row>
     <Logo end={false} />
-    <DateFormatted date={new Date(props.date)} />
+    <div>
+      <DateFormatted date={new Date(props.date)} />
+      {props.readMinutes ? ` · ${props.readMinutes} min read` : null}
+    </div>
   </Row>
 );
 
@@ -50,10 +53,12 @@ export const OGImage = ({
   title,
   description,
   date,
+  readMinutes,
 }: {
   title: string;
   description: string;
   date: string;
+  readMinutes: string;
 }) => (
   <html>
     <head>
@@ -66,7 +71,7 @@ export const OGImage = ({
       <style dangerouslySetInnerHTML={{ __html: style }} />
     </head>
     <body className="flex flex-col h-full justify-between p-12 bg-zinc-800 text-white">
-      <Header date={date} />
+      <Header date={date} readMinutes={readMinutes} />
       <Content title={title} description={description} />
       <Footer />
     </body>
