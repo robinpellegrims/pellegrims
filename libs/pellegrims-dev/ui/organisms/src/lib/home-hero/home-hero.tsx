@@ -37,12 +37,10 @@ export const HomeHero: FunctionComponent<HomeHeroProps> = ({
       <p className="leading-relaxed sm:text-2xl text-xl">
         <RoughNotationGroup show={true}>
           I&apos;m a professional{' '}
-          <Highlight color={colors.amber}>software developer</Highlight> &{' '}
-          <Highlight color={colors.green}>front-end technical lead</Highlight>.{' '}
-          <br />
-          As a freelance{' '}
-          <Highlight color={colors.blue}>web developer</Highlight>, I also help
-          various clients building modern websites.
+          <Highlight color={colors.amber}>software developer</Highlight>,{' '}
+          <Highlight color={colors.green}>front-end technical lead</Highlight>
+          {' & '}
+          <Highlight color={colors.blue}>freelance web developer</Highlight>.
         </RoughNotationGroup>
       </p>
       <Link href={contactPath}>
