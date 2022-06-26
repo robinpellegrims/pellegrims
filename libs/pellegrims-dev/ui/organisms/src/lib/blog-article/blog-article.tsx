@@ -20,7 +20,7 @@ export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
   twitterSvgIcon,
 }) => (
   <article className="mx-auto prose lg:prose-xl dark:prose-invert">
-    <header className="flex flex-col gap-1">
+    <header className="flex flex-col gap-2">
       <div className="flex flex-row justify-between w-full items-center">
         <DateFormatted date={markDown.frontMatter.date} />
         {markDown.readingTimeMins} min read

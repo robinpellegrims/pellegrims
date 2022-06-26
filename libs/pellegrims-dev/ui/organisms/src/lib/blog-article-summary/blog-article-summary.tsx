@@ -19,7 +19,7 @@ export const BlogArticleSummary: FunctionComponent<BlogArticleSummaryProps> = (
         <DateFormatted date={props.post.frontMatter.date} />
         <Tags tags={props.post.frontMatter.tags} />
       </div>
-      <div className="flex flex-col gap-6 md:flex-grow prose lg:prose-xl dark:prose-invert">
+      <div className="flex flex-col gap-2 md:flex-grow prose lg:prose-xl dark:prose-invert">
         <h2>
           <Link href={articleHref}>
             <a>{props.post.frontMatter.title}</a>
