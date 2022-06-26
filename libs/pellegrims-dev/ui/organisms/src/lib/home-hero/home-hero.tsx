@@ -23,7 +23,7 @@ export const HomeHero: FunctionComponent<HomeHeroProps> = ({
   contactPath,
 }) => (
   <section>
-    <div className="mx-auto flex items-center justify-center flex-col gap-6 text-center">
+    <div className="mx-auto flex items-center justify-center flex-col gap-12 text-center">
       <Image
         alt="hero"
         src={imageSrc}
