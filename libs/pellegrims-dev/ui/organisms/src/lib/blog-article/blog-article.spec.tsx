@@ -6,6 +6,7 @@ describe('BlogArticle', () => {
     const { baseElement } = render(
       <BlogArticle
         markDown={{
+          readingTimeMins: 5,
           slug: '',
           frontMatter: {
             title: '',
