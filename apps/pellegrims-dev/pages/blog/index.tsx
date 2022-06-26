@@ -2,14 +2,12 @@ import { getMarkdownDocuments } from '@pellegrims/markdown';
 import { POSTS_PATH } from '../../constants';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import { PageHero } from '@pellegrims/pellegrims-dev/ui/molecules';
-import { List, PageTemplate } from '@pellegrims/pellegrims-dev/ui/templates';
-import {
-  BlogArticleSummary,
-  BlogArticleSummaryProps,
-} from '@pellegrims/pellegrims-dev/ui/organisms';
+import { Grid, PageTemplate } from '@pellegrims/pellegrims-dev/ui/templates';
+import { Card, CardProps } from '@pellegrims/pellegrims-dev/ui/organisms';
+import { buildOgImageUrl, buildRelativeBlogArticleUrl } from '../../utils/url';
 
 interface BlogProps {
-  posts: BlogArticleSummaryProps[];
+  posts: CardProps[];
 }
 
 const title = 'Blog';
@@ -26,7 +24,7 @@ const Blog: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       />
     }
   >
-    <List ItemComponent={BlogArticleSummary} items={posts} />
+    <Grid ItemComponent={Card} items={posts} />
   </PageTemplate>
 );
 
@@ -34,5 +32,25 @@ export default Blog;
 
 export const getStaticProps: GetStaticProps<BlogProps> = async () => {
   const posts = getMarkdownDocuments(POSTS_PATH);
-  return { props: { posts: posts.map((post) => ({ post, path: '/blog' })) } };
+  return {
+    props: {
+      posts: posts.map(
+        (post): CardProps => ({
+          title: post.frontMatter.title ?? '',
+          cover:
+            post.frontMatter.coverImage ??
+            buildOgImageUrl({
+              date: post.frontMatter.date,
+              description: post.frontMatter.description,
+              title: post.frontMatter.title,
+            }),
+          created: post.frontMatter.date,
+          excerpt: post.frontMatter.description ?? '',
+          link: buildRelativeBlogArticleUrl(post.slug),
+          linkTarget: '_self',
+          tags: post.frontMatter.tags ?? [],
+        })
+      ),
+    },
+  };
 };

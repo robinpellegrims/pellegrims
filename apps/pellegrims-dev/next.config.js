@@ -11,7 +11,7 @@ const nextConfig = {
     svgr: false,
   },
   images: {
-    domains: ['dummyimage.com', 'avataaars.io'],
+    domains: ['avataaars.io'],
   },
   trailingSlash: true,
   i18n: {

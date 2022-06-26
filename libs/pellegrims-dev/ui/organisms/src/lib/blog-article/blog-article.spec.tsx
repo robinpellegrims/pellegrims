@@ -16,7 +16,7 @@ describe('BlogArticle', () => {
           content: '',
         }}
         twitterUserName={''}
-        canonicalUrl={''}
+        urlToShare={''}
         twitterSvgIcon={''}
       />
     );

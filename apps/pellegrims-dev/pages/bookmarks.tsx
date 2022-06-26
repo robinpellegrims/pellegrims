@@ -1,11 +1,11 @@
 import { Grid, PageTemplate } from '@pellegrims/pellegrims-dev/ui/templates';
-import { fetchRaindropBookmarks, RaindropBookmark } from '../utils/raindrop';
+import { fetchRaindropBookmarks } from '../utils/raindrop';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
-import { Card } from '@pellegrims/pellegrims-dev/ui/organisms';
+import { Card, CardProps } from '@pellegrims/pellegrims-dev/ui/organisms';
 import { PageHero } from '@pellegrims/pellegrims-dev/ui/molecules';
 
 export interface BookmarksProps {
-  bookmarks: RaindropBookmark[];
+  bookmarks: CardProps[];
 }
 
 const title = 'Bookmarks';
@@ -30,5 +30,13 @@ export default Bookmarks;
 
 export const getStaticProps: GetStaticProps<BookmarksProps> = async () => {
   const bookmarks = await fetchRaindropBookmarks();
-  return { props: { bookmarks }, revalidate: 10 };
+  return {
+    props: {
+      bookmarks: bookmarks.map((bookmark) => ({
+        ...bookmark,
+        linkTarget: '_blank',
+      })),
+    },
+    revalidate: 10,
+  };
 };
