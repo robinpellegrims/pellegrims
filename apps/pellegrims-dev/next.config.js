@@ -13,6 +13,7 @@ const nextConfig = {
   images: {
     domains: ['dummyimage.com', 'avataaars.io'],
   },
+  trailingSlash: true,
   i18n: {
     locales: ['en'],
     defaultLocale: 'en',
