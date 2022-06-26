@@ -1,22 +1,22 @@
 import { DateFormatted } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { Tags } from '@pellegrims/pellegrims-dev/ui/molecules';
-import { FunctionComponent } from 'react';
+import { FunctionComponent, HTMLAttributeAnchorTarget } from 'react';
 
 export interface CardProps {
   title: string;
   link: string;
+  linkTarget: HTMLAttributeAnchorTarget;
   cover: string;
   tags: string[];
   excerpt: string;
-  created: Date;
+  created?: Date;
 }
 
 export const Card: FunctionComponent<CardProps> = (props) => (
   <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
     <img
-      className="lg:h-48 md:h-36 w-full object-cover object-center"
+      className="lg:h-64 md:h-36 w-full object-cover object-center"
       src={props.cover}
-      alt="cover image"
       loading="lazy"
     />
     <div className="p-6 flex flex-col flex-grow">
@@ -26,7 +26,7 @@ export const Card: FunctionComponent<CardProps> = (props) => (
       <div className="flex items-center justify-between mt-auto">
         <a
           href={props.link}
-          target="_blank"
+          target={props.linkTarget}
           className="text-primary-500 inline-flex items-center md:mb-2 lg:mb-0"
           rel="noreferrer"
         >
@@ -44,9 +44,11 @@ export const Card: FunctionComponent<CardProps> = (props) => (
             <path d="M12 5l7 7-7 7" />
           </svg>
         </a>
-        <span className="text-dark-400 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1">
-          <DateFormatted date={props.created} />
-        </span>
+        {props.created ? (
+          <span className="text-dark-400 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1">
+            <DateFormatted date={props.created} />
+          </span>
+        ) : null}
       </div>
     </div>
   </div>

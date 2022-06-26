@@ -1,9 +1,9 @@
 export interface FrontMatter {
-  title: string;
-  description: string;
-  date: Date;
-  tags: string[];
-  coverImage: string;
+  title?: string;
+  description?: string;
+  date?: Date;
+  tags?: string[];
+  coverImage?: string;
 }
 
 export interface MarkdownDocumentWithoutSlug {

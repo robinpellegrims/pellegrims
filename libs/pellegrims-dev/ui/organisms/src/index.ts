@@ -1,8 +1,7 @@
 export { BlogArticle } from './lib/blog-article/blog-article';
 export type { BlogArticleProps } from './lib/blog-article/blog-article';
-export { BlogArticleSummary } from './lib/blog-article-summary/blog-article-summary';
-export type { BlogArticleSummaryProps } from './lib/blog-article-summary/blog-article-summary';
 export { Card } from './lib/card/card';
+export type { CardProps } from './lib/card/card';
 export { contactFieldNames } from './lib/contact-form/contact-form.constants';
 export { ContactForm } from './lib/contact-form/contact-form';
 export { Footer } from './lib/footer/footer';

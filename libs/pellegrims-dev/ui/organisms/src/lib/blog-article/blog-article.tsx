@@ -8,7 +8,7 @@ import Image from 'next/image';
 export interface BlogArticleProps {
   markDown: MarkdownDocument;
   twitterUserName: string;
-  canonicalUrl: string;
+  urlToShare?: string;
   twitterSvgIcon: string;
 }
 
@@ -17,17 +17,19 @@ const shareOnTwitter = 'Share on twitter' as const;
 export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
   markDown,
   twitterUserName,
-  canonicalUrl,
+  urlToShare,
   twitterSvgIcon,
 }) => (
   <article className="mx-auto prose lg:prose-xl dark:prose-invert">
     <header className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
         <div className="flex flex-row justify-between w-full items-center">
-          <DateFormatted date={markDown.frontMatter.date} />
+          {markDown.frontMatter.date ? (
+            <DateFormatted date={markDown.frontMatter.date} />
+          ) : null}
           {markDown.readingTimeMins} min read
         </div>
-        <Tags tags={markDown.frontMatter.tags} />
+        <Tags tags={markDown.frontMatter.tags ?? []} />
       </div>
       <h1>{markDown.frontMatter.title}</h1>
       {markDown.frontMatter.coverImage ? (
@@ -37,22 +39,24 @@ export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
       ) : null}
     </header>
     <Markdown markDown={markDown} />
-    <footer className="mt-24">
-      <Link
-        href={`https://twitter.com/intent/tweet?text=${markDown.frontMatter.title}&via=${twitterUserName}&url=${canonicalUrl}`}
-      >
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          aria-label={shareOnTwitter}
-          className="flex gap-2 items-center justify-center"
+    {urlToShare ? (
+      <footer className="mt-24">
+        <Link
+          href={`https://twitter.com/intent/tweet?text=${markDown.frontMatter.title}&via=${twitterUserName}&url=${urlToShare}`}
         >
-          <SocialIcon>
-            <path d={twitterSvgIcon} />
-          </SocialIcon>
-          {shareOnTwitter}
-        </a>
-      </Link>
-    </footer>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label={shareOnTwitter}
+            className="flex gap-2 items-center justify-center"
+          >
+            <SocialIcon>
+              <path d={twitterSvgIcon} />
+            </SocialIcon>
+            {shareOnTwitter}
+          </a>
+        </Link>
+      </footer>
+    ) : null}
   </article>
 );

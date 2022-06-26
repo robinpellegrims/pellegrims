@@ -7,7 +7,6 @@ import {
   BlogArticle,
   BlogArticleProps,
 } from '@pellegrims/pellegrims-dev/ui/organisms';
-import { buildCanonicalUrl } from '../utils/url';
 
 interface SnippetsProps {
   snippets: BlogArticleProps[];
@@ -34,7 +33,6 @@ export const getStaticProps: GetStaticProps<SnippetsProps> = async () => {
   return {
     props: {
       snippets: snippets.map((snippet) => ({
-        canonicalUrl: buildCanonicalUrl(snippet.slug),
         markDown: snippet,
         twitterSvgIcon,
         twitterUserName,

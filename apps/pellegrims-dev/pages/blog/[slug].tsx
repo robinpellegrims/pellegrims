@@ -14,14 +14,13 @@ import {
   oGImageHeight,
   oGImageWidth,
   POSTS_PATH,
-  productionUrl,
   twitterSvgIcon,
   twitterUserName,
 } from '../../constants';
 import { BlogArticle } from '@pellegrims/pellegrims-dev/ui/organisms';
 import { Container } from '@pellegrims/pellegrims-dev/ui/templates';
 import { NextSeo } from 'next-seo';
-import { buildCanonicalUrl } from '../../utils/url';
+import { buildCanonicalBlogArticleUrl, buildOgImageUrl } from '../../utils/url';
 
 interface BlogArticleUrlQuery extends ParsedUrlQuery {
   slug: string;
@@ -40,14 +39,14 @@ const Article: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
     <NextSeo
       title={markDown.frontMatter.title}
       description={markDown.frontMatter.description}
-      canonical={buildCanonicalUrl(slug)}
+      canonical={buildCanonicalBlogArticleUrl(slug)}
       openGraph={{
         type: 'article',
         images: [
           {
             height: oGImageHeight,
             width: oGImageWidth,
-            url: `${productionUrl}/api/og-image?title=${markDown.frontMatter.title}&description=${markDown.frontMatter.description}&date=${markDown.frontMatter.date}`,
+            url: buildOgImageUrl(markDown.frontMatter),
           },
         ],
       }}
@@ -56,7 +55,7 @@ const Article: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       <BlogArticle
         markDown={markDown}
         twitterUserName={twitterUserName}
-        canonicalUrl={buildCanonicalUrl(markDown.slug)}
+        urlToShare={buildCanonicalBlogArticleUrl(markDown.slug)}
         twitterSvgIcon={twitterSvgIcon}
       />
     </Container>
