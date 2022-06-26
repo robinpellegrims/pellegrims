@@ -2,7 +2,7 @@ import { DateFormatted } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { Tags } from '@pellegrims/pellegrims-dev/ui/molecules';
 import { FunctionComponent } from 'react';
 
-export interface BookmarkProps {
+export interface CardProps {
   title: string;
   link: string;
   cover: string;
@@ -11,7 +11,7 @@ export interface BookmarkProps {
   created: Date;
 }
 
-export const Bookmark: FunctionComponent<BookmarkProps> = (props) => (
+export const Card: FunctionComponent<CardProps> = (props) => (
   <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
     <img
       className="lg:h-48 md:h-36 w-full object-cover object-center"

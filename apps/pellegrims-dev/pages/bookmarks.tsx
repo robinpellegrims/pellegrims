@@ -1,7 +1,7 @@
 import { Grid, PageTemplate } from '@pellegrims/pellegrims-dev/ui/templates';
 import { fetchRaindropBookmarks, RaindropBookmark } from '../utils/raindrop';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
-import { Bookmark } from '@pellegrims/pellegrims-dev/ui/organisms';
+import { Card } from '@pellegrims/pellegrims-dev/ui/organisms';
 import { PageHero } from '@pellegrims/pellegrims-dev/ui/molecules';
 
 export interface BookmarksProps {
@@ -22,7 +22,7 @@ export const Bookmarks: NextPage<
     }
     seoProps={{ title }}
   >
-    <Grid items={props.bookmarks} ItemComponent={Bookmark} />
+    <Grid items={props.bookmarks} ItemComponent={Card} />
   </PageTemplate>
 );
 

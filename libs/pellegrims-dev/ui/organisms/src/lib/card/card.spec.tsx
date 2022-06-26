@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
-import { Bookmark } from './bookmark';
+import { Card } from './card';
 
 describe('Bookmark', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
-      <Bookmark
+      <Card
         {...{
           cover: '',
           created: new Date(),
