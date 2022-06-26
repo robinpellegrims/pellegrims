@@ -8,6 +8,7 @@ export interface FrontMatter {
 export interface MarkdownDocumentWithoutSlug {
   frontMatter: FrontMatter;
   content: string;
+  readingTimeMins: number;
 }
 
 export interface MarkdownDocument extends MarkdownDocumentWithoutSlug {

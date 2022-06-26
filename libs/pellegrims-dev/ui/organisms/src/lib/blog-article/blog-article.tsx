@@ -21,7 +21,10 @@ export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
 }) => (
   <article className="mx-auto prose lg:prose-xl dark:prose-invert">
     <header className="flex flex-col gap-1">
-      <DateFormatted date={markDown.frontMatter.date} />
+      <div className="flex flex-row justify-between w-full items-center">
+        <DateFormatted date={markDown.frontMatter.date} />
+        {markDown.readingTimeMins} min read
+      </div>
       <Tags tags={markDown.frontMatter.tags} />
       <h1 className="pt-6">{markDown.frontMatter.title}</h1>
     </header>

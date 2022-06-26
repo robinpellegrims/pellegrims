@@ -6,6 +6,7 @@ import {
   MarkdownDocument,
   MarkdownDocumentWithoutSlug,
 } from './markdown.model';
+import readingTime from 'reading-time';
 
 export const getMarkdownDocumentBySlug = (
   slug: string,
@@ -26,7 +27,11 @@ export const getMarkdownDocuments = (
 const getMarkdownDocument = (filePath: string): MarkdownDocumentWithoutSlug => {
   const fileContents = fs.readFileSync(filePath);
   const { data, content } = matter(fileContents);
-  return { frontMatter: data as FrontMatter, content };
+  return {
+    frontMatter: data as FrontMatter,
+    content,
+    readingTimeMins: Math.ceil(readingTime(content).minutes),
+  };
 };
 
 export const getSlugsForMarkdownFiles = (directoryPath: string): string[] =>
