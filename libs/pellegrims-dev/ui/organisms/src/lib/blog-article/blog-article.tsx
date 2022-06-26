@@ -3,6 +3,7 @@ import { Tags, Markdown } from '@pellegrims/pellegrims-dev/ui/molecules';
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
 import { DateFormatted, SocialIcon } from '@pellegrims/pellegrims-dev/ui/atoms';
+import Image from 'next/image';
 
 export interface BlogArticleProps {
   markDown: MarkdownDocument;
@@ -20,13 +21,20 @@ export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
   twitterSvgIcon,
 }) => (
   <article className="mx-auto prose lg:prose-xl dark:prose-invert">
-    <header className="flex flex-col gap-2">
-      <div className="flex flex-row justify-between w-full items-center">
-        <DateFormatted date={markDown.frontMatter.date} />
-        {markDown.readingTimeMins} min read
+    <header className="flex flex-col gap-6">
+      <div className="flex flex-col gap-2">
+        <div className="flex flex-row justify-between w-full items-center">
+          <DateFormatted date={markDown.frontMatter.date} />
+          {markDown.readingTimeMins} min read
+        </div>
+        <Tags tags={markDown.frontMatter.tags} />
       </div>
-      <Tags tags={markDown.frontMatter.tags} />
-      <h1 className="pt-6">{markDown.frontMatter.title}</h1>
+      <h1>{markDown.frontMatter.title}</h1>
+      {markDown.frontMatter.coverImage ? (
+        <div className="relative h-96 mb-12">
+          <Image src="/assets/blog/lorem-ipsum/cover.jpg" layout="fill" />
+        </div>
+      ) : null}
     </header>
     <Markdown markDown={markDown} />
     <footer className="mt-24">

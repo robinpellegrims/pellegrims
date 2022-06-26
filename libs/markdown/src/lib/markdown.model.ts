@@ -3,6 +3,7 @@ export interface FrontMatter {
   description: string;
   date: Date;
   tags: string[];
+  coverImage: string;
 }
 
 export interface MarkdownDocumentWithoutSlug {
