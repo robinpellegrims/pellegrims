@@ -39,7 +39,7 @@ const Header = (props: { date: string; readMinutes: string }) => (
 const Content = (props: { title: string; description: string }) => (
   <div className="flex flex-col gap-6 text-center text-transparent bg-clip-text bg-gradient-to-br from-red-500 to-yellow-500">
     <h1 className="text-7xl grow font-bold">{props.title}</h1>
-    <p className="leading-relaxed text-2xl">{props.description}</p>
+    <p className="leading-relaxed text-3xl">{props.description}</p>
   </div>
 );
 
@@ -70,7 +70,7 @@ export const OGImage = ({
       />
       <style dangerouslySetInnerHTML={{ __html: style }} />
     </head>
-    <body className="flex flex-col h-full justify-between p-12 bg-zinc-800 text-white">
+    <body className="flex flex-col h-full justify-between p-12 bg-zinc-800 text-white text-2xl">
       <Header date={date} readMinutes={readMinutes} />
       <Content title={title} description={description} />
       <Footer />
