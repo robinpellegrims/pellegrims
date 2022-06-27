@@ -1,6 +1,7 @@
 import { DateFormatted } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { Tags } from '@pellegrims/pellegrims-dev/ui/molecules';
 import { FunctionComponent, HTMLAttributeAnchorTarget } from 'react';
+import Image from 'next/image';
 
 export interface CardProps {
   title: string;
@@ -14,11 +15,22 @@ export interface CardProps {
 
 export const Card: FunctionComponent<CardProps> = (props) => (
   <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
-    <img
-      className="lg:h-64 md:h-36 w-full object-cover object-center"
-      src={props.cover}
-      loading="lazy"
-    />
+    <div className="relative h-96 lg:h-64 md:h-36">
+      {props.cover.startsWith('/') ? (
+        <Image
+          src={props.cover}
+          layout="fill"
+          objectFit="cover"
+          loading="lazy"
+        />
+      ) : (
+        <img
+          className="w-full h-full object-cover object-center"
+          src={props.cover}
+          loading="lazy"
+        />
+      )}
+    </div>
     <div className="p-6 flex flex-col flex-grow">
       <Tags tags={props.tags} />
       <h1 className="title-font text-lg font-medium mb-3">{props.title}</h1>
