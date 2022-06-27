@@ -46,7 +46,12 @@ const Article: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           {
             height: oGImageHeight,
             width: oGImageWidth,
-            url: buildOgImageUrl(markDown.frontMatter),
+            url: buildOgImageUrl({
+              date: markDown.frontMatter.date,
+              description: markDown.frontMatter.description,
+              readMinutes: markDown.readingTimeMins,
+              title: markDown.frontMatter.title,
+            }),
           },
         ],
       }}

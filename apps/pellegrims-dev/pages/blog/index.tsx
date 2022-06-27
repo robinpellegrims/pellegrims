@@ -43,6 +43,7 @@ export const getStaticProps: GetStaticProps<BlogProps> = async () => {
               date: post.frontMatter.date,
               description: post.frontMatter.description,
               title: post.frontMatter.title,
+              readMinutes: post.readingTimeMins,
             }),
           created: post.frontMatter.date,
           excerpt: post.frontMatter.description ?? '',
