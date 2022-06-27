@@ -23,4 +23,4 @@ export const buildRelativeOgImageUrl = ({
   }&date=${date}&readMinutes=${readMinutes}`;
 
 export const buildOgImageUrl = (ogImageParams: OGImageParams) =>
-  `${productionUrl}/${buildRelativeOgImageUrl(ogImageParams)}`;
+  `${productionUrl}${buildRelativeOgImageUrl(ogImageParams)}`;
