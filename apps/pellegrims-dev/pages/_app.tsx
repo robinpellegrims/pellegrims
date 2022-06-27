@@ -20,6 +20,7 @@ import { NextPage } from 'next';
 import { CounterDevAnalytics } from '../components/counter-dev-analytics';
 
 const headerNavLinks: { text: string; href: string }[] = [
+  { text: 'Blog', href: '/blog' },
   { text: 'Snippets', href: '/snippets' },
   { text: 'Bookmarks', href: '/bookmarks' },
   { text: 'Contact', href: '/contact' },
