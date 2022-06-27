@@ -38,6 +38,7 @@ export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
             src={markDown.frontMatter.coverImage}
             layout="fill"
             objectFit="cover"
+            loading="eager"
           />
         </div>
       ) : null}
