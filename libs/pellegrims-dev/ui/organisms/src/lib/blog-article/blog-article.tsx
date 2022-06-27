@@ -21,8 +21,8 @@ export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
   twitterSvgIcon,
 }) => (
   <article className="mx-auto prose lg:prose-xl dark:prose-invert">
-    <header className="flex flex-col gap-6">
-      <div className="flex flex-col gap-2">
+    <header className="flex flex-col">
+      <div className="flex flex-col gap-2 mb-6">
         <div className="flex flex-row justify-between w-full items-center">
           {markDown.frontMatter.date ? (
             <DateFormatted date={markDown.frontMatter.date} />
@@ -33,7 +33,7 @@ export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
       </div>
       <h1>{markDown.frontMatter.title}</h1>
       {markDown.frontMatter.coverImage ? (
-        <div className="relative h-[31rem] mb-6">
+        <div className="relative h-[31rem]">
           <Image
             src={markDown.frontMatter.coverImage}
             layout="fill"

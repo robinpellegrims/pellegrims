@@ -31,10 +31,10 @@ export const Card: FunctionComponent<CardProps> = (props) => (
         />
       )}
     </div>
-    <div className="p-6 flex flex-col flex-grow">
+    <div className="p-6 flex flex-col flex-grow gap-3">
       <Tags tags={props.tags} />
-      <h1 className="title-font text-lg font-medium mb-3">{props.title}</h1>
-      <p className="leading-relaxed mb-3 grow line-clamp-3">{props.excerpt}</p>
+      <h1 className="title-font text-xl font-bold">{props.title}</h1>
+      <p className="leading-relaxed grow line-clamp-3">{props.excerpt}</p>
       <div className="flex items-center justify-between mt-auto">
         <a
           href={props.link}
