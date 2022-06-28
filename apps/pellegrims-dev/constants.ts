@@ -24,7 +24,8 @@ export const twitterSvgIcon =
 export const twitterUrl = 'https://twitter.com/robinpel';
 export const twitterUserName = 'robinpel';
 export const twitterHandle = `@${twitterUserName}`;
-export const productionUrl = 'https://www.pellegrims.dev';
+export const canonicalDomain = 'www.pellegrims.dev';
+export const canonicalBaseUrl = `https://${canonicalDomain}`;
 const firstName = 'Robin';
 const lastName = 'Pellegrims';
 export const name = `${firstName} ${lastName}`;
@@ -32,14 +33,12 @@ export const avataaarUrl =
   'https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=BrownDark&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=Hoodie&clotheColor=Red&eyeType=Happy&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light';
 export const defaultSeoConfig: NextSeoProps = {
   defaultTitle: name,
-  titleTemplate: `${name} | %s`,
   description:
     'Professional software developer, front-end technical lead and freelance web developer.',
   openGraph: {
     title: name,
     type: 'website',
-    locale: 'en_BE',
-    url: productionUrl,
+    url: canonicalBaseUrl,
     // eslint-disable-next-line @typescript-eslint/naming-convention
     site_name: name,
     profile: {
@@ -47,7 +46,15 @@ export const defaultSeoConfig: NextSeoProps = {
       lastName,
       username: facebookProfileUrl,
     },
-    images: [{ url: `${productionUrl}/avataaar.png`, height: 560, width: 548 }],
+    images: [
+      {
+        url: `https://${
+          process.env.NEXT_PUBLIC_VERCEL_URL ?? canonicalDomain
+        }/avataaar.png`,
+        height: 560,
+        width: 548,
+      },
+    ],
   },
   twitter: {
     handle: twitterHandle,

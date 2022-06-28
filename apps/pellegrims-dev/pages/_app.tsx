@@ -9,7 +9,7 @@ import {
   linkedInSvgIcon,
   linkedInUrl,
   name,
-  productionUrl,
+  canonicalBaseUrl,
   twitterSvgIcon,
   twitterUrl,
 } from '../constants';
@@ -30,7 +30,7 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => (
   <>
     <DefaultSeo
       {...defaultSeoConfig}
-      canonical={productionUrl + useRouter().pathname}
+      canonical={canonicalBaseUrl + useRouter().pathname}
     />
     <CounterDevAnalytics user="RobinPel" />
     <Header links={headerNavLinks} />
