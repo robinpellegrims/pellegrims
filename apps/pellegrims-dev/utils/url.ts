@@ -1,9 +1,9 @@
-import { productionUrl } from '../constants';
+import { canonicalBaseUrl, canonicalDomain } from '../constants';
 
 export const buildRelativeBlogArticleUrl = (slug: string) => `/blog/${slug}`;
 
 export const buildCanonicalBlogArticleUrl = (slug: string) =>
-  `${productionUrl}${buildRelativeBlogArticleUrl(slug)}/`;
+  `${canonicalBaseUrl}${buildRelativeBlogArticleUrl(slug)}/`;
 
 export interface OGImageParams {
   title?: string;
@@ -23,4 +23,6 @@ export const buildRelativeOgImageUrl = ({
   }&date=${date}&readMinutes=${readMinutes}`;
 
 export const buildOgImageUrl = (ogImageParams: OGImageParams) =>
-  `${productionUrl}${buildRelativeOgImageUrl(ogImageParams)}`;
+  `https://${
+    process.env.NEXT_PUBLIC_VERCEL_URL ?? canonicalDomain
+  }${buildRelativeOgImageUrl(ogImageParams)}`;
