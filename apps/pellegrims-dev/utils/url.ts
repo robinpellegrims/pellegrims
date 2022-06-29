@@ -1,4 +1,4 @@
-import { canonicalBaseUrl, canonicalDomain } from '../constants';
+import { canonicalBaseUrl } from '../constants';
 
 export const buildRelativeBlogArticleUrl = (slug: string) => `/blog/${slug}`;
 
@@ -23,6 +23,4 @@ export const buildRelativeOgImageUrl = ({
   }&date=${date}&readMinutes=${readMinutes}`;
 
 export const buildOgImageUrl = (ogImageParams: OGImageParams) =>
-  `https://${
-    process.env.NEXT_PUBLIC_VERCEL_URL ?? canonicalDomain
-  }${buildRelativeOgImageUrl(ogImageParams)}`;
+  `${canonicalBaseUrl}${buildRelativeOgImageUrl(ogImageParams)}`;

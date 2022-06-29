@@ -48,9 +48,7 @@ export const defaultSeoConfig: NextSeoProps = {
     },
     images: [
       {
-        url: `https://${
-          process.env.NEXT_PUBLIC_VERCEL_URL ?? canonicalDomain
-        }/avataaar.png`,
+        url: `${canonicalBaseUrl}/avataaar.png`,
         height: 560,
         width: 548,
       },
