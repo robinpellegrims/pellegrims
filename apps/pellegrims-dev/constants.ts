@@ -1,5 +1,6 @@
 import { join } from 'path';
 import { NextSeoProps } from 'next-seo';
+import { getOrigin } from './utils/url';
 
 export const POSTS_PATH = join(
   process.cwd(),
@@ -48,7 +49,7 @@ export const defaultSeoConfig: NextSeoProps = {
     },
     images: [
       {
-        url: `${canonicalBaseUrl}/avataaar.png`,
+        url: `${getOrigin()}/avataaar.png`,
         height: 560,
         width: 548,
       },
