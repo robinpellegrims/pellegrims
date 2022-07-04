@@ -41,7 +41,9 @@ export const HomeHero: FunctionComponent<HomeHeroProps> = ({
           {', '}
           <Highlight color={colors.green}>front-end technical lead</Highlight>
           {' & '}
-          <Highlight color={colors.blue}>freelance web developer</Highlight>.
+          <span className="whitespace-nowrap">
+            <Highlight color={colors.blue}>freelance web developer</Highlight>.
+          </span>
         </RoughNotationGroup>
       </p>
       <Link href={contactPath}>
