@@ -24,5 +24,10 @@ export const buildRelativeOgImageUrl = ({
     description ?? ''
   )}&date=${date}&readMinutes=${readMinutes}`;
 
+export const getOrigin = () =>
+  typeof window !== 'undefined' && window.location.origin
+    ? window.location.origin
+    : '';
+
 export const buildOgImageUrl = (ogImageParams: OGImageParams) =>
-  `${canonicalBaseUrl}${buildRelativeOgImageUrl(ogImageParams)}`;
+  `${getOrigin()}${buildRelativeOgImageUrl(ogImageParams)}`;
