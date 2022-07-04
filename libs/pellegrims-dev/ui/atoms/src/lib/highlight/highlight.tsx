@@ -16,7 +16,8 @@ export const Highlight: FunctionComponent<HighlightProps> = ({
   );
   return (
     <RoughNotation
-      type="highlight"
+      type="underline"
+      strokeWidth={2}
       multiline={true}
       animationDuration={animationDuration}
       color={color}
