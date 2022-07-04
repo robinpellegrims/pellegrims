@@ -18,9 +18,11 @@ export const buildRelativeOgImageUrl = ({
   date,
   readMinutes,
 }: OGImageParams) =>
-  `/api/og-image?title=${title ?? ''}&description=${
+  `/api/og-image?title=${encodeURIComponent(
+    title ?? ''
+  )}&description=${encodeURIComponent(
     description ?? ''
-  }&date=${date}&readMinutes=${readMinutes}`;
+  )}&date=${date}&readMinutes=${readMinutes}`;
 
 export const buildOgImageUrl = (ogImageParams: OGImageParams) =>
   `${canonicalBaseUrl}${buildRelativeOgImageUrl(ogImageParams)}`;
