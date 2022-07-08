@@ -62,6 +62,7 @@ specifiers:
   eslint-plugin-rxjs: ^4.0.2
   eslint-plugin-rxjs-angular: ^2.0.0
   eslint-plugin-unicorn: ^39.0.0
+  feed: ^4.2.2
   get-stream: ^6.0.1
   gray-matter: ^4.0.3
   husky: ^7.0.4
@@ -100,6 +101,7 @@ specifiers:
   tslib: ^2.0.0
   typescript: 4.7.3
   typewriting-react: ^1.0.8
+  unist-util-visit: ^4.1.0
   utf-8-validate: ^5.0.9
   webpack: ^5.72.0
 
@@ -114,6 +116,7 @@ dependencies:
   chrome-aws-lambda: 6.0.0_puppeteer-core@6.0.0
   core-js: 3.18.3
   encoding: 0.1.13
+  feed: 4.2.2
   get-stream: 6.0.1
   gray-matter: 4.0.3
   next: 12.1.6_t7ss3ubh4wigfvyfclbvqff3gm
@@ -140,6 +143,7 @@ dependencies:
   tailwindcss: 3.0.23_autoprefixer@10.4.4
   tslib: 2.3.1
   typewriting-react: 1.0.8_o2jyg7a2zhyn4ywaq2ezi4dqty
+  unist-util-visit: 4.1.0
   utf-8-validate: 5.0.9
 
 devDependencies:
@@ -11139,6 +11143,16 @@ packages:
     dependencies:
       pend: 1.2.0
 
+  /feed/4.2.2:
+    resolution:
+      {
+        integrity: sha512-u5/sxGfiMfZNtJ3OvQpXcvotFpYkL0n9u9mM2vkui2nGo8b4wvDkJ8gAkYqbA8QpGyFCv3RK0Z+Iv+9veCS9bQ==,
+      }
+    engines: { node: '>=0.4.0' }
+    dependencies:
+      xml-js: 1.6.11
+    dev: false
+
   /figures/3.2.0:
     resolution:
       {
@@ -18160,7 +18174,6 @@ packages:
       {
         integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==,
       }
-    dev: true
 
   /saxes/5.0.1:
     resolution:
@@ -20853,6 +20866,16 @@ packages:
     dependencies:
       bufferutil: 4.0.6
       utf-8-validate: 5.0.9
+
+  /xml-js/1.6.11:
+    resolution:
+      {
+        integrity: sha512-7rVi2KMfwfWFl+GpPg6m80IVMWXLRjO+PxTq7V2CDhoGak0wzYzFgUY2m4XJ47OGdXd8eLE8EmwfAmdjw7lC1g==,
+      }
+    hasBin: true
+    dependencies:
+      sax: 1.2.4
+    dev: false
 
   /xml-name-validator/3.0.0:
     resolution:
