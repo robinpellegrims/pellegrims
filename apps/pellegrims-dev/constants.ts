@@ -32,28 +32,20 @@ const lastName = 'Pellegrims';
 export const name = `${firstName} ${lastName}`;
 export const avataaarUrl =
   'https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=BrownDark&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=Hoodie&clotheColor=Red&eyeType=Happy&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light';
+export const description =
+  'Professional software developer, front-end technical lead and freelance web developer.';
+export const avatarPngUrl = `${getOrigin()}/avataaar.png`;
 export const defaultSeoConfig: NextSeoProps = {
   defaultTitle: name,
-  description:
-    'Professional software developer, front-end technical lead and freelance web developer.',
+  description,
   openGraph: {
     title: name,
     type: 'website',
     url: canonicalBaseUrl,
     // eslint-disable-next-line @typescript-eslint/naming-convention
     site_name: name,
-    profile: {
-      firstName,
-      lastName,
-      username: facebookProfileUrl,
-    },
-    images: [
-      {
-        url: `${getOrigin()}/avataaar.png`,
-        height: 560,
-        width: 548,
-      },
-    ],
+    profile: { firstName, lastName, username: facebookProfileUrl },
+    images: [{ url: avatarPngUrl, height: 560, width: 548 }],
   },
   twitter: {
     handle: twitterHandle,
@@ -63,3 +55,8 @@ export const defaultSeoConfig: NextSeoProps = {
 };
 export const oGImageWidth = 1200;
 export const oGImageHeight = 630;
+export const rssFolder = 'rss';
+export const feedRss2Filename = `feed.xml`;
+export const feedJsonFilename = `feed.json`;
+export const feedAtomFilename = `atom.xml`;
+export const feedAuthor = { name, link: twitterUrl };
