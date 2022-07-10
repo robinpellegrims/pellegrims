@@ -4,14 +4,10 @@ import { Logo, SocialIconLink } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { Container } from '@pellegrims/pellegrims-dev/ui/templates';
 
 interface FooterProps {
-  facebookSvgIcon: string;
   facebookUrl: string;
-  linkedInSvgIcon: string;
   linkedInUrl: string;
   name: string;
-  twitterSvgIcon: string;
   twitterUrl: string;
-  githubSvgIcon: string;
   githubUrl: string;
 }
 
@@ -19,19 +15,26 @@ export const Footer: FunctionComponent<FooterProps> = (props) => (
   <Container>
     <footer className="py-12 flex flex-col items-center sm:flex-row gap-3 justify-between">
       <span className="inline-flex gap-3">
-        <SocialIconLink href={props.twitterUrl} label="Twitter">
-          <path d={props.twitterSvgIcon} />
-        </SocialIconLink>
-        <SocialIconLink href={props.facebookUrl} label="Facebook">
-          <path d={props.facebookSvgIcon} />
-        </SocialIconLink>
-        <SocialIconLink href={props.linkedInUrl} label="LinkedIn">
-          <path stroke="none" d={props.linkedInSvgIcon} />
-          <circle cx="4" cy="4" r="2" stroke="none" />
-        </SocialIconLink>
-        <SocialIconLink href={props.githubUrl} label="Github">
-          <path d={props.githubSvgIcon} />
-        </SocialIconLink>
+        <SocialIconLink
+          href={props.twitterUrl}
+          label="Twitter"
+          iconType="twitter"
+        />
+        <SocialIconLink
+          href={props.facebookUrl}
+          label="Facebook"
+          iconType="facebook"
+        />
+        <SocialIconLink
+          href={props.linkedInUrl}
+          label="LinkedIn"
+          iconType="linkedin"
+        />
+        <SocialIconLink
+          href={props.githubUrl}
+          label="Github"
+          iconType="github"
+        />
       </span>
       <p className="text-sm text-dark-500">
         © {new Date().getFullYear()} {props.name}

@@ -1,16 +1,12 @@
 import 'tailwindcss/tailwind.css';
 import { Footer, Header } from '@pellegrims/pellegrims-dev/ui/organisms';
 import {
+  canonicalBaseUrl,
   defaultSeoConfig,
   facebookProfileUrl,
-  facebookSvgIcon,
-  githubSvgIcon,
   githubUrl,
-  linkedInSvgIcon,
   linkedInUrl,
   name,
-  canonicalBaseUrl,
-  twitterSvgIcon,
   twitterUrl,
 } from '../constants';
 import { DefaultSeo } from 'next-seo';
@@ -40,13 +36,9 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => (
       footer={
         <Footer
           name={name}
-          facebookSvgIcon={facebookSvgIcon}
           facebookUrl={facebookProfileUrl}
-          linkedInSvgIcon={linkedInSvgIcon}
           linkedInUrl={linkedInUrl}
-          twitterSvgIcon={twitterSvgIcon}
           twitterUrl={twitterUrl}
-          githubSvgIcon={githubSvgIcon}
           githubUrl={githubUrl}
         />
       }
