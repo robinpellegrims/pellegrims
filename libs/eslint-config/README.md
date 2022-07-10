@@ -1,7 +1,6 @@
 # @pellegrims/eslint-config
 
 [![npm package link](https://img.shields.io/npm/v/@pellegrims/eslint-config)](https://www.npmjs.com/package/@pellegrims/eslint-config)
-[![codecov](https://codecov.io/gh/robinpellegrims/pellegrims/branch/master/graph/badge.svg?token=ZMFMQFBXR7&flag=eslint-config)](https://codecov.io/gh/robinpellegrims/pellegrims/tree/master/libs/eslint-config)
 
 This package provides an opinionated shareable eslint config.
 
