@@ -1,5 +1,5 @@
 import { MarkdownDocument } from '@pellegrims/markdown';
-import { Tags, Markdown } from '@pellegrims/pellegrims-dev/ui/molecules';
+import { Markdown, Tags } from '@pellegrims/pellegrims-dev/ui/molecules';
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
 import { DateFormatted, SocialIcon } from '@pellegrims/pellegrims-dev/ui/atoms';
@@ -9,7 +9,6 @@ export interface BlogArticleProps {
   markDown: MarkdownDocument;
   twitterUserName: string;
   urlToShare?: string;
-  twitterSvgIcon: string;
 }
 
 const shareOnTwitter = 'Share on twitter' as const;
@@ -18,7 +17,6 @@ export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
   markDown,
   twitterUserName,
   urlToShare,
-  twitterSvgIcon,
 }) => (
   <article className="mx-auto prose lg:prose-xl dark:prose-invert">
     <header className="flex flex-col">
@@ -55,9 +53,7 @@ export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
             aria-label={shareOnTwitter}
             className="flex gap-2 items-center justify-center"
           >
-            <SocialIcon>
-              <path d={twitterSvgIcon} />
-            </SocialIcon>
+            <SocialIcon type="twitter" />
             {shareOnTwitter}
           </a>
         </Link>

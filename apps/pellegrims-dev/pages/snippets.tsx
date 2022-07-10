@@ -1,5 +1,5 @@
 import { getMarkdownDocuments } from '@pellegrims/markdown';
-import { SNIPPETS_PATH, twitterSvgIcon, twitterUserName } from '../constants';
+import { SNIPPETS_PATH, twitterUserName } from '../constants';
 import { List, PageTemplate } from '@pellegrims/pellegrims-dev/ui/templates';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import { PageHero } from '@pellegrims/pellegrims-dev/ui/molecules';
@@ -34,7 +34,6 @@ export const getStaticProps: GetStaticProps<SnippetsProps> = async () => {
     props: {
       snippets: snippets.map((snippet) => ({
         markDown: snippet,
-        twitterSvgIcon,
         twitterUserName,
       })),
     },

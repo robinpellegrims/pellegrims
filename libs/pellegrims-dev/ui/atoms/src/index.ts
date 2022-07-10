@@ -14,5 +14,6 @@ export { PageSubtitle } from './lib/page-subtitle/page-subtitle';
 export { PageTitle } from './lib/page-title/page-title';
 export { RightArrow } from './lib/right-arrow/right-arrow';
 export { SocialIcon } from './lib/social-icon/social-icon';
+export type { SocialIconType } from './lib/social-icon/social-icon';
 export { SocialIconLink } from './lib/social-icon-link/social-icon-link';
 export { FormSuccess } from './lib/form-success/form-success';

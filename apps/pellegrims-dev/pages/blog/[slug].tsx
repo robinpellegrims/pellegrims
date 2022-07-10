@@ -14,7 +14,6 @@ import {
   oGImageHeight,
   oGImageWidth,
   POSTS_PATH,
-  twitterSvgIcon,
   twitterUserName,
 } from '../../constants';
 import { BlogArticle } from '@pellegrims/pellegrims-dev/ui/organisms';
@@ -61,7 +60,6 @@ const Article: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         markDown={markDown}
         twitterUserName={twitterUserName}
         urlToShare={buildCanonicalBlogArticleUrl(markDown.slug)}
-        twitterSvgIcon={twitterSvgIcon}
       />
     </Container>
   </>
