@@ -1,6 +1,6 @@
-import { getHeading1 } from '../support/app.po';
+import { getHeading1 } from '../support/home';
 
-describe('pellegrims-dev', () => {
+describe('home', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display the main heading', () => {
