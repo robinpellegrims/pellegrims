@@ -152,7 +152,9 @@
           },
           "configurations": {
             "production": {},
-            "development": {}
+            "development": {
+              "outputPath": "tmp/apps/pellegrims-dev"
+            }
           },
           "defaultConfiguration": "production"
         },
