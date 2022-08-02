@@ -28,7 +28,9 @@ export const buildRelativeOgImageUrl = ({
   )}&date=${date}&readMinutes=${readMinutes}`;
 
 export const getCurrentOrigin = () =>
-  typeof window !== 'undefined' ? window.location.origin : canonicalOrigin;
+  typeof window !== 'undefined' && window.location.origin
+    ? window.location.origin
+    : canonicalOrigin;
 
 export const buildOgImageUrl = (ogImageParams: OGImageParams) =>
   `${getCurrentOrigin()}${buildRelativeOgImageUrl(ogImageParams)}`;
