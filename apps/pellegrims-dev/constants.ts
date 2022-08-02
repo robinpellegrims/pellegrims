@@ -1,6 +1,6 @@
 import { join } from 'path';
 import { NextSeoProps } from 'next-seo';
-import { getOrigin } from './utils/url';
+import { getCurrentOrigin } from './utils/url';
 
 export const POSTS_PATH = join(
   process.cwd(),
@@ -18,7 +18,12 @@ export const twitterUrl = 'https://twitter.com/robinpel';
 export const twitterUserName = 'robinpel';
 export const twitterHandle = `@${twitterUserName}`;
 export const canonicalDomain = 'www.pellegrims.dev';
-export const canonicalBaseUrl = `https://${canonicalDomain}`;
+export const canonicalOrigin = `https://${canonicalDomain}`;
+export const currentDomain =
+  process.env.VERCEL_URL ??
+  process.env.NEXT_PUBLIC_VERCEL_URL ??
+  canonicalDomain;
+export const currentOrigin = `https://${currentDomain}`;
 const firstName = 'Robin';
 const lastName = 'Pellegrims';
 export const name = `${firstName} ${lastName}`;
@@ -26,14 +31,14 @@ export const avataaarUrl =
   'https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=BrownDark&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=Hoodie&clotheColor=Red&eyeType=Happy&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light';
 export const description =
   'Professional software developer, front-end technical lead and freelance web developer.';
-export const avatarPngUrl = `${getOrigin()}/avataaar.png`;
+export const avatarPngUrl = `${getCurrentOrigin()}/avataaar.png`;
 export const defaultSeoConfig: NextSeoProps = {
   defaultTitle: name,
   description,
   openGraph: {
     title: name,
     type: 'website',
-    url: canonicalBaseUrl,
+    url: currentOrigin,
     // eslint-disable-next-line @typescript-eslint/naming-convention
     site_name: name,
     profile: { firstName, lastName, username: facebookProfileUrl },

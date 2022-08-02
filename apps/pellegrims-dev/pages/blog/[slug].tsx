@@ -19,7 +19,11 @@ import {
 import { BlogArticle } from '@pellegrims/pellegrims-dev/ui/organisms';
 import { Container } from '@pellegrims/pellegrims-dev/ui/templates';
 import { NextSeo } from 'next-seo';
-import { buildCanonicalBlogArticleUrl, buildOgImageUrl } from '../../utils/url';
+import {
+  buildBlogArticleUrlToShare,
+  buildCanonicalBlogArticleUrl,
+  buildOgImageUrl,
+} from '../../utils/url';
 
 interface BlogArticleUrlQuery extends ParsedUrlQuery {
   slug: string;
@@ -59,7 +63,7 @@ const Article: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       <BlogArticle
         markDown={markDown}
         twitterUserName={twitterUserName}
-        urlToShare={buildCanonicalBlogArticleUrl(markDown.slug)}
+        urlToShare={buildBlogArticleUrlToShare(markDown.slug)}
       />
     </Container>
   </>
