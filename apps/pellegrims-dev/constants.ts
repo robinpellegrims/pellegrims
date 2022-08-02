@@ -19,11 +19,6 @@ export const twitterUserName = 'robinpel';
 export const twitterHandle = `@${twitterUserName}`;
 export const canonicalDomain = 'www.pellegrims.dev';
 export const canonicalOrigin = `https://${canonicalDomain}`;
-export const currentDomain =
-  process.env.VERCEL_URL ??
-  process.env.NEXT_PUBLIC_VERCEL_URL ??
-  canonicalDomain;
-export const currentOrigin = `https://${currentDomain}`;
 const firstName = 'Robin';
 const lastName = 'Pellegrims';
 export const name = `${firstName} ${lastName}`;
@@ -38,7 +33,7 @@ export const defaultSeoConfig: NextSeoProps = {
   openGraph: {
     title: name,
     type: 'website',
-    url: currentOrigin,
+    url: canonicalOrigin,
     // eslint-disable-next-line @typescript-eslint/naming-convention
     site_name: name,
     profile: { firstName, lastName, username: facebookProfileUrl },

@@ -1,4 +1,4 @@
-import { canonicalOrigin, currentOrigin } from '../constants';
+import { canonicalOrigin } from '../constants';
 
 export const buildRelativeBlogArticleUrl = (slug: string) => `/blog/${slug}`;
 
@@ -28,7 +28,7 @@ export const buildRelativeOgImageUrl = ({
   )}&date=${date}&readMinutes=${readMinutes}`;
 
 export const getCurrentOrigin = () =>
-  typeof window !== 'undefined' ? window.location.origin : currentOrigin;
+  typeof window !== 'undefined' ? window.location.origin : canonicalOrigin;
 
 export const buildOgImageUrl = (ogImageParams: OGImageParams) =>
   `${getCurrentOrigin()}${buildRelativeOgImageUrl(ogImageParams)}`;
