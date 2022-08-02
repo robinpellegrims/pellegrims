@@ -1,7 +1,7 @@
 import 'tailwindcss/tailwind.css';
 import { Footer, Header } from '@pellegrims/pellegrims-dev/ui/organisms';
 import {
-  canonicalBaseUrl,
+  canonicalOrigin,
   defaultSeoConfig,
   facebookProfileUrl,
   githubUrl,
@@ -27,7 +27,7 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => (
   <>
     <DefaultSeo
       {...defaultSeoConfig}
-      canonical={canonicalBaseUrl + useRouter().pathname}
+      canonical={canonicalOrigin + useRouter().pathname}
     />
     <CounterDevAnalytics user="RobinPel" />
     <HomeTemplate

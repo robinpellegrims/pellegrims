@@ -6,7 +6,6 @@ import {
 } from '@pellegrims/markdown';
 import {
   avatarPngUrl,
-  canonicalDomain,
   description,
   feedAtomFilename,
   feedAuthor,
@@ -16,16 +15,12 @@ import {
   POSTS_PATH,
   rssFolder,
 } from '../constants';
-import { buildCanonicalBlogArticleUrl } from './url';
+import { buildBlogArticleUrlToShare, getCurrentOrigin } from './url';
 import * as fs from 'fs';
 
 export const generateRssFeed = async () => {
   const posts = getMarkdownDocuments(POSTS_PATH);
-  const domain =
-    process.env.NEXT_PUBLIC_MAIN_DOMAIN ??
-    process.env.VERCEL_URL ??
-    canonicalDomain;
-  const siteURL = `https://${domain}`;
+  const siteURL = getCurrentOrigin();
   const feedOptions = buildFeedOptions(siteURL);
   const feed = new Feed(feedOptions);
   const feedItems = await Promise.all(
@@ -61,7 +56,7 @@ const buildFeedOptions = (siteURL: string): FeedOptions => {
 };
 
 const mapPostOnFeedItem = (post: MarkdownDocument, siteUrl: string): Item => {
-  const url = buildCanonicalBlogArticleUrl(post.slug);
+  const url = buildBlogArticleUrlToShare(post.slug);
   return {
     title: post.frontMatter.title ?? '',
     id: url,

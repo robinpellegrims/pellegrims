@@ -1,9 +1,12 @@
-import { canonicalBaseUrl } from '../constants';
+import { canonicalOrigin, currentOrigin } from '../constants';
 
 export const buildRelativeBlogArticleUrl = (slug: string) => `/blog/${slug}`;
 
 export const buildCanonicalBlogArticleUrl = (slug: string) =>
-  `${canonicalBaseUrl}${buildRelativeBlogArticleUrl(slug)}/`;
+  `${canonicalOrigin}${buildRelativeBlogArticleUrl(slug)}/`;
+
+export const buildBlogArticleUrlToShare = (slug: string) =>
+  `${getCurrentOrigin()}${buildRelativeBlogArticleUrl(slug)}/`;
 
 export interface OGImageParams {
   title?: string;
@@ -24,10 +27,8 @@ export const buildRelativeOgImageUrl = ({
     description ?? ''
   )}&date=${date}&readMinutes=${readMinutes}`;
 
-export const getOrigin = () =>
-  typeof window !== 'undefined' && window.location.origin
-    ? window.location.origin
-    : '';
+export const getCurrentOrigin = () =>
+  typeof window !== 'undefined' ? window.location.origin : currentOrigin;
 
 export const buildOgImageUrl = (ogImageParams: OGImageParams) =>
-  `${getOrigin()}${buildRelativeOgImageUrl(ogImageParams)}`;
+  `${getCurrentOrigin()}${buildRelativeOgImageUrl(ogImageParams)}`;
