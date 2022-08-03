@@ -27,7 +27,7 @@ describe('contact', () => {
   });
 
   it('email field should have an error for an incorrect email address', () => {
-    getMailField().type('john.doe@');
+    getMailField().type('john.does@');
     assertTypeMismatch(getMailField());
   });
 
