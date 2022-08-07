@@ -5,6 +5,7 @@
     <scripts>
       <script value="start" />
     </scripts>
+    <arguments value="pellegrims-dev" />
     <node-interpreter value="project" />
     <envs />
     <method v="2" />
