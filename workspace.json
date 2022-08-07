@@ -55,6 +55,97 @@
       },
       "tags": []
     },
+    "goldgetters": {
+      "root": "apps/goldgetters",
+      "sourceRoot": "apps/goldgetters",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/next:build",
+          "outputs": ["{options.outputPath}"],
+          "defaultConfiguration": "production",
+          "options": {
+            "root": "apps/goldgetters",
+            "outputPath": "dist/apps/goldgetters"
+          },
+          "configurations": {
+            "development": {
+              "outputPath": "tmp/apps/goldgetters"
+            },
+            "production": {}
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/next:server",
+          "defaultConfiguration": "development",
+          "options": {
+            "buildTarget": "goldgetters:build",
+            "dev": true
+          },
+          "configurations": {
+            "development": {
+              "buildTarget": "goldgetters:build:development",
+              "dev": true
+            },
+            "production": {
+              "buildTarget": "goldgetters:build:production",
+              "dev": false
+            }
+          }
+        },
+        "export": {
+          "executor": "@nrwl/next:export",
+          "options": {
+            "buildTarget": "goldgetters:build:production"
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/goldgetters"],
+          "options": {
+            "jestConfig": "apps/goldgetters/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/goldgetters/**/*.{ts,tsx,js,jsx}"]
+          }
+        }
+      },
+      "tags": []
+    },
+    "goldgetters-e2e": {
+      "root": "apps/goldgetters-e2e",
+      "sourceRoot": "apps/goldgetters-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/goldgetters-e2e/cypress.json",
+            "devServerTarget": "goldgetters:serve:development",
+            "testingType": "e2e"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "goldgetters:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/goldgetters-e2e/**/*.{js,ts}"]
+          }
+        }
+      },
+      "tags": [],
+      "implicitDependencies": ["goldgetters"]
+    },
     "markdown": {
       "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "libs/markdown",
