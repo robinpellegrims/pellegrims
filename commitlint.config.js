@@ -4,7 +4,13 @@ module.exports = {
     'scope-enum': [
       2,
       'always',
-      ['pellegrims-dev', 'eslint-config', 'nx-remotecache-s3', 'markdown'],
+      [
+        'pellegrims-dev',
+        'eslint-config',
+        'nx-remotecache-s3',
+        'markdown',
+        'goldgetters',
+      ],
     ],
   },
 };
