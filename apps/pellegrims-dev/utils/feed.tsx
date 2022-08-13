@@ -3,7 +3,7 @@ import {
   getMarkdownDocuments,
   MarkdownDocument,
   markdownToHtml,
-} from '@pellegrims/markdown';
+} from '@pellegrims/shared/markdown';
 import {
   avatarPngUrl,
   description,

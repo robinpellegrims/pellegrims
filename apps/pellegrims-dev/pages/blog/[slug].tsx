@@ -8,7 +8,7 @@ import {
   getMarkdownDocumentBySlug,
   getSlugsForMarkdownFiles,
   MarkdownDocument,
-} from '@pellegrims/markdown';
+} from '@pellegrims/shared/markdown';
 import { ParsedUrlQuery } from 'querystring';
 import {
   oGImageHeight,

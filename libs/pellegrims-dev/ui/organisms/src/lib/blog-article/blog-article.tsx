@@ -1,4 +1,4 @@
-import { MarkdownDocument } from '@pellegrims/markdown';
+import { MarkdownDocument } from '@pellegrims/shared/markdown';
 import { Markdown, Tags } from '@pellegrims/pellegrims-dev/ui/molecules';
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
