@@ -1,1 +1,1 @@
-export * from './lib/shared-ui-atoms';
+export { CounterDevAnalytics } from './lib/counter-dev-analytics';
