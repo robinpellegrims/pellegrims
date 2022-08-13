@@ -19,6 +19,9 @@
       "@pellegrims/goldgetters/ui/atoms": [
         "libs/goldgetters/ui/atoms/src/index.ts"
       ],
+      "@pellegrims/goldgetters/ui/molecules": [
+        "libs/goldgetters/ui/molecules/src/index.ts"
+      ],
       "@pellegrims/goldgetters/ui/organisms": [
         "libs/goldgetters/ui/organisms/src/index.ts"
       ],

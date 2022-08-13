@@ -171,6 +171,31 @@
         }
       }
     },
+    "goldgetters-ui-molecules": {
+      "root": "libs/goldgetters/ui/molecules",
+      "sourceRoot": "libs/goldgetters/ui/molecules/src",
+      "projectType": "library",
+      "tags": ["platform:react", "type:ui", "atomic-design:atoms"],
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": [
+              "libs/goldgetters/ui/molecules/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/goldgetters/ui/molecules"],
+          "options": {
+            "jestConfig": "libs/goldgetters/ui/molecules/jest.config.ts",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "goldgetters-ui-organisms": {
       "root": "libs/goldgetters/ui/organisms",
       "sourceRoot": "libs/goldgetters/ui/organisms/src",
