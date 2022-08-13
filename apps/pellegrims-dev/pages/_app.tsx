@@ -13,7 +13,7 @@ import { DefaultSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import { AppProps } from 'next/app';
 import { NextPage } from 'next';
-import { CounterDevAnalytics } from '../components/counter-dev-analytics';
+import { CounterDevAnalytics } from '@pellegrims/shared/ui/atoms';
 import { HomeTemplate } from '@pellegrims/pellegrims-dev/ui/templates';
 
 const headerNavLinks: { text: string; href: string }[] = [
