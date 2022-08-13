@@ -246,30 +246,6 @@
         }
       }
     },
-    "markdown": {
-      "$schema": "../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/markdown",
-      "sourceRoot": "libs/markdown/src",
-      "projectType": "library",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["libs/markdown/**/*.ts"]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/markdown"],
-          "options": {
-            "jestConfig": "libs/markdown/jest.config.ts",
-            "passWithNoTests": true
-          }
-        }
-      },
-      "tags": []
-    },
     "nx-remotecache-s3": {
       "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "libs/nx-remotecache-s3",
@@ -520,6 +496,30 @@
           "outputs": ["coverage/libs/pellegrims-dev/ui/templates"],
           "options": {
             "jestConfig": "libs/pellegrims-dev/ui/templates/jest.config.ts",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-markdown": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
+      "root": "libs/shared/markdown",
+      "sourceRoot": "libs/shared/markdown/src",
+      "projectType": "library",
+      "tags": ["scope:shared"],
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/shared/markdown/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/markdown"],
+          "options": {
+            "jestConfig": "libs/shared/markdown/jest.config.ts",
             "passWithNoTests": true
           }
         }

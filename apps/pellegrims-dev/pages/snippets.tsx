@@ -1,4 +1,4 @@
-import { getMarkdownDocuments } from '@pellegrims/markdown';
+import { getMarkdownDocuments } from '@pellegrims/shared/markdown';
 import { SNIPPETS_PATH, twitterUserName } from '../constants';
 import { List, PageTemplate } from '@pellegrims/pellegrims-dev/ui/templates';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';

@@ -1,4 +1,4 @@
-import { getMarkdownDocuments } from '@pellegrims/markdown';
+import { getMarkdownDocuments } from '@pellegrims/shared/markdown';
 import { POSTS_PATH } from '../../constants';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import { PageHero } from '@pellegrims/pellegrims-dev/ui/molecules';

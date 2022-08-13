@@ -1,5 +1,5 @@
 import ReactMarkdown from 'react-markdown';
-import { MarkdownDocument } from '@pellegrims/markdown';
+import { MarkdownDocument } from '@pellegrims/shared/markdown';
 import { FunctionComponent } from 'react';
 import { CodeBlock, MarkdownImage } from '@pellegrims/pellegrims-dev/ui/atoms';
 
