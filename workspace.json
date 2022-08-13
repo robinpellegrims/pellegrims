@@ -59,6 +59,7 @@
       "root": "apps/goldgetters",
       "sourceRoot": "apps/goldgetters",
       "projectType": "application",
+      "tags": ["platform:react", "type:app", "scope:goldgetters"],
       "targets": {
         "build": {
           "executor": "@nrwl/next:build",
@@ -114,8 +115,7 @@
             "lintFilePatterns": ["apps/goldgetters/**/*.{ts,tsx,js,jsx}"]
           }
         }
-      },
-      "tags": []
+      }
     },
     "goldgetters-e2e": {
       "root": "apps/goldgetters-e2e",
@@ -150,7 +150,12 @@
       "root": "libs/goldgetters/ui/atoms",
       "sourceRoot": "libs/goldgetters/ui/atoms/src",
       "projectType": "library",
-      "tags": ["platform:react", "type:ui", "atomic-design:atoms"],
+      "tags": [
+        "platform:react",
+        "type:ui",
+        "atomic-design:atoms",
+        "scope:goldgetters"
+      ],
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
@@ -175,7 +180,12 @@
       "root": "libs/goldgetters/ui/molecules",
       "sourceRoot": "libs/goldgetters/ui/molecules/src",
       "projectType": "library",
-      "tags": ["platform:react", "type:ui", "atomic-design:atoms"],
+      "tags": [
+        "platform:react",
+        "type:ui",
+        "atomic-design:molecules",
+        "scope:goldgetters"
+      ],
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
@@ -200,7 +210,12 @@
       "root": "libs/goldgetters/ui/organisms",
       "sourceRoot": "libs/goldgetters/ui/organisms/src",
       "projectType": "library",
-      "tags": ["platform:react", "type:ui", "atomic-design:organisms"],
+      "tags": [
+        "platform:react",
+        "type:ui",
+        "atomic-design:organisms",
+        "scope:goldgetters"
+      ],
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
@@ -225,7 +240,12 @@
       "root": "libs/goldgetters/ui/templates",
       "sourceRoot": "libs/goldgetters/ui/templates/src",
       "projectType": "library",
-      "tags": ["platform:react", "type:ui", "atomic-design:templates"],
+      "tags": [
+        "platform:react",
+        "type:ui",
+        "atomic-design:templates",
+        "scope:goldgetters"
+      ],
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
@@ -309,6 +329,7 @@
       "root": "apps/pellegrims-dev",
       "sourceRoot": "apps/pellegrims-dev",
       "projectType": "application",
+      "tags": ["platform:react", "type:app", "scope:pellegrims-dev"],
       "targets": {
         "build": {
           "executor": "@nrwl/next:build",
@@ -364,8 +385,7 @@
             "lintFilePatterns": ["apps/pellegrims-dev/**/*.{ts,tsx,js,jsx}"]
           }
         }
-      },
-      "tags": []
+      }
     },
     "pellegrims-dev-e2e": {
       "$schema": "../../node_modules/nx/schemas/project-schema.json",
@@ -402,7 +422,12 @@
       "root": "libs/pellegrims-dev/ui/atoms",
       "sourceRoot": "libs/pellegrims-dev/ui/atoms/src",
       "projectType": "library",
-      "tags": ["platform:react", "type:ui", "atomic-design:atoms"],
+      "tags": [
+        "platform:react",
+        "type:ui",
+        "atomic-design:atoms",
+        "scope:pellegrims-dev"
+      ],
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
@@ -428,7 +453,12 @@
       "root": "libs/pellegrims-dev/ui/molecules",
       "sourceRoot": "libs/pellegrims-dev/ui/molecules/src",
       "projectType": "library",
-      "tags": [],
+      "tags": [
+        "platform:react",
+        "type:ui",
+        "atomic-design:molecules",
+        "scope:pellegrims-dev"
+      ],
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
@@ -454,7 +484,12 @@
       "root": "libs/pellegrims-dev/ui/organisms",
       "sourceRoot": "libs/pellegrims-dev/ui/organisms/src",
       "projectType": "library",
-      "tags": ["platform:react", "type:ui", "atomic-design:organisms"],
+      "tags": [
+        "platform:react",
+        "type:ui",
+        "atomic-design:organisms",
+        "scope:pellegrims-dev"
+      ],
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
@@ -480,7 +515,12 @@
       "root": "libs/pellegrims-dev/ui/templates",
       "sourceRoot": "libs/pellegrims-dev/ui/templates/src",
       "projectType": "library",
-      "tags": ["platform:react", "type:ui", "atomic-design:templates"],
+      "tags": [
+        "platform:react",
+        "type:ui",
+        "atomic-design:templates",
+        "scope:pellegrims-dev"
+      ],
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
@@ -529,7 +569,12 @@
       "root": "libs/shared/ui/atoms",
       "sourceRoot": "libs/shared/ui/atoms/src",
       "projectType": "library",
-      "tags": ["platform:react", "type:ui", "atomic-design:atoms"],
+      "tags": [
+        "platform:react",
+        "type:ui",
+        "atomic-design:atoms",
+        "scope:shared"
+      ],
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
