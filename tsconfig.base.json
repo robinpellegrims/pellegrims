@@ -16,6 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@pellegrims/eslint-config": ["libs/eslint-config/src/index.ts"],
+      "@pellegrims/goldgetters/ui/organisms": [
+        "libs/goldgetters/ui/organisms/src/index.ts"
+      ],
       "@pellegrims/markdown": ["libs/markdown/src/index.ts"],
       "@pellegrims/nx-remotecache-s3": ["libs/nx-remotecache-s3/src/index.ts"],
       "@pellegrims/pellegrims-dev/ui/atoms": [
