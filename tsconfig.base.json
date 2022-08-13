@@ -16,6 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@pellegrims/eslint-config": ["libs/eslint-config/src/index.ts"],
+      "@pellegrims/goldgetters/ui/atoms": [
+        "libs/goldgetters/ui/atoms/src/index.ts"
+      ],
       "@pellegrims/goldgetters/ui/organisms": [
         "libs/goldgetters/ui/organisms/src/index.ts"
       ],
