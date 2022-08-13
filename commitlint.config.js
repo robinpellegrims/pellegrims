@@ -10,6 +10,7 @@ module.exports = {
         'nx-remotecache-s3',
         'markdown',
         'goldgetters',
+        'shared',
       ],
     ],
   },
