@@ -1,1 +1,1 @@
-export * from './lib/goldgetters-ui-templates';
+export { PageTemplate } from './lib/page/page';
