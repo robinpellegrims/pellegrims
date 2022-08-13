@@ -32,7 +32,8 @@
       ],
       "@pellegrims/pellegrims-dev/ui/templates": [
         "libs/pellegrims-dev/ui/templates/src/index.ts"
-      ]
+      ],
+      "@pellegrims/shared/ui/atoms": ["libs/shared/ui/atoms/src/index.ts"]
     },
     "strict": true,
     "noUnusedLocals": true,
