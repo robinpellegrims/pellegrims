@@ -8,7 +8,7 @@ type HeaderLink = Pick<NavItemProps, 'text' | 'href'>;
 
 interface HeaderProps {
   links: HeaderLink[];
-  image: StaticImageData | string;
+  image?: StaticImageData;
 }
 
 const loginLink: HeaderLink = { text: 'Login', href: '/login' };
