@@ -565,6 +565,29 @@
         }
       }
     },
+    "shared-test": {
+      "root": "libs/shared/test",
+      "sourceRoot": "libs/shared/test/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/shared/test/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/test"],
+          "options": {
+            "jestConfig": "libs/shared/test/jest.config.ts",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": ["type:test", "scope:shared"]
+    },
     "shared-ui-atoms": {
       "root": "libs/shared/ui/atoms",
       "sourceRoot": "libs/shared/ui/atoms/src",
