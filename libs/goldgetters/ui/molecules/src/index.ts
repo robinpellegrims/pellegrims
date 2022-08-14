@@ -1,1 +1,1 @@
-export * from './lib/goldgetters-ui-molecules';
+export { NavMenu } from './lib/nav-menu/nav-menu';

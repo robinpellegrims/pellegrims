@@ -1,1 +1,1 @@
-export * from './lib/goldgetters-ui-organisms';
+export { Header } from './lib/header/header';
