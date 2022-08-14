@@ -12,6 +12,7 @@ module.exports = {
         'goldgetters',
         'shared',
         'shared-ui-atoms',
+        'shared-test',
       ],
     ],
   },

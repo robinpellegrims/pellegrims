@@ -42,6 +42,7 @@
         "libs/pellegrims-dev/ui/templates/src/index.ts"
       ],
       "@pellegrims/shared/markdown": ["libs/shared/markdown/src/index.ts"],
+      "@pellegrims/shared/test": ["libs/shared/test/src/index.ts"],
       "@pellegrims/shared/ui/atoms": ["libs/shared/ui/atoms/src/index.ts"]
     },
     "strict": true,
