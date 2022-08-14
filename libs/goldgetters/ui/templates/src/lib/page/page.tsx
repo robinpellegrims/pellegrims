@@ -11,11 +11,9 @@ export const PageTemplate: FunctionComponent<PageTemplateProps> = ({
   content,
   footer,
 }) => (
-  <div className="min-h-screen flex flex-col">
-    {header}
-    <main className="py-12 flex-auto flex flex-col justify-center">
-      {content}
-    </main>
-    {footer}
+  <div className="flex flex-col min-h-screen">
+    <header className="sticky top-0">{header}</header>
+    <main className="grow overflow-y-auto">{content}</main>
+    <footer>{footer}</footer>
   </div>
 );
