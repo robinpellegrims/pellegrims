@@ -1,5 +1,6 @@
 import { render } from '@testing-library/react';
 import { Header } from './header';
+import { mockMatchMedia } from '@pellegrims/shared/test';
 
 jest.mock('next/router', () => ({
   useRouter() {
@@ -11,6 +12,8 @@ jest.mock('next/router', () => ({
     };
   },
 }));
+
+mockMatchMedia();
 
 describe('Header', () => {
   it('should render successfully', () => {

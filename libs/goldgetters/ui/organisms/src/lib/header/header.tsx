@@ -1,5 +1,10 @@
 import { FunctionComponent, useState } from 'react';
-import { Brand, NavItem, NavItemProps } from '@pellegrims/goldgetters/ui/atoms';
+import {
+  Brand,
+  DarkModeSwitch,
+  NavItem,
+  NavItemProps,
+} from '@pellegrims/goldgetters/ui/atoms';
 import { StaticImageData } from 'next/image';
 import { NavMenu } from '@pellegrims/goldgetters/ui/molecules';
 import { useRouter } from 'next/router';
@@ -13,7 +18,7 @@ interface HeaderProps {
 
 const loginLink: HeaderLink = { text: 'Login', href: '/login' };
 
-const Hamburger = () => (
+export const Hamburger = () => (
   <button
     data-collapse-toggle="navbar-sticky"
     type="button"
@@ -48,6 +53,7 @@ export const Header: FunctionComponent<HeaderProps> = ({ links, image }) => {
         <Brand image={image} />
         <div className="flex md:order-2">
           <NavItem {...loginLink} active={router.pathname === loginLink.href} />
+          <DarkModeSwitch />
           <div onClick={() => setIsNavOpen((prev) => !prev)}>
             <Hamburger />
           </div>

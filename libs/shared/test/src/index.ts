@@ -1,1 +1,1 @@
-export * from './lib/match-media';
+export { mockMatchMedia } from './lib/match-media';
