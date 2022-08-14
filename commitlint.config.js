@@ -11,6 +11,7 @@ module.exports = {
         'markdown',
         'goldgetters',
         'shared',
+        'shared-ui-atoms',
       ],
     ],
   },
