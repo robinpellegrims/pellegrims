@@ -1,12 +1,17 @@
 import { FunctionComponent, useState } from 'react';
-import { Brand, NavItem } from '@pellegrims/goldgetters/ui/atoms';
+import { Brand, NavItem, NavItemProps } from '@pellegrims/goldgetters/ui/atoms';
 import { StaticImageData } from 'next/image';
 import { NavMenu } from '@pellegrims/goldgetters/ui/molecules';
+import { useRouter } from 'next/router';
+
+type HeaderLink = Pick<NavItemProps, 'text' | 'href'>;
 
 interface HeaderProps {
-  links: { text: string; href: string }[];
+  links: HeaderLink[];
   image: StaticImageData | string;
 }
+
+const loginLink: HeaderLink = { text: 'Login', href: '/login' };
 
 const Hamburger = () => (
   <button
@@ -35,13 +40,14 @@ const Hamburger = () => (
 
 export const Header: FunctionComponent<HeaderProps> = ({ links, image }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <Brand image={image} />
         <div className="flex md:order-2">
-          <NavItem text="Login" href="/login" />
+          <NavItem {...loginLink} active={router.pathname === loginLink.href} />
           <div onClick={() => setIsNavOpen((prev) => !prev)}>
             <Hamburger />
           </div>
@@ -51,7 +57,12 @@ export const Header: FunctionComponent<HeaderProps> = ({ links, image }) => {
             isNavOpen ? '' : 'hidden'
           } justify-between items-center w-full md:flex md:w-auto md:order-1`}
         >
-          <NavMenu links={links} />
+          <NavMenu
+            links={links.map((link) => ({
+              ...link,
+              active: link.href === router.pathname,
+            }))}
+          />
         </div>
       </div>
     </nav>
