@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import Link from 'next/link';
+import { NextLink } from '@pellegrims/shared/ui/atoms';
 
 export const ErrorSection: FunctionComponent<{
   title: string;
@@ -17,11 +17,12 @@ export const ErrorSection: FunctionComponent<{
         <p className="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">
           {message}
         </p>
-        <Link href="/">
-          <a className="inline-flex text-white bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary my-4">
-            Terug naar de website
-          </a>
-        </Link>
+        <NextLink
+          href="/"
+          className="inline-flex text-white bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary my-4"
+        >
+          Terug naar de website
+        </NextLink>
       </div>
     </div>
   </section>
