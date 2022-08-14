@@ -1,4 +1,6 @@
-export const Index = () => (
+import { NextPage } from 'next';
+
+export const Index: NextPage = () => (
   <div className="mx-auto max-w-lg">
     <div role="status" className="my-7 animate-pulse">
       <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
