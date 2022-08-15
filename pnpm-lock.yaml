@@ -27,6 +27,7 @@ specifiers:
   '@nrwl/workspace': 14.5.2
   '@pellegrims/eslint-config': 1.0.6
   '@pellegrims/nx-remotecache-s3': 1.0.1
+  '@prisma/client': ^4.2.1
   '@tailwindcss/line-clamp': ^0.3.1
   '@tailwindcss/typography': ^0.5.2
   '@testing-library/react': 13.3.0
@@ -81,6 +82,8 @@ specifiers:
   nx-remotecache-custom: ^1.1.0
   postcss: 8.4.14
   prettier: 2.7.1
+  prettier-plugin-prisma: ^4.1.0
+  prisma: ^4.2.1
   prop-types: ^15.8.1
   puppeteer-core: 6.0.x
   react: 18.2.0
@@ -112,6 +115,7 @@ dependencies:
   '@aws-sdk/client-s3': 3.72.0_kbq3ymfgsdifbjp7lrnpzjpmde
   '@aws-sdk/client-sts': 3.76.0
   '@aws-sdk/credential-provider-node': 3.76.0
+  '@prisma/client': 4.2.1_prisma@4.2.1
   bufferutil: 4.0.6
   chrome-aws-lambda: 6.0.0_puppeteer-core@6.0.0
   core-js: 3.18.3
@@ -210,6 +214,8 @@ devDependencies:
   nx-ignore: 14.5.0
   postcss: 8.4.14
   prettier: 2.7.1
+  prettier-plugin-prisma: 4.1.0_prettier@2.7.1
+  prisma: 4.2.1
   react-test-renderer: 18.2.0_react@18.2.0
   tailwindcss: 3.1.6_ts-node@10.8.0
   ts-jest: 27.1.4_qypsxianpcw7fbrovm4jjhmxz4
@@ -4279,9 +4285,6 @@ packages:
       rxjs: 6.6.7
       semver: 7.3.4
       tslib: 2.4.0
-    transitivePeerDependencies:
-      - '@swc-node/register'
-      - '@swc/core'
     dev: true
 
   /@nrwl/devkit/14.5.2_nx@14.5.2:
@@ -4669,9 +4672,6 @@ packages:
       tmp: 0.2.1
       tslib: 2.4.0
       yargs-parser: 20.0.0
-    transitivePeerDependencies:
-      - '@swc-node/register'
-      - '@swc/core'
     dev: true
 
   /@nrwl/tao/14.5.2:
@@ -5015,6 +5015,44 @@ packages:
       source-map: 0.7.3
       webpack: 5.72.0
       webpack-dev-server: 4.9.3_y3nppahbm4wcjegol6edprfd7e
+    dev: true
+
+  /@prisma/client/4.2.1_prisma@4.2.1:
+    resolution:
+      {
+        integrity: sha512-PZBkY60+k5oix+e6IUfl3ub8TbRLNsPLdfWrdy2eh80WcHTaT+/UfvXf/B7gXedH7FRtbPFHZXk1hZenJiJZFQ==,
+      }
+    engines: { node: '>=14.17' }
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': 4.2.0-33.2920a97877e12e055c1333079b8d19cee7f33826
+      prisma: 4.2.1
+    dev: false
+
+  /@prisma/engines-version/4.2.0-33.2920a97877e12e055c1333079b8d19cee7f33826:
+    resolution:
+      {
+        integrity: sha512-tktkqdiwqE4QhmE088boPt+FwPj1Jub/zk+5F6sEfcRHzO5yz9jyMD5HFVtiwxZPLx/8Xg9ElnuTi8E5lWVQFQ==,
+      }
+    dev: false
+
+  /@prisma/engines/4.2.1:
+    resolution:
+      {
+        integrity: sha512-0KqBwREUOjBiHwITsQzw2DWfLHjntvbqzGRawj4sBMnIiL5CXwyDUKeHOwXzKMtNr1rEjxEsypM14g0CzLRK3g==,
+      }
+    requiresBuild: true
+
+  /@prisma/prisma-fmt-wasm/4.1.0-12.09f9659a3d73d5ed2aac8298e2856b8be910cd66:
+    resolution:
+      {
+        integrity: sha512-92cZ5P1IcJex6aIxFptU3HNv8g53b/eP0AhqmVGCiyzcTbwCQcbCMUycDuEoHjIuIR0o7XXdHIrXnbiQQMhEGg==,
+      }
     dev: true
 
   /@rollup/plugin-babel/5.3.0_yc423h4xbyk5kyzyxbhawgcir4:
@@ -15288,9 +15326,6 @@ packages:
       }
     dependencies:
       '@nrwl/devkit': 13.1.3
-    transitivePeerDependencies:
-      - '@swc-node/register'
-      - '@swc/core'
     dev: true
 
   /node-abort-controller/3.0.1:
@@ -15498,9 +15533,6 @@ packages:
     hasBin: true
     dependencies:
       '@nrwl/cli': 14.5.2
-    transitivePeerDependencies:
-      - '@swc-node/register'
-      - '@swc/core'
     dev: true
 
   /nx/14.5.2:
@@ -16747,6 +16779,19 @@ packages:
       }
     engines: { node: '>= 0.8.0' }
 
+  /prettier-plugin-prisma/4.1.0_prettier@2.7.1:
+    resolution:
+      {
+        integrity: sha512-bGh1pEzEjSVky3T1uznlZlWgPzyJykEbkg8iFjsBKWMMrkEDRT+5iDJD0CSFjR3bI6r9KkQQJcRvUa5oUR6hwA==,
+      }
+    engines: { node: '>=12', npm: '>=7' }
+    peerDependencies:
+      prettier: '>=2'
+    dependencies:
+      '@prisma/prisma-fmt-wasm': 4.1.0-12.09f9659a3d73d5ed2aac8298e2856b8be910cd66
+      prettier: 2.7.1
+    dev: true
+
   /prettier/2.7.1:
     resolution:
       {
@@ -16786,6 +16831,17 @@ packages:
       ansi-regex: 5.0.1
       ansi-styles: 5.2.0
       react-is: 17.0.2
+
+  /prisma/4.2.1:
+    resolution:
+      {
+        integrity: sha512-HuYqnTDgH8atjPGtYmY0Ql9XrrJnfW7daG1PtAJRW0E6gJxc50lY3vrIDn0yjMR3TvRlypjTcspQX8DT+xD4Sg==,
+      }
+    engines: { node: '>=14.17' }
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 4.2.1
 
   /prismjs/1.25.0:
     resolution:

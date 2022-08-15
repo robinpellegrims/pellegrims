@@ -114,6 +114,19 @@
           "options": {
             "lintFilePatterns": ["apps/goldgetters/**/*.{ts,tsx,js,jsx}"]
           }
+        },
+        "prisma:push": {
+          "executor": "nx:run-commands",
+          "options": {
+            "command": "npx prisma db push --schema=./apps/goldgetters/prisma/schema.prisma"
+          }
+        },
+        "prisma:studio": {
+          "executor": "nx:run-commands",
+          "options": {
+            "command": "npx prisma studio",
+            "cwd": "apps/goldgetters"
+          }
         }
       }
     },
