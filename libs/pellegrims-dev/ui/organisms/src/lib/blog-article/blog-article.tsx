@@ -23,7 +23,7 @@ export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
       <div className="flex flex-col gap-2 mb-6">
         <div className="flex flex-row justify-between w-full items-center">
           {markDown.frontMatter.date ? (
-            <DateFormatted date={markDown.frontMatter.date} />
+            <DateFormatted date={new Date(markDown.frontMatter.date)} />
           ) : null}
           {markDown.readingTimeMins} min read
         </div>

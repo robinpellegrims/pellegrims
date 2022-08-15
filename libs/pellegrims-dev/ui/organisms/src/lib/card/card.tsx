@@ -2,6 +2,7 @@ import { DateFormatted } from '@pellegrims/pellegrims-dev/ui/atoms';
 import { Tags } from '@pellegrims/pellegrims-dev/ui/molecules';
 import { FunctionComponent, HTMLAttributeAnchorTarget } from 'react';
 import Image from 'next/image';
+import { DateString } from '@pellegrims/shared/markdown';
 
 export interface CardProps {
   title: string;
@@ -10,7 +11,7 @@ export interface CardProps {
   cover: string;
   tags: string[];
   excerpt: string;
-  created?: Date;
+  created?: DateString;
 }
 
 export const Card: FunctionComponent<CardProps> = (props) => (
@@ -58,7 +59,7 @@ export const Card: FunctionComponent<CardProps> = (props) => (
         </a>
         {props.created ? (
           <span className="text-dark-400 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1">
-            <DateFormatted date={props.created} />
+            <DateFormatted date={new Date(props.created)} />
           </span>
         ) : null}
       </div>

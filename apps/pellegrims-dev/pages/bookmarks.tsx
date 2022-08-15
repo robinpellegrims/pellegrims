@@ -3,6 +3,7 @@ import { fetchRaindropBookmarks } from '../utils/raindrop';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import { Card, CardProps } from '@pellegrims/pellegrims-dev/ui/organisms';
 import { PageHero } from '@pellegrims/pellegrims-dev/ui/molecules';
+import { DateString } from '@pellegrims/shared/markdown';
 
 export interface BookmarksProps {
   bookmarks: CardProps[];
@@ -34,6 +35,7 @@ export const getStaticProps: GetStaticProps<BookmarksProps> = async () => {
     props: {
       bookmarks: bookmarks.map((bookmark) => ({
         ...bookmark,
+        created: bookmark.created.slice(0, 10) as DateString,
         linkTarget: '_blank',
       })),
     },

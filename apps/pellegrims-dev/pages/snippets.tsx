@@ -7,6 +7,7 @@ import {
   BlogArticle,
   BlogArticleProps,
 } from '@pellegrims/pellegrims-dev/ui/organisms';
+import { sortArticlesByDateDesc } from '../utils/sort';
 
 interface SnippetsProps {
   snippets: BlogArticleProps[];
@@ -30,12 +31,15 @@ const Snippets: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
 export const getStaticProps: GetStaticProps<SnippetsProps> = async () => {
   const snippets = getMarkdownDocuments(SNIPPETS_PATH);
+
   return {
     props: {
-      snippets: snippets.map((snippet) => ({
-        markDown: snippet,
-        twitterUserName,
-      })),
+      snippets: snippets
+        .map((snippet) => ({
+          markDown: snippet,
+          twitterUserName,
+        }))
+        .sort(sortArticlesByDateDesc),
     },
   };
 };
