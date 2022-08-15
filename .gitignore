@@ -40,4 +40,5 @@ Thumbs.db
 /migrations.json
 
 .env.local
+.env
 /apps/pellegrims-dev/public/rss/
