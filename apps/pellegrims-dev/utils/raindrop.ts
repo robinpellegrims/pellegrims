@@ -1,3 +1,5 @@
+import { DateString } from '@pellegrims/shared/markdown';
+
 const shareTag = 'share';
 
 const url = [
@@ -14,7 +16,7 @@ export interface RaindropBookmark {
   tags: string[];
   domain: string;
   excerpt: string;
-  created: Date;
+  created: `${DateString}${string}`;
   _id: string;
 }
 

@@ -1,4 +1,5 @@
 import { canonicalOrigin } from '../constants';
+import { DateString } from '@pellegrims/shared/markdown';
 
 export const buildRelativeBlogArticleUrl = (slug: string) => `/blog/${slug}`;
 
@@ -11,7 +12,7 @@ export const buildBlogArticleUrlToShare = (slug: string) =>
 export interface OGImageParams {
   title?: string;
   description?: string;
-  date?: Date;
+  date?: DateString;
   readMinutes?: number;
 }
 
