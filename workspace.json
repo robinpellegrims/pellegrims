@@ -64,6 +64,12 @@
         "build": {
           "executor": "@nrwl/next:build",
           "outputs": ["{options.outputPath}"],
+          "dependsOn": [
+            {
+              "projects": "self",
+              "target": "prisma:generate"
+            }
+          ],
           "defaultConfiguration": "production",
           "options": {
             "root": "apps/goldgetters",
@@ -124,8 +130,13 @@
         "prisma:studio": {
           "executor": "nx:run-commands",
           "options": {
-            "command": "npx prisma studio",
-            "cwd": "apps/goldgetters"
+            "command": "npx prisma studio --schema=./apps/goldgetters/prisma/schema.prisma"
+          }
+        },
+        "prisma:generate": {
+          "executor": "nx:run-commands",
+          "options": {
+            "command": "npx prisma generate --schema=./apps/goldgetters/prisma/schema.prisma"
           }
         }
       }
