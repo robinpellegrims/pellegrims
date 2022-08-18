@@ -1,11 +1,11 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="start pellegrims-dev" type="js.build_tools.npm" folderName="pellegrims-dev">
+  <configuration default="false" name="build  pellegrims-dev" type="js.build_tools.npm" folderName="pellegrims-dev">
     <package-json value="$PROJECT_DIR$/package.json" />
     <command value="run" />
     <scripts>
-      <script value="start" />
+      <script value="build" />
     </scripts>
-    <arguments value="pellegrims-dev" />
+    <arguments value="pellegrims-dev -- --configuration production" />
     <node-interpreter value="project" />
     <envs />
     <method v="2" />
