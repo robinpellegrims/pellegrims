@@ -123,6 +123,29 @@
         }
       }
     },
+    "goldgetters-data-access": {
+      "root": "libs/goldgetters/data-access",
+      "sourceRoot": "libs/goldgetters/data-access/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/goldgetters/data-access/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/goldgetters/data-access"],
+          "options": {
+            "jestConfig": "libs/goldgetters/data-access/jest.config.ts",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": ["scope:goldgetters"]
+    },
     "goldgetters-db": {
       "root": "libs/goldgetters/db",
       "sourceRoot": "libs/goldgetters/db/src",
@@ -192,6 +215,29 @@
       },
       "tags": [],
       "implicitDependencies": ["goldgetters"]
+    },
+    "goldgetters-server": {
+      "root": "libs/goldgetters/server",
+      "sourceRoot": "libs/goldgetters/server/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/goldgetters/server/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/goldgetters/server"],
+          "options": {
+            "jestConfig": "libs/goldgetters/server/jest.config.ts",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": ["scope:goldgetters"]
     },
     "goldgetters-ui-atoms": {
       "root": "libs/goldgetters/ui/atoms",

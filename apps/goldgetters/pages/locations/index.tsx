@@ -1,5 +1,5 @@
-import { trpc } from '../../utils/trpc';
 import { NextPage } from 'next';
+import { trpc } from '@pellegrims/goldgetters/data-access';
 
 export const Locations: NextPage = () => {
   const { data } = trpc.useQuery(['locations']);
