@@ -5,7 +5,7 @@
     <scripts>
       <script value="nx" />
     </scripts>
-    <arguments value="prisma:studio goldgetters" />
+    <arguments value="prisma-studio goldgetters-db" />
     <node-interpreter value="project" />
     <envs />
     <method v="2" />
