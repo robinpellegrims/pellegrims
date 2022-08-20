@@ -1,1 +1,1 @@
-export { PrismaClient as GoldgettersClient } from '@prisma/client-goldgetters';
+export { goldgettersClient } from './lib/client';

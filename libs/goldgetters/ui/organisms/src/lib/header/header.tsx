@@ -7,16 +7,19 @@ import {
 } from '@pellegrims/goldgetters/ui/atoms';
 import { StaticImageData } from 'next/image';
 import { NavMenu } from '@pellegrims/goldgetters/ui/molecules';
-import { useRouter } from 'next/router';
 
 type HeaderLink = Pick<NavItemProps, 'text' | 'href'>;
 
 interface HeaderProps {
   links: HeaderLink[];
   image?: StaticImageData;
+  currentPathName: string;
+  loggedIn: boolean;
+  userName: string;
 }
 
-const loginLink: HeaderLink = { text: 'Login', href: '/login' };
+const loginLink: HeaderLink = { text: 'Login', href: '/api/auth/signin' };
+const logoutLink: HeaderLink = { text: 'Logout', href: '/api/auth/signout' };
 
 export const Hamburger = () => (
   <button
@@ -43,16 +46,26 @@ export const Hamburger = () => (
   </button>
 );
 
-export const Header: FunctionComponent<HeaderProps> = ({ links, image }) => {
+export const Header: FunctionComponent<HeaderProps> = ({
+  links,
+  image,
+  currentPathName,
+  loggedIn,
+  userName,
+}) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const router = useRouter();
+  const loginOrLogoutLink = loggedIn ? logoutLink : loginLink;
 
   return (
     <nav className="px-2 sm:px-4 py-2.5 w-full z-20 top-0 left-0 border-b border-dark-200 dark:border-dark-600">
       <div className="container flex gap-2 flex-wrap justify-between mx-auto">
         <Brand image={image} />
         <div className="flex gap-4 md:order-2 items-center">
-          <NavItem {...loginLink} active={router.pathname === loginLink.href} />
+          {userName}
+          <NavItem
+            {...loginOrLogoutLink}
+            active={currentPathName === loginOrLogoutLink.href}
+          />
           <DarkModeSwitch />
           <div onClick={() => setIsNavOpen((prev) => !prev)}>
             <Hamburger />
@@ -66,7 +79,7 @@ export const Header: FunctionComponent<HeaderProps> = ({ links, image }) => {
           <NavMenu
             links={links.map((link) => ({
               ...link,
-              active: link.href === router.pathname,
+              active: link.href === currentPathName,
             }))}
           />
         </div>

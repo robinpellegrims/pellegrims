@@ -6,6 +6,7 @@ export const trpc = createReactQueryHooks<AppRouter>();
 
 export const withGoldgettersTRPC = withTRPC<AppRouter>({
   config: () => ({ url: `${getBaseUrl()}/api/trpc` }),
+  ssr: true,
 });
 
 const getBaseUrl = () => {
@@ -15,5 +16,5 @@ const getBaseUrl = () => {
   if (process.env.VERCEL_URL) {
     return `https://${process.env.VERCEL_URL}`;
   }
-  return `http://localhost:${process.env.PORT ?? 3000}`;
+  return `http://localhost:${process.env.PORT ?? 4200}`;
 };
