@@ -6,6 +6,9 @@ import { PageTemplate } from '@pellegrims/goldgetters/ui/templates';
 import logo from '../public/logo.png';
 import { AppType } from 'next/dist/shared/lib/utils';
 import { withGoldgettersTRPC } from '@pellegrims/goldgetters/data-access';
+import { SessionProvider, useSession } from 'next-auth/react';
+import { FunctionComponent } from 'react';
+import { useRouter } from 'next/router';
 
 const headerNavLinks: { text: string; href: string }[] = [
   { text: 'Nieuws', href: '/news' },
@@ -15,18 +18,34 @@ const headerNavLinks: { text: string; href: string }[] = [
   { text: 'Contact', href: '/contact' },
 ];
 
+const GoldgettersHeader: FunctionComponent = () => {
+  const session = useSession();
+  const router = useRouter();
+  const loggedIn = session.status === 'authenticated';
+  const userName = session.data?.user?.name ?? session.data?.user?.email;
+  return (
+    <Header
+      links={headerNavLinks}
+      image={logo}
+      loggedIn={loggedIn}
+      currentPathName={router.pathname}
+      userName={userName}
+    />
+  );
+};
+
 const GoldgettersApp: AppType = ({ Component, pageProps }) => (
-  <>
+  <SessionProvider session={pageProps.session}>
     <Head>
       <title>ZVC Goldgetters</title>
     </Head>
     <CounterDevAnalytics user="RobinPel" />
     <PageTemplate
-      header={<Header links={headerNavLinks} image={logo} />}
+      header={<GoldgettersHeader />}
       content={<Component {...pageProps} />}
       footer={<>Footer</>}
     />
-  </>
+  </SessionProvider>
 );
 
 export default withGoldgettersTRPC(GoldgettersApp);

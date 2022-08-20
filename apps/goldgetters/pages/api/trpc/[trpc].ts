@@ -1,3 +1,3 @@
-import { nextApiHandler } from '@pellegrims/goldgetters/server';
+import { trpcApiHandler } from '@pellegrims/goldgetters/server';
 
-export default nextApiHandler;
+export default trpcApiHandler;

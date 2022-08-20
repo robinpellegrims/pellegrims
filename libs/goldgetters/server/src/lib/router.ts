@@ -1,10 +1,8 @@
 import * as trpc from '@trpc/server';
-import { GoldgettersClient } from '@pellegrims/goldgetters/db';
-
-const prisma = new GoldgettersClient();
+import { goldgettersClient } from '@pellegrims/goldgetters/db';
 
 export const appRouter = trpc.router().query('locations', {
-  resolve: async () => ({ list: await prisma.location.findMany() }),
+  resolve: async () => ({ list: await goldgettersClient.location.findMany() }),
 });
 
 export type AppRouter = typeof appRouter;
