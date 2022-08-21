@@ -10,7 +10,7 @@ export const PageHero: FunctionComponent<HeroPageProps> = ({
   title,
   description,
 }) => (
-  <div className="flex flex-wrap w-full py-12 mb-6 flex-col items-center text-center">
+  <div className="mb-6 flex w-full flex-col flex-wrap items-center py-12 text-center">
     <PageTitle title={title} />
     {description ? <PageSubtitle subTitle={description} /> : null}
   </div>

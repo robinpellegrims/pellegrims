@@ -26,7 +26,7 @@ export const FormField: FunctionComponent<
   const inputId = `field-${props.label}`;
   return (
     <div>
-      <label htmlFor={inputId} className="leading-7 text-sm">
+      <label htmlFor={inputId} className="text-sm leading-7">
         {props.label}
       </label>
       {props.type === 'input' ? (

@@ -7,7 +7,7 @@ interface PageSubtitleProps {
 export const PageSubtitle: FunctionComponent<PageSubtitleProps> = ({
   subTitle,
 }) => (
-  <p className="lg:w-1/2 w-full leading-relaxed text-dark-500 dark:text-dark-400 my-6">
+  <p className="text-dark-500 dark:text-dark-400 my-6 w-full leading-relaxed lg:w-1/2">
     {subTitle}
   </p>
 );

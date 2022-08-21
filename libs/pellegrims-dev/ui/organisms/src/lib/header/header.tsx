@@ -11,7 +11,7 @@ interface HeaderProps {
 export const Header: FunctionComponent<HeaderProps> = ({ links }) => (
   <Container>
     <header>
-      <div className="flex py-6 flex-col md:flex-row items-center gap-3">
+      <div className="flex flex-col items-center gap-3 py-6 md:flex-row">
         <Link href="/">
           <a>
             <Logo />

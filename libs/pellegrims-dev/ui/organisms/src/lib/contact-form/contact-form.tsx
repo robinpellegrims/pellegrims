@@ -17,9 +17,9 @@ export const contactFieldsRecord: Record<
 };
 
 export const ContactForm: FunctionComponent<ContactFormProps> = (props) => (
-  <div className="flex flex-wrap text-dark-600 lg:w-1/2 md:w-2/3 mx-auto">
+  <div className="text-dark-600 mx-auto flex flex-wrap md:w-2/3 lg:w-1/2">
     <input className="hidden" name={contactFieldsRecord['honey']} type="text" />
-    <div className="p-2 w-1/2">
+    <div className="w-1/2 p-2">
       <FormField
         label="Name"
         type="input"
@@ -30,7 +30,7 @@ export const ContactForm: FunctionComponent<ContactFormProps> = (props) => (
         }}
       />
     </div>
-    <div className="p-2 w-1/2">
+    <div className="w-1/2 p-2">
       <FormField
         label="Email"
         type="input"
@@ -42,7 +42,7 @@ export const ContactForm: FunctionComponent<ContactFormProps> = (props) => (
         }}
       />
     </div>
-    <div className="p-2 w-full">
+    <div className="w-full p-2">
       <FormField
         label="Message"
         type="textarea"
@@ -54,7 +54,7 @@ export const ContactForm: FunctionComponent<ContactFormProps> = (props) => (
         }}
       />
     </div>
-    <div className="p-2 w-full mx-auto text-center">
+    <div className="mx-auto w-full p-2 text-center">
       <Button text="Submit" type="primary" loading={props.loading} />
     </div>
   </div>

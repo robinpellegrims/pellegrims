@@ -10,7 +10,7 @@ export const SocialIcon: FunctionComponent<{ type: SocialIconType }> = ({
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth="2"
-    className="w-5 h-5"
+    className="h-5 w-5"
     viewBox="0 0 24 24"
   >
     {iconMapping[type]}

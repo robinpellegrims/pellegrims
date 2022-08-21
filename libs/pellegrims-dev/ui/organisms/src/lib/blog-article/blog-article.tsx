@@ -18,10 +18,10 @@ export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
   twitterUserName,
   urlToShare,
 }) => (
-  <article className="mx-auto prose lg:prose-xl dark:prose-invert">
+  <article className="prose lg:prose-xl dark:prose-invert mx-auto">
     <header className="flex flex-col">
-      <div className="flex flex-col gap-2 mb-6">
-        <div className="flex flex-row justify-between w-full items-center">
+      <div className="mb-6 flex flex-col gap-2">
+        <div className="flex w-full flex-row items-center justify-between">
           {markDown.frontMatter.date ? (
             <DateFormatted date={new Date(markDown.frontMatter.date)} />
           ) : null}
@@ -51,7 +51,7 @@ export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
             rel="noopener noreferrer"
             target="_blank"
             aria-label={shareOnTwitter}
-            className="flex gap-2 items-center justify-center"
+            className="flex items-center justify-center gap-2"
           >
             <SocialIcon type="twitter" />
             {shareOnTwitter}

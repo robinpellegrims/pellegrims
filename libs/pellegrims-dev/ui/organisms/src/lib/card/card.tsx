@@ -15,8 +15,8 @@ export interface CardProps {
 }
 
 export const Card: FunctionComponent<CardProps> = (props) => (
-  <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
-    <div className="relative h-96 lg:h-64 md:h-36">
+  <div className="flex h-full flex-col overflow-hidden rounded-lg border-2 border-gray-200 border-opacity-60">
+    <div className="relative h-96 md:h-36 lg:h-64">
       {props.cover.startsWith('/') ? (
         <Image
           src={props.cover}
@@ -26,17 +26,17 @@ export const Card: FunctionComponent<CardProps> = (props) => (
         />
       ) : (
         <img
-          className="w-full h-full object-cover object-center"
+          className="h-full w-full object-cover object-center"
           src={props.cover}
           loading="lazy"
         />
       )}
     </div>
-    <div className="p-6 flex flex-col flex-grow gap-3">
+    <div className="flex flex-grow flex-col gap-3 p-6">
       <Tags tags={props.tags} />
       <h1 className="title-font text-xl font-bold">{props.title}</h1>
-      <p className="leading-relaxed grow line-clamp-3">{props.excerpt}</p>
-      <div className="flex items-center justify-between mt-auto">
+      <p className="line-clamp-3 grow leading-relaxed">{props.excerpt}</p>
+      <div className="mt-auto flex items-center justify-between">
         <a
           href={props.link}
           target={props.linkTarget}
@@ -45,7 +45,7 @@ export const Card: FunctionComponent<CardProps> = (props) => (
         >
           Read more
           <svg
-            className="w-4 h-4 ml-2"
+            className="ml-2 h-4 w-4"
             viewBox="0 0 24 24"
             stroke="currentColor"
             strokeWidth="2"
@@ -58,7 +58,7 @@ export const Card: FunctionComponent<CardProps> = (props) => (
           </svg>
         </a>
         {props.created ? (
-          <span className="text-dark-400 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1">
+          <span className="text-dark-400 ml-auto inline-flex items-center py-1 pr-3 text-sm leading-none md:ml-0 lg:ml-auto">
             <DateFormatted date={new Date(props.created)} />
           </span>
         ) : null}
