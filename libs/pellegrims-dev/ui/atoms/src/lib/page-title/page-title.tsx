@@ -6,9 +6,9 @@ interface PageTitleProps {
 
 export const PageTitle: FunctionComponent<PageTitleProps> = ({ title }) => (
   <>
-    <h1 className="sm:text-6xl text-5xl font-medium title-font mb-4">
+    <h1 className="title-font mb-4 text-5xl font-medium sm:text-6xl">
       {title}
     </h1>
-    <div className="h-1 w-20 bg-primary-500 rounded" />
+    <div className="bg-primary-500 h-1 w-20 rounded" />
   </>
 );

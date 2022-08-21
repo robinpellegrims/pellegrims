@@ -6,11 +6,11 @@ interface NavProps {
 }
 
 export const NavMenu: FunctionComponent<NavProps> = ({ links }) => (
-  <ul className="flex flex-col md:gap-8 md:flex-row rounded-lg border md:border-0 border-dark-100 dark:border-dark-700">
+  <ul className="border-dark-100 dark:border-dark-700 flex flex-col rounded-lg border md:flex-row md:gap-8 md:border-0">
     {links.map((link) => (
       <li
         key={link.href}
-        className="border-b border-dark-100 md:border-0 dark:border-dark-700"
+        className="border-dark-100 dark:border-dark-700 border-b md:border-0"
       >
         <NavItem {...link} />
       </li>

@@ -22,7 +22,7 @@ export const Button: FunctionComponent<ButtonProps> = ({
   text,
 }) => (
   <button
-    className={`inline-flex border-0 py-2 px-6 focus:outline-none rounded text-lg disabled:cursor-not-allowed ${buttonTypeClasses[type]}`}
+    className={`inline-flex rounded border-0 py-2 px-6 text-lg focus:outline-none disabled:cursor-not-allowed ${buttonTypeClasses[type]}`}
     disabled={loading}
   >
     {loading ? (

@@ -16,7 +16,7 @@ export const NavItem: FunctionComponent<NavItemProps> = ({
     href={href}
     className={`${
       active ? 'text-primary' : 'text-dark-700'
-    } block p-2 md:p-0 hover:bg-dark-50 lg:hover:bg-transparent lg:hover:text-primary dark:text-dark-400  lg:dark:hover:bg-transparent md:text-sm md:font-medium`}
+    } hover:bg-dark-50 lg:hover:text-primary dark:text-dark-400 block p-2 md:p-0 md:text-sm  md:font-medium lg:hover:bg-transparent lg:dark:hover:bg-transparent`}
   >
     {text}
   </NextLink>

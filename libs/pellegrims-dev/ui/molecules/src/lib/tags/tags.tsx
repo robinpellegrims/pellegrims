@@ -6,7 +6,7 @@ interface TagsProps {
 }
 
 export const Tags: FunctionComponent<TagsProps> = (props) => (
-  <div className="uppercase flex flex-wrap gap-1">
+  <div className="flex flex-wrap gap-1 uppercase">
     {props.tags
       .map((tag) => `#${tag}`.toUpperCase())
       .map((tag) => (

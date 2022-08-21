@@ -25,13 +25,13 @@ export const Hamburger = () => (
   <button
     data-collapse-toggle="navbar-sticky"
     type="button"
-    className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+    className="inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
     aria-controls="navbar-sticky"
     aria-expanded="false"
   >
     <span className="sr-only">Open main menu</span>
     <svg
-      className="w-6 h-6"
+      className="h-6 w-6"
       aria-hidden="true"
       fill="currentColor"
       viewBox="0 0 20 20"
@@ -57,10 +57,10 @@ export const Header: FunctionComponent<HeaderProps> = ({
   const loginOrLogoutLink = loggedIn ? logoutLink : loginLink;
 
   return (
-    <nav className="px-2 sm:px-4 py-2.5 w-full z-20 top-0 left-0 border-b border-dark-200 dark:border-dark-600">
-      <div className="container flex gap-2 flex-wrap justify-between mx-auto">
+    <nav className="border-dark-200 dark:border-dark-600 top-0 left-0 z-20 w-full border-b px-2 py-2.5 sm:px-4">
+      <div className="container mx-auto flex flex-wrap justify-between gap-2">
         <Brand image={image} />
-        <div className="flex gap-4 md:order-2 items-center">
+        <div className="flex items-center gap-4 md:order-2">
           {userName}
           <NavItem
             {...loginOrLogoutLink}
@@ -74,7 +74,7 @@ export const Header: FunctionComponent<HeaderProps> = ({
         <div
           className={`${
             isNavOpen ? '' : 'hidden'
-          } justify-between items-center w-full md:flex md:w-auto md:order-1`}
+          } w-full items-center justify-between md:order-1 md:flex md:w-auto`}
         >
           <NavMenu
             links={links.map((link) => ({

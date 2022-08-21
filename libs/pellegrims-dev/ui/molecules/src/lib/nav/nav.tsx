@@ -6,7 +6,7 @@ interface NavProps {
 }
 
 export const Nav: FunctionComponent<NavProps> = ({ links }) => (
-  <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center text-dark-600 dark:text-dark-300">
+  <nav className="text-dark-600 dark:text-dark-300 flex flex-wrap items-center justify-center text-base md:ml-auto">
     {links.map((link) => (
       <NavItem key={link.href} {...link} />
     ))}

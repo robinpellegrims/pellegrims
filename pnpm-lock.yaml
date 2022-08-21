@@ -89,6 +89,7 @@ specifiers:
   postcss: 8.4.14
   prettier: 2.7.1
   prettier-plugin-prisma: ^4.1.0
+  prettier-plugin-tailwindcss: ^0.1.13
   prisma: ^4.2.1
   prop-types: ^15.8.1
   puppeteer-core: 6.0.x
@@ -229,6 +230,7 @@ devDependencies:
   postcss: 8.4.14
   prettier: 2.7.1
   prettier-plugin-prisma: 4.1.0_prettier@2.7.1
+  prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
   prisma: 4.2.1
   react-test-renderer: 18.2.0_react@18.2.0
   tailwindcss: 3.1.6_ts-node@10.8.0
@@ -17036,6 +17038,18 @@ packages:
       prettier: '>=2'
     dependencies:
       '@prisma/prisma-fmt-wasm': 4.1.0-12.09f9659a3d73d5ed2aac8298e2856b8be910cd66
+      prettier: 2.7.1
+    dev: true
+
+  /prettier-plugin-tailwindcss/0.1.13_prettier@2.7.1:
+    resolution:
+      {
+        integrity: sha512-/EKQURUrxLu66CMUg4+1LwGdxnz8of7IDvrSLqEtDqhLH61SAlNNUSr90UTvZaemujgl3OH/VHg+fyGltrNixw==,
+      }
+    engines: { node: '>=12.17.0' }
+    peerDependencies:
+      prettier: '>=2.2.0'
+    dependencies:
       prettier: 2.7.1
     dev: true
 

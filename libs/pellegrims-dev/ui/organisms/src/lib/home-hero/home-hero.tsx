@@ -23,7 +23,7 @@ export const HomeHero: FunctionComponent<HomeHeroProps> = ({
   contactPath,
 }) => (
   <section>
-    <div className="mx-auto flex items-center justify-center flex-col gap-12 text-center">
+    <div className="mx-auto flex flex-col items-center justify-center gap-12 text-center">
       <Image
         alt="hero"
         src={imageSrc}
@@ -31,10 +31,10 @@ export const HomeHero: FunctionComponent<HomeHeroProps> = ({
         height="280"
         layout="fixed"
       />
-      <h1 className="sm:text-4xl text-3xl font-medium">
+      <h1 className="text-3xl font-medium sm:text-4xl">
         Hi! I&apos;m <span className="font-semibold">{name}</span> 👋
       </h1>
-      <p className="leading-relaxed sm:text-2xl text-xl">
+      <p className="text-xl leading-relaxed sm:text-2xl">
         <RoughNotationGroup show={true}>
           I&apos;m a professional{' '}
           <Highlight color={colors.amber}>software developer</Highlight>

@@ -11,7 +11,7 @@ export const PageTemplate: FunctionComponent<PageTemplateProps> = ({
   content,
   footer,
 }) => (
-  <div className="flex flex-col min-h-screen">
+  <div className="flex min-h-screen flex-col">
     <header className="sticky top-0">{header}</header>
     <main className="grow overflow-y-auto">{content}</main>
     <footer>{footer}</footer>

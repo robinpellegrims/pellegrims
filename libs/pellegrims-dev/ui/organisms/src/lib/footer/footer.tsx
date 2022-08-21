@@ -13,7 +13,7 @@ interface FooterProps {
 
 export const Footer: FunctionComponent<FooterProps> = (props) => (
   <Container>
-    <footer className="py-12 flex flex-col items-center sm:flex-row gap-3 justify-between">
+    <footer className="flex flex-col items-center justify-between gap-3 py-12 sm:flex-row">
       <span className="inline-flex gap-3">
         <SocialIconLink
           href={props.twitterUrl}
@@ -36,7 +36,7 @@ export const Footer: FunctionComponent<FooterProps> = (props) => (
           iconType="github"
         />
       </span>
-      <p className="text-sm text-dark-500">
+      <p className="text-dark-500 text-sm">
         © {new Date().getFullYear()} {props.name}
       </p>
       <Link href="/apps/pellegrims-dev/public">

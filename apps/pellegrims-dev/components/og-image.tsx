@@ -10,7 +10,7 @@ const style = `
 
 const Profile = () => (
   <div className="flex flex-row justify-center gap-4">
-    <img className="rounded-full w-16" src={avataaarUrl} />
+    <img className="w-16 rounded-full" src={avataaarUrl} />
     <div className="flex flex-col justify-center">
       <span className="text-2xl font-medium">Robin Pellegrims</span>
       <span className="">
@@ -21,7 +21,7 @@ const Profile = () => (
 );
 
 const Row: FunctionComponent<PropsWithChildren> = ({ children }) => (
-  <div className="flex flex-row justify-between w-full items-center">
+  <div className="flex w-full flex-row items-center justify-between">
     {children}
   </div>
 );
@@ -37,9 +37,9 @@ const Header = (props: { date: string; readMinutes: string }) => (
 );
 
 const Content = (props: { title: string; description: string }) => (
-  <div className="flex flex-col gap-6 text-center text-transparent bg-clip-text bg-gradient-to-br from-red-500 to-yellow-500">
-    <h1 className="text-7xl grow font-bold">{props.title}</h1>
-    <p className="leading-relaxed text-3xl">{props.description}</p>
+  <div className="flex flex-col gap-6 bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-center text-transparent">
+    <h1 className="grow text-7xl font-bold">{props.title}</h1>
+    <p className="text-3xl leading-relaxed">{props.description}</p>
   </div>
 );
 
@@ -70,7 +70,7 @@ export const OGImage = ({
       />
       <style dangerouslySetInnerHTML={{ __html: style }} />
     </head>
-    <body className="flex flex-col h-full justify-between p-12 bg-zinc-800 text-white text-2xl">
+    <body className="flex h-full flex-col justify-between bg-zinc-800 p-12 text-2xl text-white">
       <Header date={date} readMinutes={readMinutes} />
       <Content title={title} description={description} />
       <Footer />
