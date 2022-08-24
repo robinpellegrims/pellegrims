@@ -18,6 +18,7 @@ npm install --save-dev @pellegrims/nx-remotecache-s3
 | Bucket    | Optional. Specify which bucket should be used for storing the cache.                                                    | `NX_CACHE_S3_BUCKET`        | `bucket`   |
 | Prefix    | Optional. Specify prefix path of target object key.                                                                     | `NX_CACHE_S3_PREFIX`        | `prefix`   |
 | Region    | Optional. The AWS region to which this client will send requests.                                                       | `NX_CACHE_S3_REGION`        | `region`   |
+| Profile   | Optional. The AWS profile to use to authenticate.                                                                       | `ENV_PROFILE`               | `profile`  |
 
 ```json
 {

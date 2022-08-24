@@ -10,6 +10,7 @@ const ENV_BUCKET = 'NX_CACHE_S3_BUCKET';
 const ENV_PREFIX = 'NX_CACHE_S3_PREFIX';
 const ENV_ENDPOINT = 'NX_CACHE_S3_ENDPOINT';
 const ENV_REGION = 'NX_CACHE_S3_REGION';
+const ENV_PROFILE = 'NX_CACHE_S3_PROFILE';
 
 const getEnv = (key: string) => process.env[key];
 
@@ -18,6 +19,7 @@ interface S3Options {
   prefix?: string;
   endpoint?: string;
   region?: string;
+  profile?: string;
 }
 
 const runner: typeof defaultTasksRunner = createCustomRunner<S3Options>(
@@ -25,6 +27,7 @@ const runner: typeof defaultTasksRunner = createCustomRunner<S3Options>(
     initEnv(options);
 
     const provider = defaultProvider({
+      profile: getEnv(ENV_PROFILE),
       roleAssumerWithWebIdentity: getDefaultRoleAssumerWithWebIdentity(),
     });
 
