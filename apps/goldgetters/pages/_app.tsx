@@ -21,15 +21,12 @@ const headerNavLinks: { text: string; href: string }[] = [
 const GoldgettersHeader: FunctionComponent = () => {
   const session = useSession();
   const router = useRouter();
-  const loggedIn = session.status === 'authenticated';
-  const userName = session.data?.user?.name ?? session.data?.user?.email;
   return (
     <Header
       links={headerNavLinks}
       image={logo}
-      loggedIn={loggedIn}
       currentPathName={router.pathname}
-      userName={userName}
+      user={session.data?.user}
     />
   );
 };

@@ -6,14 +6,7 @@ mockMatchMedia();
 
 describe('Header', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(
-      <Header
-        links={[]}
-        userName="John Doe"
-        currentPathName="/"
-        loggedIn={false}
-      />
-    );
+    const { baseElement } = render(<Header links={[]} currentPathName="/" />);
     expect(baseElement).toBeTruthy();
   });
 });
