@@ -22,12 +22,14 @@ const headerNavLinks: { text: string; href: string }[] = [
 const GoldgettersHeader: FunctionComponent = () => {
   const session = useSession();
   const router = useRouter();
+  const userLoading = session.status === 'loading';
   return (
     <Header
       links={headerNavLinks}
       image={logo}
       currentPathName={router.pathname}
       user={session.data?.user}
+      userLoading={userLoading}
     />
   );
 };

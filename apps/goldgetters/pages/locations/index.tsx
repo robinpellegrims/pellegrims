@@ -1,20 +1,29 @@
 import { NextPage } from 'next';
 import { trpc } from '@pellegrims/goldgetters/data-access';
+import { WithLoading } from '@pellegrims/goldgetters/ui/atoms';
+import { Hero } from '@pellegrims/goldgetters/ui/organisms';
+import { Container, Section } from '@pellegrims/goldgetters/ui/templates';
 
 export const Locations: NextPage = () => {
   const { data } = trpc.useQuery(['locations']);
 
-  if (!data) {
-    return <div>Loading...</div>;
-  }
   return (
     <>
-      <h1>Locations</h1>
-      <ul>
-        {data.list.map((location) => (
-          <li key={location.id}>{location.name}</li>
-        ))}
-      </ul>
+      <Hero
+        title="Locaties"
+        subtitle="Alle locaties waarop ZVC Goldgetters te bewonderen valt"
+      />
+      <Section>
+        <Container>
+          <WithLoading loading={!data}>
+            <ul>
+              {data?.list.map((location) => (
+                <li key={location.id}>{location.name}</li>
+              ))}
+            </ul>
+          </WithLoading>
+        </Container>
+      </Section>
     </>
   );
 };

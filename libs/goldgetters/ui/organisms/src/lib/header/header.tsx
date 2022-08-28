@@ -6,6 +6,7 @@ import {
   IconButton,
   NavItem,
   NavItemProps,
+  WithLoading,
 } from '@pellegrims/goldgetters/ui/atoms';
 import { StaticImageData } from 'next/image';
 import { User, UserMenu } from './user-menu';
@@ -20,6 +21,7 @@ interface HeaderProps {
   image?: StaticImageData;
   currentPathName: string;
   user?: User;
+  userLoading: boolean;
 }
 
 export const Header: FunctionComponent<HeaderProps> = ({
@@ -27,6 +29,7 @@ export const Header: FunctionComponent<HeaderProps> = ({
   image,
   currentPathName,
   user,
+  userLoading,
 }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
@@ -35,14 +38,16 @@ export const Header: FunctionComponent<HeaderProps> = ({
         <Brand image={image} />
         <div className="ml-auto flex items-center gap-2 sm:ml-0 md:order-2">
           <DarkModeSwitch />
-          {user ? (
-            <UserMenu user={user} />
-          ) : (
-            <NavItem
-              {...loginLink}
-              active={currentPathName === loginLink.href}
-            />
-          )}
+          <WithLoading loading={userLoading}>
+            {user ? (
+              <UserMenu user={user} />
+            ) : (
+              <NavItem
+                {...loginLink}
+                active={currentPathName === loginLink.href}
+              />
+            )}
+          </WithLoading>
           <div className="md:hidden">
             <IconButton onClick={() => setIsNavOpen((prev) => !prev)}>
               <Icon type="hamburger" />

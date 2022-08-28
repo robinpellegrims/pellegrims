@@ -2,6 +2,7 @@ import { Hero } from '@pellegrims/goldgetters/ui/organisms';
 import { Container, Section } from '@pellegrims/goldgetters/ui/templates';
 import { useSession } from 'next-auth/react';
 import { FunctionComponent } from 'react';
+import { WithLoading } from '@pellegrims/goldgetters/ui/atoms';
 
 export interface User {
   name?: string | null;
@@ -38,15 +39,13 @@ export const Profile = () => {
       <Hero title="Profiel" subtitle="Bekijk en wijzig je gegevens" />
       <Section>
         <Container>
-          {session.status === 'loading' ? (
-            'Loading...'
-          ) : (
+          <WithLoading loading={session.status === 'loading'}>
             <div className="grid gap-6 md:grid-cols-2">
-              <KeyValue label="Naam" value={session.data.user.name} />
-              <KeyValue label="E-Mail" value={session.data.user.email} />
-              <KeyValue label="Afbeelding" value={session.data.user.image} />
+              <KeyValue label="Naam" value={session.data?.user.name} />
+              <KeyValue label="E-Mail" value={session.data?.user.email} />
+              <KeyValue label="Afbeelding" value={session.data?.user.image} />
             </div>
-          )}
+          </WithLoading>
         </Container>
       </Section>
     </>
