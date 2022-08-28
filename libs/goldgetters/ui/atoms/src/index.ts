@@ -4,3 +4,4 @@ export { NavItem } from './lib/nav-item/nav-item';
 export type { NavItemProps } from './lib/nav-item/nav-item';
 export { IconButton } from './lib/icon-button/icon-button';
 export { Icon } from './lib/icon/icon';
+export { Heading } from './lib/heading/heading';
