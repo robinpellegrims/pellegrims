@@ -47,7 +47,7 @@ export const UserMenu: FunctionComponent<UserMenuProps> = ({ user }) => (
     </DropDownSection>
     <DropDownSection>
       <DropdownLink text="Dashboard" href="/admin/dashboard" />
-      <DropdownLink text="Profiel" href="/profile" />
+      <DropdownLink text="Profiel" href="/user/profile" />
     </DropDownSection>
     <DropDownSection>
       <DropdownLink text="Uitloggen" href="/api/auth/signout" />
