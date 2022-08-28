@@ -1,0 +1,28 @@
+{
+  "root": "libs/goldgetters/ui/atoms",
+  "sourceRoot": "libs/goldgetters/ui/atoms/src",
+  "projectType": "library",
+  "tags": [
+    "platform:react",
+    "type:ui",
+    "atomic-design:atoms",
+    "scope:goldgetters"
+  ],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/goldgetters/ui/atoms/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/goldgetters/ui/atoms"],
+      "options": {
+        "jestConfig": "libs/goldgetters/ui/atoms/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

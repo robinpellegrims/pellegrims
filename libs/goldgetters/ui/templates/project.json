@@ -1,0 +1,30 @@
+{
+  "root": "libs/goldgetters/ui/templates",
+  "sourceRoot": "libs/goldgetters/ui/templates/src",
+  "projectType": "library",
+  "tags": [
+    "platform:react",
+    "type:ui",
+    "atomic-design:templates",
+    "scope:goldgetters"
+  ],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/goldgetters/ui/templates/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/goldgetters/ui/templates"],
+      "options": {
+        "jestConfig": "libs/goldgetters/ui/templates/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

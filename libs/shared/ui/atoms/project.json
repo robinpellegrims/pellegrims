@@ -1,0 +1,23 @@
+{
+  "root": "libs/shared/ui/atoms",
+  "sourceRoot": "libs/shared/ui/atoms/src",
+  "projectType": "library",
+  "tags": ["platform:react", "type:ui", "atomic-design:atoms", "scope:shared"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/ui/atoms/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/ui/atoms"],
+      "options": {
+        "jestConfig": "libs/shared/ui/atoms/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

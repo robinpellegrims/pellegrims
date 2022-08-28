@@ -1,0 +1,31 @@
+{
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "root": "libs/pellegrims-dev/ui/molecules",
+  "sourceRoot": "libs/pellegrims-dev/ui/molecules/src",
+  "projectType": "library",
+  "tags": [
+    "platform:react",
+    "type:ui",
+    "atomic-design:molecules",
+    "scope:pellegrims-dev"
+  ],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/pellegrims-dev/ui/molecules/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/pellegrims-dev/ui/molecules"],
+      "options": {
+        "jestConfig": "libs/pellegrims-dev/ui/molecules/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
