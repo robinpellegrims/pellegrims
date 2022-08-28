@@ -14,7 +14,7 @@ export const Footer: FunctionComponent<FooterProps> = ({
   githubUrl,
 }) => (
   <Container>
-    <div className="p-4 sm:p-6">
+    <div className="py-4 sm:py-6">
       <hr className="dark:border-dark-700 border-dark-200 my-6 sm:mx-auto lg:my-8" />
       <div className="flex flex-col items-center justify-between sm:flex-row">
         <span className="text-dark-500 dark:text-dark-400 text-sm sm:text-center">
