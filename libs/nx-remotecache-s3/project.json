@@ -1,0 +1,55 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "root": "libs/nx-remotecache-s3",
+  "sourceRoot": "libs/nx-remotecache-s3/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/nx-remotecache-s3/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/nx-remotecache-s3"],
+      "options": {
+        "jestConfig": "libs/nx-remotecache-s3/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/nx-remotecache-s3",
+        "tsConfig": "libs/nx-remotecache-s3/tsconfig.lib.json",
+        "packageJson": "libs/nx-remotecache-s3/package.json",
+        "main": "libs/nx-remotecache-s3/src/index.ts",
+        "assets": ["libs/nx-remotecache-s3/*.md"],
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "postTargets": ["nx-remotecache-s3:github", "nx-remotecache-s3:deploy"]
+      }
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notesFile": "libs/nx-remotecache-s3/CHANGELOG.md"
+      }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    }
+  },
+  "tags": []
+}

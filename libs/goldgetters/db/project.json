@@ -1,0 +1,41 @@
+{
+  "root": "libs/goldgetters/db",
+  "sourceRoot": "libs/goldgetters/db/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/goldgetters/db/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/goldgetters/db"],
+      "options": {
+        "jestConfig": "libs/goldgetters/db/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "prisma-push": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx prisma db push --schema=./libs/goldgetters/db/prisma/schema.prisma"
+      }
+    },
+    "prisma-studio": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx prisma studio --schema=./libs/goldgetters/db/prisma/schema.prisma"
+      }
+    },
+    "prisma-generate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx prisma generate --schema=./libs/goldgetters/db/prisma/schema.prisma"
+      }
+    }
+  },
+  "tags": ["scope:goldgetters"]
+}

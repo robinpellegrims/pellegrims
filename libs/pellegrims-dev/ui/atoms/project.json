@@ -1,0 +1,31 @@
+{
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "root": "libs/pellegrims-dev/ui/atoms",
+  "sourceRoot": "libs/pellegrims-dev/ui/atoms/src",
+  "projectType": "library",
+  "tags": [
+    "platform:react",
+    "type:ui",
+    "atomic-design:atoms",
+    "scope:pellegrims-dev"
+  ],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/pellegrims-dev/ui/atoms/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/pellegrims-dev/ui/atoms"],
+      "options": {
+        "jestConfig": "libs/pellegrims-dev/ui/atoms/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

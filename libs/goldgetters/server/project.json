@@ -1,0 +1,23 @@
+{
+  "root": "libs/goldgetters/server",
+  "sourceRoot": "libs/goldgetters/server/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/goldgetters/server/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/goldgetters/server"],
+      "options": {
+        "jestConfig": "libs/goldgetters/server/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:goldgetters"]
+}

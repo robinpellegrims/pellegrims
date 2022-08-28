@@ -1,0 +1,24 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "root": "libs/shared/markdown",
+  "sourceRoot": "libs/shared/markdown/src",
+  "projectType": "library",
+  "tags": ["scope:shared"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/markdown/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/markdown"],
+      "options": {
+        "jestConfig": "libs/shared/markdown/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

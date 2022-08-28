@@ -1,0 +1,31 @@
+{
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "root": "libs/pellegrims-dev/ui/organisms",
+  "sourceRoot": "libs/pellegrims-dev/ui/organisms/src",
+  "projectType": "library",
+  "tags": [
+    "platform:react",
+    "type:ui",
+    "atomic-design:organisms",
+    "scope:pellegrims-dev"
+  ],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/pellegrims-dev/ui/organisms/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/pellegrims-dev/ui/organisms"],
+      "options": {
+        "jestConfig": "libs/pellegrims-dev/ui/organisms/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
