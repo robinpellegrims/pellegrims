@@ -1,7 +1,7 @@
 import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
 import { CounterDevAnalytics } from '@pellegrims/shared/ui/atoms';
-import { Header } from '@pellegrims/goldgetters/ui/organisms';
+import { Footer, Header } from '@pellegrims/goldgetters/ui/organisms';
 import { AppTemplate } from '@pellegrims/goldgetters/ui/templates';
 import logo from '../public/logo.png';
 import { AppType } from 'next/dist/shared/lib/utils';
@@ -9,6 +9,7 @@ import { withGoldgettersTRPC } from '@pellegrims/goldgetters/data-access';
 import { SessionProvider, useSession } from 'next-auth/react';
 import { FunctionComponent } from 'react';
 import { useRouter } from 'next/router';
+import { facebookUrl, githubUrl, twitterUrl } from '../constants';
 
 const headerNavLinks: { text: string; href: string }[] = [
   { text: 'Nieuws', href: '/news' },
@@ -40,7 +41,13 @@ const GoldgettersApp: AppType = ({ Component, pageProps }) => (
     <AppTemplate
       header={<GoldgettersHeader />}
       content={<Component {...pageProps} />}
-      footer={<>Footer</>}
+      footer={
+        <Footer
+          facebookUrl={facebookUrl}
+          githubUrl={githubUrl}
+          twitterUrl={twitterUrl}
+        />
+      }
     />
   </SessionProvider>
 );
