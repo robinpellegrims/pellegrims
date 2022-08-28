@@ -28,6 +28,7 @@ export const Dropdown: FunctionComponent<
       </div>
       <div
         onMouseDown={(event) => event.preventDefault()}
+        onClick={() => setDropdownOpen(false)}
         className={`absolute ${positionMapping[position]} z-50 my-4
         ${isDropdownOpen ? '' : 'hidden'} 
         dark:bg-dark-700 divide-dark-100 dark:divide-dark-600 list-none divide-y rounded bg-white text-base shadow`}
