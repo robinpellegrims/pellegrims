@@ -42,3 +42,6 @@ Thumbs.db
 .env.local
 .env
 /apps/pellegrims-dev/public/rss/
+
+# Next.js
+.next

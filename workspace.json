@@ -77,7 +77,7 @@
           },
           "configurations": {
             "development": {
-              "outputPath": "tmp/apps/goldgetters"
+              "outputPath": "apps/goldgetters"
             },
             "production": {}
           }
@@ -434,7 +434,7 @@
           "configurations": {
             "production": {},
             "development": {
-              "outputPath": "tmp/apps/pellegrims-dev"
+              "outputPath": "apps/pellegrims-dev"
             }
           },
           "defaultConfiguration": "production"
