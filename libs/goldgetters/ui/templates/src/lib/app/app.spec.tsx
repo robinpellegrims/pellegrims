@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
-import { PageTemplate } from './page';
+import { AppTemplate } from './app';
 
 describe('PageTemplate', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
-      <PageTemplate
+      <AppTemplate
         header={<>Header</>}
         content={<>Content</>}
         footer={<>Footer</>}

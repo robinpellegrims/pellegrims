@@ -1,2 +1,2 @@
 export { Container } from './lib/container/container';
-export { PageTemplate } from './lib/page/page';
+export { AppTemplate } from './lib/app/app';
