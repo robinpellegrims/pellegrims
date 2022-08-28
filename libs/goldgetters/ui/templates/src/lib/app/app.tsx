@@ -6,7 +6,7 @@ interface PageTemplateProps {
   footer: ReactElement;
 }
 
-export const PageTemplate: FunctionComponent<PageTemplateProps> = ({
+export const AppTemplate: FunctionComponent<PageTemplateProps> = ({
   header,
   content,
   footer,
