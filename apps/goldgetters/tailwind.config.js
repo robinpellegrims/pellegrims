@@ -14,7 +14,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: { primary: colors.red['800'], dark: colors.zinc },
+      colors: {
+        primary: { ...colors.red, DEFAULT: colors.red['800'] },
+        dark: colors.zinc,
+      },
     },
     fontFamily: {
       body: [
