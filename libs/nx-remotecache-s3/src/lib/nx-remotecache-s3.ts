@@ -27,7 +27,7 @@ const runner: typeof defaultTasksRunner = createCustomRunner<S3Options>(
     initEnv(options);
 
     const provider = defaultProvider({
-      profile: getEnv(ENV_PROFILE),
+      profile: getEnv(ENV_PROFILE) ?? options.profile,
       roleAssumerWithWebIdentity: getDefaultRoleAssumerWithWebIdentity(),
     });
 

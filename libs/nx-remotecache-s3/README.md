@@ -30,7 +30,8 @@ npm install --save-dev @pellegrims/nx-remotecache-s3
         "endpoint": "https://some-endpoint.com",
         "bucket": "name-of-bucket",
         "prefix": "prefix/",
-        "region": "us-west-000"
+        "region": "us-west-000",
+        "profile": "name-of-aws-profile"
       }
     }
   }
