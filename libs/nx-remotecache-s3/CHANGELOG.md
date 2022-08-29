@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [1.2.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.1.1...nx-remotecache-s3-1.2.0) (2022-08-29)
+
+### Features
+
+- **nx-remotecache-s3:** add support for options.profile ([ba04295](https://github.com/robinpellegrims/pellegrims/commit/ba0429572c1e5b76987cc37808a483e2567ccede))
+
 ## [1.1.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.1.0...nx-remotecache-s3-1.1.1) (2022-08-26)
 
 # [1.1.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.0.6...nx-remotecache-s3-1.1.0) (2022-08-26)
