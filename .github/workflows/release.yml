@@ -20,9 +20,8 @@ jobs:
         uses: robinpellegrims/composite-actions/pnpm-install@main
       - uses: actions/setup-node@v2
         with:
-          node-version: '14.x'
-          registry-url: 'https://registry.npmjs.org'
-      - run: pnpm nx affected -- ${{ github.event_name == 'workflow_dispatch' && '--all' || '--base=$BEFORE_SHA' }} --target=version --parallel=1 --baseBranch=master --push
+          node-version: 16
+      - run: pnpm nx affected ${{ github.event_name == 'workflow_dispatch' && '--all' || '--base=$BEFORE_SHA' }} --target=version --parallel=1 --baseBranch=master --push
         env:
           BEFORE_SHA: ${{ github.event.before }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
