@@ -31,7 +31,7 @@ const UserInfo = (props: {
 );
 
 const UserButton: FunctionComponent<{ user?: User }> = ({ user }) => (
-  <IconButton>
+  <IconButton label="User menu">
     {user?.image ? (
       <img className="h-5 w-5 rounded-full" src={user.image} alt="user" />
     ) : (

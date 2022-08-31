@@ -49,7 +49,10 @@ export const Header: FunctionComponent<HeaderProps> = ({
             )}
           </WithLoading>
           <div className="md:hidden">
-            <IconButton onClick={() => setIsNavOpen((prev) => !prev)}>
+            <IconButton
+              onClick={() => setIsNavOpen((prev) => !prev)}
+              label="Menu"
+            >
               <Icon type="hamburger" />
             </IconButton>
           </div>

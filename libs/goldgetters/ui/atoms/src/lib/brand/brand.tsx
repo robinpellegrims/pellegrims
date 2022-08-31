@@ -9,7 +9,7 @@ interface LogoProps {
 export const Brand: FunctionComponent<LogoProps> = ({ image }) => (
   <NextLink href="/" className="flex items-center">
     {image ? (
-      <div className="relative mr-3 h-9 w-10 ">
+      <div className="relative mr-3 h-10 w-10 ">
         <Image src={image} alt="logo" layout="fill" />
       </div>
     ) : null}

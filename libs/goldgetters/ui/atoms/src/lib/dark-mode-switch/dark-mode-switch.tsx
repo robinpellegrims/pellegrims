@@ -5,7 +5,7 @@ import { Icon } from '../icon/icon';
 export const DarkModeSwitch = () => {
   const [isDark, setDark] = useDarkMode();
   return (
-    <IconButton onClick={() => setDark(!isDark)}>
+    <IconButton onClick={() => setDark(!isDark)} label="Switch theme">
       {isDark ? <Icon type="sun" /> : <Icon type="moon" />}
     </IconButton>
   );
