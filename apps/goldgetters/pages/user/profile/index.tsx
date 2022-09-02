@@ -41,9 +41,18 @@ export const Profile = () => {
         <Container>
           <WithLoading loading={session.status === 'loading'}>
             <div className="grid gap-6 md:grid-cols-2">
-              <KeyValue label="Naam" value={session.data?.user.name} />
-              <KeyValue label="E-Mail" value={session.data?.user.email} />
-              <KeyValue label="Afbeelding" value={session.data?.user.image} />
+              <KeyValue
+                label="Naam"
+                value={session.data?.user?.name ?? undefined}
+              />
+              <KeyValue
+                label="E-Mail"
+                value={session.data?.user?.email ?? undefined}
+              />
+              <KeyValue
+                label="Afbeelding"
+                value={session.data?.user?.image ?? undefined}
+              />
             </div>
           </WithLoading>
         </Container>
