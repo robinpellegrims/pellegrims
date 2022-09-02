@@ -7,3 +7,4 @@ export { IconButton } from './lib/icon-button/icon-button';
 export { Icon } from './lib/icon/icon';
 export { Heading } from './lib/heading/heading';
 export { SocialLink } from './lib/social-link/social-link';
+export { Button } from './lib/button/button';
