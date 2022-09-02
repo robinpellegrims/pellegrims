@@ -40,6 +40,7 @@
     "puppeteer-core": "6.0.x",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.34.2",
     "react-is": "18.2.0",
     "react-markdown": "^6.0.3",
     "react-query": "3",
