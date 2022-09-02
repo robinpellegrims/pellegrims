@@ -97,6 +97,7 @@ specifiers:
   puppeteer-core: 6.0.x
   react: 18.2.0
   react-dom: 18.2.0
+  react-hook-form: ^7.34.2
   react-is: 18.2.0
   react-markdown: ^6.0.3
   react-query: '3'
@@ -149,6 +150,7 @@ dependencies:
   puppeteer-core: 6.0.0_22kvxa7zeyivx4jp72v2w3pkvy
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-hook-form: 7.34.2_react@18.2.0
   react-is: 18.2.0
   react-markdown: 6.0.3_ug65io7jkbhmo4fihdmbrh3ina
   react-query: 3.39.2_biqbaboplfbrettd7655fr4n2y
@@ -17571,6 +17573,18 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+
+  /react-hook-form/7.34.2_react@18.2.0:
+    resolution:
+      {
+        integrity: sha512-1lYWbEqr0GW7HHUjMScXMidGvV0BE2RJV3ap2BL7G0EJirkqpccTaawbsvBO8GZaB3JjCeFBEbnEWI1P8ZoLRQ==,
+      }
+    engines: { node: '>=12.22.0' }
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /react-is/16.13.1:
     resolution:
