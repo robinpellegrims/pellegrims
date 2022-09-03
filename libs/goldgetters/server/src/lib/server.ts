@@ -5,4 +5,5 @@ import { createContext } from './context';
 export const trpcApiHandler = trpcNext.createNextApiHandler({
   router: appRouter,
   createContext,
+  onError: ({ error }) => console.error('Error:', error),
 });

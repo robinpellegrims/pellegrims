@@ -1,7 +1,12 @@
 import { FunctionComponent } from 'react';
 import { useForm } from 'react-hook-form';
-import { Container, Section } from '@pellegrims/goldgetters/ui/templates';
-import { Button, Input, Textarea } from '@pellegrims/goldgetters/ui/atoms';
+import {
+  Alert,
+  Button,
+  Input,
+  Textarea,
+  WithLoading,
+} from '@pellegrims/goldgetters/ui/atoms';
 
 interface FormData {
   name: string;
@@ -11,20 +16,22 @@ interface FormData {
 }
 
 interface ContactFormProps {
-  onSubmit: (data: FormData) => void;
+  onSubmit: (data: FormData) => Promise<unknown>;
+  error?: string;
 }
 
 export const ContactForm: FunctionComponent<ContactFormProps> = ({
   onSubmit,
+  error,
 }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm<FormData>();
   return (
-    <Section>
-      <Container>
+    <>
+      {!isSubmitSuccessful && (
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex flex-col gap-6">
             <Input
@@ -49,11 +56,25 @@ export const ContactForm: FunctionComponent<ContactFormProps> = ({
               rows={3}
             />
           </div>
-          <Button type="submit" className="mt-6">
-            Verzenden
+          <Button type="submit" className="my-6">
+            <WithLoading loading={isSubmitting}>Verzenden</WithLoading>
           </Button>
         </form>
-      </Container>
-    </Section>
+      )}
+      {error && (
+        <Alert
+          type="danger"
+          text={`Er was een probleem bij het verzenden, probeer het later opnieuw. (${error})`}
+          title="Probleem!"
+        />
+      )}
+      {isSubmitSuccessful && (
+        <Alert
+          type="success"
+          text="Bericht succesvol verzonden."
+          title="Success!"
+        />
+      )}
+    </>
   );
 };
