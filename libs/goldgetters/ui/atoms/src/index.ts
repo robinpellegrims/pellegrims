@@ -1,3 +1,4 @@
+export { Alert } from './lib/alert/alert';
 export { WithLoading } from './lib/spinner/spinner';
 export { DarkModeSwitch } from './lib/dark-mode-switch/dark-mode-switch';
 export { Brand } from './lib/brand/brand';
