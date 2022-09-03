@@ -1,8 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import nodemailer from 'nodemailer';
 import { contactFieldNames } from '@pellegrims/pellegrims-dev/ui/organisms';
-import Mail from 'nodemailer/lib/mailer/index';
 import SMTPTransport from 'nodemailer/lib/smtp-transport';
+import { createTransport, SendMailOptions } from 'nodemailer';
 
 export interface ContactApiResponseBody {
   error?: string;
@@ -62,7 +61,7 @@ const contact = async (
           : undefined,
     };
 
-    const mailData: Mail.Options = {
+    const mailData: SendMailOptions = {
       from: smtpConfig.user,
       replyTo: body.email,
       to: process.env.CONTACT_MAIL_TO,
@@ -75,7 +74,7 @@ const contact = async (
       return resolve();
     }
 
-    const transporter = nodemailer.createTransport(transportOptions);
+    const transporter = createTransport(transportOptions);
 
     transporter.sendMail(mailData, (error: Error | null) => {
       if (error) {
