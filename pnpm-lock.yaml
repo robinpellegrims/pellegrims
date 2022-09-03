@@ -121,6 +121,7 @@ specifiers:
   unist-util-visit: ^4.1.0
   utf-8-validate: ^5.0.9
   webpack: ^5.72.0
+  zod: ^3.18.0
 
 dependencies:
   '@aws-sdk/client-s3': 3.72.0_kbq3ymfgsdifbjp7lrnpzjpmde
@@ -167,6 +168,7 @@ dependencies:
   typewriting-react: 1.0.8_o2jyg7a2zhyn4ywaq2ezi4dqty
   unist-util-visit: 4.1.0
   utf-8-validate: 5.0.9
+  zod: 3.18.0
 
 devDependencies:
   '@angular-eslint/eslint-plugin': 13.0.1_dirlon5mihsay42fpwhjobmlby
@@ -21372,6 +21374,13 @@ packages:
         integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==,
       }
     engines: { node: '>=10' }
+
+  /zod/3.18.0:
+    resolution:
+      {
+        integrity: sha512-gwTm8RfUCe8l9rDwN5r2A17DkAa8Ez4Yl4yXqc5VqeGaXaJahzYYXbTwvhroZi0SNBqTwh/bKm2N0mpCzuw4bA==,
+      }
+    dev: false
 
   /zwitch/2.0.2:
     resolution:

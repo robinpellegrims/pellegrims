@@ -56,7 +56,8 @@
     "tslib": "^2.0.0",
     "typewriting-react": "^1.0.8",
     "unist-util-visit": "^4.1.0",
-    "utf-8-validate": "^5.0.9"
+    "utf-8-validate": "^5.0.9",
+    "zod": "^3.18.0"
   },
   "devDependencies": {
     "@angular-eslint/eslint-plugin": "13.0.1",
