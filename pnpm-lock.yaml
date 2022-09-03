@@ -86,7 +86,6 @@ specifiers:
   node-mocks-http: ^1.11.0
   nodemailer: ^6.7.2
   nx: 14.6.0
-  nx-ignore: ^14.5.0
   nx-remotecache-custom: ^1.1.0
   postcss: 8.4.16
   prettier: 2.7.1
@@ -234,7 +233,6 @@ devDependencies:
   ngx-deploy-npm: 3.0.5
   node-mocks-http: 1.11.0
   nx: 14.6.0
-  nx-ignore: 14.5.0
   postcss: 8.4.16
   prettier: 2.7.1
   prettier-plugin-prisma: 4.1.0_prettier@2.7.1
@@ -5558,15 +5556,6 @@ packages:
       '@svgr/plugin-svgo': 6.2.0_@svgr+core@6.2.1
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@swc/helpers/0.3.17:
-    resolution:
-      {
-        integrity: sha512-tb7Iu+oZ+zWJZ3HJqwx8oNwSDIU440hmVMDPhpACWQWnrZHK99Bxs70gT1L2dnr5Hg50ZRWEFkQCAnOVVV0z1Q==,
-      }
-    dependencies:
-      tslib: 2.4.0
     dev: true
 
   /@swc/helpers/0.4.3:
@@ -15797,21 +15786,6 @@ packages:
       {
         integrity: sha512-JYOWTeFoS0Z93587vRJgASD5Ut11fYl5NyihP3KrYBvMe1FRRs6RN7m20SA/16GM4P6hTnZjT+UmDOt38UeXNg==,
       }
-    dev: true
-
-  /nx-ignore/14.5.0:
-    resolution:
-      {
-        integrity: sha512-NDPDmObo2vrTzOvyTYffnLLB0RAFqfUj9JwRCet4KmTnUazLovcCRK56SF+OgeQyi2UYLjOG5Hd8sqc46g6lrQ==,
-      }
-    hasBin: true
-    dependencies:
-      '@swc/helpers': 0.3.17
-      nx: 14.6.0
-      typescript: 4.7.3
-    transitivePeerDependencies:
-      - '@swc-node/register'
-      - '@swc/core'
     dev: true
 
   /nx-remotecache-custom/1.1.0_@nrwl+workspace@14.6.0:
