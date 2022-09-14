@@ -7,9 +7,10 @@
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/pellegrims-dev-e2e/cypress.json",
+        "cypressConfig": "apps/pellegrims-dev-e2e/cypress.config.ts",
         "devServerTarget": "pellegrims-dev:serve",
-        "tsConfig": "apps/pellegrims-dev-e2e/tsconfig.json"
+        "tsConfig": "apps/pellegrims-dev-e2e/tsconfig.json",
+        "testingType": "e2e"
       },
       "configurations": {
         "production": {

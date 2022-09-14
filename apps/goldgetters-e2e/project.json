@@ -6,7 +6,7 @@
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/goldgetters-e2e/cypress.json",
+        "cypressConfig": "apps/goldgetters-e2e/cypress.config.ts",
         "devServerTarget": "goldgetters:serve:development",
         "testingType": "e2e"
       },
