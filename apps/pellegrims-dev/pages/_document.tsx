@@ -1,6 +1,6 @@
 import { Head, Html, Main, NextScript } from 'next/document';
-import { Favicon } from '../components/favicon';
 import { feedRss2Filename, name, rssFolder } from '../constants';
+import { FavIcon } from '@pellegrims/shared/ui/atoms';
 
 export const MyDocument = () => (
   <Html className="dark:bg-dark-800 text-dark-900 dark:text-dark-100 bg-white">
@@ -16,7 +16,7 @@ export const MyDocument = () => (
         title={name}
         href={`/${rssFolder}/${feedRss2Filename}`}
       />
-      <Favicon />
+      <FavIcon pathPrefix="/favicon" />
     </Head>
     <body>
       <Main />
