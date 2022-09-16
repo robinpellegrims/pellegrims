@@ -5,6 +5,7 @@ module.exports = {
       2,
       'always',
       [
+        'cotersus',
         'pellegrims-dev',
         'eslint-config',
         'nx-remotecache-s3',
