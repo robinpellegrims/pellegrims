@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
+    "cotersus": "apps/cotersus",
+    "cotersus-e2e": "apps/cotersus-e2e",
     "eslint-config": "libs/eslint-config",
     "goldgetters": "apps/goldgetters",
     "goldgetters-data-access": "libs/goldgetters/data-access",
