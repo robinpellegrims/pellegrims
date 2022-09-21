@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/robinpellegrims/pellegrims/issues?q=is%3Aissue+label%3Ascope%3Anx-remotecache-s3+"
   },
-  "homepage": "https://github.com/robinpellegrims/pellegrims/tree/master/libs/nx-remotecache-s3"
+  "homepage": "https://github.com/robinpellegrims/pellegrims/tree/master/libs/nx-remotecache-s3",
+  "peerDependencies": {
+    "@nrwl/workspace": ">=9.2.2"
+  }
 }
