@@ -10,6 +10,7 @@ import { SessionProvider, useSession } from 'next-auth/react';
 import { FunctionComponent } from 'react';
 import { useRouter } from 'next/router';
 import { facebookUrl, githubUrl, twitterUrl } from '../constants';
+import { Session } from 'next-auth';
 
 const headerNavLinks: { text: string; href: string }[] = [
   { text: 'Nieuws', href: '/news' },
@@ -34,7 +35,10 @@ const GoldgettersHeader: FunctionComponent = () => {
   );
 };
 
-const GoldgettersApp: AppType = ({ Component, pageProps }) => (
+const GoldgettersApp: AppType<{ session: Session | null | undefined }> = ({
+  Component,
+  pageProps,
+}) => (
   <SessionProvider session={pageProps.session}>
     <Head>
       <title>ZVC Goldgetters</title>
