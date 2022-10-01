@@ -39,10 +39,7 @@
     },
     "github": {
       "executor": "@jscutlery/semver:github",
-      "options": {
-        "tag": "${tag}",
-        "notesFile": "libs/nx-remotecache-s3/CHANGELOG.md"
-      }
+      "options": { "tag": "${tag}", "notes": "${notes}" }
     },
     "deploy": {
       "executor": "ngx-deploy-npm:deploy",
