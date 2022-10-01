@@ -1,7 +1,7 @@
 {
   "name": "@pellegrims/nx-remotecache-s3",
   "main": "src/index.js",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Remote caching for @nrwl/nx using S3 storage",
   "scripts": {
     "test": "nx test nx-remotecache-s3"
