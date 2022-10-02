@@ -4,11 +4,7 @@ import { ContactForm } from './contact-form';
 describe('ContactForm', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
-      <ContactForm
-        onSubmit={() => {
-          /* do nothing*/
-        }}
-      />
+      <ContactForm onSubmit={() => Promise.resolve()} />
     );
     expect(baseElement).toBeTruthy();
   });
