@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.2.0](https://github.com/robinpellegrims/pellegrims/compare/goldgetters-0.1.0...goldgetters-0.2.0) (2022-10-02)
+
+### Features
+
+- **goldgetters:** update profile name ([ffd6191](https://github.com/robinpellegrims/pellegrims/commit/ffd6191d33aeff3d4931f266e01709a35a9186a1))
+
 # 0.1.0 (2022-10-01)
 
 ### Bug Fixes
