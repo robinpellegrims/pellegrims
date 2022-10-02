@@ -3,9 +3,10 @@ import { goldgettersClient } from '@pellegrims/goldgetters/db';
 import { z } from 'zod';
 import { contactMailTo, smtpTransportOptions, smtpUser } from './mail-config';
 import { createTransport } from 'nodemailer';
+import { Context } from './context';
 
 export const appRouter = trpc
-  .router()
+  .router<Context>()
   .query('locations', {
     resolve: async () => ({
       list: await goldgettersClient.location.findMany(),
@@ -36,6 +37,22 @@ export const appRouter = trpc
           cause: error,
         });
       }
+    },
+  })
+  .mutation('user', {
+    input: z.object({
+      name: z.string().nullable(),
+      image: z.string().nullable(),
+    }),
+    resolve: async ({ input, ctx }) => {
+      const email = ctx.session?.user?.email;
+      if (!email) {
+        throw new trpc.TRPCError({ code: 'UNAUTHORIZED' });
+      }
+      return goldgettersClient.user.update({
+        where: { email },
+        data: { name: input.name },
+      });
     },
   });
 
