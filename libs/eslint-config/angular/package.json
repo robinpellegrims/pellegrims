@@ -1,5 +1,5 @@
 {
-  "name": "@pellegrims/eslint-config",
+  "name": "@pellegrims/eslint-config-angular",
   "version": "1.0.13",
   "description": "ESLint shareable configuration",
   "repository": {
@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/robinpellegrims/pellegrims/labels/scope%3Aeslint-config"
   },
-  "homepage": "https://github.com/robinpellegrims/pellegrims/tree/master/libs/eslint-config",
+  "homepage": "https://github.com/robinpellegrims/pellegrims/tree/master/libs/eslint-config/angular",
   "peerDependencies": {
     "@angular-eslint/eslint-plugin": "^13.0.1",
     "@angular-eslint/eslint-plugin-template": "^13.0.1",
