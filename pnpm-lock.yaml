@@ -28,7 +28,7 @@ specifiers:
   '@nrwl/web': 14.7.11
   '@nrwl/workspace': 14.7.11
   '@pellegrims/eslint-config': 1.0.6
-  '@pellegrims/nx-remotecache-s3': 1.0.1
+  '@pellegrims/nx-remotecache-s3': 1.2.3
   '@prisma/client': ^4.2.1
   '@tailwindcss/line-clamp': ^0.3.1
   '@tailwindcss/typography': ^0.5.2
@@ -192,7 +192,7 @@ devDependencies:
   '@nrwl/web': 14.7.11_g5viviqr4kgiero3yai2pwlctq
   '@nrwl/workspace': 14.7.11_xlwy2tibxcc7aqof5wrq4mkjly
   '@pellegrims/eslint-config': 1.0.6_hhornvt65uzhvvz2iiwie72sji
-  '@pellegrims/nx-remotecache-s3': 1.0.1_4v7ywiidtrf6wnjsu3yfu33oxe
+  '@pellegrims/nx-remotecache-s3': 1.2.3_4v7ywiidtrf6wnjsu3yfu33oxe
   '@tailwindcss/line-clamp': 0.3.1_tailwindcss@3.1.8
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.1.8
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
@@ -5101,21 +5101,23 @@ packages:
       tslib: 2.3.1
     dev: true
 
-  /@pellegrims/nx-remotecache-s3/1.0.1_4v7ywiidtrf6wnjsu3yfu33oxe:
+  /@pellegrims/nx-remotecache-s3/1.2.3_4v7ywiidtrf6wnjsu3yfu33oxe:
     resolution:
       {
-        integrity: sha512-/hEhpm63B5p5Rw/NaD2RHPAyb86yj1RJhITbNvIve1Vxef5BU0DmcjbVnV1IB4m7NQfP24/MklcOj0nYdRlMhQ==,
+        integrity: sha512-g1JwmU39B7aGyIDRG6bfh6HMbBkpWo/DA3Tsj2OV1BMpheqqMYpT3S6cqIBuOdUuTnxqDIx6+nrTAgfMUSQ2Ng==,
       }
+    peerDependencies:
+      '@nrwl/workspace': '>=9.2.2'
     dependencies:
       '@aws-sdk/client-s3': 3.72.0_kbq3ymfgsdifbjp7lrnpzjpmde
       '@aws-sdk/client-sts': 3.76.0
       '@aws-sdk/credential-provider-node': 3.76.0
+      '@nrwl/workspace': 14.7.11_xlwy2tibxcc7aqof5wrq4mkjly
       get-stream: 6.0.1
       nx-remotecache-custom: 1.1.0_@nrwl+workspace@14.7.11
-      tslib: 2.3.1
+      tslib: 2.4.0
     transitivePeerDependencies:
       - '@aws-sdk/signature-v4-crt'
-      - '@nrwl/workspace'
     dev: true
 
   /@phenomnomnominal/tsquery/4.1.1_typescript@4.7.3:
