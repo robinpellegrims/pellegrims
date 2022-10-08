@@ -29,10 +29,12 @@
     "url": "https://github.com/robinpellegrims/pellegrims/labels/scope%3Aeslint-config"
   },
   "homepage": "https://github.com/robinpellegrims/pellegrims/tree/master/libs/eslint-config/angular",
+  "dependencies": {
+    "@pellegrims/eslint-config-base": "^0.0.2"
+  },
   "peerDependencies": {
     "@angular-eslint/eslint-plugin": "^13.0.1",
     "@angular-eslint/eslint-plugin-template": "^13.0.1",
-    "@pellegrims/eslint-config-base": "^0.0.1",
     "eslint-plugin-angular-template-consistent-this": "^0.0.11",
     "eslint-plugin-ngrx": "^2.0.1",
     "eslint-plugin-rxjs-angular": "^2.0.0"
