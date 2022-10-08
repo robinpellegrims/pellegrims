@@ -1,3 +1,7 @@
 export = {
-  extends: ['./typescript', './javascript', './angular', './angular-template'],
+  extends: [
+    '@pellegrims/eslint-config-base',
+    './angular',
+    './angular-template',
+  ],
 };

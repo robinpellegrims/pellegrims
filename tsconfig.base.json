@@ -18,6 +18,9 @@
       "@pellegrims/eslint-config-angular": [
         "libs/eslint-config/angular/src/index.ts"
       ],
+      "@pellegrims/eslint-config/base": [
+        "libs/eslint-config/base/src/index.ts"
+      ],
       "@pellegrims/goldgetters/data-access": [
         "libs/goldgetters/data-access/src/index.ts"
       ],

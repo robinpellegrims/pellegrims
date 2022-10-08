@@ -1,32 +1,31 @@
 {
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "root": "libs/eslint-config/angular",
-  "sourceRoot": "libs/eslint-config/angular/src",
+  "root": "libs/eslint-config/base",
+  "sourceRoot": "libs/eslint-config/base/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/eslint-config/angular",
-        "tsConfig": "libs/eslint-config/angular/tsconfig.lib.json",
-        "packageJson": "libs/eslint-config/angular/package.json",
-        "main": "libs/eslint-config/angular/src/index.ts",
-        "assets": ["libs/eslint-config/angular/*.md"]
+        "outputPath": "dist/libs/eslint-config/base",
+        "main": "libs/eslint-config/base/src/index.ts",
+        "tsConfig": "libs/eslint-config/base/tsconfig.lib.json",
+        "assets": ["libs/eslint-config/base/*.md"]
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/eslint-config/angular/**/*.ts"]
+        "lintFilePatterns": ["libs/eslint-config/base/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/eslint-config/angular"],
+      "outputs": ["coverage/libs/eslint-config/base"],
       "options": {
-        "jestConfig": "libs/eslint-config/angular/jest.config.ts",
+        "jestConfig": "libs/eslint-config/base/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -34,8 +33,8 @@
       "executor": "@jscutlery/semver:version",
       "options": {
         "postTargets": [
-          "eslint-config-angular:github",
-          "eslint-config-angular:deploy"
+          "eslint-config-base:github",
+          "eslint-config-base:deploy"
         ]
       }
     },
