@@ -1,6 +1,6 @@
 {
   "name": "@pellegrims/eslint-config-angular",
-  "version": "1.0.13",
+  "version": "0.0.1",
   "description": "ESLint shareable configuration for Angular",
   "repository": {
     "type": "git",
