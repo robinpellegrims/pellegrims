@@ -27,7 +27,7 @@ specifiers:
   '@nrwl/react': 14.7.11
   '@nrwl/web': 14.7.11
   '@nrwl/workspace': 14.7.11
-  '@pellegrims/eslint-config': 1.0.6
+  '@pellegrims/eslint-config': 1.0.13
   '@pellegrims/nx-remotecache-s3': 1.2.3
   '@prisma/client': ^4.2.1
   '@tailwindcss/line-clamp': ^0.3.1
@@ -191,7 +191,7 @@ devDependencies:
   '@nrwl/react': 14.7.11_g5viviqr4kgiero3yai2pwlctq
   '@nrwl/web': 14.7.11_g5viviqr4kgiero3yai2pwlctq
   '@nrwl/workspace': 14.7.11_xlwy2tibxcc7aqof5wrq4mkjly
-  '@pellegrims/eslint-config': 1.0.6_hhornvt65uzhvvz2iiwie72sji
+  '@pellegrims/eslint-config': 1.0.13_hhornvt65uzhvvz2iiwie72sji
   '@pellegrims/nx-remotecache-s3': 1.2.3_4v7ywiidtrf6wnjsu3yfu33oxe
   '@tailwindcss/line-clamp': 0.3.1_tailwindcss@3.1.8
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.1.8
@@ -5064,10 +5064,10 @@ packages:
       node-addon-api: 3.2.1
       node-gyp-build: 4.3.0
 
-  /@pellegrims/eslint-config/1.0.6_hhornvt65uzhvvz2iiwie72sji:
+  /@pellegrims/eslint-config/1.0.13_hhornvt65uzhvvz2iiwie72sji:
     resolution:
       {
-        integrity: sha512-5tvNZF5sQ5Yl3etlvd6WFbgNalzFfg8qQJpduZvTFzAVulp2LY6Bj/QZkeNfEdtz4kUYshlvQJrlltWw0Gvmcg==,
+        integrity: sha512-ViZFhCL9oSpo6UKbA/kzFy9trXSR7KzMqsp5c1VTEr97nsm0pf0XC861THQm1DOLSz/kxbF9+RkUBMKpWBP34w==,
       }
     peerDependencies:
       '@angular-eslint/eslint-plugin': ^13.0.1
