@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default {
-  displayName: 'eslint-config',
-  preset: '../../jest.preset.js',
+  displayName: 'eslint-config-angular',
+  preset: '../../../jest.preset.js',
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.spec.json',
@@ -12,5 +12,5 @@ export default {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/eslint-config',
+  coverageDirectory: '../../../coverage/libs/eslint-config/angular',
 };
