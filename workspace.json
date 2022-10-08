@@ -4,6 +4,7 @@
     "cotersus": "apps/cotersus",
     "cotersus-e2e": "apps/cotersus-e2e",
     "eslint-config-angular": "libs/eslint-config/angular",
+    "eslint-config-base": "libs/eslint-config/base",
     "goldgetters": "apps/goldgetters",
     "goldgetters-data-access": "libs/goldgetters/data-access",
     "goldgetters-db": "libs/goldgetters/db",

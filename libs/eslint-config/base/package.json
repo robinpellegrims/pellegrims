@@ -1,0 +1,45 @@
+{
+  "name": "@pellegrims/eslint-config/base",
+  "version": "0.0.1",
+  "description": "ESLint shareable configuration for Typescript & Javascript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robinpellegrims/pellegrims.git",
+    "directory": "libs/eslint-config/base"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "pellegrims",
+    "typescript",
+    "javascript",
+    "rxjs",
+    "import",
+    "etc",
+    "unicorn",
+    "prettier",
+    "nx"
+  ],
+  "author": "Robin Pellegrims",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robinpellegrims/pellegrims/labels/scope%3Aeslint-config"
+  },
+  "homepage": "https://github.com/robinpellegrims/pellegrims/tree/master/libs/eslint-config/base",
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-etc": "^2.0.1",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-rxjs": "^4.0.2",
+    "eslint-plugin-unicorn": "^39.0.0"
+  },
+  "exports": {
+    "./": "./src/index.js",
+    "./javascript": "./src/javascript.js",
+    "./typescript": "./src/typescript.js"
+  }
+}
