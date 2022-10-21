@@ -12,13 +12,14 @@ This package was built with [nx-remotecache-custom](https://www.npmjs.com/packag
 npm install --save-dev @pellegrims/nx-remotecache-s3
 ```
 
-| Parameter | Description                                                                                                             | Environment Variable / .env | `nx.json`  |
-| --------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------- | ---------- |
-| Endpoint  | Optional. The fully qualified endpoint of the webservice. This is only required when using a custom (non-AWS) endpoint. | `NX_CACHE_S3_ENDPOINT`      | `endpoint` |
-| Bucket    | Optional. Specify which bucket should be used for storing the cache.                                                    | `NX_CACHE_S3_BUCKET`        | `bucket`   |
-| Prefix    | Optional. Specify prefix path of target object key.                                                                     | `NX_CACHE_S3_PREFIX`        | `prefix`   |
-| Region    | Optional. The AWS region to which this client will send requests.                                                       | `NX_CACHE_S3_REGION`        | `region`   |
-| Profile   | Optional. The AWS profile to use to authenticate.                                                                       | `NX_CACHE_S3_PROFILE`       | `profile`  |
+| Parameter        | Description                                                                                                                                           | Environment Variable / .env    | `nx.json`        |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ | ---------------- |
+| Endpoint         | Optional. The fully qualified endpoint of the webservice. This is only required when using a custom (non-AWS) endpoint.                               | `NX_CACHE_S3_ENDPOINT`         | `endpoint`       |
+| Bucket           | Optional. Specify which bucket should be used for storing the cache.                                                                                  | `NX_CACHE_S3_BUCKET`           | `bucket`         |
+| Prefix           | Optional. Specify prefix path of target object key.                                                                                                   | `NX_CACHE_S3_PREFIX`           | `prefix`         |
+| Region           | Optional. The AWS region to which this client will send requests.                                                                                     | `NX_CACHE_S3_REGION`           | `region`         |
+| Profile          | Optional. The AWS profile to use to authenticate.                                                                                                     | `NX_CACHE_S3_PROFILE`          | `profile`        |
+| Force Path Style | Optional. Whether to force path style URLs for S3 objects (e.g., `https://s3.amazonaws.com/<bucket>/` instead of `https://<bucket>.s3.amazonaws.com/` | `NX_CACHE_S3_FORCE_PATH_STYLE` | `forcePathStyle` |
 
 ```json
 {
@@ -31,7 +32,8 @@ npm install --save-dev @pellegrims/nx-remotecache-s3
         "bucket": "name-of-bucket",
         "prefix": "prefix/",
         "region": "us-west-000",
-        "profile": "name-of-aws-profile"
+        "profile": "name-of-aws-profile",
+        "forcePathStyle": true
       }
     }
   }
