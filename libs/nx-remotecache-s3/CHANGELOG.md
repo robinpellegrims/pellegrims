@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [1.3.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.2.3...nx-remotecache-s3-1.3.0) (2022-10-26)
+
+### Features
+
+- **nx-remotecache-s3:** add force path style capability to S3Options ([3a778c4](https://github.com/robinpellegrims/pellegrims/commit/3a778c40fb786110de569080a031d0f88ade075d))
+
 ## [1.2.3](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.2.2...nx-remotecache-s3-1.2.3) (2022-10-01)
 
 ## [1.2.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.2.1...nx-remotecache-s3-1.2.2) (2022-09-21)
