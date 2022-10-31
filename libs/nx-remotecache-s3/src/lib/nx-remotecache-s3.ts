@@ -7,21 +7,23 @@ import { Stream } from 'stream';
 import defaultTasksRunner from 'nx/src/tasks-runner/default-tasks-runner';
 
 const ENV_BUCKET = 'NX_CACHE_S3_BUCKET';
-const ENV_PREFIX = 'NX_CACHE_S3_PREFIX';
 const ENV_ENDPOINT = 'NX_CACHE_S3_ENDPOINT';
-const ENV_REGION = 'NX_CACHE_S3_REGION';
-const ENV_PROFILE = 'NX_CACHE_S3_PROFILE';
 const ENV_FORCE_PATH_STYLE = 'NX_CACHE_S3_FORCE_PATH_STYLE';
+const ENV_PREFIX = 'NX_CACHE_S3_PREFIX';
+const ENV_PROFILE = 'NX_CACHE_S3_PROFILE';
+const ENV_READ_ONLY = 'NX_CACHE_S3_READ_ONLY';
+const ENV_REGION = 'NX_CACHE_S3_REGION';
 
 const getEnv = (key: string) => process.env[key];
 
 interface S3Options {
   bucket?: string;
-  prefix?: string;
   endpoint?: string;
-  region?: string;
-  profile?: string;
   forcePathStyle?: boolean;
+  prefix?: string;
+  profile?: string;
+  readOnly?: boolean;
+  region?: string;
 }
 
 const runner: typeof defaultTasksRunner = createCustomRunner<S3Options>(
@@ -41,8 +43,8 @@ const runner: typeof defaultTasksRunner = createCustomRunner<S3Options>(
     });
 
     const bucket = getEnv(ENV_BUCKET) ?? options.bucket;
-
     const prefix = getEnv(ENV_PREFIX) ?? options.prefix ?? '';
+    const readOnly = getEnv(ENV_READ_ONLY) ?? options.readOnly ?? false;
 
     return {
       name: 'S3',
@@ -72,14 +74,19 @@ const runner: typeof defaultTasksRunner = createCustomRunner<S3Options>(
         });
         return getStream.buffer(result.Body as Stream);
       },
-      storeFile: async (filename, buffer) =>
-        await s3Storage.putObject({
+      storeFile: async (filename, buffer) => {
+        if (readOnly) {
+          throw new Error('Read Only cache enabled, skipped upload');
+        }
+
+        return await s3Storage.putObject({
           /* eslint-disable @typescript-eslint/naming-convention */
           Bucket: bucket,
           Key: `${prefix}${filename}`,
           Body: buffer,
           /* eslint-enable @typescript-eslint/naming-convention */
-        }),
+        });
+      },
     };
   }
 );
