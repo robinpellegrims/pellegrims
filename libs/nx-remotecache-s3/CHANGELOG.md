@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [1.4.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.3.0...nx-remotecache-s3-1.4.0) (2022-11-01)
+
+### Features
+
+- **nx-remotecache-s3:** add readonly option ([9cb9b37](https://github.com/robinpellegrims/pellegrims/commit/9cb9b37d8bfe6043163ed43e1bd5df48794b358d))
+
 # [1.3.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.2.3...nx-remotecache-s3-1.3.0) (2022-10-26)
 
 ### Features
