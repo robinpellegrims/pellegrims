@@ -39,12 +39,14 @@ const runner: typeof defaultTasksRunner = createCustomRunner<S3Options>(
       endpoint: getEnv(ENV_ENDPOINT) ?? options.endpoint,
       region: getEnv(ENV_REGION) ?? options.region,
       credentials: provider,
-      forcePathStyle: !!getEnv(ENV_FORCE_PATH_STYLE) ?? options.forcePathStyle,
+      forcePathStyle:
+        getEnv(ENV_FORCE_PATH_STYLE) === 'true' ?? options.forcePathStyle,
     });
 
     const bucket = getEnv(ENV_BUCKET) ?? options.bucket;
     const prefix = getEnv(ENV_PREFIX) ?? options.prefix ?? '';
-    const readOnly = getEnv(ENV_READ_ONLY) ?? options.readOnly ?? false;
+    const readOnly =
+      getEnv(ENV_READ_ONLY) === 'true' ?? options.readOnly ?? false;
 
     return {
       name: 'S3',
@@ -58,7 +60,10 @@ const runner: typeof defaultTasksRunner = createCustomRunner<S3Options>(
           });
           return !!result;
         } catch (error) {
-          if ((error as Error).name === 'NotFound') {
+          if (
+            (error as Error).name === 'Forbidden' ||
+            (error as Error).name === 'NotFound'
+          ) {
             return false;
           } else {
             throw error;
@@ -76,7 +81,7 @@ const runner: typeof defaultTasksRunner = createCustomRunner<S3Options>(
       },
       storeFile: async (filename, buffer) => {
         if (readOnly) {
-          throw new Error('Read Only cache enabled, skipped upload');
+          throw new Error('ReadOnly');
         }
 
         return await s3Storage.putObject({
