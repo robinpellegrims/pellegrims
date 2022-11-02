@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.4.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.4.1...nx-remotecache-s3-1.4.2) (2022-11-02)
+
+### Bug Fixes
+
+- **nx-remotecache-s3:** fix 403 error handling for fileExists ([79b6532](https://github.com/robinpellegrims/pellegrims/commit/79b65324d36c8bd800e82bbb28dd8efb9d5255b4))
+
 ## [1.4.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.4.0...nx-remotecache-s3-1.4.1) (2022-11-02)
 
 ### Bug Fixes
