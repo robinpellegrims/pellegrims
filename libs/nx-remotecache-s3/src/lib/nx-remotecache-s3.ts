@@ -61,7 +61,7 @@ const runner: typeof defaultTasksRunner = createCustomRunner<S3Options>(
           return !!result;
         } catch (error) {
           if (
-            (error as Error).name === 'Forbidden' ||
+            (error as Error).name === '403' ||
             (error as Error).name === 'NotFound'
           ) {
             return false;
@@ -83,7 +83,6 @@ const runner: typeof defaultTasksRunner = createCustomRunner<S3Options>(
         if (readOnly) {
           throw new Error('ReadOnly');
         }
-
         return await s3Storage.putObject({
           /* eslint-disable @typescript-eslint/naming-convention */
           Bucket: bucket,
