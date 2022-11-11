@@ -24,13 +24,7 @@ export const HomeHero: FunctionComponent<HomeHeroProps> = ({
 }) => (
   <section>
     <div className="mx-auto flex flex-col items-center justify-center gap-12 text-center">
-      <Image
-        alt="hero"
-        src={imageSrc}
-        width="264"
-        height="280"
-        layout="fixed"
-      />
+      <Image alt="hero" src={imageSrc} width="264" height="280" />
       <h1 className="text-3xl font-medium sm:text-4xl">
         Hi! I&apos;m <span className="font-semibold">{name}</span> 👋
       </h1>

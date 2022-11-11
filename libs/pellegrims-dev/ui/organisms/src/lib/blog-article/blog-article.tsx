@@ -34,9 +34,11 @@ export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
         <div className="relative h-[31rem]">
           <Image
             src={markDown.frontMatter.coverImage}
-            layout="fill"
-            objectFit="cover"
+            alt="cover image"
             loading="eager"
+            fill
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
           />
         </div>
       ) : null}
