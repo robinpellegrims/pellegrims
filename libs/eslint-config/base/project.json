@@ -1,4 +1,5 @@
 {
+  "name": "eslint-config-base",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "root": "libs/eslint-config/base",
   "sourceRoot": "libs/eslint-config/base/src",
@@ -23,7 +24,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/eslint-config/base"],
+      "outputs": ["{workspaceRoot}/coverage/libs/eslint-config/base"],
       "options": {
         "jestConfig": "libs/eslint-config/base/jest.config.ts",
         "passWithNoTests": true

@@ -1,4 +1,5 @@
 {
+  "name": "shared-markdown",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "root": "libs/shared/markdown",
   "sourceRoot": "libs/shared/markdown/src",
@@ -14,7 +15,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared/markdown"],
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/markdown"],
       "options": {
         "jestConfig": "libs/shared/markdown/jest.config.ts",
         "passWithNoTests": true

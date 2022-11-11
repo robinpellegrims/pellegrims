@@ -1,4 +1,5 @@
 {
+  "name": "pellegrims-dev-ui-organisms",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "root": "libs/pellegrims-dev/ui/organisms",
   "sourceRoot": "libs/pellegrims-dev/ui/organisms/src",
@@ -21,7 +22,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/pellegrims-dev/ui/organisms"],
+      "outputs": ["{workspaceRoot}/coverage/libs/pellegrims-dev/ui/organisms"],
       "options": {
         "jestConfig": "libs/pellegrims-dev/ui/organisms/jest.config.ts",
         "passWithNoTests": true

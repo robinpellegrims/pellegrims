@@ -1,4 +1,5 @@
 {
+  "name": "nx-remotecache-s3",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "root": "libs/nx-remotecache-s3",
   "sourceRoot": "libs/nx-remotecache-s3/src",
@@ -13,7 +14,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/nx-remotecache-s3"],
+      "outputs": ["{workspaceRoot}/coverage/libs/nx-remotecache-s3"],
       "options": {
         "jestConfig": "libs/nx-remotecache-s3/jest.config.ts",
         "passWithNoTests": true
@@ -39,7 +40,10 @@
     },
     "github": {
       "executor": "@jscutlery/semver:github",
-      "options": { "tag": "${tag}", "notes": "${notes}" }
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}"
+      }
     },
     "publish": {
       "executor": "ngx-deploy-npm:deploy",

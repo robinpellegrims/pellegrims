@@ -1,4 +1,5 @@
 {
+  "name": "goldgetters-data-access",
   "root": "libs/goldgetters/data-access",
   "sourceRoot": "libs/goldgetters/data-access/src",
   "projectType": "library",
@@ -12,7 +13,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/goldgetters/data-access"],
+      "outputs": ["{workspaceRoot}/coverage/libs/goldgetters/data-access"],
       "options": {
         "jestConfig": "libs/goldgetters/data-access/jest.config.ts",
         "passWithNoTests": true

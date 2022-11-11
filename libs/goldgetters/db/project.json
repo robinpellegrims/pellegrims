@@ -1,4 +1,5 @@
 {
+  "name": "goldgetters-db",
   "root": "libs/goldgetters/db",
   "sourceRoot": "libs/goldgetters/db/src",
   "projectType": "library",
@@ -12,7 +13,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/goldgetters/db"],
+      "outputs": ["{workspaceRoot}/coverage/libs/goldgetters/db"],
       "options": {
         "jestConfig": "libs/goldgetters/db/jest.config.ts",
         "passWithNoTests": true
