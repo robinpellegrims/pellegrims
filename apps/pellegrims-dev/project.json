@@ -1,4 +1,5 @@
 {
+  "name": "pellegrims-dev",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "root": "apps/pellegrims-dev",
   "sourceRoot": "apps/pellegrims-dev",
@@ -46,7 +47,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/pellegrims-dev"],
+      "outputs": ["{workspaceRoot}/coverage/apps/pellegrims-dev"],
       "options": {
         "jestConfig": "apps/pellegrims-dev/jest.config.ts",
         "passWithNoTests": true
@@ -67,7 +68,10 @@
     },
     "github": {
       "executor": "@jscutlery/semver:github",
-      "options": { "tag": "${tag}", "notes": "${notes}" }
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}"
+      }
     },
     "deploy": {
       "executor": "@pellegrims/nx-vercel:deploy",

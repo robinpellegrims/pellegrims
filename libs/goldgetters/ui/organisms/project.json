@@ -1,4 +1,5 @@
 {
+  "name": "goldgetters-ui-organisms",
   "root": "libs/goldgetters/ui/organisms",
   "sourceRoot": "libs/goldgetters/ui/organisms/src",
   "projectType": "library",
@@ -20,7 +21,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/goldgetters/ui/organisms"],
+      "outputs": ["{workspaceRoot}/coverage/libs/goldgetters/ui/organisms"],
       "options": {
         "jestConfig": "libs/goldgetters/ui/organisms/jest.config.ts",
         "passWithNoTests": true
