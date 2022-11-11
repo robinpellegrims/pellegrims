@@ -9,9 +9,12 @@ interface SocialIconProps {
 }
 
 export const SocialIconLink: FunctionComponent<SocialIconProps> = (props) => (
-  <Link href={props.href}>
-    <a rel="noopener noreferrer" target="_blank" aria-label={props.label}>
-      <SocialIcon type={props.iconType} />
-    </a>
+  <Link
+    href={props.href}
+    rel="noopener noreferrer"
+    target="_blank"
+    aria-label={props.label}
+  >
+    <SocialIcon type={props.iconType} />
   </Link>
 );

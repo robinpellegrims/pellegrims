@@ -40,9 +40,7 @@ export const Footer: FunctionComponent<FooterProps> = (props) => (
         © {new Date().getFullYear()} {props.name}
       </p>
       <Link href="/apps/pellegrims-dev/public">
-        <a>
-          <Logo end={true} />
-        </a>
+        <Logo end={true} />
       </Link>
     </footer>
   </Container>
