@@ -24,7 +24,7 @@ const Blog: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       />
     }
   >
-    <Grid ItemComponent={Card} items={posts} />
+    <Grid items={posts} render={(post) => <Card {...post} />} />
   </PageTemplate>
 );
 

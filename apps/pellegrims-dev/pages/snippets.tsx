@@ -25,7 +25,7 @@ const Snippets: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       />
     }
   >
-    <List items={snippets} ItemComponent={BlogArticle} />
+    <List items={snippets} render={(article) => <BlogArticle {...article} />} />
   </PageTemplate>
 );
 

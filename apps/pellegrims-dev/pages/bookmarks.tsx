@@ -23,7 +23,10 @@ export const Bookmarks: NextPage<
     }
     seoProps={{ title }}
   >
-    <Grid items={props.bookmarks} ItemComponent={Card} />
+    <Grid
+      items={props.bookmarks}
+      render={(bookmark) => <Card {...bookmark} />}
+    />
   </PageTemplate>
 );
 
