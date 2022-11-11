@@ -12,9 +12,7 @@ export const NextLink: FunctionComponent<PropsWithChildren<NextLinkProps>> = ({
   children,
   ...rest
 }) => (
-  <Link href={href} {...rest}>
-    <a href={href} className={className}>
-      {children}
-    </a>
+  <Link href={href} {...rest} className={className}>
+    {children}
   </Link>
 );

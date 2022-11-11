@@ -13,9 +13,7 @@ export const Header: FunctionComponent<HeaderProps> = ({ links }) => (
     <header>
       <div className="flex flex-col items-center gap-3 py-6 md:flex-row">
         <Link href="/">
-          <a>
-            <Logo />
-          </a>
+          <Logo />
         </Link>
         <Nav links={links} />
       </div>

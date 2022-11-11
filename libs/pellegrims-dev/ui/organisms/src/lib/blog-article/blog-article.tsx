@@ -48,16 +48,13 @@ export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
       <footer className="mt-24">
         <Link
           href={`https://twitter.com/intent/tweet?text=${markDown.frontMatter.title}&via=${twitterUserName}&url=${urlToShare}`}
+          rel="noopener noreferrer"
+          target="_blank"
+          aria-label={shareOnTwitter}
+          className="flex items-center justify-center gap-2"
         >
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            aria-label={shareOnTwitter}
-            className="flex items-center justify-center gap-2"
-          >
-            <SocialIcon type="twitter" />
-            {shareOnTwitter}
-          </a>
+          <SocialIcon type="twitter" />
+          {shareOnTwitter}
         </Link>
       </footer>
     ) : null}

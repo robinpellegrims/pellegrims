@@ -7,7 +7,11 @@ export interface NavItemProps {
 }
 
 export const NavItem: FunctionComponent<NavItemProps> = ({ text, href }) => (
-  <Link key={href} href={href}>
-    <a className="hover:text-dark-900 mr-5 dark:hover:text-white">{text}</a>
+  <Link
+    key={href}
+    href={href}
+    className="hover:text-dark-900 mr-5 dark:hover:text-white"
+  >
+    {text}
   </Link>
 );

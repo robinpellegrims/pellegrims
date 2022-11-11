@@ -37,9 +37,7 @@ export const HomeHero: FunctionComponent<HomeHeroProps> = ({
         </RoughNotationGroup>
       </p>
       <Link href={contactPath}>
-        <a>
-          <Button text="Get in touch" type="primary" />
-        </a>
+        <Button text="Get in touch" type="primary" />
       </Link>
     </div>
   </section>
