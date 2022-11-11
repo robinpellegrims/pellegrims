@@ -3,9 +3,7 @@ import { Grid } from './grid';
 
 describe('Grid', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(
-      <Grid ItemComponent={() => <span></span>} items={[]} />
-    );
+    const { baseElement } = render(<Grid render={() => <span />} items={[]} />);
     expect(baseElement).toBeTruthy();
   });
 });
