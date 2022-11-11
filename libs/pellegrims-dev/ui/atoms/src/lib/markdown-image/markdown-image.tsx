@@ -20,8 +20,8 @@ export const MarkdownImage: FunctionComponent<
     const alt = metastring.replace(/ *\{[^)]*} */g, '');
     const metaWidth = metastring.match(/{([^}]+)x/);
     const metaHeight = metastring.match(/x([^}]+)}/);
-    const width = metaWidth?.[1] ?? '100%';
-    const height = metaHeight?.[1] ?? '100%';
+    const width = metaWidth?.[1] ?? 300;
+    const height = metaHeight?.[1] ?? 300;
     const isPriority = metastring.toLowerCase().match('{priority}') !== null;
     const hasCaption = metastring?.toLowerCase().includes('{caption:');
     const caption = metastring?.match(/{caption: (.*?)}/)?.pop();
@@ -33,8 +33,9 @@ export const MarkdownImage: FunctionComponent<
           src={imageSrc}
           alt={alt}
           priority={isPriority}
-          width={width}
-          height={height}
+          width={+width}
+          height={+height}
+          style={{ margin: 'auto' }}
         />
         {hasCaption ? (
           <div className="caption" aria-label={caption}>

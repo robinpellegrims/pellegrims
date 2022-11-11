@@ -8,7 +8,7 @@ import {
   NavItemProps,
   WithLoading,
 } from '@pellegrims/goldgetters/ui/atoms';
-import { StaticImageData } from 'next/image';
+import { StaticImageData } from 'next/legacy/image';
 import { User, UserMenu } from './user-menu';
 import { NavMenu } from '@pellegrims/goldgetters/ui/molecules';
 

@@ -20,9 +20,11 @@ export const Card: FunctionComponent<CardProps> = (props) => (
       {props.cover.startsWith('/') ? (
         <Image
           src={props.cover}
-          layout="fill"
-          objectFit="cover"
+          alt="cover image"
           loading="lazy"
+          fill
+          sizes="100vw"
+          style={{ objectFit: 'cover' }}
         />
       ) : (
         <img
