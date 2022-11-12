@@ -34,7 +34,7 @@
       "options": {
         "postTargets": [
           "eslint-config-base:github",
-          "eslint-config-base:deploy"
+          "eslint-config-base:publish"
         ]
       }
     },
@@ -45,7 +45,7 @@
         "notes": "${notes}"
       }
     },
-    "deploy": {
+    "publish": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
         "access": "public"
