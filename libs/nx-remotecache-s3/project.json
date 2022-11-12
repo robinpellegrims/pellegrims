@@ -34,14 +34,14 @@
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "postTargets": ["nx-remotecache-s3:github", "nx-remotecache-s3:deploy"]
+        "postTargets": ["nx-remotecache-s3:github", "nx-remotecache-s3:publish"]
       }
     },
     "github": {
       "executor": "@jscutlery/semver:github",
       "options": { "tag": "${tag}", "notes": "${notes}" }
     },
-    "deploy": {
+    "publish": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
         "access": "public"
