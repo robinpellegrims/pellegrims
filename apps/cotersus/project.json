@@ -65,6 +65,13 @@
     "github": {
       "executor": "@jscutlery/semver:github",
       "options": { "tag": "${tag}", "notes": "${notes}" }
+    },
+    "deploy": {
+      "executor": "@pellegrims/nx-vercel:deploy",
+      "options": {
+        "projectId": "prj_qsVtu5u3zorgtUFbtK3vWuhtwSuo",
+        "orgId": "GZ8fDLDaLMVY3YiLUZ86vnk4"
+      }
     }
   },
   "tags": ["platform:react", "type:app", "scope:cotersus"]
