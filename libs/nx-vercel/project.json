@@ -1,0 +1,62 @@
+{
+  "name": "nx-vercel",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "root": "libs/nx-vercel",
+  "sourceRoot": "libs/nx-vercel/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/nx-vercel",
+        "main": "libs/nx-vercel/src/index.ts",
+        "tsConfig": "libs/nx-vercel/tsconfig.lib.json",
+        "assets": [
+          "libs/nx-vercel/*.md",
+          {
+            "input": "./libs/nx-vercel/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/nx-vercel/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/nx-vercel",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./libs/nx-vercel",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/nx-vercel/**/*.ts",
+          "libs/nx-vercel/generators.json",
+          "libs/nx-vercel/executors.json",
+          "libs/nx-vercel/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/nx-vercel"],
+      "options": {
+        "jestConfig": "libs/nx-vercel/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

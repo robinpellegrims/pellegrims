@@ -15,6 +15,7 @@ module.exports = {
         'shared',
         'shared-ui-atoms',
         'shared-test',
+        'nx-vercel',
       ],
     ],
   },
