@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "title": "Deploy",
+  "description": "Deploy to Vercel using the Vercel CLI",
+  "type": "object",
+  "properties": {
+    "projectId": {
+      "type": "string",
+      "description": "Vercel project id"
+    },
+    "orgId": {
+      "type": "string",
+      "description": "Vercel organization id"
+    }
+  },
+  "required": ["projectId", "orgId"]
+}

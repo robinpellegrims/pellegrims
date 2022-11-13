@@ -48,6 +48,11 @@
         "plugin:@nrwl/nx/javascript",
         "@pellegrims/eslint-config-base/javascript"
       ]
+    },
+    {
+      "files": "*.json",
+      "parser": "jsonc-eslint-parser",
+      "rules": {}
     }
   ]
 }

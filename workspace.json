@@ -15,6 +15,7 @@
     "goldgetters-ui-organisms": "libs/goldgetters/ui/organisms",
     "goldgetters-ui-templates": "libs/goldgetters/ui/templates",
     "nx-remotecache-s3": "libs/nx-remotecache-s3",
+    "nx-vercel": "libs/nx-vercel",
     "pellegrims-dev": "apps/pellegrims-dev",
     "pellegrims-dev-e2e": "apps/pellegrims-dev-e2e",
     "pellegrims-dev-ui-atoms": "libs/pellegrims-dev/ui/atoms",
