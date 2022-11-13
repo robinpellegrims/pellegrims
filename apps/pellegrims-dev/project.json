@@ -61,11 +61,20 @@
     },
     "version": {
       "executor": "@jscutlery/semver:version",
-      "options": { "postTargets": ["pellegrims-dev:github"] }
+      "options": {
+        "postTargets": ["pellegrims-dev:github"]
+      }
     },
     "github": {
       "executor": "@jscutlery/semver:github",
       "options": { "tag": "${tag}", "notes": "${notes}" }
+    },
+    "deploy": {
+      "executor": "@pellegrims/nx-vercel:deploy",
+      "options": {
+        "projectId": "prj_YpdulcdkZvF1CqjVsBrEhEZk8WHa",
+        "orgId": "GZ8fDLDaLMVY3YiLUZ86vnk4"
+      }
     }
   }
 }
