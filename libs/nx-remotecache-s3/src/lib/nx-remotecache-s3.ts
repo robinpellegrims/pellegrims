@@ -40,13 +40,13 @@ const runner: typeof defaultTasksRunner = createCustomRunner<S3Options>(
       region: getEnv(ENV_REGION) ?? options.region,
       credentials: provider,
       forcePathStyle:
-        getEnv(ENV_FORCE_PATH_STYLE) === 'true' ?? options.forcePathStyle,
+        getEnv(ENV_FORCE_PATH_STYLE) === 'true' || options.forcePathStyle,
     });
 
     const bucket = getEnv(ENV_BUCKET) ?? options.bucket;
     const prefix = getEnv(ENV_PREFIX) ?? options.prefix ?? '';
     const readOnly =
-      getEnv(ENV_READ_ONLY) === 'true' ?? options.readOnly ?? false;
+      getEnv(ENV_READ_ONLY) === 'true' || (options.readOnly ?? false);
 
     return {
       name: 'S3',
