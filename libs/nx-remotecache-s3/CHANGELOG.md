@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.4.6](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.4.5...nx-remotecache-s3-1.4.6) (2022-12-12)
+
+### Bug Fixes
+
+- **nx-remotecache-s3:** options.forcePathStyle and options.readOnly are never used ([9f90d13](https://github.com/robinpellegrims/pellegrims/commit/9f90d13fefeed5d330d81d4e803a02cd214e558e)), closes [#183](https://github.com/robinpellegrims/pellegrims/issues/183)
+
 ## [1.4.5](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.4.4...nx-remotecache-s3-1.4.5) (2022-12-04)
 
 ### Bug Fixes
