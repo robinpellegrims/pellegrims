@@ -29,7 +29,6 @@
     "core-js": "^3.6.5",
     "encoding": "^0.1.13",
     "feed": "^4.2.2",
-    "get-stream": "^6.0.1",
     "gray-matter": "^4.0.3",
     "next": "13.0.0",
     "next-api-og-image": "^4.0.1",

@@ -2,8 +2,6 @@ import { CustomRunnerOptions, initEnv } from 'nx-remotecache-custom';
 import { defaultProvider } from '@aws-sdk/credential-provider-node';
 import { getDefaultRoleAssumerWithWebIdentity } from '@aws-sdk/client-sts';
 import { S3 } from '@aws-sdk/client-s3';
-import * as getStream from 'get-stream';
-import { Stream } from 'stream';
 import { RemoteCacheImplementation } from 'nx-remotecache-custom/types/remote-cache-implementation';
 
 const ENV_BUCKET = 'NX_CACHE_S3_BUCKET';
@@ -75,11 +73,17 @@ export const setupS3TaskRunner = async (
         /* eslint-disable @typescript-eslint/naming-convention */
         Bucket: bucket,
         Key: `${prefix}${filename}`,
+
         /* eslint-enable @typescript-eslint/naming-convention */
       });
-      return getStream.buffer(result.Body as Stream);
+
+      if (typeof result.Body === 'undefined') {
+        throw new Error('Could not retrieve file');
+      }
+
+      return result.Body.transformToWebStream() as unknown as NodeJS.ReadableStream;
     },
-    storeFile: async (filename: string, buffer) => {
+    storeFile: async (filename: string, stream) => {
       if (readOnly) {
         throw new Error('ReadOnly');
       }
@@ -87,7 +91,7 @@ export const setupS3TaskRunner = async (
         /* eslint-disable @typescript-eslint/naming-convention */
         Bucket: bucket,
         Key: `${prefix}${filename}`,
-        Body: buffer,
+        Body: stream,
         /* eslint-enable @typescript-eslint/naming-convention */
       });
     },

@@ -6,16 +6,18 @@ import { S3 } from '@aws-sdk/client-s3';
 
 const filename = 'someFilename';
 const fileContent = 'content';
-const fileContentBuffer = Buffer.from(fileContent);
+const fileContentStream = new Readable();
+fileContentStream.push(fileContent);
+fileContentStream.push(null);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+(fileContentStream as any).transformToWebStream = jest.fn();
 
 jest.mock('@aws-sdk/client-s3');
 const s3Mock = jest.mocked(S3);
 jest.mocked(S3.prototype.putObject).mockImplementation(() => Promise.resolve());
 jest.mocked(S3.prototype.getObject).mockImplementation(() =>
-  Promise.resolve({
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    Body: Readable.from(fileContent),
-  })
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  Promise.resolve({ Body: fileContentStream })
 );
 
 jest.mock('@aws-sdk/credential-provider-node');
@@ -113,6 +115,24 @@ const getObjectCalledWithParams = async ({
   });
 };
 
+const mockGetObjectWithNoBodyCalledWithParams = ({
+  bucket,
+  prefix,
+}: {
+  bucket?: string;
+  prefix?: string;
+}) => {
+  const safePrefix = prefix ?? '';
+  jest.mocked(S3.prototype.getObject).mockImplementation(() => ({
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    Bucket: bucket,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    Key: safePrefix + filename,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    Body: undefined,
+  }));
+};
+
 const putObjectCalledWithParams = async ({
   runnerOptions,
   bucket,
@@ -123,7 +143,7 @@ const putObjectCalledWithParams = async ({
   prefix?: string;
 }) => {
   const runner = await setupS3TaskRunner(runnerOptions);
-  await runner.storeFile(filename, fileContentBuffer);
+  await runner.storeFile(filename, fileContentStream);
   const safePrefix = prefix ?? '';
   expect(s3Mock.mock.instances[0].putObject).toHaveBeenCalledWith({
     // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -131,7 +151,7 @@ const putObjectCalledWithParams = async ({
     // eslint-disable-next-line @typescript-eslint/naming-convention
     Key: safePrefix + filename,
     // eslint-disable-next-line @typescript-eslint/naming-convention
-    Body: fileContentBuffer,
+    Body: fileContentStream,
   });
 };
 
@@ -265,12 +285,19 @@ describe('setupS3TaskRunner', () => {
           });
         });
       });
+      it('should throw an error if the Body of the result is undefined', async () => {
+        mockGetObjectWithNoBodyCalledWithParams({ ...defaultOptions });
+        const runner = await setupS3TaskRunner(defaultOptions);
+        await expect(runner.retrieveFile(filename)).rejects.toThrowError(
+          'Could not retrieve file'
+        );
+      });
     });
     describe('storeFile', () => {
       describe('should call s3.putObject', () => {
         it('only once', async () => {
           const runner = await setupS3TaskRunner(emptyOptions);
-          await runner.storeFile(filename, fileContentBuffer);
+          await runner.storeFile(filename, fileContentStream);
           expect(s3Mock.mock.instances[0].putObject).toHaveBeenCalledTimes(1);
         });
         it('with default parameters', async () => {
@@ -300,13 +327,13 @@ describe('setupS3TaskRunner', () => {
             ...defaultOptions,
             readOnly: true,
           });
-          const storePromise = runner.storeFile(filename, fileContentBuffer);
+          const storePromise = runner.storeFile(filename, fileContentStream);
           await expect(storePromise).rejects.toThrowError('ReadOnly');
         });
         it('through env variable', async () => {
           process.env.NX_CACHE_S3_READ_ONLY = 'true';
           const runner = await setupS3TaskRunner(emptyOptions);
-          const storePromise = runner.storeFile(filename, fileContentBuffer);
+          const storePromise = runner.storeFile(filename, fileContentStream);
           await expect(storePromise).rejects.toThrowError('ReadOnly');
         });
       });
