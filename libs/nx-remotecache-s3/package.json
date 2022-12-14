@@ -30,10 +30,10 @@
     "@nrwl/workspace": ">=9.2.2"
   },
   "dependencies": {
-    "nx-remotecache-custom": "^1.1.0",
-    "@aws-sdk/client-s3": "^3.72.0",
-    "@aws-sdk/credential-provider-node": "^3.76.0",
-    "@aws-sdk/client-sts": "^3.76.0",
+    "nx-remotecache-custom": "^3.0.0",
+    "@aws-sdk/client-s3": "^3.229.0",
+    "@aws-sdk/client-sts": "^3.229.0",
+    "@aws-sdk/credential-provider-node": "^3.229.0",
     "get-stream": "^6.0.1",
     "tslib": "^2.0.0"
   }
