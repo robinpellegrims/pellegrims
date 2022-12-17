@@ -1,7 +1,8 @@
-import { CustomRunnerOptions, initEnv } from 'nx-remotecache-custom';
+import { S3 } from '@aws-sdk/client-s3';
 import { defaultProvider } from '@aws-sdk/credential-provider-node';
 import { getDefaultRoleAssumerWithWebIdentity } from '@aws-sdk/client-sts';
-import { S3 } from '@aws-sdk/client-s3';
+import { Upload } from '@aws-sdk/lib-storage';
+import { CustomRunnerOptions, initEnv } from 'nx-remotecache-custom';
 import { RemoteCacheImplementation } from 'nx-remotecache-custom/types/remote-cache-implementation';
 
 const ENV_BUCKET = 'NX_CACHE_S3_BUCKET';
@@ -56,6 +57,7 @@ export const setupS3TaskRunner = async (
           Key: `${prefix}${filename}`,
           /* eslint-enable @typescript-eslint/naming-convention */
         });
+
         return !!result;
       } catch (error) {
         if (
@@ -73,27 +75,23 @@ export const setupS3TaskRunner = async (
         /* eslint-disable @typescript-eslint/naming-convention */
         Bucket: bucket,
         Key: `${prefix}${filename}`,
-
         /* eslint-enable @typescript-eslint/naming-convention */
       });
 
-      if (typeof result.Body === 'undefined') {
-        throw new Error('Could not retrieve file');
-      }
-
-      return result.Body.transformToWebStream() as unknown as NodeJS.ReadableStream;
+      return result.Body as NodeJS.ReadableStream;
     },
-    storeFile: async (filename: string, stream) => {
+    storeFile: (filename: string, stream) => {
       if (readOnly) {
         throw new Error('ReadOnly');
       }
-      return await s3Storage.putObject({
-        /* eslint-disable @typescript-eslint/naming-convention */
-        Bucket: bucket,
-        Key: `${prefix}${filename}`,
-        Body: stream,
-        /* eslint-enable @typescript-eslint/naming-convention */
+
+      const upload = new Upload({
+        client: s3Storage,
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        params: { Bucket: bucket, Key: `${prefix}${filename}`, Body: stream },
       });
+
+      return upload.done();
     },
   };
 };

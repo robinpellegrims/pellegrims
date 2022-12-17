@@ -1,20 +1,20 @@
-import { S3Options, setupS3TaskRunner } from './setup-s3-task-runner';
-import { CustomRunnerOptions } from 'nx-remotecache-custom';
-import { defaultProvider } from '@aws-sdk/credential-provider-node';
-import { Readable } from 'stream';
 import { S3 } from '@aws-sdk/client-s3';
+import { defaultProvider } from '@aws-sdk/credential-provider-node';
+import { Upload } from '@aws-sdk/lib-storage';
+import { CustomRunnerOptions } from 'nx-remotecache-custom';
+import { Readable } from 'stream';
+import { S3Options, setupS3TaskRunner } from './setup-s3-task-runner';
 
 const filename = 'someFilename';
 const fileContent = 'content';
 const fileContentStream = new Readable();
 fileContentStream.push(fileContent);
 fileContentStream.push(null);
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-(fileContentStream as any).transformToWebStream = jest.fn();
 
 jest.mock('@aws-sdk/client-s3');
+jest.mock('@aws-sdk/lib-storage');
 const s3Mock = jest.mocked(S3);
-jest.mocked(S3.prototype.putObject).mockImplementation(() => Promise.resolve());
+const uploadMock = jest.mocked(Upload);
 jest.mocked(S3.prototype.getObject).mockImplementation(() =>
   // eslint-disable-next-line @typescript-eslint/naming-convention
   Promise.resolve({ Body: fileContentStream })
@@ -115,25 +115,7 @@ const getObjectCalledWithParams = async ({
   });
 };
 
-const mockGetObjectWithNoBodyCalledWithParams = ({
-  bucket,
-  prefix,
-}: {
-  bucket?: string;
-  prefix?: string;
-}) => {
-  const safePrefix = prefix ?? '';
-  jest.mocked(S3.prototype.getObject).mockImplementation(() => ({
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    Bucket: bucket,
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    Key: safePrefix + filename,
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    Body: undefined,
-  }));
-};
-
-const putObjectCalledWithParams = async ({
+const uploadCalledWithParams = async ({
   runnerOptions,
   bucket,
   prefix,
@@ -143,15 +125,17 @@ const putObjectCalledWithParams = async ({
   prefix?: string;
 }) => {
   const runner = await setupS3TaskRunner(runnerOptions);
-  await runner.storeFile(filename, fileContentStream);
+  runner.storeFile(filename, fileContentStream);
   const safePrefix = prefix ?? '';
-  expect(s3Mock.mock.instances[0].putObject).toHaveBeenCalledWith({
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    Bucket: bucket,
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    Key: safePrefix + filename,
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    Body: fileContentStream,
+  expect(uploadMock).toHaveBeenCalledWith({
+    client: s3Mock.mock.instances[0],
+    params: {
+      /* eslint-disable @typescript-eslint/naming-convention */
+      Bucket: bucket,
+      Key: safePrefix + filename,
+      Body: fileContentStream,
+      /* eslint-enable @typescript-eslint/naming-convention */
+    },
   });
 };
 
@@ -285,29 +269,22 @@ describe('setupS3TaskRunner', () => {
           });
         });
       });
-      it('should throw an error if the Body of the result is undefined', async () => {
-        mockGetObjectWithNoBodyCalledWithParams({ ...defaultOptions });
-        const runner = await setupS3TaskRunner(defaultOptions);
-        await expect(runner.retrieveFile(filename)).rejects.toThrowError(
-          'Could not retrieve file'
-        );
-      });
     });
     describe('storeFile', () => {
-      describe('should call s3.putObject', () => {
+      describe('should call Upload', () => {
         it('only once', async () => {
           const runner = await setupS3TaskRunner(emptyOptions);
           await runner.storeFile(filename, fileContentStream);
-          expect(s3Mock.mock.instances[0].putObject).toHaveBeenCalledTimes(1);
+          expect(uploadMock).toHaveBeenCalledTimes(1);
         });
         it('with default parameters', async () => {
-          await putObjectCalledWithParams({
+          await uploadCalledWithParams({
             runnerOptions: emptyOptions,
             ...emptyOptions,
           });
         });
         it('with parameters from options', async () => {
-          await putObjectCalledWithParams({
+          await uploadCalledWithParams({
             runnerOptions: defaultOptions,
             ...defaultOptions,
           });
@@ -315,26 +292,24 @@ describe('setupS3TaskRunner', () => {
         it('with parameters from ENV variables', async () => {
           process.env.NX_CACHE_S3_BUCKET = envValues.bucket;
           process.env.NX_CACHE_S3_PREFIX = envValues.prefix;
-          await putObjectCalledWithParams({
+          await uploadCalledWithParams({
             runnerOptions: defaultOptions,
             ...envValues,
           });
         });
       });
-      describe('should not call s3.putObject when readonly', () => {
+      describe('should not call Upload when readonly', () => {
         it('through option', async () => {
           const runner = await setupS3TaskRunner({
             ...defaultOptions,
             readOnly: true,
           });
-          const storePromise = runner.storeFile(filename, fileContentStream);
-          await expect(storePromise).rejects.toThrowError('ReadOnly');
+          expect(runner.storeFile).toThrowError('ReadOnly');
         });
         it('through env variable', async () => {
           process.env.NX_CACHE_S3_READ_ONLY = 'true';
           const runner = await setupS3TaskRunner(emptyOptions);
-          const storePromise = runner.storeFile(filename, fileContentStream);
-          await expect(storePromise).rejects.toThrowError('ReadOnly');
+          expect(runner.storeFile).toThrowError('ReadOnly');
         });
       });
     });
