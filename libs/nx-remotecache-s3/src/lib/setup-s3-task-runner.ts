@@ -1,18 +1,12 @@
-import { S3 } from '@aws-sdk/client-s3';
-import { defaultProvider } from '@aws-sdk/credential-provider-node';
-import { getDefaultRoleAssumerWithWebIdentity } from '@aws-sdk/client-sts';
 import { Upload } from '@aws-sdk/lib-storage';
 import { CustomRunnerOptions, initEnv } from 'nx-remotecache-custom';
 import { RemoteCacheImplementation } from 'nx-remotecache-custom/types/remote-cache-implementation';
+import { buildS3Client } from './s3-client';
+import { buildCommonCommandInput, getEnv } from './util';
 
 const ENV_BUCKET = 'NX_CACHE_S3_BUCKET';
-const ENV_ENDPOINT = 'NX_CACHE_S3_ENDPOINT';
-const ENV_FORCE_PATH_STYLE = 'NX_CACHE_S3_FORCE_PATH_STYLE';
 const ENV_PREFIX = 'NX_CACHE_S3_PREFIX';
-const ENV_PROFILE = 'NX_CACHE_S3_PROFILE';
 const ENV_READ_ONLY = 'NX_CACHE_S3_READ_ONLY';
-const ENV_REGION = 'NX_CACHE_S3_REGION';
-const getEnv = (key: string) => process.env[key];
 
 export interface S3Options {
   bucket?: string;
@@ -29,18 +23,7 @@ export const setupS3TaskRunner = async (
 ): Promise<RemoteCacheImplementation> => {
   initEnv(options);
 
-  const provider = defaultProvider({
-    profile: getEnv(ENV_PROFILE) ?? options.profile,
-    roleAssumerWithWebIdentity: getDefaultRoleAssumerWithWebIdentity(),
-  });
-
-  const s3Storage = new S3({
-    endpoint: getEnv(ENV_ENDPOINT) ?? options.endpoint,
-    region: getEnv(ENV_REGION) ?? options.region,
-    credentials: provider,
-    forcePathStyle:
-      getEnv(ENV_FORCE_PATH_STYLE) === 'true' || options.forcePathStyle,
-  });
+  const s3Storage = buildS3Client(options);
 
   const bucket = getEnv(ENV_BUCKET) ?? options.bucket;
   const prefix = getEnv(ENV_PREFIX) ?? options.prefix ?? '';
@@ -51,13 +34,9 @@ export const setupS3TaskRunner = async (
     name: 'S3',
     fileExists: async (filename: string) => {
       try {
-        const result = await s3Storage.headObject({
-          /* eslint-disable @typescript-eslint/naming-convention */
-          Bucket: bucket,
-          Key: `${prefix}${filename}`,
-          /* eslint-enable @typescript-eslint/naming-convention */
-        });
-
+        const result = await s3Storage.headObject(
+          buildCommonCommandInput(bucket, prefix, filename)
+        );
         return !!result;
       } catch (error) {
         if (
@@ -71,13 +50,9 @@ export const setupS3TaskRunner = async (
       }
     },
     retrieveFile: async (filename: string) => {
-      const result = await s3Storage.getObject({
-        /* eslint-disable @typescript-eslint/naming-convention */
-        Bucket: bucket,
-        Key: `${prefix}${filename}`,
-        /* eslint-enable @typescript-eslint/naming-convention */
-      });
-
+      const result = await s3Storage.getObject(
+        buildCommonCommandInput(bucket, prefix, filename)
+      );
       return result.Body as NodeJS.ReadableStream;
     },
     storeFile: (filename: string, stream) => {
@@ -87,8 +62,11 @@ export const setupS3TaskRunner = async (
 
       const upload = new Upload({
         client: s3Storage,
-        // eslint-disable-next-line @typescript-eslint/naming-convention
-        params: { Bucket: bucket, Key: `${prefix}${filename}`, Body: stream },
+        params: {
+          ...buildCommonCommandInput(bucket, prefix, filename),
+          // eslint-disable-next-line @typescript-eslint/naming-convention
+          Body: stream,
+        },
       });
 
       return upload.done();
