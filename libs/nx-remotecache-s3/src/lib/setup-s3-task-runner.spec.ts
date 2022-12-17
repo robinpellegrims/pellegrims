@@ -1,5 +1,4 @@
 import { S3 } from '@aws-sdk/client-s3';
-import { defaultProvider } from '@aws-sdk/credential-provider-node';
 import { Upload } from '@aws-sdk/lib-storage';
 import { CustomRunnerOptions } from 'nx-remotecache-custom';
 import { Readable } from 'stream';
@@ -13,6 +12,7 @@ fileContentStream.push(null);
 
 jest.mock('@aws-sdk/client-s3');
 jest.mock('@aws-sdk/lib-storage');
+
 const s3Mock = jest.mocked(S3);
 const uploadMock = jest.mocked(Upload);
 jest.mocked(S3.prototype.getObject).mockImplementation(() =>
@@ -43,26 +43,6 @@ const envValues: Record<keyof S3Options, string> = {
   bucket: 'envBucket',
   prefix: 'envPrefix',
   readOnly: 'false',
-};
-
-const expectS3Instance = (params: {
-  endpoint?: string;
-  region?: string;
-  forcePathStyle?: boolean;
-  profile?: string;
-}) => {
-  expect(defaultProvider).toHaveBeenCalledTimes(1);
-  expect(defaultProvider).toHaveBeenCalledWith({
-    profile: params.profile,
-    roleAssumerWithWebIdentity: expect.any(Function),
-  });
-  expect(s3Mock).toHaveBeenCalledTimes(1);
-  expect(s3Mock).toHaveBeenCalledWith({
-    endpoint: params.endpoint,
-    region: params.region,
-    forcePathStyle: params.forcePathStyle,
-    credentials: jest.mocked(defaultProvider).mock.results[0].value,
-  });
 };
 
 const mockHeadObjectError = (error: string) =>
@@ -125,7 +105,7 @@ const uploadCalledWithParams = async ({
   prefix?: string;
 }) => {
   const runner = await setupS3TaskRunner(runnerOptions);
-  runner.storeFile(filename, fileContentStream);
+  await runner.storeFile(filename, fileContentStream);
   const safePrefix = prefix ?? '';
   expect(uploadMock).toHaveBeenCalledWith({
     client: s3Mock.mock.instances[0],
@@ -158,32 +138,6 @@ describe('setupS3TaskRunner', () => {
     expect(runner.retrieveFile).toBeInstanceOf(Function);
     expect(runner.storeFile).toBeInstanceOf(Function);
     expect(runner.name).toMatch('S3');
-  });
-
-  describe('should create a new S3 client instance', () => {
-    it('created only once', async () => {
-      await setupS3TaskRunner(emptyOptions);
-      expect(S3).toHaveBeenCalledTimes(1);
-    });
-
-    it('with default parameters', async () => {
-      await setupS3TaskRunner(emptyOptions);
-      expectS3Instance({});
-    });
-
-    it('with parameters from options', async () => {
-      await setupS3TaskRunner(defaultOptions);
-      expectS3Instance({ ...defaultOptions });
-    });
-
-    it('with parameters from ENV variables', async () => {
-      process.env.NX_CACHE_S3_ENDPOINT = envValues.endpoint;
-      process.env.NX_CACHE_S3_REGION = envValues.region;
-      process.env.NX_CACHE_S3_FORCE_PATH_STYLE = envValues.forcePathStyle;
-      process.env.NX_CACHE_S3_PROFILE = envValues.profile;
-      await setupS3TaskRunner(defaultOptions);
-      expectS3Instance({ ...envValues, forcePathStyle: true });
-    });
   });
 
   describe('should implement RemoteCacheImplementation interface', () => {
