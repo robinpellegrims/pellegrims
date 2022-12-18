@@ -1,8 +1,10 @@
 import { Upload } from '@aws-sdk/lib-storage';
-import { CustomRunnerOptions, initEnv } from 'nx-remotecache-custom';
-import { RemoteCacheImplementation } from 'nx-remotecache-custom/types/remote-cache-implementation';
+import { initEnv } from 'nx-remotecache-custom';
 import { buildS3Client } from './s3-client';
 import { buildCommonCommandInput, getEnv } from './util';
+
+import type { CustomRunnerOptions } from 'nx-remotecache-custom';
+import type { RemoteCacheImplementation } from 'nx-remotecache-custom/types/remote-cache-implementation';
 
 const ENV_BUCKET = 'NX_CACHE_S3_BUCKET';
 const ENV_PREFIX = 'NX_CACHE_S3_PREFIX';

@@ -1,8 +1,10 @@
 import { S3 } from '@aws-sdk/client-s3';
 import { Upload } from '@aws-sdk/lib-storage';
-import { CustomRunnerOptions } from 'nx-remotecache-custom';
 import { Readable } from 'stream';
-import { S3Options, setupS3TaskRunner } from './setup-s3-task-runner';
+import { setupS3TaskRunner } from './setup-s3-task-runner';
+
+import type { CustomRunnerOptions } from 'nx-remotecache-custom';
+import type { S3Options } from './setup-s3-task-runner';
 
 const filename = 'someFilename';
 const fileContent = 'content';

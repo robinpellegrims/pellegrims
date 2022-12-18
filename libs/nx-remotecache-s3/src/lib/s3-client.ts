@@ -2,8 +2,9 @@ import { S3 } from '@aws-sdk/client-s3';
 import { getEnv } from './util';
 import { defaultProvider } from '@aws-sdk/credential-provider-node';
 import { getDefaultRoleAssumerWithWebIdentity } from '@aws-sdk/client-sts';
-import { S3ClientConfig } from '@aws-sdk/client-s3/dist-types/S3Client';
-import { DefaultProviderInit } from '@aws-sdk/credential-provider-node/dist-types/defaultProvider';
+
+import type { S3ClientConfig } from '@aws-sdk/client-s3/dist-types/S3Client';
+import type { DefaultProviderInit } from '@aws-sdk/credential-provider-node/dist-types/defaultProvider';
 
 const ENV_ENDPOINT = 'NX_CACHE_S3_ENDPOINT';
 const ENV_PROFILE = 'NX_CACHE_S3_PROFILE';
