@@ -162,8 +162,8 @@ describe('setupS3TaskRunner', () => {
             ...defaultOptions,
           }));
         it('with parameters from ENV variables', async () => {
-          process.env.NX_CACHE_S3_BUCKET = envValues.bucket;
-          process.env.NX_CACHE_S3_PREFIX = envValues.prefix;
+          process.env.NXCACHE_S3_BUCKET = envValues.bucket;
+          process.env.NXCACHE_S3_PREFIX = envValues.prefix;
           await headObjectCalledWithParams({
             runnerOptions: defaultOptions,
             ...envValues,
@@ -217,8 +217,8 @@ describe('setupS3TaskRunner', () => {
             ...defaultOptions,
           }));
         it('with parameters from ENV variables', async () => {
-          process.env.NX_CACHE_S3_BUCKET = envValues.bucket;
-          process.env.NX_CACHE_S3_PREFIX = envValues.prefix;
+          process.env.NXCACHE_S3_BUCKET = envValues.bucket;
+          process.env.NXCACHE_S3_PREFIX = envValues.prefix;
           await getObjectCalledWithParams({
             runnerOptions: defaultOptions,
             ...envValues,
@@ -246,8 +246,8 @@ describe('setupS3TaskRunner', () => {
           });
         });
         it('with parameters from ENV variables', async () => {
-          process.env.NX_CACHE_S3_BUCKET = envValues.bucket;
-          process.env.NX_CACHE_S3_PREFIX = envValues.prefix;
+          process.env.NXCACHE_S3_BUCKET = envValues.bucket;
+          process.env.NXCACHE_S3_PREFIX = envValues.prefix;
           await uploadCalledWithParams({
             runnerOptions: defaultOptions,
             ...envValues,
@@ -263,7 +263,7 @@ describe('setupS3TaskRunner', () => {
           expect(runner.storeFile).toThrowError('ReadOnly');
         });
         it('through env variable', async () => {
-          process.env.NX_CACHE_S3_READ_ONLY = 'true';
+          process.env.NXCACHE_S3_READ_ONLY = 'true';
           const runner = await setupS3TaskRunner(emptyOptions);
           expect(runner.storeFile).toThrowError('ReadOnly');
         });

@@ -6,9 +6,9 @@ import { buildCommonCommandInput, getEnv, isReadOnly } from './util';
 import type { CustomRunnerOptions } from 'nx-remotecache-custom';
 import type { RemoteCacheImplementation } from 'nx-remotecache-custom/types/remote-cache-implementation';
 
-const ENV_BUCKET = 'NX_CACHE_S3_BUCKET';
-const ENV_PREFIX = 'NX_CACHE_S3_PREFIX';
-const ENV_READ_ONLY = 'NX_CACHE_S3_READ_ONLY';
+const ENV_BUCKET = 'NXCACHE_S3_BUCKET';
+const ENV_PREFIX = 'NXCACHE_S3_PREFIX';
+const ENV_READ_ONLY = 'NXCACHE_S3_READ_ONLY';
 
 export interface S3Options {
   bucket?: string;

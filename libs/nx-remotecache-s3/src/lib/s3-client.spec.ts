@@ -77,10 +77,10 @@ describe('buildS3Client', () => {
   });
 
   it('with parameters from ENV variables', async () => {
-    process.env.NX_CACHE_S3_ENDPOINT = envValues.endpoint;
-    process.env.NX_CACHE_S3_REGION = envValues.region;
-    process.env.NX_CACHE_S3_FORCE_PATH_STYLE = envValues.forcePathStyle;
-    process.env.NX_CACHE_S3_PROFILE = envValues.profile;
+    process.env.NXCACHE_S3_ENDPOINT = envValues.endpoint;
+    process.env.NXCACHE_S3_REGION = envValues.region;
+    process.env.NXCACHE_S3_FORCE_PATH_STYLE = envValues.forcePathStyle;
+    process.env.NXCACHE_S3_PROFILE = envValues.profile;
     await setupS3TaskRunner(defaultOptions);
     expectS3Instance({ ...envValues, forcePathStyle: true });
   });
