@@ -12,15 +12,15 @@ This package was built with [nx-remotecache-custom](https://www.npmjs.com/packag
 npm install --save-dev @pellegrims/nx-remotecache-s3
 ```
 
-| Parameter        | Description                                                                                                                                           | Environment Variable / .env    | `nx.json`        |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ | ---------------- |
-| Endpoint         | Optional. The fully qualified endpoint of the webservice. This is only required when using a custom (non-AWS) endpoint.                               | `NX_CACHE_S3_ENDPOINT`         | `endpoint`       |
-| Bucket           | Optional. Specify which bucket should be used for storing the cache.                                                                                  | `NX_CACHE_S3_BUCKET`           | `bucket`         |
-| Prefix           | Optional. Specify prefix path of target object key.                                                                                                   | `NX_CACHE_S3_PREFIX`           | `prefix`         |
-| Region           | Optional. The AWS region to which this client will send requests.                                                                                     | `NX_CACHE_S3_REGION`           | `region`         |
-| Profile          | Optional. The AWS profile to use to authenticate.                                                                                                     | `NX_CACHE_S3_PROFILE`          | `profile`        |
-| Force Path Style | Optional. Whether to force path style URLs for S3 objects (e.g., `https://s3.amazonaws.com/<bucket>/` instead of `https://<bucket>.s3.amazonaws.com/` | `NX_CACHE_S3_FORCE_PATH_STYLE` | `forcePathStyle` |
-| Read Only        | Optional. Disable writing cache to the S3 bucket. This may be useful if you only want to write to the cache from a CI but not localhost.              | `NX_CACHE_S3_READ_ONLY`        | `readOnly`       |
+| Parameter        | Description                                                                                                                                           | Environment Variable / .env   | `nx.json`        |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- | ---------------- |
+| Endpoint         | Optional. The fully qualified endpoint of the webservice. This is only required when using a custom (non-AWS) endpoint.                               | `NXCACHE_S3_ENDPOINT`         | `endpoint`       |
+| Bucket           | Optional. Specify which bucket should be used for storing the cache.                                                                                  | `NXCACHE_S3_BUCKET`           | `bucket`         |
+| Prefix           | Optional. Specify prefix path of target object key.                                                                                                   | `NXCACHE_S3_PREFIX`           | `prefix`         |
+| Region           | Optional. The AWS region to which this client will send requests.                                                                                     | `NXCACHE_S3_REGION`           | `region`         |
+| Profile          | Optional. The AWS profile to use to authenticate.                                                                                                     | `NXCACHE_S3_PROFILE`          | `profile`        |
+| Force Path Style | Optional. Whether to force path style URLs for S3 objects (e.g., `https://s3.amazonaws.com/<bucket>/` instead of `https://<bucket>.s3.amazonaws.com/` | `NXCACHE_S3_FORCE_PATH_STYLE` | `forcePathStyle` |
+| Read Only        | Optional. Disable writing cache to the S3 bucket. This may be useful if you only want to write to the cache from a CI but not localhost.              | `NXCACHE_S3_READ_ONLY`        | `readOnly`       |
 
 ```json
 {

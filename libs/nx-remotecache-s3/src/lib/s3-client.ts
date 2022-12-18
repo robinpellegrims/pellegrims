@@ -6,10 +6,10 @@ import { getDefaultRoleAssumerWithWebIdentity } from '@aws-sdk/client-sts';
 import type { S3ClientConfig } from '@aws-sdk/client-s3/dist-types/S3Client';
 import type { DefaultProviderInit } from '@aws-sdk/credential-provider-node/dist-types/defaultProvider';
 
-const ENV_ENDPOINT = 'NX_CACHE_S3_ENDPOINT';
-const ENV_PROFILE = 'NX_CACHE_S3_PROFILE';
-const ENV_FORCE_PATH_STYLE = 'NX_CACHE_S3_FORCE_PATH_STYLE';
-const ENV_REGION = 'NX_CACHE_S3_REGION';
+const ENV_ENDPOINT = 'NXCACHE_S3_ENDPOINT';
+const ENV_PROFILE = 'NXCACHE_S3_PROFILE';
+const ENV_FORCE_PATH_STYLE = 'NXCACHE_S3_FORCE_PATH_STYLE';
+const ENV_REGION = 'NXCACHE_S3_REGION';
 
 export const buildS3Client = (
   options: Pick<S3ClientConfig, 'endpoint' | 'region' | 'forcePathStyle'> &
