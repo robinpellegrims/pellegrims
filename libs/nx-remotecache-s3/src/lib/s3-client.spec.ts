@@ -1,7 +1,9 @@
-import { S3Options, setupS3TaskRunner } from './setup-s3-task-runner';
+import { setupS3TaskRunner } from './setup-s3-task-runner';
 import { S3 } from '@aws-sdk/client-s3';
 import { defaultProvider } from '@aws-sdk/credential-provider-node';
-import { CustomRunnerOptions } from 'nx-remotecache-custom';
+
+import type { CustomRunnerOptions } from 'nx-remotecache-custom';
+import type { S3Options } from './setup-s3-task-runner';
 
 jest.mock('@aws-sdk/client-s3');
 jest.mock('@aws-sdk/credential-provider-node');
