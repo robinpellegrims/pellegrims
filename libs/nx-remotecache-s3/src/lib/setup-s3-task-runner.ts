@@ -1,7 +1,7 @@
 import { Upload } from '@aws-sdk/lib-storage';
 import { initEnv } from 'nx-remotecache-custom';
 import { buildS3Client } from './s3-client';
-import { buildCommonCommandInput, getEnv } from './util';
+import { buildCommonCommandInput, getEnv, isReadOnly } from './util';
 
 import type { CustomRunnerOptions } from 'nx-remotecache-custom';
 import type { RemoteCacheImplementation } from 'nx-remotecache-custom/types/remote-cache-implementation';
@@ -29,8 +29,7 @@ export const setupS3TaskRunner = async (
 
   const bucket = getEnv(ENV_BUCKET) ?? options.bucket;
   const prefix = getEnv(ENV_PREFIX) ?? options.prefix ?? '';
-  const readOnly =
-    getEnv(ENV_READ_ONLY) === 'true' || (options.readOnly ?? false);
+  const readOnly = isReadOnly(options, ENV_READ_ONLY);
 
   return {
     name: 'S3',
