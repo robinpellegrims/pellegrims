@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.5.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.5.1...nx-remotecache-s3-1.5.2) (2022-12-19)
+
+### Bug Fixes
+
+- **nx-remotecache-s3:** readonly not correctly calculated ([725dea1](https://github.com/robinpellegrims/pellegrims/commit/725dea18bafcf94d9a482892cae01ae652e768bf))
+
 ## [1.5.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.5.0...nx-remotecache-s3-1.5.1) (2022-12-17)
 
 # [1.5.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.4.7...nx-remotecache-s3-1.5.0) (2022-12-17)
