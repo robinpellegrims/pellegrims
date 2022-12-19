@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.0.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.5.2...nx-remotecache-s3-2.0.0) (2022-12-19)
+
+### Features
+
+- **nx-remotecache-s3:** update envs to custom runner v3 format ([954b888](https://github.com/robinpellegrims/pellegrims/commit/954b8888cb4b4470b98933b9518786065c31a742))
+
+### BREAKING CHANGES
+
+- **nx-remotecache-s3:** ENV vars now start with `NXCACHE_` instead of `NX_CACHE_`
+
 ## [1.5.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.5.1...nx-remotecache-s3-1.5.2) (2022-12-19)
 
 ### Bug Fixes
