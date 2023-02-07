@@ -58,7 +58,7 @@ specifiers:
   caniuse-lite: ^1.0.30001356
   chrome-aws-lambda: 1.6.3
   core-js: ^3.6.5
-  cypress: ^11.0.0
+  cypress: ^12.2.0
   encoding: ^0.1.13
   eslint: 8.15.0
   eslint-config-next: 13.1.1
@@ -182,17 +182,17 @@ devDependencies:
   '@commitlint/config-conventional': 17.0.2
   '@jscutlery/semver': 2.25.1_@nrwl+devkit@15.5.3
   '@nrwl/cli': 15.5.3_remttfpqelteelpmsamodh7d3m
-  '@nrwl/cypress': 15.5.3_qullpl5ug5vecghmkkogyxfveu
+  '@nrwl/cypress': 15.5.3_7gcdmgpto6zaabhwy4vznoopuq
   '@nrwl/devkit': 15.5.3_nx@15.5.3+typescript@4.9.4
   '@nrwl/eslint-plugin-nx': 15.5.3_glqk34gcf5m36rhm72ja5otbgq
   '@nrwl/jest': 15.5.3_wv6vvoud56zuycrmoyvjdah4pu
   '@nrwl/js': 15.5.3_42oa73mp6s6xshhsfy2se2llea
   '@nrwl/linter': 15.5.3_ehrbja4do3mhzoriixsk3trzmu
-  '@nrwl/next': 15.5.3_5txca6s25itgokur3ppxvaiimi
+  '@nrwl/next': 15.5.3_cf6xff5axyic6c3xdmzmzbn6ea
   '@nrwl/node': 15.5.3_fojkj3vcfyr2yrnui76vmr34qq
   '@nrwl/nx-plugin': 15.5.3_r4diofw7o4eq6qfdxjfz2xz7cy
   '@nrwl/react': 15.5.3_42oa73mp6s6xshhsfy2se2llea
-  '@nrwl/web': 15.5.3_pc6pibpvv2j2w7his3pyu2t5aa
+  '@nrwl/web': 15.5.3_e3mk2gec2legsfly47txrn2bha
   '@nrwl/workspace': 15.5.3_liugefjhuoinpliinppwityou4
   '@pellegrims/eslint-config-base': 0.0.2_fh3zvaf4zvf566kkeykhgmulxi
   '@pellegrims/nx-remotecache-s3': 1.4.7_@nrwl+workspace@15.5.3
@@ -216,7 +216,7 @@ devDependencies:
   babel-jest: 28.1.3_@babel+core@7.17.9
   babel-loader: 8.2.4_vs5hf2sl7hjtttp43d2vzw3qay
   caniuse-lite: 1.0.30001356
-  cypress: 11.2.0
+  cypress: 12.5.1
   eslint: 8.15.0
   eslint-config-next: 13.1.1_7xejdone6kwdndpjp5nwx3ofcu
   eslint-config-prettier: 8.3.0_eslint@8.15.0
@@ -5606,7 +5606,7 @@ packages:
       - debug
     dev: true
 
-  /@nrwl/cypress/15.5.3_qullpl5ug5vecghmkkogyxfveu:
+  /@nrwl/cypress/15.5.3_7gcdmgpto6zaabhwy4vznoopuq:
     resolution:
       {
         integrity: sha512-qOp0MfD8ot+QGkkBV8tWM3x2repSFmoo6Jn4wSKuQ3Md6UeoCdchKrm5oT8+FRjdaKLydFgA3wZcbDU+m6mQlA==,
@@ -5621,7 +5621,7 @@ packages:
       '@nrwl/linter': 15.5.3_ehrbja4do3mhzoriixsk3trzmu
       '@nrwl/workspace': 15.5.3_liugefjhuoinpliinppwityou4
       '@phenomnomnominal/tsquery': 4.1.1_typescript@4.9.4
-      cypress: 11.2.0
+      cypress: 12.5.1
       dotenv: 10.0.0
       semver: 7.3.4
     transitivePeerDependencies:
@@ -5770,7 +5770,7 @@ packages:
       - nx
       - typescript
 
-  /@nrwl/next/15.5.3_5txca6s25itgokur3ppxvaiimi:
+  /@nrwl/next/15.5.3_cf6xff5axyic6c3xdmzmzbn6ea:
     resolution:
       {
         integrity: sha512-CAQ2KMnvfvKIBXhDKak5MW50MD4uVclmkNgfxZnm86QRYoE0IaixlE96VCMBOA+zq6onw/b8uDS5syRtAbsEJw==,
@@ -5779,7 +5779,7 @@ packages:
       next: ^13.0.0
     dependencies:
       '@babel/plugin-proposal-decorators': 7.15.8_@babel+core@7.17.9
-      '@nrwl/cypress': 15.5.3_qullpl5ug5vecghmkkogyxfveu
+      '@nrwl/cypress': 15.5.3_7gcdmgpto6zaabhwy4vznoopuq
       '@nrwl/devkit': 15.5.3_nx@15.5.3+typescript@4.9.4
       '@nrwl/jest': 15.5.3_wv6vvoud56zuycrmoyvjdah4pu
       '@nrwl/linter': 15.5.3_ehrbja4do3mhzoriixsk3trzmu
@@ -5972,7 +5972,7 @@ packages:
       - '@swc/core'
       - debug
 
-  /@nrwl/web/15.5.3_pc6pibpvv2j2w7his3pyu2t5aa:
+  /@nrwl/web/15.5.3_e3mk2gec2legsfly47txrn2bha:
     resolution:
       {
         integrity: sha512-puZRZL5wEVsxWqnEo0LTC1mDQZU/XIm98qferhP4n0XVU3bghjOj/4w0Pea2E7yge/DQ1JviydKX6+jGoAP+Dg==,
@@ -5985,7 +5985,7 @@ packages:
       '@babel/preset-env': 7.16.11_@babel+core@7.20.5
       '@babel/preset-typescript': 7.15.0_@babel+core@7.20.5
       '@babel/runtime': 7.18.9
-      '@nrwl/cypress': 15.5.3_qullpl5ug5vecghmkkogyxfveu
+      '@nrwl/cypress': 15.5.3_7gcdmgpto6zaabhwy4vznoopuq
       '@nrwl/devkit': 15.5.3_nx@15.5.3+typescript@4.9.4
       '@nrwl/jest': 15.5.3_wv6vvoud56zuycrmoyvjdah4pu
       '@nrwl/js': 15.5.3_42oa73mp6s6xshhsfy2se2llea
@@ -10751,12 +10751,12 @@ packages:
         integrity: sha512-rpw6JPxK6Rfg1zLOYCSwle2GFOOsnjmDYDaBwEcwoOg4qlsIVCN789VkBZDJAGi4T07gI4YSutR43t9Zz4Lzuw==,
       }
 
-  /cypress/11.2.0:
+  /cypress/12.5.1:
     resolution:
       {
-        integrity: sha512-u61UGwtu7lpsNWLUma/FKNOsrjcI6wleNmda/TyKHe0dOBcVjbCPlp1N6uwFZ0doXev7f/91YDpU9bqDCFeBLA==,
+        integrity: sha512-ZmCmJ3lsyeOpBfh410m5+AO2CO1AxAzFBt7k6/uVbNcrNZje1vdiwYTpj2ksPKg9mjr9lR6V8tmlDNMvr4H/YQ==,
       }
-    engines: { node: '>=12.0.0' }
+    engines: { node: ^14.0.0 || ^16.0.0 || >=18.0.0 }
     hasBin: true
     requiresBuild: true
     dependencies:
