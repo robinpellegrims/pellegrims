@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.2.0](https://github.com/robinpellegrims/pellegrims/compare/pellegrims-dev-0.1.3...pellegrims-dev-0.2.0) (2023-02-08)
+
+### Features
+
+- **pellegrims-dev:** replace next-api-og-image by @vercel/og ([12f9d12](https://github.com/robinpellegrims/pellegrims/commit/12f9d125adf19b972681020b9f66dcaf3812675a))
+
 ## [0.1.3](https://github.com/robinpellegrims/pellegrims/compare/pellegrims-dev-0.1.2...pellegrims-dev-0.1.3) (2022-11-27)
 
 ## [0.1.2](https://github.com/robinpellegrims/pellegrims/compare/pellegrims-dev-0.1.1...pellegrims-dev-0.1.2) (2022-11-13)
