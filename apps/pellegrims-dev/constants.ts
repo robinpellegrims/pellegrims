@@ -1,15 +1,6 @@
-import { join } from 'path';
 import { NextSeoProps } from 'next-seo';
 import { getCurrentOrigin } from './utils/url';
 
-export const POSTS_PATH = join(
-  process.cwd(),
-  'apps/pellegrims-dev/content/blog'
-);
-export const SNIPPETS_PATH = join(
-  process.cwd(),
-  'apps/pellegrims-dev/content/snippets'
-);
 export const facebookUserName = 'robin.pellegrims';
 export const facebookProfileUrl = `https://www.facebook.com/${facebookUserName}`;
 export const githubUrl = 'https://github.com/robinpellegrims';

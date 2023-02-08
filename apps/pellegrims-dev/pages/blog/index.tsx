@@ -1,10 +1,10 @@
 import { getMarkdownDocuments } from '@pellegrims/shared/markdown';
-import { POSTS_PATH } from '../../constants';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import { PageHero } from '@pellegrims/pellegrims-dev/ui/molecules';
 import { Grid, PageTemplate } from '@pellegrims/pellegrims-dev/ui/templates';
 import { Card, CardProps } from '@pellegrims/pellegrims-dev/ui/organisms';
 import { buildOgImageUrl, buildRelativeBlogArticleUrl } from '../../utils/url';
+import { POSTS_PATH } from '../../utils/paths';
 
 interface BlogProps {
   posts: CardProps[];
