@@ -1,19 +1,19 @@
-import { DateFormatted, Logo } from '@pellegrims/pellegrims-dev/ui/atoms';
-import { avataaarUrl, twitterHandle } from '../constants';
+import { DateFormatted } from '@pellegrims/pellegrims-dev/ui/atoms';
+import { twitterHandle } from '../constants';
 import { FunctionComponent, PropsWithChildren } from 'react';
 
-const style = `
-  .font-logo {
-    font-family: 'Caveat', cursive;
-  }
-`;
+import colors from 'tailwindcss/colors';
 
 const Profile = () => (
-  <div className="flex flex-row justify-center gap-4">
-    <img className="w-16 rounded-full" src={avataaarUrl} />
-    <div className="flex flex-col justify-center">
-      <span className="text-2xl font-medium">Robin Pellegrims</span>
-      <span className="">
+  <div tw="flex flex-row items-center">
+    <img
+      tw="w-16 rounded-full mr-4"
+      src="https://www.pellegrims.dev/avataaar.png"
+      alt="avatar"
+    />
+    <div tw="flex flex-col justify-center">
+      <span tw="text-2xl font-medium">Robin Pellegrims</span>
+      <span>
         <div>{twitterHandle}</div>
       </span>
     </div>
@@ -21,32 +21,31 @@ const Profile = () => (
 );
 
 const Row: FunctionComponent<PropsWithChildren> = ({ children }) => (
-  <div className="flex w-full flex-row items-center justify-between">
-    {children}
-  </div>
+  <div tw="flex w-full flex-row items-center justify-between">{children}</div>
 );
 
 const Header = (props: { date: string; readMinutes: string }) => (
   <Row>
-    <Logo end={false} />
-    <div>
+    <Profile />
+    <div tw="flex flex-row">
       <DateFormatted date={new Date(props.date)} />
-      {props.readMinutes ? ` · ${props.readMinutes} min read` : null}
+      <div tw="px-2">·</div>
+      {props.readMinutes ? `${props.readMinutes} min read` : null}
     </div>
   </Row>
 );
 
 const Content = (props: { title: string; description: string }) => (
-  <div className="flex flex-col gap-6 bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-center text-transparent">
-    <h1 className="grow text-7xl font-bold">{props.title}</h1>
-    <p className="text-3xl leading-relaxed">{props.description}</p>
+  <div
+    style={{
+      backgroundImage: `linear-gradient(to right, ${colors.red['500']}, ${colors.yellow['500']})`,
+      backgroundClip: 'text',
+    }}
+    tw="flex flex-col items-center text-transparent"
+  >
+    <h1 tw="text-7xl font-extrabold">{props.title}</h1>
+    <p tw="text-3xl leading-relaxed">{props.description}</p>
   </div>
-);
-
-const Footer = () => (
-  <Row>
-    <Profile /> <Logo end={true} />
-  </Row>
 );
 
 export const OGImage = ({
@@ -60,22 +59,20 @@ export const OGImage = ({
   date: string;
   readMinutes: string;
 }) => (
-  <html>
-    <head>
-      {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-      <script src="https://cdn.tailwindcss.com/3.1.3" />
-      <link
-        href="https://fonts.googleapis.com/css?family=Caveat&display=swap"
-        rel="stylesheet"
-      />
-      <style dangerouslySetInnerHTML={{ __html: style }} />
-    </head>
-    <body className="flex h-full flex-col justify-between bg-zinc-800 p-12 text-2xl text-white">
+  <div
+    style={{
+      height: '100%',
+      width: '100%',
+      display: 'flex',
+    }}
+  >
+    <div tw="flex flex-col h-full w-full flex-col items-stretch bg-zinc-800 p-12 text-2xl text-white">
       <Header date={date} readMinutes={readMinutes} />
-      <Content title={title} description={description} />
-      <Footer />
-    </body>
-  </html>
+      <div tw="flex grow justify-center items-center">
+        <Content title={title} description={description} />
+      </div>
+    </div>
+  </div>
 );
 
 export default OGImage;
