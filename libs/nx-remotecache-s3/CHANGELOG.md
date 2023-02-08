@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.0.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-2.0.0...nx-remotecache-s3-2.0.1) (2023-02-08)
+
 # [2.0.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.5.2...nx-remotecache-s3-2.0.0) (2022-12-19)
 
 ### Features
