@@ -10,12 +10,7 @@ import {
   MarkdownDocument,
 } from '@pellegrims/shared/markdown';
 import { ParsedUrlQuery } from 'querystring';
-import {
-  oGImageHeight,
-  oGImageWidth,
-  POSTS_PATH,
-  twitterUserName,
-} from '../../constants';
+import { oGImageHeight, oGImageWidth, twitterUserName } from '../../constants';
 import { BlogArticle } from '@pellegrims/pellegrims-dev/ui/organisms';
 import { Container } from '@pellegrims/pellegrims-dev/ui/templates';
 import { NextSeo } from 'next-seo';
@@ -24,6 +19,7 @@ import {
   buildCanonicalBlogArticleUrl,
   buildOgImageUrl,
 } from '../../utils/url';
+import { POSTS_PATH } from '../../utils/paths';
 
 interface BlogArticleUrlQuery extends ParsedUrlQuery {
   slug: string;

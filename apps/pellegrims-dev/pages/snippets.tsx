@@ -1,5 +1,5 @@
 import { getMarkdownDocuments } from '@pellegrims/shared/markdown';
-import { SNIPPETS_PATH, twitterUserName } from '../constants';
+import { twitterUserName } from '../constants';
 import { List, PageTemplate } from '@pellegrims/pellegrims-dev/ui/templates';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import { PageHero } from '@pellegrims/pellegrims-dev/ui/molecules';
@@ -8,6 +8,7 @@ import {
   BlogArticleProps,
 } from '@pellegrims/pellegrims-dev/ui/organisms';
 import { sortArticlesByDateDesc } from '../utils/sort';
+import { SNIPPETS_PATH } from '../utils/paths';
 
 interface SnippetsProps {
   snippets: BlogArticleProps[];

@@ -12,11 +12,11 @@ import {
   feedJsonFilename,
   feedRss2Filename,
   name,
-  POSTS_PATH,
   rssFolder,
 } from '../constants';
 import { buildBlogArticleUrlToShare, getCurrentOrigin } from './url';
 import * as fs from 'fs';
+import { POSTS_PATH } from './paths';
 
 export const generateRssFeed = async () => {
   const posts = getMarkdownDocuments(POSTS_PATH);
