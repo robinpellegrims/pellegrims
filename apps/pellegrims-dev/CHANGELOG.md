@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.3.0](https://github.com/robinpellegrims/pellegrims/compare/pellegrims-dev-0.2.0...pellegrims-dev-0.3.0) (2023-02-11)
+
+### Features
+
+- **pellegrims-dev:** improve og image ([49ac849](https://github.com/robinpellegrims/pellegrims/commit/49ac849065de7e350b24e0fdd046bea29fce8b27))
+
 # [0.2.0](https://github.com/robinpellegrims/pellegrims/compare/pellegrims-dev-0.1.3...pellegrims-dev-0.2.0) (2023-02-08)
 
 ### Features
