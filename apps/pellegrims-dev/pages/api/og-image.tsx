@@ -16,6 +16,6 @@ export default (req: NextRequest) => {
         readMinutes={searchParams.get('readMinutes') ?? ''}
       />
     ),
-    { width: oGImageWidth, height: oGImageHeight }
+    { width: oGImageWidth, height: oGImageHeight, debug: false }
   );
 };
