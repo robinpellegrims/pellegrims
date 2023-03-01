@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
-      - run: pnpm nx affected --base=$BEFORE_SHA --target=deploy --parallel=1 --baseBranch=master --environment=production
+      - run: pnpm nx affected ${{ github.event_name == 'workflow_dispatch' && '--all' || '--base=$BEFORE_SHA' }} --target=deploy --parallel=1 --baseBranch=master --environment=production
         env:
           BEFORE_SHA: ${{ github.event.before }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
