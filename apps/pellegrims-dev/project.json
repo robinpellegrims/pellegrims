@@ -63,7 +63,10 @@
     "release": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "postTargets": ["pellegrims-dev:github"]
+        "postTargets": [
+          "pellegrims-dev:github",
+          "pellegrims-dev:deploy:production"
+        ]
       }
     },
     "github": {
@@ -77,8 +80,10 @@
       "executor": "@pellegrims/nx-vercel:deploy",
       "options": {
         "projectId": "prj_YpdulcdkZvF1CqjVsBrEhEZk8WHa",
-        "orgId": "GZ8fDLDaLMVY3YiLUZ86vnk4"
-      }
+        "orgId": "GZ8fDLDaLMVY3YiLUZ86vnk4",
+        "baseBranch": "master"
+      },
+      "configurations": { "production": { "environment": "production" } }
     }
   }
 }

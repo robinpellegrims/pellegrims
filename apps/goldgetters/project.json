@@ -68,7 +68,7 @@
     "release": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "postTargets": ["goldgetters:github"]
+        "postTargets": ["goldgetters:github", "goldgetters:deploy:production"]
       }
     },
     "github": {
@@ -82,8 +82,10 @@
       "executor": "@pellegrims/nx-vercel:deploy",
       "options": {
         "projectId": "prj_ubfBjPKtdCGZKFL8M8B0FS9eTo4U",
-        "orgId": "GZ8fDLDaLMVY3YiLUZ86vnk4"
-      }
+        "orgId": "GZ8fDLDaLMVY3YiLUZ86vnk4",
+        "baseBranch": "master"
+      },
+      "configurations": { "production": { "environment": "production" } }
     }
   }
 }

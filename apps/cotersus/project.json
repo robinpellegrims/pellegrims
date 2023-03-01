@@ -62,7 +62,7 @@
     "release": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "postTargets": ["cotersus:github"]
+        "postTargets": ["cotersus:github", "cotersus:deploy:production"]
       }
     },
     "github": {
@@ -76,8 +76,10 @@
       "executor": "@pellegrims/nx-vercel:deploy",
       "options": {
         "projectId": "prj_qsVtu5u3zorgtUFbtK3vWuhtwSuo",
-        "orgId": "GZ8fDLDaLMVY3YiLUZ86vnk4"
-      }
+        "orgId": "GZ8fDLDaLMVY3YiLUZ86vnk4",
+        "baseBranch": "master"
+      },
+      "configurations": { "production": { "environment": "production" } }
     }
   },
   "tags": ["platform:react", "type:app", "scope:cotersus"]

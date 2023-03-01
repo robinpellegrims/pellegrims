@@ -27,3 +27,6 @@ jobs:
           BEFORE_SHA: ${{ github.event.before }}
           GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN_GITHUB }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
