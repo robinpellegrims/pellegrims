@@ -25,7 +25,7 @@ jobs:
       - run: pnpm nx affected ${{ github.event_name == 'workflow_dispatch' && '--all' || '--base=$BEFORE_SHA' }} --target=release --parallel=1 --baseBranch=master --push
         env:
           BEFORE_SHA: ${{ github.event.before }}
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN_GITHUB }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
