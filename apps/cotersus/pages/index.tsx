@@ -8,6 +8,7 @@ export const Index = () => (
       <div className="text-center">
         <h1 className="font-fjalla text-8xl">Cotersus</h1>
         <h2 className="font-montserrat text-4xl">IT Consulting</h2>
+        <h3>CI test</h3>
       </div>
     </div>
   </div>
