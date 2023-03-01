@@ -32,7 +32,7 @@
         "buildableProjectDepsInPackageJsonType": "dependencies"
       }
     },
-    "version": {
+    "release": {
       "executor": "@jscutlery/semver:version",
       "options": {
         "postTargets": ["nx-remotecache-s3:github", "nx-remotecache-s3:publish"]

@@ -59,7 +59,7 @@
         "lintFilePatterns": ["apps/cotersus/**/*.{ts,tsx,js,jsx}"]
       }
     },
-    "version": {
+    "release": {
       "executor": "@jscutlery/semver:version",
       "options": {
         "postTargets": ["cotersus:github"]

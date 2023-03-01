@@ -31,7 +31,7 @@
         "passWithNoTests": true
       }
     },
-    "version": {
+    "release": {
       "executor": "@jscutlery/semver:version",
       "options": {
         "postTargets": [
