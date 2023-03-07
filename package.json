@@ -13,7 +13,7 @@
   },
   "private": true,
   "dependencies": {
-    "@aws-sdk/abort-controller": "^3.0.0",
+    "@aws-sdk/abort-controller": "^3.226.0",
     "@aws-sdk/client-s3": "^3.231.0",
     "@aws-sdk/client-sts": "^3.231.0",
     "@aws-sdk/credential-provider-node": "^3.231.0",
