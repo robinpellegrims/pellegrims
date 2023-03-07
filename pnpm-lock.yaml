@@ -28,7 +28,7 @@ specifiers:
   '@nrwl/web': 15.6.3
   '@nrwl/workspace': 15.6.3
   '@pellegrims/eslint-config-base': 0.0.2
-  '@pellegrims/nx-remotecache-s3': 1.4.7
+  '@pellegrims/nx-remotecache-s3': 2.0.3
   '@prisma/client': ^4.10.0
   '@swc-node/register': ^1.4.2
   '@swc/cli': ~0.1.55
@@ -193,7 +193,7 @@ devDependencies:
   '@nrwl/web': 15.6.3_plve2mdgghqv3m2ascx7xbq4q4
   '@nrwl/workspace': 15.6.3_u467zs5mtctlunurtd3iqjnom4
   '@pellegrims/eslint-config-base': 0.0.2_fh3zvaf4zvf566kkeykhgmulxi
-  '@pellegrims/nx-remotecache-s3': 1.4.7_@nrwl+workspace@15.6.3
+  '@pellegrims/nx-remotecache-s3': 2.0.3_@nrwl+workspace@15.6.3
   '@swc-node/register': 1.5.4_xerxcjkx7kzzzjtod4rapqmigm
   '@swc/cli': 0.1.61_@swc+core@1.3.34
   '@swc/core': 1.3.34
@@ -829,7 +829,6 @@ packages:
       events: 3.3.0
       stream-browserify: 3.0.0
       tslib: 2.4.1
-    dev: false
 
   /@aws-sdk/md5-js/3.226.0:
     resolution:
@@ -6194,21 +6193,22 @@ packages:
       tslib: 2.3.1
     dev: true
 
-  /@pellegrims/nx-remotecache-s3/1.4.7_@nrwl+workspace@15.6.3:
+  /@pellegrims/nx-remotecache-s3/2.0.3_@nrwl+workspace@15.6.3:
     resolution:
       {
-        integrity: sha512-yKNT0/tgAZkKtsBqPjseJyHJffAyeLZ2TPlei2uMCNaGQm/IagzVIL4ont9TKqyztImUMd4m0TXbeh2jP7BNCw==,
+        integrity: sha512-f82/dmIKbLcE220HeMNZRBiLEjigb5zRdS87L6laMZK4S+zKw26s6ulBueW6S3zyfmnk5E7qK+9dpUFEB3pfFA==,
       }
     peerDependencies:
       '@nrwl/workspace': '>=9.2.2'
     dependencies:
+      '@aws-sdk/abort-controller': 3.226.0
       '@aws-sdk/client-s3': 3.231.0
       '@aws-sdk/client-sts': 3.231.0
       '@aws-sdk/credential-provider-node': 3.231.0
+      '@aws-sdk/lib-storage': 3.231.0_iuu2dslkebrimg5lnvlefpr354
       '@nrwl/workspace': 15.6.3_u467zs5mtctlunurtd3iqjnom4
-      get-stream: 6.0.1
-      nx-remotecache-custom: 1.1.0_@nrwl+workspace@15.6.3
-      tslib: 2.4.0
+      nx-remotecache-custom: 3.0.0_@nrwl+workspace@15.6.3
+      tslib: 2.5.0
     transitivePeerDependencies:
       - '@aws-sdk/signature-v4-crt'
       - aws-crt
@@ -8315,14 +8315,6 @@ packages:
       }
     dev: true
 
-  /adm-zip/0.5.9:
-    resolution:
-      {
-        integrity: sha512-s+3fXLkeeLjZ2kLjCBwQufpI5fuN+kIGBxu6530nVQZGVol0d7Y/M88/xw9HGGUcJjKf8LutN3VPRUBq6N7Ajg==,
-      }
-    engines: { node: '>=6.0' }
-    dev: true
-
   /agent-base/6.0.2:
     resolution:
       {
@@ -9816,7 +9808,6 @@ packages:
         integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==,
       }
     engines: { node: '>=10' }
-    dev: false
 
   /chrome-trace-event/1.0.3:
     resolution:
@@ -11528,15 +11519,6 @@ packages:
         integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==,
       }
     engines: { node: '>=12' }
-    dev: false
-
-  /dotenv/8.6.0:
-    resolution:
-      {
-        integrity: sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==,
-      }
-    engines: { node: '>=10' }
-    dev: true
 
   /dotgitignore/2.1.0:
     resolution:
@@ -13453,7 +13435,6 @@ packages:
     engines: { node: '>= 8' }
     dependencies:
       minipass: 3.3.6
-    dev: false
 
   /fs-monkey/1.0.3:
     resolution:
@@ -17239,7 +17220,6 @@ packages:
     engines: { node: '>=8' }
     dependencies:
       yallist: 4.0.0
-    dev: false
 
   /minipass/4.0.0:
     resolution:
@@ -17249,7 +17229,6 @@ packages:
     engines: { node: '>=8' }
     dependencies:
       yallist: 4.0.0
-    dev: false
 
   /minizlib/2.1.2:
     resolution:
@@ -17260,7 +17239,6 @@ packages:
     dependencies:
       minipass: 3.3.6
       yallist: 4.0.0
-    dev: false
 
   /mkdirp/0.5.5:
     resolution:
@@ -17670,20 +17648,6 @@ packages:
       }
     dev: true
 
-  /nx-remotecache-custom/1.1.0_@nrwl+workspace@15.6.3:
-    resolution:
-      {
-        integrity: sha512-Jdl1Ak6z1MAwGVnqfL1TjRTQX0Y8HN+McP3IoYVBk3hF1sFijB6DO6+P79T1OjzRIsC9JqNaMxg+9SAgaD//Tg==,
-      }
-    peerDependencies:
-      '@nrwl/workspace': '>=9.2.2'
-    dependencies:
-      '@nrwl/workspace': 15.6.3_u467zs5mtctlunurtd3iqjnom4
-      adm-zip: 0.5.9
-      chalk: 4.1.2
-      dotenv: 8.6.0
-    dev: true
-
   /nx-remotecache-custom/3.0.0_@nrwl+workspace@15.6.3:
     resolution:
       {
@@ -17696,7 +17660,6 @@ packages:
       chalk: 4.1.2
       dotenv: 16.0.3
       tar: 6.1.13
-    dev: false
 
   /nx/15.6.3_l5ry2ouiqoxs2zysqzoiqvzu2i:
     resolution:
@@ -21044,7 +21007,6 @@ packages:
     dependencies:
       inherits: 2.0.4
       readable-stream: 3.6.0
-    dev: false
 
   /string-argv/0.3.1:
     resolution:
@@ -21617,7 +21579,6 @@ packages:
       minizlib: 2.1.2
       mkdirp: 1.0.4
       yallist: 4.0.0
-    dev: false
 
   /terminal-link/2.1.1:
     resolution:
