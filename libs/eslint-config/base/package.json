@@ -1,6 +1,6 @@
 {
   "name": "@pellegrims/eslint-config-base",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "ESLint shareable configuration for Typescript & Javascript",
   "repository": {
     "type": "git",
