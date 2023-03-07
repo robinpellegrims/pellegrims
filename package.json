@@ -81,7 +81,7 @@
     "@nrwl/web": "15.6.3",
     "@nrwl/workspace": "15.6.3",
     "@pellegrims/eslint-config-base": "0.0.2",
-    "@pellegrims/nx-remotecache-s3": "1.4.7",
+    "@pellegrims/nx-remotecache-s3": "2.0.3",
     "@swc-node/register": "^1.4.2",
     "@swc/cli": "~0.1.55",
     "@swc/core": "^1.2.173",
