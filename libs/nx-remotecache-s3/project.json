@@ -29,7 +29,8 @@
         "packageJson": "libs/nx-remotecache-s3/package.json",
         "main": "libs/nx-remotecache-s3/src/index.ts",
         "assets": ["libs/nx-remotecache-s3/*.md"],
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "buildableProjectDepsInPackageJsonType": "dependencies",
+        "updateBuildableProjectDepsInPackageJson": false
       }
     },
     "release": {
