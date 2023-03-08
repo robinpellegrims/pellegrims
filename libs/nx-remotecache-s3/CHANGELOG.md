@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.1.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-2.0.3...nx-remotecache-s3-2.1.0) (2023-03-08)
+
+### Features
+
+- add environment variable to explicitly set custom access key ID and secret access key for AWS ([#199](https://github.com/robinpellegrims/pellegrims/issues/199)) ([dd15562](https://github.com/robinpellegrims/pellegrims/commit/dd1556228756689f2d2106498e0e7aadaef39bf0))
+
 ## [2.0.3](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-2.0.2...nx-remotecache-s3-2.0.3) (2023-03-07)
 
 ## [2.0.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-2.0.1...nx-remotecache-s3-2.0.2) (2023-03-07)
