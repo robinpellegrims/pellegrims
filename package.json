@@ -67,7 +67,7 @@
     "@babel/runtime": "^7.16.0",
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
-    "@jscutlery/semver": "2.25.1",
+    "@jscutlery/semver": "2.30.1",
     "@nrwl/cli": "15.6.3",
     "@nrwl/cypress": "15.6.3",
     "@nrwl/devkit": "15.6.3",
