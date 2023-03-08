@@ -18,22 +18,7 @@ export const buildS3Client = (
   options: Pick<S3ClientConfig, 'endpoint' | 'region' | 'forcePathStyle'> &
     Pick<DefaultProviderInit, 'profile'>
 ) => {
-  const awsAccessKeyIdOverride = getEnv(ENV_ACCESS_KEY_ID);
-  const awsSecretAccessKeyOverride = getEnv(ENV_SECRET_ACCESS_KEY);
-
-  let provider: AwsCredentialIdentity | Provider<AwsCredentialIdentity>;
-
-  if (awsAccessKeyIdOverride?.length && awsSecretAccessKeyOverride?.length) {
-    provider = {
-      accessKeyId: awsAccessKeyIdOverride,
-      secretAccessKey: awsSecretAccessKeyOverride,
-    };
-  } else {
-    provider = defaultProvider({
-      profile: getEnv(ENV_PROFILE) ?? options.profile,
-      roleAssumerWithWebIdentity: getDefaultRoleAssumerWithWebIdentity(),
-    });
-  }
+  const provider = getCredentialsProvider(options);
 
   return new S3({
     endpoint: getEnv(ENV_ENDPOINT) ?? options.endpoint,
@@ -42,4 +27,24 @@ export const buildS3Client = (
     forcePathStyle:
       getEnv(ENV_FORCE_PATH_STYLE) === 'true' || options.forcePathStyle,
   });
+};
+
+const getCredentialsProvider = (
+  options: Pick<S3ClientConfig, 'endpoint' | 'region' | 'forcePathStyle'> &
+    Pick<DefaultProviderInit, 'profile'>
+): AwsCredentialIdentity | Provider<AwsCredentialIdentity> => {
+  const awsAccessKeyIdOverride = getEnv(ENV_ACCESS_KEY_ID);
+  const awsSecretAccessKeyOverride = getEnv(ENV_SECRET_ACCESS_KEY);
+
+  if (awsAccessKeyIdOverride?.length && awsSecretAccessKeyOverride?.length) {
+    return {
+      accessKeyId: awsAccessKeyIdOverride,
+      secretAccessKey: awsSecretAccessKeyOverride,
+    };
+  } else {
+    return defaultProvider({
+      profile: getEnv(ENV_PROFILE) ?? options.profile,
+      roleAssumerWithWebIdentity: getDefaultRoleAssumerWithWebIdentity(),
+    });
+  }
 };
