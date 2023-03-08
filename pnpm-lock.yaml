@@ -101,7 +101,7 @@ specifiers:
   react-is: 18.2.0
   react-markdown: ^6.0.3
   react-query: '3'
-  react-rough-notation: ^1.0.1
+  react-rough-notation: 1.0.3
   react-syntax-highlighter: ^15.4.4
   react-test-renderer: 18.2.0
   react-typist: ^2.0.5
@@ -159,7 +159,7 @@ dependencies:
   react-is: 18.2.0
   react-markdown: 6.0.3_fan5qbzahqtxlm5dzefqlqx5ia
   react-query: 3.39.2_biqbaboplfbrettd7655fr4n2y
-  react-rough-notation: 1.0.1_biqbaboplfbrettd7655fr4n2y
+  react-rough-notation: 1.0.3_biqbaboplfbrettd7655fr4n2y
   react-syntax-highlighter: 15.4.4_react@18.2.0
   react-typist: 2.0.5_biqbaboplfbrettd7655fr4n2y
   reading-time: 1.5.0
@@ -19431,18 +19431,18 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /react-rough-notation/1.0.1_biqbaboplfbrettd7655fr4n2y:
+  /react-rough-notation/1.0.3_biqbaboplfbrettd7655fr4n2y:
     resolution:
       {
-        integrity: sha512-UZQZ09XiZgbDRZFFP0qaFmTzs0rMKO929Npa5fHb2TOzLvKNEamaUtjRwjBx79cFzf+xMl/y8Y4HbYvvcKHQGQ==,
+        integrity: sha512-hMmyWNZTpPO9QOwj0g1SGgRiPWhJLhQje9ZtpQiAa1h0147oCL5C49OLXEZZYCxfMhXOqYBxSNkbndM09o3hUQ==,
       }
     peerDependencies:
-      react: ^16.13.1
-      react-dom: ^16.13.1
+      react: ^18.2.0
+      react-dom: ^18.2.0
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      rough-notation: 0.4.0
+      rough-notation: 0.5.1
     dev: false
 
   /react-shallow-renderer/16.15.0_react@18.2.0:
@@ -20098,10 +20098,10 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /rough-notation/0.4.0:
+  /rough-notation/0.5.1:
     resolution:
       {
-        integrity: sha512-hDgn9qMIxWnfY+WWjt30aLMtDHR13H8r/NI3EQNdJiEFAzpklH5nKg4eH/thpxCWTYzyg8ueMsKIfz9MzOBQ4Q==,
+        integrity: sha512-ITHofTzm13cWFVfoGsh/4c/k2Mg8geKgBCwex71UZLnNuw403tCRjYPQ68jSAd37DMbZIePXPjDgY0XdZi9HPw==,
       }
     dev: false
 

@@ -46,7 +46,7 @@
     "react-is": "18.2.0",
     "react-markdown": "^6.0.3",
     "react-query": "3",
-    "react-rough-notation": "^1.0.1",
+    "react-rough-notation": "1.0.3",
     "react-syntax-highlighter": "^15.4.4",
     "react-typist": "^2.0.5",
     "reading-time": "^1.5.0",
