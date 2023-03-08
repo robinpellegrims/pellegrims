@@ -243,7 +243,7 @@ devDependencies:
   prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
   prisma: 4.10.0
   react-test-renderer: 18.2.0_react@18.2.0
-  tailwindcss: 3.2.4_v776zzvn44o7tpgzieipaairwm
+  tailwindcss: 3.2.4_ts-node@10.9.1
   ts-jest: 28.0.8_v4ue35wbpr37derxbqmykx6eay
   ts-node: 10.9.1_gezkeegddf2gfk3pfvvlbj4jou
   ts-toolbelt: 9.6.0
@@ -6878,7 +6878,7 @@ packages:
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 3.2.4_v776zzvn44o7tpgzieipaairwm
+      tailwindcss: 3.2.4_ts-node@10.9.1
     dev: true
 
   /@tailwindcss/typography/0.5.2_tailwindcss@3.2.4:
@@ -6892,7 +6892,7 @@ packages:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
-      tailwindcss: 3.2.4_v776zzvn44o7tpgzieipaairwm
+      tailwindcss: 3.2.4_ts-node@10.9.1
     dev: true
 
   /@testing-library/dom/8.11.0:
