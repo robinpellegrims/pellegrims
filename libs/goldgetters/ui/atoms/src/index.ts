@@ -1,3 +1,4 @@
+export * from './lib/image-input/image-input';
 export { Alert } from './lib/alert/alert';
 export { WithLoading } from './lib/spinner/spinner';
 export { DarkModeSwitch } from './lib/dark-mode-switch/dark-mode-switch';
@@ -11,3 +12,6 @@ export { SocialLink } from './lib/social-link/social-link';
 export { Button } from './lib/button/button';
 export { Input } from './lib/input/input';
 export { Textarea } from './lib/textarea/textarea';
+export { ImageInput } from './lib/image-input/image-input';
+export { ImagePreview } from './lib/image-input/image-preview';
+export { Dropzone } from './lib/image-input/dropzone';
