@@ -4,6 +4,7 @@ import {
   MoonIcon,
   SunIcon,
   UserIcon,
+  XMarkIcon,
 } from '@heroicons/react/24/outline';
 import { FacebookIcon } from './custom/facebook';
 import { TwitterIcon } from './custom/twitter';
@@ -16,7 +17,8 @@ export type IconType =
   | 'hamburger'
   | 'facebook'
   | 'twitter'
-  | 'github';
+  | 'github'
+  | 'remove';
 
 export interface IconProps {
   type: IconType;
@@ -30,6 +32,7 @@ const iconMapping: Record<IconType, ReactElement> = {
   facebook: <FacebookIcon />,
   twitter: <TwitterIcon />,
   github: <GithubIcon />,
+  remove: <XMarkIcon className="h-6 w-6" />,
 };
 
 export const Icon: FunctionComponent<IconProps> = ({ type }) =>
