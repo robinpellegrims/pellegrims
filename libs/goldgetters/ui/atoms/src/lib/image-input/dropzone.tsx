@@ -1,19 +1,22 @@
-import {
-  ChangeEventHandler,
-  FunctionComponent,
-  InputHTMLAttributes,
-} from 'react';
+import { FunctionComponent, InputHTMLAttributes } from 'react';
 
 interface DropZoneProps {
   inputProps: InputHTMLAttributes<HTMLInputElement>;
-  onChange: ChangeEventHandler<HTMLInputElement>;
+  onFileChange: (file: File | undefined) => void;
 }
 
 export const Dropzone: FunctionComponent<DropZoneProps> = ({
   inputProps,
-  onChange,
+  onFileChange,
 }) => (
-  <div className="flex w-full items-center justify-center">
+  <div
+    className="flex w-full items-center justify-center"
+    onDrop={(event) => {
+      event.preventDefault();
+      onFileChange(event.dataTransfer.files.item(0) ?? undefined);
+    }}
+    onDragOver={(event) => event.preventDefault()}
+  >
     <label
       htmlFor="dropzone-file"
       className="dark:hover:bg-bray-800 bg-dark-50 hover:bg-dark-100 border-dark-300 dark:bg-dark-700 dark:hover:border-dark-500 dark:hover:bg-dark-600 dark:border-dark-600 flex h-64 w-full cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed"
@@ -44,7 +47,7 @@ export const Dropzone: FunctionComponent<DropZoneProps> = ({
         type="file"
         className="hidden"
         {...inputProps}
-        onChange={onChange}
+        onChange={(event) => onFileChange(event.target.files?.[0])}
       />
     </label>
   </div>
