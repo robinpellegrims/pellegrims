@@ -1,6 +1,5 @@
 import { FormField } from '../form-field/form-field';
 import {
-  ChangeEventHandler,
   forwardRef,
   FunctionComponent,
   InputHTMLAttributes,
@@ -21,10 +20,7 @@ export const ImageInput: FunctionComponent<ImageInputProps> = forwardRef(
       File | string | undefined
     >(imageUrl);
 
-    const imageChange: ChangeEventHandler<HTMLInputElement> = (event) =>
-      event.target.files?.length &&
-      event.target.files?.length > 0 &&
-      setSelectedImage(event.target.files?.[0]);
+    const onFileChange = (file: File | undefined) => setSelectedImage(file);
 
     const removeSelectedImage = () => setSelectedImage(undefined);
 
@@ -33,7 +29,7 @@ export const ImageInput: FunctionComponent<ImageInputProps> = forwardRef(
         {selectedImage ? (
           <ImagePreview image={selectedImage} onDelete={removeSelectedImage} />
         ) : (
-          <Dropzone inputProps={inputProps} onChange={imageChange} />
+          <Dropzone inputProps={inputProps} onFileChange={onFileChange} />
         )}
       </FormField>
     );
