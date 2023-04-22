@@ -1,1 +1,1 @@
-export { trpc, withGoldgettersTRPC } from './lib/trpc';
+export { trpc } from './lib/trpc';

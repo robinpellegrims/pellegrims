@@ -5,7 +5,7 @@ import { Hero } from '@pellegrims/goldgetters/ui/organisms';
 import { Container, Section } from '@pellegrims/goldgetters/ui/templates';
 
 export const Locations: NextPage = () => {
-  const { data } = trpc.useQuery(['locations']);
+  const { data } = trpc.locations.useQuery();
 
   return (
     <>

@@ -18,7 +18,7 @@ const reloadSession = () => {
 export const Profile = () => {
   const session = useSession();
 
-  const updateUser = trpc.useMutation('user', {
+  const updateUser = trpc.user.useMutation({
     onSuccess: () => reloadSession(),
   });
 
