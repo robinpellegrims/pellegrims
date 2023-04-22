@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.3.0](https://github.com/robinpellegrims/pellegrims/compare/goldgetters-0.2.3...goldgetters-0.3.0) (2023-04-22)
+
+### Features
+
+- **goldgetters:** simplify profile form & image input components ([9658e29](https://github.com/robinpellegrims/pellegrims/commit/9658e295e78f411a0a156505585ae7ba09a48696))
+
 ## [0.2.3](https://github.com/robinpellegrims/pellegrims/compare/goldgetters-0.2.2...goldgetters-0.2.3) (2023-03-07)
 
 ## [0.2.2](https://github.com/robinpellegrims/pellegrims/compare/goldgetters-0.2.1...goldgetters-0.2.2) (2022-11-27)
