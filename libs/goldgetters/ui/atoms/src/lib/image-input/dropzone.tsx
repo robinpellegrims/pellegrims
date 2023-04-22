@@ -1,12 +1,10 @@
-import { FunctionComponent, InputHTMLAttributes } from 'react';
+import { FunctionComponent } from 'react';
 
 interface DropZoneProps {
-  inputProps: InputHTMLAttributes<HTMLInputElement>;
   onFileChange: (file: File | undefined) => void;
 }
 
 export const Dropzone: FunctionComponent<DropZoneProps> = ({
-  inputProps,
   onFileChange,
 }) => (
   <div
@@ -46,7 +44,6 @@ export const Dropzone: FunctionComponent<DropZoneProps> = ({
         id="dropzone-file"
         type="file"
         className="hidden"
-        {...inputProps}
         onChange={(event) => onFileChange(event.target.files?.[0])}
       />
     </label>

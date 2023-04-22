@@ -27,12 +27,14 @@ export const Profile = () => {
       <Hero title="Profiel" subtitle="Bekijk en wijzig je gegevens" />
       <Section>
         <ProfileForm
-          defaultValues={{
+          profileFormValue={{
             name: session.data?.user?.name ?? undefined,
-            image: session.data?.user?.image ?? undefined,
+            image: session.data?.user?.image
+              ? { previewUrl: '', value: session.data.user.image }
+              : undefined,
             mail: session.data?.user?.email ?? undefined,
           }}
-          onSubmit={(value) =>
+          submitHandler={(value) =>
             updateUser.mutateAsync({ name: value.name ?? null, image: '' })
           }
         ></ProfileForm>
