@@ -4,7 +4,7 @@ import { Container, Section } from '@pellegrims/goldgetters/ui/templates';
 import { NextPage } from 'next';
 
 export const Contact: NextPage = () => {
-  const send = trpc.useMutation('contact');
+  const send = trpc.contact.useMutation();
 
   return (
     <>

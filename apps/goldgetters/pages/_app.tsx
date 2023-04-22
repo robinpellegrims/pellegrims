@@ -5,7 +5,7 @@ import { Footer, Header } from '@pellegrims/goldgetters/ui/organisms';
 import { AppTemplate } from '@pellegrims/goldgetters/ui/templates';
 import logo from '../public/logo.png';
 import { AppType } from 'next/dist/shared/lib/utils';
-import { withGoldgettersTRPC } from '@pellegrims/goldgetters/data-access';
+import { trpc } from '@pellegrims/goldgetters/data-access';
 import { SessionProvider, useSession } from 'next-auth/react';
 import { FunctionComponent } from 'react';
 import { useRouter } from 'next/router';
@@ -58,4 +58,4 @@ const GoldgettersApp: AppType<{ session: Session | null | undefined }> = ({
   </SessionProvider>
 );
 
-export default withGoldgettersTRPC(GoldgettersApp);
+export default trpc.withTRPC(GoldgettersApp);
