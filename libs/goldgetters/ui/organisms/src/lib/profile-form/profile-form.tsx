@@ -3,43 +3,55 @@ import { useForm } from 'react-hook-form';
 import {
   Alert,
   Button,
+  ImageInput,
+  ImageInputValue,
   Input,
   WithLoading,
 } from '@pellegrims/goldgetters/ui/atoms';
 
-interface FormData {
+export interface ProfileFormSubmitValue {
+  name?: string;
+  image?: string | File;
+}
+
+export interface ProfileFormValue {
   name?: string;
   mail?: string;
-  image?: string;
+  image?: ImageInputValue;
 }
 
 interface ProfileFormProps {
-  onSubmit: (data: FormData) => Promise<unknown>;
+  submitHandler: (data: ProfileFormSubmitValue) => Promise<unknown>;
   error?: string;
-  defaultValues?: FormData;
+  profileFormValue?: ProfileFormValue;
 }
 
 export const ProfileForm: FunctionComponent<ProfileFormProps> = ({
-  onSubmit,
+  submitHandler,
   error,
-  defaultValues,
+  profileFormValue,
 }) => {
   const {
     register,
     handleSubmit,
+    setValue,
     reset,
     formState: { errors, isSubmitting, isSubmitSuccessful, isSubmitted },
-  } = useForm<FormData>({ defaultValues });
+  } = useForm<ProfileFormValue>({ defaultValues: profileFormValue });
 
   useEffect(() => {
     if (!isSubmitted && !isSubmitting) {
-      reset(defaultValues);
+      reset(profileFormValue);
     }
-  }, [defaultValues, reset, isSubmitted, isSubmitting]);
+  }, [profileFormValue, reset, isSubmitted, isSubmitting]);
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form
+        onSubmit={handleSubmit(({ name, image }) =>
+          submitHandler({ name, image: image?.value })
+        )}
+      >
         <div className="grid gap-6 md:grid-cols-2">
           <Input
             label="Naam"
@@ -52,10 +64,11 @@ export const ProfileForm: FunctionComponent<ProfileFormProps> = ({
             error={errors.mail?.type}
             disabled={true}
           />
-          <Input
+          <ImageInput
             label="Afbeelding"
-            {...register('image')}
             error={errors.image?.type}
+            value={profileFormValue?.image}
+            onChange={(changeValue) => setValue('image', changeValue)}
           />
         </div>
         <Button type="submit" className="my-6">
@@ -69,7 +82,7 @@ export const ProfileForm: FunctionComponent<ProfileFormProps> = ({
           title="Probleem!"
         />
       )}
-      {isSubmitSuccessful && (
+      {isSubmitSuccessful && !isSubmitting && (
         <Alert
           type="success"
           text="Profiel succesvol gewijzigd"
