@@ -36,6 +36,7 @@ export const ProfileForm: FunctionComponent<ProfileFormProps> = ({
     handleSubmit,
     setValue,
     reset,
+    getValues,
     formState: { errors, isSubmitting, isSubmitSuccessful, isSubmitted },
   } = useForm<ProfileFormValue>({ defaultValues: profileFormValue });
 
@@ -67,7 +68,7 @@ export const ProfileForm: FunctionComponent<ProfileFormProps> = ({
           <ImageInput
             label="Afbeelding"
             error={errors.image?.type}
-            value={profileFormValue?.image}
+            value={getValues('image')}
             onChange={(changeValue) => setValue('image', changeValue)}
           />
         </div>
