@@ -1,13 +1,12 @@
-import { Hero, ProfileForm } from '@pellegrims/goldgetters/ui/organisms';
+import {
+  Hero,
+  ProfileForm,
+  ProfileFormSubmitValue,
+} from '@pellegrims/goldgetters/ui/organisms';
 import { Container, Section } from '@pellegrims/goldgetters/ui/templates';
-import { useSession } from 'next-auth/react';
 import { trpc } from '@pellegrims/goldgetters/data-access';
-
-export interface User {
-  name?: string | null;
-  email?: string | null;
-  image?: string | null;
-}
+import { isString } from 'next/dist/build/webpack/plugins/jsconfig-paths-plugin';
+import { NextPage } from 'next';
 
 const reloadSession = () => {
   // update next-auth session hack: https://stackoverflow.com/a/70405437
@@ -15,12 +14,38 @@ const reloadSession = () => {
   document.dispatchEvent(event);
 };
 
-export const Profile = () => {
-  const session = useSession();
-
-  const updateUser = trpc.user.useMutation({
+export const Profile: NextPage = () => {
+  const updateUser = trpc.user.update.useMutation({
     onSuccess: () => reloadSession(),
   });
+
+  const getUser = trpc.user.get.useQuery(undefined, { staleTime: Infinity });
+
+  const createS3PresignedUrl = trpc.generateUploadUrl.useMutation();
+
+  const maybeUploadImage = async (
+    fileOrUrl: File | undefined
+  ): Promise<string | null> => {
+    if (!fileOrUrl) {
+      return null;
+    }
+    const key = `user/${fileOrUrl.name}`;
+    const presignedUrl = await createS3PresignedUrl.mutateAsync({ key });
+    await fetch(presignedUrl, {
+      method: 'PUT',
+      body: fileOrUrl,
+      headers: { 'Content-Type': fileOrUrl.type },
+    });
+    return key;
+  };
+
+  const onSubmit = async (value: ProfileFormSubmitValue) => {
+    const image = isString(value.image)
+      ? value.image
+      : await maybeUploadImage(value.image);
+    const name = value.name ?? null;
+    return updateUser.mutateAsync({ name, image });
+  };
 
   return (
     <Container>
@@ -28,15 +53,17 @@ export const Profile = () => {
       <Section>
         <ProfileForm
           profileFormValue={{
-            name: session.data?.user?.name ?? undefined,
-            image: session.data?.user?.image
-              ? { previewUrl: '', value: session.data.user.image }
-              : undefined,
-            mail: session.data?.user?.email ?? undefined,
+            name: getUser.data?.name ?? undefined,
+            image:
+              getUser.data?.image && getUser.data?.imageUrl
+                ? {
+                    previewUrl: getUser.data.imageUrl,
+                    value: getUser.data.image,
+                  }
+                : undefined,
+            mail: getUser.data?.email ?? undefined,
           }}
-          submitHandler={(value) =>
-            updateUser.mutateAsync({ name: value.name ?? null, image: '' })
-          }
+          submitHandler={onSubmit}
         ></ProfileForm>
       </Section>
     </Container>
