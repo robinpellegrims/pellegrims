@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.4.0](https://github.com/robinpellegrims/pellegrims/compare/goldgetters-0.3.1...goldgetters-0.4.0) (2023-04-24)
+
+### Features
+
+- **goldgetters:** save user profile image to s3 ([d479e4e](https://github.com/robinpellegrims/pellegrims/commit/d479e4e5b0823ee87e9881ba3f18654aab20d898))
+
 ## [0.3.1](https://github.com/robinpellegrims/pellegrims/compare/goldgetters-0.3.0...goldgetters-0.3.1) (2023-04-22)
 
 # [0.3.0](https://github.com/robinpellegrims/pellegrims/compare/goldgetters-0.2.3...goldgetters-0.3.0) (2023-04-22)
