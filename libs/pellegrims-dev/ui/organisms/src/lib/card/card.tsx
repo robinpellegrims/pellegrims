@@ -1,4 +1,4 @@
-import { DateFormatted } from '@pellegrims/pellegrims-dev/ui/atoms';
+import { DateFormatted } from '@pellegrims/shared/ui/atoms';
 import { Tags } from '@pellegrims/pellegrims-dev/ui/molecules';
 import { FunctionComponent, HTMLAttributeAnchorTarget } from 'react';
 import Image from 'next/image';

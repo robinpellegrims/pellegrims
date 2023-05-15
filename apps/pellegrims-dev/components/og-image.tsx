@@ -1,4 +1,4 @@
-import { DateFormatted } from '@pellegrims/pellegrims-dev/ui/atoms';
+import { DateFormatted } from '@pellegrims/shared/ui/atoms';
 import { twitterHandle } from '../constants';
 import { FunctionComponent, PropsWithChildren } from 'react';
 

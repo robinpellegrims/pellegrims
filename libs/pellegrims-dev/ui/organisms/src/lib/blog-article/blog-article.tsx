@@ -2,7 +2,8 @@ import { MarkdownDocument } from '@pellegrims/shared/markdown';
 import { Markdown, Tags } from '@pellegrims/pellegrims-dev/ui/molecules';
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
-import { DateFormatted, SocialIcon } from '@pellegrims/pellegrims-dev/ui/atoms';
+import { SocialIcon } from '@pellegrims/pellegrims-dev/ui/atoms';
+import { DateFormatted } from '@pellegrims/shared/ui/atoms';
 import Image from 'next/image';
 
 export interface BlogArticleProps {

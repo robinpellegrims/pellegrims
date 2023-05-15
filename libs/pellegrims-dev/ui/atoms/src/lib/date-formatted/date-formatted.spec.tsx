@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { DateFormatted } from './date-formatted';
+import { DateFormatted } from '@pellegrims/shared/ui/atoms';
 
 describe('DateFormatted', () => {
   it('should render successfully', () => {
