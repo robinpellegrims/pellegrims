@@ -1,7 +1,6 @@
 {
   "name": "shared-markdown",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "root": "libs/shared/markdown",
   "sourceRoot": "libs/shared/markdown/src",
   "projectType": "library",
   "tags": ["scope:shared"],

@@ -1,7 +1,6 @@
 {
   "name": "cotersus-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "root": "apps/cotersus-e2e",
   "sourceRoot": "apps/cotersus-e2e/src",
   "projectType": "application",
   "targets": {

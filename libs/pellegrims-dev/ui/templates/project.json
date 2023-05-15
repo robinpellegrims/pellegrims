@@ -1,7 +1,6 @@
 {
   "name": "pellegrims-dev-ui-templates",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-  "root": "libs/pellegrims-dev/ui/templates",
   "sourceRoot": "libs/pellegrims-dev/ui/templates/src",
   "projectType": "library",
   "tags": [

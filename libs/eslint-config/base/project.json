@@ -1,7 +1,6 @@
 {
   "name": "eslint-config-base",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "root": "libs/eslint-config/base",
   "sourceRoot": "libs/eslint-config/base/src",
   "projectType": "library",
   "targets": {

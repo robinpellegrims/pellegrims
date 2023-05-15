@@ -1,6 +1,5 @@
 {
   "name": "goldgetters-ui-templates",
-  "root": "libs/goldgetters/ui/templates",
   "sourceRoot": "libs/goldgetters/ui/templates/src",
   "projectType": "library",
   "tags": [

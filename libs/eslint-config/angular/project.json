@@ -1,7 +1,6 @@
 {
   "name": "eslint-config-angular",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "root": "libs/eslint-config/angular",
   "sourceRoot": "libs/eslint-config/angular/src",
   "projectType": "library",
   "targets": {

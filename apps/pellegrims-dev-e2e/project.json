@@ -1,7 +1,6 @@
 {
   "name": "pellegrims-dev-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "root": "apps/pellegrims-dev-e2e",
   "sourceRoot": "apps/pellegrims-dev-e2e/src",
   "projectType": "application",
   "targets": {

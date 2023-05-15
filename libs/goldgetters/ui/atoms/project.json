@@ -1,6 +1,5 @@
 {
   "name": "goldgetters-ui-atoms",
-  "root": "libs/goldgetters/ui/atoms",
   "sourceRoot": "libs/goldgetters/ui/atoms/src",
   "projectType": "library",
   "tags": [

@@ -1,7 +1,6 @@
 {
   "name": "pellegrims-dev-ui-atoms",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-  "root": "libs/pellegrims-dev/ui/atoms",
   "sourceRoot": "libs/pellegrims-dev/ui/atoms/src",
   "projectType": "library",
   "tags": [

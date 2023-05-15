@@ -1,6 +1,5 @@
 {
   "name": "goldgetters-data-access",
-  "root": "libs/goldgetters/data-access",
   "sourceRoot": "libs/goldgetters/data-access/src",
   "projectType": "library",
   "targets": {

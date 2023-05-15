@@ -1,6 +1,5 @@
 {
   "name": "shared-ui-atoms",
-  "root": "libs/shared/ui/atoms",
   "sourceRoot": "libs/shared/ui/atoms/src",
   "projectType": "library",
   "tags": ["platform:react", "type:ui", "atomic-design:atoms", "scope:shared"],

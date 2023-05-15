@@ -1,7 +1,6 @@
 {
   "name": "nx-remotecache-s3",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "root": "libs/nx-remotecache-s3",
   "sourceRoot": "libs/nx-remotecache-s3/src",
   "projectType": "library",
   "targets": {

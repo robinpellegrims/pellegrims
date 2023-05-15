@@ -1,6 +1,5 @@
 {
   "name": "goldgetters-ui-organisms",
-  "root": "libs/goldgetters/ui/organisms",
   "sourceRoot": "libs/goldgetters/ui/organisms/src",
   "projectType": "library",
   "tags": [

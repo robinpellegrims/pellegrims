@@ -1,7 +1,6 @@
 {
   "name": "cotersus",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "root": "apps/cotersus",
   "sourceRoot": "apps/cotersus",
   "projectType": "application",
   "targets": {
