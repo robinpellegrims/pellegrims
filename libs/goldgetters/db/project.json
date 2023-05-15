@@ -1,6 +1,5 @@
 {
   "name": "goldgetters-db",
-  "root": "libs/goldgetters/db",
   "sourceRoot": "libs/goldgetters/db/src",
   "projectType": "library",
   "targets": {

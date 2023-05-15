@@ -1,7 +1,6 @@
 {
   "name": "pellegrims-dev",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "root": "apps/pellegrims-dev",
   "sourceRoot": "apps/pellegrims-dev",
   "projectType": "application",
   "tags": ["platform:react", "type:app", "scope:pellegrims-dev"],

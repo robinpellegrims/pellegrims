@@ -1,6 +1,5 @@
 {
   "name": "shared-test",
-  "root": "libs/shared/test",
   "sourceRoot": "libs/shared/test/src",
   "projectType": "library",
   "targets": {

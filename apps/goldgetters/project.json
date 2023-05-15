@@ -1,6 +1,5 @@
 {
   "name": "goldgetters",
-  "root": "apps/goldgetters",
   "sourceRoot": "apps/goldgetters",
   "projectType": "application",
   "tags": ["platform:react", "type:app", "scope:goldgetters"],

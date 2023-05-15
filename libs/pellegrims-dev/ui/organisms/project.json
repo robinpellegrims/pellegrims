@@ -1,7 +1,6 @@
 {
   "name": "pellegrims-dev-ui-organisms",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-  "root": "libs/pellegrims-dev/ui/organisms",
   "sourceRoot": "libs/pellegrims-dev/ui/organisms/src",
   "projectType": "library",
   "tags": [

@@ -1,6 +1,5 @@
 {
   "name": "goldgetters-ui-molecules",
-  "root": "libs/goldgetters/ui/molecules",
   "sourceRoot": "libs/goldgetters/ui/molecules/src",
   "projectType": "library",
   "tags": [

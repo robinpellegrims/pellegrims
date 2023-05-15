@@ -1,6 +1,5 @@
 {
   "name": "goldgetters-e2e",
-  "root": "apps/goldgetters-e2e",
   "sourceRoot": "apps/goldgetters-e2e/src",
   "projectType": "application",
   "targets": {

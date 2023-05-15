@@ -1,7 +1,6 @@
 {
   "name": "pellegrims-dev-ui-molecules",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-  "root": "libs/pellegrims-dev/ui/molecules",
   "sourceRoot": "libs/pellegrims-dev/ui/molecules/src",
   "projectType": "library",
   "tags": [

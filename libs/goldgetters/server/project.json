@@ -1,6 +1,5 @@
 {
   "name": "goldgetters-server",
-  "root": "libs/goldgetters/server",
   "sourceRoot": "libs/goldgetters/server/src",
   "projectType": "library",
   "targets": {
