@@ -11,7 +11,7 @@
   ],
   "targets": {
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -20,7 +20,7 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/pellegrims-dev/ui/organisms"],
       "options": {
         "jestConfig": "libs/pellegrims-dev/ui/organisms/jest.config.ts",

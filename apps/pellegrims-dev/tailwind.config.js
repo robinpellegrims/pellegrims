@@ -1,5 +1,5 @@
 const { join } = require('path');
-const { createGlobPatternsForDependencies } = require('@nrwl/next/tailwind');
+const { createGlobPatternsForDependencies } = require('@nx/next/tailwind');
 const colors = require('tailwindcss/colors');
 
 module.exports = {

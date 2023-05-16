@@ -6,7 +6,7 @@
   "tags": ["platform:react", "type:app", "scope:pellegrims-dev"],
   "targets": {
     "build": {
-      "executor": "@nrwl/next:build",
+      "executor": "@nx/next:build",
       "outputs": ["{options.outputPath}"],
       "options": {
         "root": "apps/pellegrims-dev",
@@ -21,7 +21,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@nrwl/next:server",
+      "executor": "@nx/next:server",
       "options": {
         "buildTarget": "pellegrims-dev:build",
         "dev": true
@@ -39,13 +39,13 @@
       "defaultConfiguration": "development"
     },
     "export": {
-      "executor": "@nrwl/next:export",
+      "executor": "@nx/next:export",
       "options": {
         "buildTarget": "pellegrims-dev:build:production"
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/pellegrims-dev"],
       "options": {
         "jestConfig": "apps/pellegrims-dev/jest.config.ts",
@@ -53,7 +53,7 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/pellegrims-dev/**/*.{ts,tsx,js,jsx}"]
@@ -82,7 +82,11 @@
         "orgId": "GZ8fDLDaLMVY3YiLUZ86vnk4",
         "baseBranch": "master"
       },
-      "configurations": { "production": { "environment": "production" } }
+      "configurations": {
+        "production": {
+          "environment": "production"
+        }
+      }
     }
   }
 }

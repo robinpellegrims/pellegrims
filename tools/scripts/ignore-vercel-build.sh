@@ -2,11 +2,11 @@
 APP=$1
 
 # Determine version of Nx installed
-NX_VERSION=$(node -e "console.log(require('./package.json').devDependencies['@nrwl/workspace'])")
+NX_VERSION=$(node -e "console.log(require('./package.json').devDependencies['@nx/workspace'])")
 TS_VERSION=$(node -e "console.log(require('./package.json').devDependencies['typescript'])")
 
-# Install @nrwl/workspace in order to run the affected command
-pnpm install -D @nrwl/workspace@$NX_VERSION --prefer-offline
+# Install @nx/workspace in order to run the affected command
+pnpm install -D @nx/workspace@$NX_VERSION --prefer-offline
 pnpm install -D typescript@$TS_VERSION --prefer-offline
 
 # Run the affected command, comparing latest commit to the one before that
