@@ -5,7 +5,7 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/next:build",
+      "executor": "@nx/next:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
@@ -20,7 +20,7 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/next:server",
+      "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "cotersus:build",
@@ -38,13 +38,13 @@
       }
     },
     "export": {
-      "executor": "@nrwl/next:export",
+      "executor": "@nx/next:export",
       "options": {
         "buildTarget": "cotersus:build:production"
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/cotersus"],
       "options": {
         "jestConfig": "apps/cotersus/jest.config.ts",
@@ -52,7 +52,7 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/cotersus/**/*.{ts,tsx,js,jsx}"]
@@ -78,7 +78,11 @@
         "orgId": "GZ8fDLDaLMVY3YiLUZ86vnk4",
         "baseBranch": "master"
       },
-      "configurations": { "production": { "environment": "production" } }
+      "configurations": {
+        "production": {
+          "environment": "production"
+        }
+      }
     }
   },
   "tags": ["platform:react", "type:app", "scope:cotersus"]

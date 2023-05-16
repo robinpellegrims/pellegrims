@@ -1,16 +1,17 @@
 {
   "name": "goldgetters",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/goldgetters",
   "projectType": "application",
   "tags": ["platform:react", "type:app", "scope:goldgetters"],
   "targets": {
     "build": {
-      "executor": "@nrwl/next:build",
+      "executor": "@nx/next:build",
       "outputs": ["{options.outputPath}"],
       "dependsOn": [
         {
-          "projects": "dependencies",
-          "target": "prisma-generate"
+          "target": "prisma-generate",
+          "dependencies": true
         }
       ],
       "defaultConfiguration": "production",
@@ -26,7 +27,7 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/next:server",
+      "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "goldgetters:build",
@@ -44,13 +45,13 @@
       }
     },
     "export": {
-      "executor": "@nrwl/next:export",
+      "executor": "@nx/next:export",
       "options": {
         "buildTarget": "goldgetters:build:production"
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/goldgetters"],
       "options": {
         "jestConfig": "apps/goldgetters/jest.config.ts",
@@ -58,7 +59,7 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/goldgetters/**/*.{ts,tsx,js,jsx}"]
@@ -84,7 +85,11 @@
         "orgId": "GZ8fDLDaLMVY3YiLUZ86vnk4",
         "baseBranch": "master"
       },
-      "configurations": { "production": { "environment": "production" } }
+      "configurations": {
+        "production": {
+          "environment": "production"
+        }
+      }
     }
   }
 }

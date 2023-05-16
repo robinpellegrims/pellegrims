@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/robinpellegrims/pellegrims/tree/master/libs/nx-remotecache-s3",
   "peerDependencies": {
-    "@nrwl/workspace": ">=9.2.2"
+    "@nx/workspace": ">=16.0.0"
   },
   "dependencies": {
     "@aws-sdk/abort-controller": "^3.329.0",
@@ -36,7 +36,7 @@
     "@aws-sdk/credential-provider-node": "^3.329.0",
     "@aws-sdk/lib-storage": "^3.329.0",
     "@aws-sdk/types": "^3.329.0",
-    "nx-remotecache-custom": "^3.0.0",
+    "nx-remotecache-custom": "^4.0.0",
     "tslib": "^2.3.1"
   }
 }
