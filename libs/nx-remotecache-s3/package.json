@@ -20,7 +20,10 @@
     "storage",
     "typescript"
   ],
-  "author": "Robin Pellegrims",
+  "author": "Robin Pellegrims <robin.pellegrims@gmail.com>",
+  "contributors": [
+    "Steven Rathbauer <gh.rathpc@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/robinpellegrims/pellegrims/issues?q=is%3Aissue+label%3Ascope%3Anx-remotecache-s3+"
