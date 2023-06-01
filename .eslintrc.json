@@ -39,14 +39,14 @@
       "files": ["*.ts", "*.tsx"],
       "extends": [
         "plugin:@nx/typescript",
-        "@pellegrims/eslint-config-base/typescript"
+        "./dist/libs/eslint-config/base/src/typescript"
       ]
     },
     {
       "files": ["*.js", "*.jsx"],
       "extends": [
         "plugin:@nx/javascript",
-        "@pellegrims/eslint-config-base/javascript"
+        "./dist/libs/eslint-config/base/src/javascript"
       ]
     },
     {

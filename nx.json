@@ -11,7 +11,7 @@
       }
     },
     "remotecache-s3": {
-      "runner": "@pellegrims/nx-remotecache-s3",
+      "runner": "./dist/libs/nx-remotecache-s3",
       "options": {
         "cacheableOperations": ["build", "lint", "test", "e2e"],
         "bucket": "monorepo-cache",
