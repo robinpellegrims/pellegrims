@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [3.0.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-2.1.3...nx-remotecache-s3-3.0.0) (2023-06-01)
+
+### Features
+
+- update package to force version bump ([0dbdae0](https://github.com/robinpellegrims/pellegrims/commit/0dbdae01e6ad309881f91b94a0736ca5a43fc4ca))
+
+### BREAKING CHANGES
+
+- Minimum Nx version is now >=16.0.0
+
 ## [2.1.3](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-2.1.2...nx-remotecache-s3-2.1.3) (2023-06-01)
 
 ## [2.1.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-2.1.1...nx-remotecache-s3-2.1.2) (2023-05-15)
