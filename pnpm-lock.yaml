@@ -1,9 +1,6 @@
 lockfileVersion: '6.0'
 
 dependencies:
-  '@aws-sdk/abort-controller':
-    specifier: ^3.329.0
-    version: 3.329.0
   '@aws-sdk/client-s3':
     specifier: ^3.332.0
     version: 3.332.0
@@ -31,6 +28,9 @@ dependencies:
   '@prisma/client':
     specifier: ^4.10.0
     version: 4.14.0(prisma@4.14.0)
+  '@smithy/abort-controller':
+    specifier: ^2.0.1
+    version: 2.0.1
   '@swc/helpers':
     specifier: 0.5.1
     version: 0.5.1
@@ -5151,6 +5151,27 @@ packages:
     dependencies:
       '@sinonjs/commons': 2.0.0
     dev: true
+
+  /@smithy/abort-controller@2.0.1:
+    resolution:
+      {
+        integrity: sha512-0s7XjIbsTwZyUW9OwXQ8J6x1UiA1TNCh60Vaw56nHahL7kUZsLhmTlWiaxfLkFtO2Utkj8YewcpHTYpxaTzO+w==,
+      }
+    engines: { node: '>=14.0.0' }
+    dependencies:
+      '@smithy/types': 2.0.2
+      tslib: 2.5.0
+    dev: false
+
+  /@smithy/types@2.0.2:
+    resolution:
+      {
+        integrity: sha512-wcymEjIXQ9+NEfE5Yt5TInAqe1o4n+Nh+rh00AwoazppmUt8tdo6URhc5gkDcOYrcvlDVAZE7uG69nDpEGUKxw==,
+      }
+    engines: { node: '>=14.0.0' }
+    dependencies:
+      tslib: 2.5.0
+    dev: false
 
   /@svgr/babel-plugin-add-jsx-attribute@6.5.1(@babel/core@7.21.8):
     resolution:

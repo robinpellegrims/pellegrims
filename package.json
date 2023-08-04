@@ -14,7 +14,7 @@
   },
   "private": true,
   "dependencies": {
-    "@aws-sdk/abort-controller": "^3.329.0",
+    "@smithy/abort-controller": "^2.0.1",
     "@aws-sdk/client-s3": "^3.332.0",
     "@aws-sdk/client-sts": "^3.332.0",
     "@aws-sdk/credential-provider-node": "^3.332.0",
