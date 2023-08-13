@@ -11,7 +11,8 @@
         "outputPath": "dist/libs/eslint-config/base",
         "main": "libs/eslint-config/base/src/index.ts",
         "tsConfig": "libs/eslint-config/base/tsconfig.lib.json",
-        "assets": ["libs/eslint-config/base/*.md"]
+        "assets": ["libs/eslint-config/base/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true
       }
     },
     "lint": {
