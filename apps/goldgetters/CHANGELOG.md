@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.4](https://github.com/robinpellegrims/pellegrims/compare/goldgetters-0.4.3...goldgetters-0.4.4) (2023-08-13)
+
 ## [0.4.3](https://github.com/robinpellegrims/pellegrims/compare/goldgetters-0.4.2...goldgetters-0.4.3) (2023-06-01)
 
 ## [0.4.2](https://github.com/robinpellegrims/pellegrims/compare/goldgetters-0.4.1...goldgetters-0.4.2) (2023-06-01)
