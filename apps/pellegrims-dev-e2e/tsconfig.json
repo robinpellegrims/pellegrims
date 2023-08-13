@@ -6,10 +6,5 @@
     "allowJs": true,
     "types": ["cypress", "node"]
   },
-  "include": ["src/**/*.ts", "src/**/*.js", "cypress.config.ts"],
-  "references": [
-    {
-      "path": "./cypress/tsconfig.json"
-    }
-  ]
+  "include": ["src/**/*.ts", "src/**/*.js", "cypress.config.ts"]
 }

@@ -7,6 +7,7 @@ module.exports = {
       [
         'cotersus',
         'pellegrims-dev',
+        'pellegrims-dev-e2e',
         'eslint-config-base',
         'eslint-config-angular',
         'nx-remotecache-s3',
