@@ -9,7 +9,6 @@
       "options": {
         "cypressConfig": "apps/pellegrims-dev-e2e/cypress.config.ts",
         "devServerTarget": "pellegrims-dev:serve",
-        "tsConfig": "apps/pellegrims-dev-e2e/tsconfig.json",
         "testingType": "e2e"
       },
       "configurations": {
