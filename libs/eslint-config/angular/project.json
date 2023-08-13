@@ -12,7 +12,8 @@
         "tsConfig": "libs/eslint-config/angular/tsconfig.lib.json",
         "packageJson": "libs/eslint-config/angular/package.json",
         "main": "libs/eslint-config/angular/src/index.ts",
-        "assets": ["libs/eslint-config/angular/*.md"]
+        "assets": ["libs/eslint-config/angular/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true
       }
     },
     "lint": {
