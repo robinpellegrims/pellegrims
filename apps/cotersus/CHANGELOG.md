@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.9](https://github.com/robinpellegrims/pellegrims/compare/cotersus-0.1.8...cotersus-0.1.9) (2023-08-13)
+
 ## [0.1.8](https://github.com/robinpellegrims/pellegrims/compare/cotersus-0.1.7...cotersus-0.1.8) (2023-06-01)
 
 ## [0.1.7](https://github.com/robinpellegrims/pellegrims/compare/cotersus-0.1.6...cotersus-0.1.7) (2023-05-15)
