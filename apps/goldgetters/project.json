@@ -16,7 +16,6 @@
       ],
       "defaultConfiguration": "production",
       "options": {
-        "root": "apps/goldgetters",
         "outputPath": "dist/apps/goldgetters"
       },
       "configurations": {
