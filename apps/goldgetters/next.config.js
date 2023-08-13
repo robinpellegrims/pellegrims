@@ -10,6 +10,11 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  experimental: {
+    outputFileTracingExcludes: {
+      '*': ['node_modules/@swc/**/*'],
+    },
+  },
 };
 
 module.exports = withNx(nextConfig);
