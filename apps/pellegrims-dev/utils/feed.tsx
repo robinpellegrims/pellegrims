@@ -27,7 +27,7 @@ export const generateRssFeed = async () => {
     posts.map((post) => mapPostOnFeedItem(post, siteURL))
   );
   feedItems.forEach((item) => feed.addItem(item));
-  const publicRssFolderPath = `./apps/pellegrims-dev/public/${rssFolder}`;
+  const publicRssFolderPath = `./public/${rssFolder}`;
   fs.mkdirSync(publicRssFolderPath, { recursive: true });
   fs.writeFileSync(`${publicRssFolderPath}/${feedRss2Filename}`, feed.rss2());
   fs.writeFileSync(`${publicRssFolderPath}/${feedAtomFilename}`, feed.atom1());
