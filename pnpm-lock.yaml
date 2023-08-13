@@ -12,7 +12,7 @@ dependencies:
     version: 3.332.0
   '@aws-sdk/lib-storage':
     specifier: ^3.332.0
-    version: 3.332.0(@aws-sdk/abort-controller@3.329.0)(@aws-sdk/client-s3@3.332.0)
+    version: 3.332.0(@aws-sdk/abort-controller@3.374.0)(@aws-sdk/client-s3@3.332.0)
   '@aws-sdk/s3-request-presigner':
     specifier: ^3.329.0
     version: 3.332.0
@@ -127,6 +127,9 @@ dependencies:
   remark-html:
     specifier: ^15.0.0
     version: 15.0.2
+  semver:
+    specifier: ^5.7.2
+    version: 5.7.2
   styled-components:
     specifier: 5.3.6
     version: 5.3.6(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)
@@ -142,6 +145,9 @@ dependencies:
   utf-8-validate:
     specifier: ^5.0.9
     version: 5.0.10
+  word-wrap:
+    specifier: ^1.2.5
+    version: 1.2.5
   zod:
     specifier: ^3.18.0
     version: 3.21.4
@@ -352,8 +358,8 @@ devDependencies:
     specifier: 4.9.4
     version: 4.9.4
   vite:
-    specifier: ^3.2.3
-    version: 3.2.6(@types/node@18.11.9)
+    specifier: ^3.2.7
+    version: 3.2.7(@types/node@18.11.9)
   vitest:
     specifier: ^0.25.1
     version: 0.25.8
@@ -473,6 +479,18 @@ packages:
     engines: { node: '>=14.0.0' }
     dependencies:
       '@aws-sdk/types': 3.329.0
+      tslib: 2.5.0
+    dev: false
+
+  /@aws-sdk/abort-controller@3.374.0:
+    resolution:
+      {
+        integrity: sha512-pO1pqFBdIF28ZvnJmg58Erj35RLzXsTrjvHghdc/xgtSvodFFCNrUsPg6AP3On8eiw9elpHoS4P8jMx1pHDXEw==,
+      }
+    engines: { node: '>=14.0.0' }
+    deprecated: This package has moved to @smithy/abort-controller
+    dependencies:
+      '@smithy/abort-controller': 1.1.0
       tslib: 2.5.0
     dev: false
 
@@ -934,7 +952,7 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /@aws-sdk/lib-storage@3.332.0(@aws-sdk/abort-controller@3.329.0)(@aws-sdk/client-s3@3.332.0):
+  /@aws-sdk/lib-storage@3.332.0(@aws-sdk/abort-controller@3.374.0)(@aws-sdk/client-s3@3.332.0):
     resolution:
       {
         integrity: sha512-o/bvLrlrmkbdnJjMfsNFGDkjNRpfpBv1bJgXwUc/b3q6dtTlr5b7Lo5DveKq7h32oi2bcp3lIwtK69vgQiElcw==,
@@ -944,7 +962,7 @@ packages:
       '@aws-sdk/abort-controller': ^3.0.0
       '@aws-sdk/client-s3': ^3.0.0
     dependencies:
-      '@aws-sdk/abort-controller': 3.329.0
+      '@aws-sdk/abort-controller': 3.374.0
       '@aws-sdk/client-s3': 3.332.0
       '@aws-sdk/middleware-endpoint': 3.329.0
       '@aws-sdk/smithy-client': 3.329.0
@@ -1688,7 +1706,7 @@ packages:
       debug: 4.3.4(supports-color@5.5.0)
       gensync: 1.0.0-beta.2
       json5: 2.2.3
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
 
@@ -1813,7 +1831,7 @@ packages:
       '@babel/helper-validator-option': 7.21.0
       browserslist: 4.21.5
       lru-cache: 5.1.1
-      semver: 6.3.0
+      semver: 6.3.1
 
   /@babel/helper-compilation-targets@7.22.10:
     resolution:
@@ -4712,7 +4730,7 @@ packages:
       babel-plugin-polyfill-corejs3: 0.6.0(@babel/core@7.21.8)
       babel-plugin-polyfill-regenerator: 0.4.1(@babel/core@7.21.8)
       core-js-compat: 3.30.2
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -6915,6 +6933,17 @@ packages:
       '@sinonjs/commons': 2.0.0
     dev: true
 
+  /@smithy/abort-controller@1.1.0:
+    resolution:
+      {
+        integrity: sha512-5imgGUlZL4dW4YWdMYAKLmal9ny/tlenM81QZY7xYyb76z9Z/QOg7oM5Ak9HQl8QfFTlGVWwcMXl+54jroRgEQ==,
+      }
+    engines: { node: '>=14.0.0' }
+    dependencies:
+      '@smithy/types': 1.2.0
+      tslib: 2.5.0
+    dev: false
+
   /@smithy/abort-controller@2.0.1:
     resolution:
       {
@@ -6923,6 +6952,16 @@ packages:
     engines: { node: '>=14.0.0' }
     dependencies:
       '@smithy/types': 2.0.2
+      tslib: 2.5.0
+    dev: false
+
+  /@smithy/types@1.2.0:
+    resolution:
+      {
+        integrity: sha512-z1r00TvBqF3dh4aHhya7nz1HhvCg4TRmw51fjMrh5do3h+ngSstt/yKlNbHeb9QxJmFbmN8KEVSWgb1bRvfEoA==,
+      }
+    engines: { node: '>=14.0.0' }
+    dependencies:
       tslib: 2.5.0
     dev: false
 
@@ -7189,7 +7228,7 @@ packages:
       '@swc/core': 1.3.57(@swc/helpers@0.5.1)
       commander: 7.2.0
       fast-glob: 3.2.12
-      semver: 7.5.0
+      semver: 7.5.3
       slash: 3.0.0
       source-map: 0.7.4
     dev: true
@@ -9108,7 +9147,7 @@ packages:
       '@babel/compat-data': 7.21.7
       '@babel/core': 7.21.8
       '@babel/helper-define-polyfill-provider': 0.3.3(@babel/core@7.21.8)
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -12055,7 +12094,7 @@ packages:
       jsx-ast-utils: 3.3.3
       language-tags: 1.0.8
       minimatch: 3.1.2
-      semver: 6.3.0
+      semver: 6.3.1
     dev: true
 
   /eslint-plugin-react-hooks@4.6.0(eslint@8.15.0):
@@ -12093,7 +12132,7 @@ packages:
       object.values: 1.1.6
       prop-types: 15.8.1
       resolve: 2.0.0-next.4
-      semver: 6.3.0
+      semver: 6.3.1
       string.prototype.matchall: 4.0.8
     dev: true
 
@@ -12144,7 +12183,7 @@ packages:
       read-pkg-up: 7.0.1
       regexp-tree: 0.1.27
       safe-regex: 2.1.1
-      semver: 7.5.0
+      semver: 7.5.3
       strip-indent: 3.0.0
     transitivePeerDependencies:
       - supports-color
@@ -15215,7 +15254,7 @@ packages:
       acorn: 8.8.2
       eslint-visitor-keys: 3.4.1
       espree: 9.5.2
-      semver: 7.5.0
+      semver: 7.5.3
     dev: true
 
   /jsonc-parser@3.2.0:
@@ -15753,7 +15792,7 @@ packages:
       }
     engines: { node: '>=8' }
     dependencies:
-      semver: 6.3.0
+      semver: 6.3.1
     dev: true
 
   /make-error@1.3.6:
@@ -16711,7 +16750,7 @@ packages:
     dependencies:
       hosted-git-info: 2.8.9
       resolve: 1.22.2
-      semver: 5.7.1
+      semver: 5.7.2
       validate-npm-package-license: 3.0.4
     dev: true
 
@@ -17084,7 +17123,7 @@ packages:
       levn: 0.3.0
       prelude-ls: 1.1.2
       type-check: 0.3.2
-      word-wrap: 1.2.3
+      word-wrap: 1.2.5
     dev: true
 
   /optionator@0.9.1:
@@ -17099,7 +17138,7 @@ packages:
       levn: 0.4.1
       prelude-ls: 1.2.1
       type-check: 0.4.0
-      word-wrap: 1.2.3
+      word-wrap: 1.2.5
     dev: true
 
   /ora@5.4.1:
@@ -18799,18 +18838,10 @@ packages:
       semver: 6.3.1
     dev: true
 
-  /semver@5.7.1:
+  /semver@5.7.2:
     resolution:
       {
-        integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==,
-      }
-    hasBin: true
-    dev: true
-
-  /semver@6.3.0:
-    resolution:
-      {
-        integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==,
+        integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==,
       }
     hasBin: true
 
@@ -18820,7 +18851,6 @@ packages:
         integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==,
       }
     hasBin: true
-    dev: true
 
   /semver@7.5.0:
     resolution:
@@ -19969,7 +19999,7 @@ packages:
       json5: 2.2.3
       lodash.memoize: 4.1.2
       make-error: 1.3.6
-      semver: 7.5.0
+      semver: 7.5.3
       typescript: 4.9.4
       yargs-parser: 21.1.1
     dev: true
@@ -20683,10 +20713,10 @@ packages:
       vfile-message: 3.1.4
     dev: false
 
-  /vite@3.2.6(@types/node@18.11.9):
+  /vite@3.2.7(@types/node@18.11.9):
     resolution:
       {
-        integrity: sha512-nTXTxYVvaQNLoW5BQ8PNNQ3lPia57gzsQU/Khv+JvzKPku8kNZL6NMUR/qwXhMG6E+g1idqEPanomJ+VZgixEg==,
+        integrity: sha512-29pdXjk49xAP0QBr0xXqu2s5jiQIXNvE/xwd0vUizYT2Hzqe4BksNNoWllFVXJf4eLZ+UlVQmXfB4lWrc+t18g==,
       }
     engines: { node: ^14.18.0 || >=16.0.0 }
     hasBin: true
@@ -20758,7 +20788,7 @@ packages:
       tinybench: 2.5.0
       tinypool: 0.3.1
       tinyspy: 1.1.1
-      vite: 3.2.6(@types/node@18.11.9)
+      vite: 3.2.7(@types/node@18.11.9)
     transitivePeerDependencies:
       - less
       - sass
@@ -20998,13 +21028,12 @@ packages:
       }
     dev: true
 
-  /word-wrap@1.2.3:
+  /word-wrap@1.2.5:
     resolution:
       {
-        integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==,
+        integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==,
       }
     engines: { node: '>=0.10.0' }
-    dev: true
 
   /wordwrap@1.0.0:
     resolution:
