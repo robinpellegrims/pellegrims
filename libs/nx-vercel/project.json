@@ -50,7 +50,7 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["coverage/libs/nx-vercel"],
+      "outputs": ["{workspaceRoot}/coverage/libs/nx-vercel"],
       "options": {
         "jestConfig": "libs/nx-vercel/jest.config.ts",
         "passWithNoTests": true
