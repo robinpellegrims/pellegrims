@@ -63,7 +63,7 @@
     "unist-util-visit": "^4.1.0",
     "utf-8-validate": "^5.0.9",
     "word-wrap": "^1.2.5",
-    "zod": "^3.18.0"
+    "zod": "^3.22.3"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
