@@ -177,7 +177,7 @@ devDependencies:
     version: 3.0.0(@nx/devkit@16.8.1)
   '@nx/cypress':
     specifier: 16.8.1
-    version: 16.8.1(@swc-node/register@1.6.5)(@swc/core@1.3.57)(@types/node@18.11.9)(cypress@12.17.3)(eslint@8.46.0)(nx@16.8.1)(typescript@4.9.4)
+    version: 16.8.1(@swc-node/register@1.6.5)(@swc/core@1.3.57)(@types/node@18.11.9)(cypress@13.3.0)(eslint@8.46.0)(nx@16.8.1)(typescript@4.9.4)
   '@nx/devkit':
     specifier: 16.8.1
     version: 16.8.1(nx@16.8.1)
@@ -269,8 +269,8 @@ devDependencies:
     specifier: ^1.0.30001356
     version: 1.0.30001486
   cypress:
-    specifier: 12.17.3
-    version: 12.17.3
+    specifier: ^13.0.0
+    version: 13.3.0
   eslint:
     specifier: 8.46.0
     version: 8.46.0
@@ -5186,10 +5186,10 @@ packages:
       '@jridgewell/trace-mapping': 0.3.9
     dev: true
 
-  /@cypress/request@2.88.11:
+  /@cypress/request@3.0.1:
     resolution:
       {
-        integrity: sha512-M83/wfQ1EkspjkE2lNWNV5ui2Cv7UCv1swW1DqljahbzLVWltcsexQh8jYtuS/vzFXP+HySntGM83ZXA9fn17w==,
+        integrity: sha512-TWivJlJi8ZDx2wGOw1dbLuHJKUYX7bWySw377nlnGOW3hP9/MUKIsEdXT/YngWxVdgNCHRBmFlBipE+5/2ZZlQ==,
       }
     engines: { node: '>= 6' }
     dependencies:
@@ -5208,7 +5208,7 @@ packages:
       performance-now: 2.1.0
       qs: 6.10.4
       safe-buffer: 5.2.1
-      tough-cookie: 2.5.0
+      tough-cookie: 4.1.3
       tunnel-agent: 0.6.0
       uuid: 8.3.2
     dev: true
@@ -5958,13 +5958,13 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@nrwl/cypress@16.8.1(@swc-node/register@1.6.5)(@swc/core@1.3.57)(@types/node@18.11.9)(cypress@12.17.3)(eslint@8.46.0)(nx@16.8.1)(typescript@4.9.4):
+  /@nrwl/cypress@16.8.1(@swc-node/register@1.6.5)(@swc/core@1.3.57)(@types/node@18.11.9)(cypress@13.3.0)(eslint@8.46.0)(nx@16.8.1)(typescript@4.9.4):
     resolution:
       {
         integrity: sha512-set8MUV6b1QpHCSqQ4It01BM9u6hf0e6s02DZdi/1OW3h/JYo5kqcLrYQra3AKCIimGByXdoHtCUjyFT0pMrdg==,
       }
     dependencies:
-      '@nx/cypress': 16.8.1(@swc-node/register@1.6.5)(@swc/core@1.3.57)(@types/node@18.11.9)(cypress@12.17.3)(eslint@8.46.0)(nx@16.8.1)(typescript@4.9.4)
+      '@nx/cypress': 16.8.1(@swc-node/register@1.6.5)(@swc/core@1.3.57)(@types/node@18.11.9)(cypress@13.3.0)(eslint@8.46.0)(nx@16.8.1)(typescript@4.9.4)
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc-node/register'
@@ -6234,7 +6234,7 @@ packages:
       - '@swc/core'
       - debug
 
-  /@nx/cypress@16.8.1(@swc-node/register@1.6.5)(@swc/core@1.3.57)(@types/node@18.11.9)(cypress@12.17.3)(eslint@8.46.0)(nx@16.8.1)(typescript@4.9.4):
+  /@nx/cypress@16.8.1(@swc-node/register@1.6.5)(@swc/core@1.3.57)(@types/node@18.11.9)(cypress@13.3.0)(eslint@8.46.0)(nx@16.8.1)(typescript@4.9.4):
     resolution:
       {
         integrity: sha512-Yao0YWb0PVyAKDWXKjHsLjwuULx7GPUsoAuz8qr990YeKDuhqFKOPmSPSv8a8VAOo7yltCWuBmzvL1X8xF2amQ==,
@@ -6245,12 +6245,12 @@ packages:
       cypress:
         optional: true
     dependencies:
-      '@nrwl/cypress': 16.8.1(@swc-node/register@1.6.5)(@swc/core@1.3.57)(@types/node@18.11.9)(cypress@12.17.3)(eslint@8.46.0)(nx@16.8.1)(typescript@4.9.4)
+      '@nrwl/cypress': 16.8.1(@swc-node/register@1.6.5)(@swc/core@1.3.57)(@types/node@18.11.9)(cypress@13.3.0)(eslint@8.46.0)(nx@16.8.1)(typescript@4.9.4)
       '@nx/devkit': 16.8.1(nx@16.8.1)
       '@nx/js': 16.8.1(@swc-node/register@1.6.5)(@swc/core@1.3.57)(@types/node@18.11.9)(nx@16.8.1)(typescript@4.9.4)
       '@nx/linter': 16.8.1(@swc-node/register@1.6.5)(@swc/core@1.3.57)(@types/node@18.11.9)(eslint@8.46.0)(nx@16.8.1)
       '@phenomnomnominal/tsquery': 5.0.1(typescript@4.9.4)
-      cypress: 12.17.3
+      cypress: 13.3.0
       detect-port: 1.5.1
       semver: 7.5.3
       tslib: 2.5.0
@@ -7836,18 +7836,18 @@ packages:
       }
     dev: false
 
-  /@types/node@16.18.40:
-    resolution:
-      {
-        integrity: sha512-+yno3ItTEwGxXiS/75Q/aHaa5srkpnJaH+kdkTVJ3DtJEwv92itpKbxU+FjPoh2m/5G9zmUQfrL4A4C13c+iGA==,
-      }
-    dev: true
-
   /@types/node@18.11.9:
     resolution:
       {
         integrity: sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==,
       }
+
+  /@types/node@18.18.4:
+    resolution:
+      {
+        integrity: sha512-t3rNFBgJRugIhackit2mVcLfF6IRc0JE4oeizPQL8Zrm8n2WY/0wOdpOPhdtG0V9Q2TlW/axbF1MJ6z+Yj/kKQ==,
+      }
+    dev: true
 
   /@types/nodemailer@6.4.7:
     resolution:
@@ -10878,18 +10878,18 @@ packages:
         integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==,
       }
 
-  /cypress@12.17.3:
+  /cypress@13.3.0:
     resolution:
       {
-        integrity: sha512-/R4+xdIDjUSLYkiQfwJd630S81KIgicmQOLXotFxVXkl+eTeVO+3bHXxdi5KBh/OgC33HWN33kHX+0tQR/ZWpg==,
+        integrity: sha512-mpI8qcTwLGiA4zEQvTC/U1xGUezVV4V8HQCOYjlEOrVmU1etVvxOjkCXHGwrlYdZU/EPmUiWfsO3yt1o+Q2bgw==,
       }
-    engines: { node: ^14.0.0 || ^16.0.0 || >=18.0.0 }
+    engines: { node: ^16.0.0 || ^18.0.0 || >=20.0.0 }
     hasBin: true
     requiresBuild: true
     dependencies:
-      '@cypress/request': 2.88.11
+      '@cypress/request': 3.0.1
       '@cypress/xvfb': 1.2.4(supports-color@8.1.1)
-      '@types/node': 16.18.40
+      '@types/node': 18.18.4
       '@types/sinonjs__fake-timers': 8.1.1
       '@types/sizzle': 2.3.3
       arch: 2.2.0
@@ -10922,6 +10922,7 @@ packages:
       minimist: 1.2.8
       ospath: 1.2.2
       pretty-bytes: 5.6.0
+      process: 0.11.10
       proxy-from-env: 1.0.0
       request-progress: 3.0.0
       semver: 7.5.3
@@ -17995,6 +17996,14 @@ packages:
       }
     dev: true
 
+  /process@0.11.10:
+    resolution:
+      {
+        integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==,
+      }
+    engines: { node: '>= 0.6.0' }
+    dev: true
+
   /progress@2.0.3:
     resolution:
       {
@@ -20091,21 +20100,23 @@ packages:
       ieee754: 1.2.1
     dev: true
 
-  /tough-cookie@2.5.0:
-    resolution:
-      {
-        integrity: sha512-nlLsUzgm1kfLXSXfRZMc1KLAugd4hqJHDTvc2hDIwS3mZAfMEuMbc03SujMF+GEcpaX/qboeycw6iO8JwVv2+g==,
-      }
-    engines: { node: '>=0.8' }
-    dependencies:
-      psl: 1.9.0
-      punycode: 2.3.0
-    dev: true
-
   /tough-cookie@4.1.2:
     resolution:
       {
         integrity: sha512-G9fqXWoYFZgTc2z8Q5zaHy/vJMjm+WV0AkAeHxVCQiEB1b+dGvWzFW6QV07cY5jQ5gRkeid2qIkzkxUnmoQZUQ==,
+      }
+    engines: { node: '>=6' }
+    dependencies:
+      psl: 1.9.0
+      punycode: 2.3.0
+      universalify: 0.2.0
+      url-parse: 1.5.10
+    dev: true
+
+  /tough-cookie@4.1.3:
+    resolution:
+      {
+        integrity: sha512-aX/y5pVRkfRnfmuX+OdbSdXvPe6ieKX/G2s7e98f4poJHnqH3281gDPm/metm6E/WRamfx7WC4HUqkWHfQHprw==,
       }
     engines: { node: '>=6' }
     dependencies:
