@@ -124,7 +124,7 @@
     "ngx-deploy-npm": "6.0.0",
     "node-mocks-http": "^1.11.0",
     "nx": "16.10.0",
-    "postcss": "8.4.19",
+    "postcss": "8.4.31",
     "prettier": "2.7.1",
     "prettier-plugin-prisma": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.1.13",
