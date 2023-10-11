@@ -8,7 +8,10 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/nx-remotecache-s3/**/*.ts"]
+        "lintFilePatterns": [
+          "libs/nx-remotecache-s3/**/*.ts",
+          "libs/nx-remotecache-s3/package.json"
+        ]
       }
     },
     "test": {
