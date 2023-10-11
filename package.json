@@ -40,7 +40,7 @@
     "next-auth": "^4.22.1",
     "next-seo": "^4.28.1",
     "nodemailer": "^6.7.2",
-    "nx-remotecache-custom": "^4.0.0",
+    "nx-remotecache-custom": "^5.0.1",
     "prop-types": "^15.8.1",
     "puppeteer-core": "6.0.x",
     "react": "18.2.0",

@@ -84,8 +84,8 @@ dependencies:
     specifier: ^6.7.2
     version: 6.9.1
   nx-remotecache-custom:
-    specifier: ^4.0.0
-    version: 4.0.0(@nx/workspace@16.10.0)
+    specifier: ^5.0.1
+    version: 5.0.1(@nx/workspace@16.10.0)
   prop-types:
     specifier: ^15.8.1
     version: 15.8.1
@@ -11496,14 +11496,6 @@ packages:
       }
     engines: { node: '>=12' }
 
-  /dotenv@16.0.3:
-    resolution:
-      {
-        integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==,
-      }
-    engines: { node: '>=12' }
-    dev: false
-
   /dotenv@16.3.1:
     resolution:
       {
@@ -17114,17 +17106,17 @@ packages:
       }
     dev: true
 
-  /nx-remotecache-custom@4.0.0(@nx/workspace@16.10.0):
+  /nx-remotecache-custom@5.0.1(@nx/workspace@16.10.0):
     resolution:
       {
-        integrity: sha512-ylKokrs8W9BkAUzctDsLyqiuw+TYZbGn7mxQL238xcsTrQOIZrGrS1hXSOftP5G35a4qUIMXV9se/HZjgzK3CA==,
+        integrity: sha512-UgvsnVp4iuQ3hmLdUilzS4bEYfe8kNB8sf9LFk3v9A7iBUy/uUuHmN23SuHlAslq0q5jBb9l3/7TIzRK345NYw==,
       }
     peerDependencies:
-      '@nx/workspace': '>=16.0.0'
+      '@nx/workspace': '>=16.9.0'
     dependencies:
       '@nx/workspace': 16.10.0(@swc-node/register@1.6.8)(@swc/core@1.3.75)
       chalk: 4.1.2
-      dotenv: 16.0.3
+      dotenv: 16.3.1
       tar: 6.1.14
     dev: false
 
