@@ -11,12 +11,11 @@
         "outputPath": "dist/libs/eslint-config/base",
         "main": "libs/eslint-config/base/src/index.ts",
         "tsConfig": "libs/eslint-config/base/tsconfig.lib.json",
-        "assets": ["libs/eslint-config/base/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true
+        "assets": ["libs/eslint-config/base/*.md"]
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/eslint-config/base/**/*.ts"]
@@ -26,8 +25,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/eslint-config/base"],
       "options": {
-        "jestConfig": "libs/eslint-config/base/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/eslint-config/base/jest.config.ts"
       }
     },
     "release": {

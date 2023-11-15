@@ -6,7 +6,7 @@
   "tags": ["scope:shared"],
   "targets": {
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/shared/markdown/**/*.ts"]
@@ -16,8 +16,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/shared/markdown"],
       "options": {
-        "jestConfig": "libs/shared/markdown/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/shared/markdown/jest.config.ts"
       }
     }
   }
