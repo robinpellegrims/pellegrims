@@ -23,7 +23,6 @@ export = {
     ],
     '@typescript-eslint/member-ordering': 'error',
     '@typescript-eslint/naming-convention': 'error',
-    '@typescript-eslint/no-duplicate-imports': 'error',
     '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: true }],
     '@typescript-eslint/no-inferrable-types': [
       'error',

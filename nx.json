@@ -1,19 +1,14 @@
 {
-  "npmScope": "pellegrims",
   "affected": {
     "defaultBase": "master"
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "nx/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
-      }
+      "runner": "nx/tasks-runners/default"
     },
     "remotecache-s3": {
       "runner": "./dist/libs/nx-remotecache-s3",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "bucket": "monorepo-cache",
         "endpoint": "https://s3.eu-central-003.backblazeb2.com",
         "region": "us-west-000",
@@ -38,16 +33,29 @@
   "targetDefaults": {
     "build": {
       "dependsOn": ["^build"],
-      "inputs": ["production", "^production"]
+      "inputs": ["production", "^production"],
+      "cache": true
     },
     "e2e": {
-      "inputs": ["default", "^production"]
-    },
-    "test": {
-      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"]
+      "inputs": ["default", "^production"],
+      "cache": true
     },
     "lint": {
-      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
+      "cache": true
+    },
+    "@nx/jest:jest": {
+      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
+      "cache": true,
+      "options": {
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
     }
   },
   "namedInputs": {

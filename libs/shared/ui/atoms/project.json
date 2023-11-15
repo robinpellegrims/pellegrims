@@ -6,7 +6,7 @@
   "tags": ["platform:react", "type:ui", "atomic-design:atoms", "scope:shared"],
   "targets": {
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/shared/ui/atoms/**/*.{ts,tsx,js,jsx}"]
@@ -16,8 +16,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/shared/ui/atoms"],
       "options": {
-        "jestConfig": "libs/shared/ui/atoms/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/shared/ui/atoms/jest.config.ts"
       }
     }
   }

@@ -12,12 +12,11 @@
         "tsConfig": "libs/eslint-config/angular/tsconfig.lib.json",
         "packageJson": "libs/eslint-config/angular/package.json",
         "main": "libs/eslint-config/angular/src/index.ts",
-        "assets": ["libs/eslint-config/angular/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true
+        "assets": ["libs/eslint-config/angular/*.md"]
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/eslint-config/angular/**/*.ts"]
@@ -27,8 +26,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/eslint-config/angular"],
       "options": {
-        "jestConfig": "libs/eslint-config/angular/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/eslint-config/angular/jest.config.ts"
       }
     },
     "release": {

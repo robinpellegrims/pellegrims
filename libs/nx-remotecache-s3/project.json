@@ -5,7 +5,7 @@
   "projectType": "library",
   "targets": {
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -18,8 +18,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/nx-remotecache-s3"],
       "options": {
-        "jestConfig": "libs/nx-remotecache-s3/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/nx-remotecache-s3/jest.config.ts"
       }
     },
     "build": {
@@ -30,9 +29,7 @@
         "tsConfig": "libs/nx-remotecache-s3/tsconfig.lib.json",
         "packageJson": "libs/nx-remotecache-s3/package.json",
         "main": "libs/nx-remotecache-s3/src/index.ts",
-        "assets": ["libs/nx-remotecache-s3/*.md"],
-        "buildableProjectDepsInPackageJsonType": "dependencies",
-        "updateBuildableProjectDepsInPackageJson": false
+        "assets": ["libs/nx-remotecache-s3/*.md"]
       }
     },
     "release": {

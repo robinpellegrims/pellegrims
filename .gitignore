@@ -47,3 +47,5 @@ Thumbs.db
 .next
 
 .vercel
+
+.nx/cache

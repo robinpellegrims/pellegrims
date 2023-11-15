@@ -46,12 +46,11 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/cotersus"],
       "options": {
-        "jestConfig": "apps/cotersus/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "apps/cotersus/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/cotersus/**/*.{ts,tsx,js,jsx}"]

@@ -6,5 +6,8 @@ export = {
       extends: ['plugin:import/typescript'],
     },
   ],
-  rules: { 'import/no-deprecated': 'warn' },
+  rules: {
+    'import/no-deprecated': 'warn',
+    'import/no-duplicates': 'error',
+  },
 };

@@ -47,12 +47,11 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/pellegrims-dev"],
       "options": {
-        "jestConfig": "apps/pellegrims-dev/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "apps/pellegrims-dev/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/pellegrims-dev/**/*.{ts,tsx,js,jsx}"]
