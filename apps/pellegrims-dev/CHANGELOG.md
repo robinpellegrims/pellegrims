@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [1.0.0](https://github.com/robinpellegrims/pellegrims/compare/pellegrims-dev-0.3.6...pellegrims-dev-1.0.0) (2023-11-16)
+
+### Build System
+
+- update nx v17.1.2 and run migrations and update related deps ([ce8348e](https://github.com/robinpellegrims/pellegrims/commit/ce8348ea890c8224338cec3a514b8ecd87cb13d3))
+
+### BREAKING CHANGES
+
+- requires nx >=17.0.0
+
 ## [0.3.6](https://github.com/robinpellegrims/pellegrims/compare/pellegrims-dev-0.3.5...pellegrims-dev-0.3.6) (2023-08-13)
 
 ### Bug Fixes
