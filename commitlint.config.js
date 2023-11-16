@@ -5,7 +5,6 @@ module.exports = {
       2,
       'always',
       [
-        'cotersus',
         'pellegrims-dev',
         'pellegrims-dev-e2e',
         'eslint-config-base',
