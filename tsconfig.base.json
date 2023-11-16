@@ -21,25 +21,6 @@
       "@pellegrims/eslint-config/base": [
         "libs/eslint-config/base/src/index.ts"
       ],
-      "@pellegrims/goldgetters/data-access": [
-        "libs/goldgetters/data-access/src/index.ts"
-      ],
-      "@pellegrims/goldgetters/db": ["libs/goldgetters/db/src/index.ts"],
-      "@pellegrims/goldgetters/server": [
-        "libs/goldgetters/server/src/index.ts"
-      ],
-      "@pellegrims/goldgetters/ui/atoms": [
-        "libs/goldgetters/ui/atoms/src/index.ts"
-      ],
-      "@pellegrims/goldgetters/ui/molecules": [
-        "libs/goldgetters/ui/molecules/src/index.ts"
-      ],
-      "@pellegrims/goldgetters/ui/organisms": [
-        "libs/goldgetters/ui/organisms/src/index.ts"
-      ],
-      "@pellegrims/goldgetters/ui/templates": [
-        "libs/goldgetters/ui/templates/src/index.ts"
-      ],
       "@pellegrims/nx-remotecache-s3": ["libs/nx-remotecache-s3/src/index.ts"],
       "@pellegrims/nx-vercel": ["libs/nx-vercel/src/index.ts"],
       "@pellegrims/pellegrims-dev/ui/atoms": [

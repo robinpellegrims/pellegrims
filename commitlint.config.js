@@ -12,7 +12,6 @@ module.exports = {
         'eslint-config-angular',
         'nx-remotecache-s3',
         'markdown',
-        'goldgetters',
         'shared',
         'shared-ui-atoms',
         'shared-test',
