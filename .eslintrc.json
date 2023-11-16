@@ -17,13 +17,6 @@
                 "onlyDependOnLibsWithTags": ["*"]
               },
               {
-                "sourceTag": "scope:goldgetters",
-                "onlyDependOnLibsWithTags": [
-                  "scope:goldgetters",
-                  "scope:shared"
-                ]
-              },
-              {
                 "sourceTag": "scope:pellegrims-dev",
                 "onlyDependOnLibsWithTags": [
                   "scope:pellegrims-dev",
