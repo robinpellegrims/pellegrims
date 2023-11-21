@@ -38,6 +38,9 @@
     "@aws-sdk/credential-provider-node": "^3.329.0",
     "@aws-sdk/lib-storage": "^3.329.0",
     "@aws-sdk/types": "^3.329.0",
+    "@smithy/node-http-handler": "^2.2.2",
+    "hpagent": "^1.2.0",
+    "matcher": "^4.0.0",
     "nx-remotecache-custom": "^19.0.0",
     "tslib": "^2.3.1"
   }
