@@ -1,8 +1,11 @@
-import type { CustomRunnerOptions } from 'nx-remotecache-custom';
-import type { S3Options } from './setup-s3-task-runner';
-import { buildCommonCommandInput, getEnv, isReadOnly } from './util';
-
-const emptyOptions: CustomRunnerOptions<S3Options> = { lifeCycle: {} };
+import { clearProxyInfo, emptyOptions } from './test-utils';
+import {
+  buildCommonCommandInput,
+  getEnv,
+  isReadOnly,
+  getHttpProxy,
+  getHttpsProxy,
+} from './util';
 
 describe('util', () => {
   const originalEnv = process.env;
@@ -81,6 +84,32 @@ describe('util', () => {
     it('returns false when env is "somestring" and option is undefined', () => {
       process.env.TEST_ENV = 'somestring';
       expect(isReadOnly({ ...emptyOptions }, 'TEST_ENV')).toBe(false);
+    });
+  });
+  describe('get proxy information', () => {
+    beforeEach(clearProxyInfo);
+
+    it('should return undefined when http_proxy and HTTP_PROXY is not set', () => {
+      expect(getHttpProxy()).toBe(undefined);
+    });
+    it('should return imaproxy when http_proxy is set', () => {
+      process.env.http_proxy = 'imaproxy';
+      expect(getHttpProxy()).toBe('imaproxy');
+    });
+    it('should return imaproxy when HTTP_PROXY is set', () => {
+      process.env.HTTP_PROXY = 'imaproxy';
+      expect(getHttpProxy()).toBe('imaproxy');
+    });
+    it('should return undefined when https_proxy and HTTPS_PROXY is not set', () => {
+      expect(getHttpsProxy()).toBe(undefined);
+    });
+    it('should return imaproxy when https_proxy is set', () => {
+      process.env.https_proxy = 'imaproxy';
+      expect(getHttpsProxy()).toBe('imaproxy');
+    });
+    it('should return imaproxy when HTTPS_PROXY is set', () => {
+      process.env.HTTPS_PROXY = 'imaproxy';
+      expect(getHttpsProxy()).toBe('imaproxy');
     });
   });
 });
