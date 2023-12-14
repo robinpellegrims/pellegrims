@@ -38,15 +38,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "libs/nx-vercel/**/*.ts",
-          "libs/nx-vercel/generators.json",
-          "libs/nx-vercel/executors.json",
-          "libs/nx-vercel/package.json"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
