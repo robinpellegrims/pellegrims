@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.1](https://github.com/robinpellegrims/pellegrims/compare/eslint-config-base-1.0.0...eslint-config-base-1.0.1) (2023-12-14)
+
 # [1.0.0](https://github.com/robinpellegrims/pellegrims/compare/eslint-config-base-0.0.10...eslint-config-base-1.0.0) (2023-11-16)
 
 ### Build System
