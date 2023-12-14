@@ -2,6 +2,7 @@
 title: 'Make Angular Material dialogs type-safe'
 description: 'How to use Angular Material dialogs in a type-safe way and avoid runtime issues'
 date: '2022-06-27'
+updateDate: '2023-12-14'
 tags: ['angular', 'material', 'typescript']
 coverImage: '/assets/blog/ng-material-dialog-type-safety/cover.jpg'
 ---
@@ -17,7 +18,7 @@ isn't completely type-safe and could potentially lead to runtime issues.
 
 ## Use case
 
-Our use case is using Angular v13.3.8 and is based
+Our use case is using Angular v17.0.4 and is based
 on [this example](https://material.angular.io/components/dialog/overview#sharing-data-with-the-dialog-component) in the
 official Angular Material documentation.
 
@@ -50,9 +51,9 @@ After clicking one of the buttons, the dialog returns a boolean representing the
   // template: see above
 })
 export class AppComponent {
-  constructor(public dialog: MatDialog) {}
+  private dialog = inject(DialogService);
 
-  openDialog() {
+  protected openDialog() {
     this.dialog
       .open(DialogComponent, { data: { animal: 'panda' } })
       .afterClosed()
@@ -83,13 +84,11 @@ export class AppComponent {
   // template: see above
 })
 export class DialogComponent {
-  constructor(
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
-    public dialogRef: MatDialogRef<DialogComponent>
-  ) {}
+  protected data: DialogData = inject(MAT_DIALOG_DATA);
+  protected dialogRef: MatDialogRef<DialogComponent> = inject(MatDialogRef);
 
-  cancelClick = () => this.dialogRef.close(false);
-  okClick = () => this.dialogRef.close(true);
+  protected cancelClick = () => this.dialogRef.close(false);
+  protected okClick = () => this.dialogRef.close(true);
 }
 ```
 
@@ -125,7 +124,7 @@ this.dialog
   instead:
 
 ```typescript
-@Inject(MAT_DIALOG_DATA) public data: { favouriteAnimal: string }
+protected data: { favouriteAnimal: string } = inject(MAT_DIALOG_DATA);
 ```
 
 - The dialog should return a boolean value after closing, but nothing currently prevents us from passing anything else
@@ -161,10 +160,8 @@ In the dialog component, we can force the result type when injecting the `MatDia
 
 ```typescript
 // dialog component
-constructor(
-  @Inject(MAT_DIALOG_DATA) public data: DialogData,
-  public dialogRef: MatDialogRef<DialogComponent, boolean>
-) {}
+protected data: DialogData = inject(MAT_DIALOG_DATA);
+protected dialogRef: MatDialogRef<DialogComponent, boolean> = inject(MatDialogRef);
 ```
 
 While these simple changes effectively force the developer to use correct dialog data and result objects, it still
@@ -179,18 +176,16 @@ dialog Data/Result types, a custom dialog service and abstract dialog component 
 ```typescript
 @Directive()
 export abstract class StronglyTypedDialog<DialogData, DialogResult> {
-  constructor(
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
-    public dialogRef: MatDialogRef<
-      StronglyTypedDialog<DialogData, DialogResult>,
-      DialogResult
-    >
-  ) {}
+  protected data: DialogData = inject(MAT_DIALOG_DATA);
+  protected dialogRef: MatDialogRef<
+    StronglyTypedDialog<DialogData, DialogResult>,
+    DialogResult
+  > = inject(MatDialogRef);
 }
 
 @Injectable({ providedIn: 'root' })
 export class DialogService {
-  constructor(public dialog: MatDialog) {}
+  protected dialog = inject(MatDialog);
 
   open = <DialogData, DialogResult>(
     component: ComponentType<StronglyTypedDialog<DialogData, DialogResult>>,
@@ -210,8 +205,8 @@ Since the constructor has been moved to an abstract superclass, the dialog compo
   // template: unchanged, see above
 })
 export class DialogComponent extends StronglyTypedDialog<DialogData, boolean> {
-  cancelClick = () => this.dialogRef.close(false);
-  okClick = () => this.dialogRef.close(true);
+  protected cancelClick = () => this.dialogRef.close(false);
+  protected okClick = () => this.dialogRef.close(true);
 }
 ```
 
@@ -223,9 +218,9 @@ The dialog can then be opened through this new `DialogService` instead of the re
   // template: unchanged, see above
 })
 export class AppComponent {
-  constructor(public dialog: DialogService) {}
+  private dialog = inject(DialogService);
 
-  openDialog() {
+  protected openDialog() {
     this.dialog
       .open(DialogComponent, { data: { animal: 'panda' } })
       .afterClosed()
@@ -254,3 +249,8 @@ Some of the issues can be addressed by adding generic params:
 
 Finally, the `open()` method of the `MatDialogService` can be wrapped in a custom service that provides full type-safety
 and addresses all of the explored issues.
+
+## More information
+
+- [Example repository](https://github.com/robinpellegrims/angular-material-type-safe-dialog)
+- [Official documentation](https://material.angular.io/components/dialog)
