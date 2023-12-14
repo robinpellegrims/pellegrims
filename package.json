@@ -37,7 +37,7 @@
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "next": "13.3.0",
-    "next-auth": "^4.22.1",
+    "next-auth": "^4.24.5",
     "next-seo": "^4.28.1",
     "nodemailer": "^6.7.2",
     "nx-remotecache-custom": "^17.0.0",
