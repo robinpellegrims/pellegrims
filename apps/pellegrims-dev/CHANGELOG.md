@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.2](https://github.com/robinpellegrims/pellegrims/compare/pellegrims-dev-1.0.1...pellegrims-dev-1.0.2) (2023-12-14)
+
 ## [1.0.1](https://github.com/robinpellegrims/pellegrims/compare/pellegrims-dev-1.0.0...pellegrims-dev-1.0.1) (2023-12-14)
 
 # [1.0.0](https://github.com/robinpellegrims/pellegrims/compare/pellegrims-dev-0.3.6...pellegrims-dev-1.0.0) (2023-11-16)
