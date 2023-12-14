@@ -23,16 +23,28 @@ export const BlogArticle: FunctionComponent<BlogArticleProps> = ({
     <header className="flex flex-col">
       <div className="mb-6 flex flex-col gap-2">
         <div className="flex w-full flex-row items-center justify-between">
-          {markDown.frontMatter.date ? (
-            <DateFormatted date={new Date(markDown.frontMatter.date)} />
-          ) : null}
+          <span>
+            {markDown.frontMatter.date ? (
+              <DateFormatted date={new Date(markDown.frontMatter.date)} />
+            ) : null}
+            {markDown.frontMatter.updateDate ? (
+              <>
+                {' '}
+                (last update:{' '}
+                <DateFormatted
+                  date={new Date(markDown.frontMatter.updateDate)}
+                />
+                )
+              </>
+            ) : null}
+          </span>
           {markDown.readingTimeMins} min read
         </div>
         <Tags tags={markDown.frontMatter.tags ?? []} />
       </div>
       <h1>{markDown.frontMatter.title}</h1>
       {markDown.frontMatter.coverImage ? (
-        <div className="relative h-[31rem]">
+        <div className="relative mb-6 h-[31rem]">
           <Image
             src={markDown.frontMatter.coverImage}
             alt="cover image"

@@ -9,6 +9,7 @@ export interface FrontMatter {
   title?: string;
   description?: string;
   date?: DateString;
+  updateDate: DateString;
   tags?: string[];
   coverImage?: string;
 }
