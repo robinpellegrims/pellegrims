@@ -69,7 +69,7 @@ const headObjectCalledWithParams = async ({
   const runner = await setupS3TaskRunner(runnerOptions);
   await runner.fileExists(filename);
   const safePrefix = prefix ?? '';
-  expect(s3Mock.mock.instances[0].headObject).toHaveBeenCalledWith({
+  expect(s3Mock.prototype.headObject).toHaveBeenCalledWith({
     // eslint-disable-next-line @typescript-eslint/naming-convention
     Bucket: bucket,
     // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -89,7 +89,7 @@ const getObjectCalledWithParams = async ({
   const runner = await setupS3TaskRunner(runnerOptions);
   await runner.retrieveFile(filename);
   const safePrefix = prefix ?? '';
-  expect(s3Mock.mock.instances[0].getObject).toHaveBeenCalledWith({
+  expect(s3Mock.prototype.getObject).toHaveBeenCalledWith({
     // eslint-disable-next-line @typescript-eslint/naming-convention
     Bucket: bucket,
     // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -109,15 +109,12 @@ const uploadCalledWithParams = async ({
   const runner = await setupS3TaskRunner(runnerOptions);
   await runner.storeFile(filename, fileContentStream);
   const safePrefix = prefix ?? '';
-  expect(uploadMock).toHaveBeenCalledWith({
-    client: s3Mock.mock.instances[0],
-    params: {
-      /* eslint-disable @typescript-eslint/naming-convention */
-      Bucket: bucket,
-      Key: safePrefix + filename,
-      Body: fileContentStream,
-      /* eslint-enable @typescript-eslint/naming-convention */
-    },
+  expect(uploadMock.mock.calls[0][0].params).toEqual({
+    /* eslint-disable @typescript-eslint/naming-convention */
+    Bucket: bucket,
+    Key: safePrefix + filename,
+    Body: fileContentStream,
+    /* eslint-enable @typescript-eslint/naming-convention */
   });
 };
 
@@ -148,7 +145,7 @@ describe('setupS3TaskRunner', () => {
         it('only once', async () => {
           const runner = await setupS3TaskRunner(emptyOptions);
           await runner.fileExists(filename);
-          const method = s3Mock.mock.instances[0].headObject;
+          const method = s3Mock.prototype.headObject;
           expect(method).toBeCalledTimes(1);
         });
         it('with default parameters', async () =>
@@ -204,7 +201,7 @@ describe('setupS3TaskRunner', () => {
         it('only once', async () => {
           const runner = await setupS3TaskRunner(emptyOptions);
           await runner.retrieveFile(filename);
-          expect(s3Mock.mock.instances[0].getObject).toHaveBeenCalledTimes(1);
+          expect(s3Mock.prototype.getObject).toHaveBeenCalledTimes(1);
         });
         it('with default parameters', async () =>
           await getObjectCalledWithParams({
