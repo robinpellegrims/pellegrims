@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [5.0.3](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-5.0.2...nx-remotecache-s3-5.0.3) (2024-01-02)
+
+### Bug Fixes
+
+- **nx-remotecache-s3:** add config value to provider call for role assumption ([1cae7fe](https://github.com/robinpellegrims/pellegrims/commit/1cae7fe4bd636b970ff0ebf7b4d4384d6cb154ea))
+- **nx-remotecache-s3:** update test for provider call for role assumption ([66c785d](https://github.com/robinpellegrims/pellegrims/commit/66c785d9a737a44d29d2c429404c57960c1bd81d))
+
 ## [5.0.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-5.0.1...nx-remotecache-s3-5.0.2) (2023-12-14)
 
 ## [5.0.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-5.0.0...nx-remotecache-s3-5.0.1) (2023-12-14)
