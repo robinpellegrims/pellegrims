@@ -43,6 +43,7 @@ const expectS3Instance = (params: {
   expect(defaultProvider).toHaveBeenCalledWith({
     profile: params.profile,
     roleAssumerWithWebIdentity: expect.any(Function),
+    roleAssumer: expect.any(Function),
   });
   expect(s3Mock).toHaveBeenCalledTimes(1);
   expect(s3Mock).toHaveBeenCalledWith({
