@@ -22,22 +22,7 @@
         "libs/eslint-config/base/src/index.ts"
       ],
       "@pellegrims/nx-remotecache-s3": ["libs/nx-remotecache-s3/src/index.ts"],
-      "@pellegrims/nx-vercel": ["libs/nx-vercel/src/index.ts"],
-      "@pellegrims/pellegrims-dev/ui/atoms": [
-        "libs/pellegrims-dev/ui/atoms/src/index.ts"
-      ],
-      "@pellegrims/pellegrims-dev/ui/molecules": [
-        "libs/pellegrims-dev/ui/molecules/src/index.ts"
-      ],
-      "@pellegrims/pellegrims-dev/ui/organisms": [
-        "libs/pellegrims-dev/ui/organisms/src/index.ts"
-      ],
-      "@pellegrims/pellegrims-dev/ui/templates": [
-        "libs/pellegrims-dev/ui/templates/src/index.ts"
-      ],
-      "@pellegrims/shared/markdown": ["libs/shared/markdown/src/index.ts"],
-      "@pellegrims/shared/test": ["libs/shared/test/src/index.ts"],
-      "@pellegrims/shared/ui/atoms": ["libs/shared/ui/atoms/src/index.ts"]
+      "@pellegrims/nx-vercel": ["libs/nx-vercel/src/index.ts"]
     },
     "strict": true,
     "noUnusedLocals": true,

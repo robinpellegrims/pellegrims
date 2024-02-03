@@ -15,13 +15,6 @@
               {
                 "sourceTag": "*",
                 "onlyDependOnLibsWithTags": ["*"]
-              },
-              {
-                "sourceTag": "scope:pellegrims-dev",
-                "onlyDependOnLibsWithTags": [
-                  "scope:pellegrims-dev",
-                  "scope:shared"
-                ]
               }
             ]
           }
