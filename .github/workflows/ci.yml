@@ -30,8 +30,8 @@ jobs:
           script: |
             // Calculate affected projects and define a matrix to use for the next job
             const maxRunners = 3;
-            const targets = ['test', 'lint', 'e2e', 'deploy'];
-            const serialTargets = ['e2e', 'deploy'];
+            const targets = ['test', 'lint', 'e2e'];
+            const serialTargets = ['e2e'];
             const matrix = { include: [] };
             let hasChanges = false;
 
@@ -112,4 +112,3 @@ jobs:
           MATRIX_TARGET: ${{ matrix.target }}
           MATRIX_PARALLEL: ${{ matrix.parallel }}
           MATRIX_PROJECTS: ${{ matrix.projects }}
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
