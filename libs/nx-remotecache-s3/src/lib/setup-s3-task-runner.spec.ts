@@ -2,7 +2,12 @@ import { S3 } from '@aws-sdk/client-s3';
 import { Upload } from '@aws-sdk/lib-storage';
 import { Readable } from 'stream';
 import { setupS3TaskRunner } from './setup-s3-task-runner';
-
+import {
+  clearProxyInfo,
+  defaultOptions,
+  emptyOptions,
+  envValues,
+} from './test-utils';
 import type { CustomRunnerOptions } from 'nx-remotecache-custom';
 import type { S3Options } from './setup-s3-task-runner';
 
@@ -23,29 +28,6 @@ jest.mocked(S3.prototype.getObject).mockImplementation(() =>
 );
 
 jest.mock('@aws-sdk/credential-provider-node');
-
-const emptyOptions: CustomRunnerOptions<S3Options> = { lifeCycle: {} };
-
-const defaultOptions: CustomRunnerOptions<S3Options> = {
-  lifeCycle: {},
-  endpoint: 'optionsEndpoint',
-  region: 'optionsRegion',
-  forcePathStyle: true,
-  profile: 'optionsProfile',
-  bucket: 'optionsBucket',
-  prefix: 'optionsPrefix',
-  readOnly: false,
-};
-
-const envValues: Record<keyof S3Options, string> = {
-  endpoint: 'envEndpoint',
-  region: 'envRegion',
-  forcePathStyle: 'true',
-  profile: 'envProfile',
-  bucket: 'envBucket',
-  prefix: 'envPrefix',
-  readOnly: 'false',
-};
 
 const mockHeadObjectError = (error: string) =>
   jest
@@ -120,6 +102,8 @@ const uploadCalledWithParams = async ({
 
 describe('setupS3TaskRunner', () => {
   const originalEnv = process.env;
+
+  beforeEach(clearProxyInfo);
 
   afterEach(() => {
     process.env = { ...originalEnv };

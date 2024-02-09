@@ -70,6 +70,14 @@ Hash: d3d2bea71ea0f3004304c5cc88cf91be50b02bb636ebbdfcc927626fd8edf1ae
 
 See [nx-remotecache-custom](https://github.com/NiklasPor/nx-remotecache-custom#advanced-configuration).
 
+### Proxy Configuration
+
+To use a proxy to connect to the S3 bucket, set any of the `http_proxy` `https_proxy` `HTTP_PROXY` or `HTTPS_PROXY` environment variables, with the lowercase version taking precedence. If needed, the proxy can be bypassed by adding the S3 endpoint to the `no_proxy` or `NO_PROXY` environment variables.
+
+If the s3 endpoint has not been configured, the `no_proxy` will be checked against the default s3 endpoint, which is `s3.amazonaws.com`. Adding `.amazonaws.com` to your `no_proxy` will bypass the proxy for calls to s3, but MAY also affect other calls to any `amazonaws.com` service.
+
+To specifically bypass the proxy for ONLY S3 calls, make sure to configure the `endpoint` by specifying it in the options parameters or setting the `NXCACHE_S3_ENDPOINT` environment variable, and adding the same url to the `no_proxy` environment variable.
+
 ## More Custom Runners
 
 See [nx-remotecache-custom](https://github.com/NiklasPor/nx-remotecache-custom#all-custom-runners).
