@@ -29,7 +29,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
-    "@jscutlery/semver": "^4.0.0",
+    "@jscutlery/semver": "^5.2.0",
     "@nx/cypress": "18.0.6",
     "@nx/devkit": "18.0.6",
     "@nx/eslint": "18.0.6",
