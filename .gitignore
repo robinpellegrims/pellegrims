@@ -40,7 +40,6 @@ Thumbs.db
 /migrations.json
 
 .env.local
-.env
 
 # Next.js
 .next
