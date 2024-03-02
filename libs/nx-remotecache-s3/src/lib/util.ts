@@ -18,9 +18,10 @@ export const isReadOnly = (
   options: CustomRunnerOptions<S3Options>,
   envReadOnly: string
 ) => {
-  if (typeof getEnv(envReadOnly) !== 'undefined') {
-    if (getEnv(envReadOnly) === 'true') return true;
-    if (getEnv(envReadOnly) === 'false') return false;
+  const readonly = getEnv(envReadOnly);
+  if (typeof readonly !== 'undefined') {
+    if (readonly === 'true') return true;
+    if (readonly === 'false') return false;
   }
   return options.readOnly ?? false;
 };
