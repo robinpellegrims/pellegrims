@@ -22,7 +22,7 @@
     "@aws-sdk/types": "^3.468.0",
     "@smithy/abort-controller": "^2.0.15",
     "@swc/helpers": "0.5.3",
-    "nx-remotecache-custom": "^17.0.0",
+    "nx-remotecache-custom": "^18.0.0",
     "semver": "^6.3.1",
     "tslib": "^2.0.0"
   },
@@ -78,4 +78,3 @@
     ]
   }
 }
-
