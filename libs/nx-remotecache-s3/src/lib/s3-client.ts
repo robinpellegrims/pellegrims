@@ -24,7 +24,7 @@ const ENV_FORCE_PATH_STYLE = 'NXCACHE_S3_FORCE_PATH_STYLE';
 const ENV_REGION = 'NXCACHE_S3_REGION';
 const ENV_ACCESS_KEY_ID = 'NXCACHE_S3_ACCESS_KEY_ID';
 const ENV_SECRET_ACCESS_KEY = 'NXCACHE_S3_SECRET_ACCESS_KEY';
-const DEFAULT_S3_ENDPOINT = 'https://amazonaws.com';
+const DEFAULT_S3_ENDPOINT = 'https://s3.amazonaws.com';
 
 function getHttpAgent(): HttpsProxyAgent {
   return new HttpsProxyAgent({ proxy: getHttpProxy() as string });
