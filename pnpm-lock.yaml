@@ -158,8 +158,8 @@ devDependencies:
     specifier: 4.9.4
     version: 4.9.4
   vite:
-    specifier: 5.0.8
-    version: 5.0.8(@types/node@18.19.21)
+    specifier: 5.0.13
+    version: 5.0.13(@types/node@18.19.21)
   vitest:
     specifier: ^0.25.1
     version: 0.25.8
@@ -12668,15 +12668,6 @@ packages:
       }
     dev: true
 
-  /nanoid@3.3.6:
-    resolution:
-      {
-        integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==,
-      }
-    engines: { node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1 }
-    hasBin: true
-    dev: true
-
   /nanoid@3.3.7:
     resolution:
       {
@@ -13403,18 +13394,6 @@ packages:
         integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==,
       }
     engines: { node: '>=4' }
-    dev: true
-
-  /postcss@8.4.31:
-    resolution:
-      {
-        integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==,
-      }
-    engines: { node: ^10 || ^12 || >=14 }
-    dependencies:
-      nanoid: 3.3.6
-      picocolors: 1.0.0
-      source-map-js: 1.0.2
     dev: true
 
   /postcss@8.4.32:
@@ -15486,17 +15465,17 @@ packages:
     dependencies:
       '@types/node': 18.19.21
       esbuild: 0.15.18
-      postcss: 8.4.31
+      postcss: 8.4.32
       resolve: 1.22.2
       rollup: 2.79.1
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
 
-  /vite@5.0.8(@types/node@18.19.21):
+  /vite@5.0.13(@types/node@18.19.21):
     resolution:
       {
-        integrity: sha512-jYMALd8aeqR3yS9xlHd0OzQJndS9fH5ylVgWdB+pxTwxLKdO1pgC5Dlb398BUxpfaBxa4M9oT7j1g503Gaj5IQ==,
+        integrity: sha512-/9ovhv2M2dGTuA+dY93B9trfyWMDRQw2jdVBhHNP6wr0oF34wG2i/N55801iZIpgUpnHDm4F/FabGQLyc+eOgg==,
       }
     engines: { node: ^18.0.0 || >=20.0.0 }
     hasBin: true
