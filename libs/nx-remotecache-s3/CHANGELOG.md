@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [7.0.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-6.0.0...nx-remotecache-s3-7.0.0) (2024-05-23)
+
+### Features
+
+- update nx to v19.0.6 ([79bb766](https://github.com/robinpellegrims/pellegrims/commit/79bb766e6e9a80ebf88ded795f564a56880020c7))
+
+### BREAKING CHANGES
+
+- update nx to 19
+
 # [6.0.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-5.0.4...nx-remotecache-s3-6.0.0) (2024-03-02)
 
 ### Features
