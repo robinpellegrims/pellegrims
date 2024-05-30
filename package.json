@@ -21,7 +21,10 @@
     "@aws-sdk/s3-request-presigner": "^3.473.0",
     "@aws-sdk/types": "^3.468.0",
     "@smithy/abort-controller": "^2.0.15",
+    "@smithy/node-http-handler": "^2.2.2",
     "@swc/helpers": "0.5.3",
+    "hpagent": "^1.2.0",
+    "matcher": "^4.0.0",
     "nx-remotecache-custom": "^19.0.0",
     "semver": "^6.3.1",
     "tslib": "^2.0.0"
