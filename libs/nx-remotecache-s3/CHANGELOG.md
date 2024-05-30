@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [7.1.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-7.0.0...nx-remotecache-s3-7.1.0) (2024-05-30)
+
+### Features
+
+- add proxy support for nx-remotecache-s3 ([#267](https://github.com/robinpellegrims/pellegrims/issues/267)) ([f91742f](https://github.com/robinpellegrims/pellegrims/commit/f91742fde0a9b1b16e897aa6217cab460b9ab6ed))
+
 # [7.0.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-6.0.0...nx-remotecache-s3-7.0.0) (2024-05-23)
 
 ### Features
