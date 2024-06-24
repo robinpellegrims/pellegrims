@@ -29,7 +29,11 @@
     "release": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "postTargets": ["nx-remotecache-s3:github", "nx-remotecache-s3:publish"]
+        "postTargets": [
+          "nx-remotecache-s3:github",
+          "nx-remotecache-s3:build",
+          "nx-remotecache-s3:publish"
+        ]
       }
     },
     "github": {
@@ -42,8 +46,10 @@
     "publish": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public"
-      }
+        "access": "public",
+        "distFolderPath": "dist/libs/nx-remotecache-s3"
+      },
+      "dependsOn": ["build"]
     }
   },
   "tags": []
