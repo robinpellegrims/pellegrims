@@ -31,6 +31,7 @@
       "options": {
         "postTargets": [
           "eslint-config-angular:github",
+          "eslint-config-angular:build",
           "eslint-config-angular:publish"
         ]
       }
@@ -45,8 +46,10 @@
     "publish": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public"
-      }
+        "access": "public",
+        "distFolderPath": "dist/libs/eslint-config/angular"
+      },
+      "dependsOn": ["build"]
     }
   },
   "tags": []
