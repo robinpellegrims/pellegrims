@@ -48,3 +48,4 @@ Thumbs.db
 .vercel
 
 .nx/cache
+.nx/workspace-data
