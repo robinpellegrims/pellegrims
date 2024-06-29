@@ -18,6 +18,8 @@ jobs:
           fetch-depth: 0
       - name: Install dependencies
         uses: robinpellegrims/composite-actions/pnpm-install@main
+        with:
+          pnpm-version: 9.4.0
       - uses: nrwl/nx-set-shas@v3
       # This line is needed for nx affected to work when CI is running on a PR
       - run: git branch --track master origin/master
@@ -92,6 +94,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Install dependencies
         uses: robinpellegrims/composite-actions/pnpm-install@main
+        with:
+          pnpm-version: 9.4.0
       - name: Execute
         uses: actions/github-script@v7
         id: execute
