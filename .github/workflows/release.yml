@@ -18,6 +18,8 @@ jobs:
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
       - name: Install dependencies
         uses: robinpellegrims/composite-actions/pnpm-install@main
+        with:
+          pnpm-version: 9.4.0
       - uses: actions/setup-node@v2
         with:
           node-version: 16
