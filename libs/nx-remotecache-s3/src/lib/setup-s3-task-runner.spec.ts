@@ -235,20 +235,6 @@ describe('setupS3TaskRunner', () => {
           });
         });
       });
-      describe('should not call Upload when readonly', () => {
-        it('through option', async () => {
-          const runner = await setupS3TaskRunner({
-            ...defaultOptions,
-            readOnly: true,
-          });
-          expect(runner.storeFile).toThrowError('ReadOnly');
-        });
-        it('through env variable', async () => {
-          process.env.NXCACHE_S3_READ_ONLY = 'true';
-          const runner = await setupS3TaskRunner(emptyOptions);
-          expect(runner.storeFile).toThrowError('ReadOnly');
-        });
-      });
     });
   });
 });

@@ -1,8 +1,7 @@
-import { clearProxyInfo, emptyOptions } from './test-utils';
+import { clearProxyInfo } from './test-utils';
 import {
   buildCommonCommandInput,
   getEnv,
-  isReadOnly,
   getHttpProxy,
   getHttpsProxy,
 } from './util';
@@ -48,42 +47,6 @@ describe('util', () => {
         Key: 'prefixfilename',
         /* eslint-enable @typescript-eslint/naming-convention */
       });
-    });
-  });
-  describe('isReadOnly', () => {
-    it('returns true when option is true and env is undefined', () => {
-      expect(isReadOnly({ ...emptyOptions, readOnly: true }, 'TEST_ENV')).toBe(
-        true
-      );
-    });
-    it('returns false when option is false and env is undefined', () => {
-      expect(isReadOnly({ ...emptyOptions, readOnly: false }, 'TEST_ENV')).toBe(
-        false
-      );
-    });
-    it('returns true when env is true', () => {
-      process.env.TEST_ENV = 'true';
-      expect(isReadOnly({ ...emptyOptions }, 'TEST_ENV')).toBe(true);
-    });
-    it('returns false when env is false', () => {
-      process.env.TEST_ENV = 'false';
-      expect(isReadOnly({ ...emptyOptions }, 'TEST_ENV')).toBe(false);
-    });
-    it('returns true when env is "somestring" and option is true', () => {
-      process.env.TEST_ENV = 'somestring';
-      expect(isReadOnly({ ...emptyOptions, readOnly: true }, 'TEST_ENV')).toBe(
-        true
-      );
-    });
-    it('returns false when env is "somestring" and option is false', () => {
-      process.env.TEST_ENV = 'somestring';
-      expect(isReadOnly({ ...emptyOptions, readOnly: false }, 'TEST_ENV')).toBe(
-        false
-      );
-    });
-    it('returns false when env is "somestring" and option is undefined', () => {
-      process.env.TEST_ENV = 'somestring';
-      expect(isReadOnly({ ...emptyOptions }, 'TEST_ENV')).toBe(false);
     });
   });
   describe('get proxy information', () => {

@@ -11,7 +11,6 @@ export const defaultOptions: CustomRunnerOptions<S3Options> = {
   profile: 'optionsProfile',
   bucket: 'optionsBucket',
   prefix: 'optionsPrefix',
-  readOnly: false,
 };
 
 export const envValues: Record<keyof S3Options, string> = {
@@ -21,7 +20,6 @@ export const envValues: Record<keyof S3Options, string> = {
   profile: 'envProfile',
   bucket: 'envBucket',
   prefix: 'envPrefix',
-  readOnly: 'false',
 };
 
 export const clearProxyInfo = () => {
