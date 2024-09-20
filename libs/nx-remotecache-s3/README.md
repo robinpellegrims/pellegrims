@@ -20,7 +20,6 @@ npm install --save-dev @pellegrims/nx-remotecache-s3
 | Region           | Optional. The AWS region to which this client will send requests.                                                                                     | `NXCACHE_S3_REGION`              | `region`         |
 | Profile          | Optional. The AWS profile to use to authenticate.                                                                                                     | `NXCACHE_S3_PROFILE`             | `profile`        |
 | Force Path Style | Optional. Whether to force path style URLs for S3 objects (e.g., `https://s3.amazonaws.com/<bucket>/` instead of `https://<bucket>.s3.amazonaws.com/` | `NXCACHE_S3_FORCE_PATH_STYLE`    | `forcePathStyle` |
-| Read Only        | Optional. Disable writing cache to the S3 bucket. This may be useful if you only want to write to the cache from a CI but not localhost.              | `NXCACHE_S3_READ_ONLY`           | `readOnly`       |
 | Http Proxy       | Optional. Useful when your environment must connect to a proxy to access the internet.                                                                | `http_proxy` \|\| `HTTP_PROXY`   |                  |
 | Https Proxy      | Optional. Useful when your environment must connect to a proxy to access the internet.                                                                | `https_proxy` \|\| `HTTPS_PROXY` |                  |
 | No Proxy         | Optional. Useful when your environment must connect to a proxy to access the internet, but is not needed for connecting to aws.                       | `no_proxy` \|\| `NO_PROXY`       |                  |
@@ -37,8 +36,7 @@ npm install --save-dev @pellegrims/nx-remotecache-s3
         "prefix": "prefix/",
         "region": "us-west-000",
         "profile": "name-of-aws-profile",
-        "forcePathStyle": true,
-        "readOnly": false
+        "forcePathStyle": true
       }
     }
   }
@@ -71,7 +69,7 @@ Hash: d3d2bea71ea0f3004304c5cc88cf91be50b02bb636ebbdfcc927626fd8edf1ae
 
 ## Advanced Configuration
 
-See [nx-remotecache-custom](https://github.com/NiklasPor/nx-remotecache-custom#advanced-configuration).
+See [nx-remotecache-custom](https://github.com/NiklasPor/nx-remotecache-custom#advanced-configuration) for more options like the ability to disable writes which may be useful if you only want to write to the cache from a CI but not localhost.
 
 ### Proxy Configuration
 

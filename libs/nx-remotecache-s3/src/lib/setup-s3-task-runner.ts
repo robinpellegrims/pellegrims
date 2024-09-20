@@ -1,14 +1,13 @@
 import { Upload } from '@aws-sdk/lib-storage';
 import { initEnv } from 'nx-remotecache-custom';
 import { buildS3Client } from './s3-client';
-import { buildCommonCommandInput, getEnv, isReadOnly } from './util';
+import { buildCommonCommandInput, getEnv } from './util';
 
 import type { CustomRunnerOptions } from 'nx-remotecache-custom';
 import type { RemoteCacheImplementation } from 'nx-remotecache-custom/types/remote-cache-implementation';
 
 const ENV_BUCKET = 'NXCACHE_S3_BUCKET';
 const ENV_PREFIX = 'NXCACHE_S3_PREFIX';
-const ENV_READ_ONLY = 'NXCACHE_S3_READ_ONLY';
 
 export interface S3Options {
   bucket?: string;
@@ -16,7 +15,6 @@ export interface S3Options {
   forcePathStyle?: boolean;
   prefix?: string;
   profile?: string;
-  readOnly?: boolean;
   region?: string;
 }
 
@@ -29,7 +27,6 @@ export const setupS3TaskRunner = async (
 
   const bucket = getEnv(ENV_BUCKET) ?? options.bucket;
   const prefix = getEnv(ENV_PREFIX) ?? options.prefix ?? '';
-  const readOnly = isReadOnly(options, ENV_READ_ONLY);
 
   return {
     name: 'S3',
@@ -57,10 +54,6 @@ export const setupS3TaskRunner = async (
       return result.Body as NodeJS.ReadableStream;
     },
     storeFile: (filename: string, stream) => {
-      if (readOnly) {
-        throw new Error('ReadOnly');
-      }
-
       const upload = new Upload({
         client: s3Storage,
         params: {
