@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [8.0.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-7.1.0...nx-remotecache-s3-8.0.0) (2024-09-29)
+
+### Bug Fixes
+
+- **nx-remotecache-s3:** remove readOnly param and env var ([ddb7051](https://github.com/robinpellegrims/pellegrims/commit/ddb70510b9ce6e8ec80b30d506fd490413f0c808))
+
+### BREAKING CHANGES
+
+- **nx-remotecache-s3:** Update to `write: false` or `NXCACHE_WRITE=false` from `nx-remotecache-custom`.
+
 # [7.1.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-7.0.0...nx-remotecache-s3-7.1.0) (2024-05-30)
 
 ### Features
