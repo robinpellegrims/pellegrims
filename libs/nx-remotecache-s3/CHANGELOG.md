@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [8.1.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-8.0.0...nx-remotecache-s3-8.1.0) (2024-11-10)
+
+### Features
+
+- **nx-remotecache-s3:** support nx v20 ([4bccc51](https://github.com/robinpellegrims/pellegrims/commit/4bccc51f238df125779aadeddd91ea06d627732c))
+
 # [8.0.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-7.1.0...nx-remotecache-s3-8.0.0) (2024-09-29)
 
 ### Bug Fixes
