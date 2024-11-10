@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.2](https://github.com/robinpellegrims/pellegrims/compare/eslint-config-angular-1.0.1...eslint-config-angular-1.0.2) (2024-11-10)
+
 ## [1.0.1](https://github.com/robinpellegrims/pellegrims/compare/eslint-config-angular-1.0.0...eslint-config-angular-1.0.1) (2023-12-14)
 
 # [1.0.0](https://github.com/robinpellegrims/pellegrims/compare/eslint-config-angular-0.0.10...eslint-config-angular-1.0.0) (2023-11-16)
