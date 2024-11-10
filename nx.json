@@ -50,5 +50,6 @@
       "!{projectRoot}/src/test-setup.[jt]s"
     ]
   },
-  "defaultBase": "master"
+  "defaultBase": "master",
+  "useLegacyCache": true
 }
