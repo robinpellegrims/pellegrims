@@ -4870,14 +4870,6 @@ packages:
     engines: { node: '>=0.10.0' }
     hasBin: true
 
-  ejs@3.1.9:
-    resolution:
-      {
-        integrity: sha512-rC+QVNMJWv+MtPgkt0y+0rVEIdbtxVADApW9JXrUVlzHetgcyczP/E7DJmWJ4fJCZF2cPcBk0laWO9ZHMG3DmQ==,
-      }
-    engines: { node: '>=0.10.0' }
-    hasBin: true
-
   electron-to-chromium@1.4.690:
     resolution:
       {
@@ -11570,7 +11562,7 @@ snapshots:
 
   '@nx/devkit@20.8.2(nx@20.8.2)':
     dependencies:
-      ejs: 3.1.9
+      ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.1
       minimatch: 9.0.3
@@ -13479,10 +13471,6 @@ snapshots:
   eastasianwidth@0.2.0: {}
 
   ejs@3.1.10:
-    dependencies:
-      jake: 10.8.5
-
-  ejs@3.1.9:
     dependencies:
       jake: 10.8.5
 
