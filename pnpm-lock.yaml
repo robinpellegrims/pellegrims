@@ -1900,6 +1900,7 @@ packages:
         integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==,
       }
     engines: { node: '>=10.10.0' }
+    deprecated: Use @eslint/config-array instead
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution:
@@ -1913,6 +1914,7 @@ packages:
       {
         integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==,
       }
+    deprecated: Use @eslint/object-schema instead
 
   '@hutson/parse-repository-url@5.0.0':
     resolution:
@@ -2063,13 +2065,6 @@ packages:
         integrity: sha512-RyjiyMUZrKz/c+zlMFO1pm70DcIlST8AeWTkoUdZevew44wcNZQHsEVOiCVtgVnlFFD82FPaXycys58cf2muVQ==,
       }
     engines: { node: ^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0 }
-
-  '@jest/types@29.5.0':
-    resolution:
-      {
-        integrity: sha512-qbu7kN6czmVRc3xWFQcAN03RAUamgppVUdXrvl1Wr3jlNF93o9mJbGcDWrwGB6ht44u7efB1qCFgVQmca24Uog==,
-      }
-    engines: { node: ^14.15.0 || ^16.10.0 || >=18.0.0 }
 
   '@jest/types@29.6.3':
     resolution:
@@ -3497,6 +3492,7 @@ packages:
       {
         integrity: sha512-m7VZ3jwz4eK6A4Vtt8Ew1/mNbP24u0FhdyfA7fSvnJR6LMdfOYnmuIrrJAgrYfYJ10F/otaHTtrtrtmHdMNzEw==,
       }
+    deprecated: package has been renamed to acorn-import-attributes
     peerDependencies:
       acorn: ^8
 
@@ -3989,14 +3985,6 @@ packages:
       }
     engines: { node: '>=8' }
 
-  browserslist@4.21.5:
-    resolution:
-      {
-        integrity: sha512-tUkiguQGW7S3IhB7N+c2MV/HZPSCPAAiYBZXLsBhFB/PCy6ZKKsZrmBayHV9fdGV/ARIfJ14NkxKzRDjvp7L6w==,
-      }
-    engines: { node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7 }
-    hasBin: true
-
   browserslist@4.23.0:
     resolution:
       {
@@ -4108,12 +4096,6 @@ packages:
         integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==,
       }
     engines: { node: '>=10' }
-
-  caniuse-lite@1.0.30001486:
-    resolution:
-      {
-        integrity: sha512-uv7/gXuHi10Whlj0pp5q/tsK/32J2QSqVRKQhs2j8VsDCjgyruAh/eEXHF822VqO9yT6iZKw3nRwZRSPBE9OQg==,
-      }
 
   caniuse-lite@1.0.30001591:
     resolution:
@@ -4896,12 +4878,6 @@ packages:
     engines: { node: '>=0.10.0' }
     hasBin: true
 
-  electron-to-chromium@1.4.389:
-    resolution:
-      {
-        integrity: sha512-WDgWUOK8ROR7sDFyYmxCUOoDc50lPgYAHAHwnnD1iN3SKO/mpqftb9iIPiEkMKmqYdkrR0j3N/O+YB/U7lSxwg==,
-      }
-
   electron-to-chromium@1.4.690:
     resolution:
       {
@@ -5486,13 +5462,6 @@ packages:
       }
     engines: { node: '>=10' }
 
-  eslint-visitor-keys@3.4.1:
-    resolution:
-      {
-        integrity: sha512-pZnmmLwYzf+kWaM/Qgrvpen51upAktaaiI01nsJD/Yr3lMOdNtq0cxkrrg16w64VtisN6okbs7Q8AfGqj4c9fA==,
-      }
-    engines: { node: ^12.22.0 || ^14.17.0 || >=16.0.0 }
-
   eslint-visitor-keys@3.4.3:
     resolution:
       {
@@ -5506,14 +5475,8 @@ packages:
         integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==,
       }
     engines: { node: ^12.22.0 || ^14.17.0 || >=16.0.0 }
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
-
-  espree@9.5.2:
-    resolution:
-      {
-        integrity: sha512-7OASN1Wma5fum5SrNhFMAMJxOUAbhyfQ8dQ//PJaJbNw0URTPWqIghHWt1MmAANKhHZIYOHruW4Kw4ruUWOdGw==,
-      }
-    engines: { node: ^12.22.0 || ^14.17.0 || >=16.0.0 }
 
   espree@9.6.1:
     resolution:
@@ -5971,6 +5934,7 @@ packages:
       {
         integrity: sha512-OvD9ENzPLbegENnYP5UUfJIirTg4+XwMWGaQfQTY0JenxNvvIKP3U3/tAQSPIu/lHxXYSZmpXlUHeqAIdKzBLQ==,
       }
+    deprecated: Glob versions prior to v9 are no longer supported
 
   glob@7.2.3:
     resolution:
@@ -6177,7 +6141,10 @@ packages:
     engines: { node: ^16.14.0 || >=18.0.0 }
 
   hpagent@1.2.0:
-    resolution: { integrity: sha1-CuQXiVQw6zdwwDRDRWuNkMpGSQM= }
+    resolution:
+      {
+        integrity: sha512-A91dYTeIB6NoXG+PxTQpCCDDnfHsW9kc06Lvpu1TEe9gnd6ZFeiBoRO9JvzEv6xK7EX97/dUE8g/vBMTqTS3CA==,
+      }
     engines: { node: '>=14' }
 
   html-encoding-sniffer@3.0.0:
@@ -7345,6 +7312,7 @@ packages:
       {
         integrity: sha512-RaPMZKiMy8/JruncMU5Bt6na1eftNoo++R4Y+N2FrxkDVTrGvcyzFTsaGif4QTeKESheMGegbhw6iUAq+5A8zA==,
       }
+    deprecated: Please upgrade to 2.3.7 which fixes GHSA-4q6p-r6v2-jvc5
 
   lru-cache@10.0.1:
     resolution:
@@ -7400,7 +7368,10 @@ packages:
     engines: { node: '>=8' }
 
   matcher@4.0.0:
-    resolution: { integrity: sha1-pCoFoJqu2S4tJB65H92saJRh6lE= }
+    resolution:
+      {
+        integrity: sha512-S6x5wmcDmsDRRU/c2dkccDwQPXoFczc5+HpQ2lON8pnvHlnvHAHj5WlLVvw6n6vNyHuVugYrFohYxbS+pvFpKQ==,
+      }
     engines: { node: '>=10' }
 
   math-intrinsics@1.1.0:
@@ -7620,12 +7591,6 @@ packages:
         integrity: sha512-QNABxbrPa3qEIfrE6GOJ7BYIuignnJw7iQ2YPbc3Nla1HzRJjXzZOiikfF8m7eAMfichLt3M4VgLOetqgDmgGQ==,
       }
 
-  node-releases@2.0.10:
-    resolution:
-      {
-        integrity: sha512-5GFldHPXVG/YZmFzJvKK2zDSzPKhEp0+ZR5SVaoSag9fsL5YgHbUHDfnG5494ISANDcK4KwPXAx2xqVEydmd7w==,
-      }
-
   node-releases@2.0.14:
     resolution:
       {
@@ -7716,12 +7681,6 @@ packages:
         integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==,
       }
     engines: { node: '>=0.10.0' }
-
-  object-inspect@1.12.3:
-    resolution:
-      {
-        integrity: sha512-geUvdk7c+eizMNUDkRpW1wJwgfOiOeHbxBR/hLXK1aT6zmVSO0jsQcs7fj6MGw89jC/cjGfLcNOrtMYtGqm81g==,
-      }
 
   object-inspect@1.13.1:
     resolution:
@@ -8159,6 +8118,10 @@ packages:
         integrity: sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==,
       }
     engines: { node: '>=0.6.0', teleport: '>=0.2.0' }
+    deprecated: |-
+      You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+
+      (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
 
   querystringify@2.2.0:
     resolution:
@@ -9400,15 +9363,6 @@ packages:
       }
     engines: { node: '>=8' }
 
-  update-browserslist-db@1.0.11:
-    resolution:
-      {
-        integrity: sha512-dCwEFf0/oT85M1fHBg4F0jtLwJrutGoHSQXCh7u4o2t1drG+c0a9Flnqww6XUKSfQMPpJBRjU8d4RXB09qtvaA==,
-      }
-    hasBin: true
-    peerDependencies:
-      browserslist: '>= 4.21.0'
-
   update-browserslist-db@1.0.13:
     resolution:
       {
@@ -9708,10 +9662,10 @@ packages:
       }
     engines: { node: ^12.13.0 || ^14.15.0 || >=16.0.0 }
 
-  ws@8.13.0:
+  ws@8.18.3:
     resolution:
       {
-        integrity: sha512-x9vcZYTrFPC7aSIbj7sRCYo7L/Xb8Iy+pW0ng0wt2vCJv7M9HOMy0UoN3rr+IFC7hb7vXoqS+P9ktyLLLhO+LA==,
+        integrity: sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==,
       }
     engines: { node: '>=10.0.0' }
     peerDependencies:
@@ -11527,15 +11481,6 @@ snapshots:
       '@types/yargs': 17.0.24
       chalk: 4.1.2
 
-  '@jest/types@29.5.0':
-    dependencies:
-      '@jest/schemas': 29.4.3
-      '@types/istanbul-lib-coverage': 2.0.4
-      '@types/istanbul-reports': 3.0.1
-      '@types/node': 18.19.21
-      '@types/yargs': 17.0.24
-      chalk: 4.1.2
-
   '@jest/types@29.6.3':
     dependencies:
       '@jest/schemas': 29.6.3
@@ -12492,7 +12437,7 @@ snapshots:
       debug: 4.3.4(supports-color@9.3.1)
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.6.0
+      semver: 7.7.3
       tsutils: 3.21.0(typescript@5.5.4)
     optionalDependencies:
       typescript: 5.5.4
@@ -12507,7 +12452,7 @@ snapshots:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.3
-      semver: 7.6.0
+      semver: 7.7.3
       ts-api-utils: 1.3.0(typescript@5.5.4)
     optionalDependencies:
       typescript: 5.5.4
@@ -12537,7 +12482,7 @@ snapshots:
       fast-glob: 3.3.2
       is-glob: 4.0.3
       minimatch: 9.0.4
-      semver: 7.6.0
+      semver: 7.7.3
       ts-api-utils: 1.3.0(typescript@5.5.4)
     optionalDependencies:
       typescript: 5.5.4
@@ -12554,7 +12499,7 @@ snapshots:
       '@typescript-eslint/typescript-estree': 5.59.5(typescript@5.5.4)
       eslint: 8.57.0
       eslint-scope: 5.1.1
-      semver: 7.6.0
+      semver: 7.7.3
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -12706,17 +12651,13 @@ snapshots:
       acorn: 8.10.0
       acorn-walk: 8.2.0
 
-  acorn-import-assertions@1.8.0(acorn@8.8.2):
+  acorn-import-assertions@1.8.0(acorn@8.10.0):
     dependencies:
-      acorn: 8.8.2
+      acorn: 8.10.0
 
   acorn-jsx@5.3.2(acorn@8.10.0):
     dependencies:
       acorn: 8.10.0
-
-  acorn-jsx@5.3.2(acorn@8.8.2):
-    dependencies:
-      acorn: 8.8.2
 
   acorn-walk@8.2.0: {}
 
@@ -13051,13 +12992,6 @@ snapshots:
     dependencies:
       fill-range: 7.0.1
 
-  browserslist@4.21.5:
-    dependencies:
-      caniuse-lite: 1.0.30001486
-      electron-to-chromium: 1.4.389
-      node-releases: 2.0.10
-      update-browserslist-db: 1.0.11(browserslist@4.21.5)
-
   browserslist@4.23.0:
     dependencies:
       caniuse-lite: 1.0.30001591
@@ -13089,7 +13023,7 @@ snapshots:
 
   builtins@5.0.1:
     dependencies:
-      semver: 7.6.0
+      semver: 7.7.3
 
   bundle-name@3.0.0:
     dependencies:
@@ -13124,8 +13058,6 @@ snapshots:
   camelcase@5.3.1: {}
 
   camelcase@6.3.0: {}
-
-  caniuse-lite@1.0.30001486: {}
 
   caniuse-lite@1.0.30001591: {}
 
@@ -13298,7 +13230,7 @@ snapshots:
       handlebars: 4.7.7
       json-stringify-safe: 5.0.1
       meow: 12.1.1
-      semver: 7.6.0
+      semver: 7.7.3
       split2: 4.2.0
 
   conventional-changelog@5.1.0:
@@ -13554,8 +13486,6 @@ snapshots:
     dependencies:
       jake: 10.8.5
 
-  electron-to-chromium@1.4.389: {}
-
   electron-to-chromium@1.4.690: {}
 
   emittery@0.13.1: {}
@@ -13608,7 +13538,7 @@ snapshots:
       is-string: 1.0.7
       is-typed-array: 1.1.10
       is-weakref: 1.0.2
-      object-inspect: 1.12.3
+      object-inspect: 1.13.1
       object-keys: 1.1.1
       object.assign: 4.1.4
       regexp.prototype.flags: 1.5.0
@@ -13892,7 +13822,7 @@ snapshots:
       debug: 4.3.4(supports-color@9.3.1)
       enhanced-resolve: 5.14.0
       eslint: 8.57.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.7)(eslint-import-resolver-typescript@3.5.5(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.29.0)(eslint@8.57.0))(eslint@8.57.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.7)(eslint-import-resolver-typescript@3.5.5)(eslint@8.57.0)
       eslint-plugin-import: 2.29.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.5.5)(eslint@8.57.0)
       get-tsconfig: 4.5.0
       globby: 13.1.4
@@ -13905,7 +13835,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.7)(eslint-import-resolver-typescript@3.5.5(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.29.0)(eslint@8.57.0))(eslint@8.57.0):
+  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.7)(eslint-import-resolver-typescript@3.5.5)(eslint@8.57.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -13916,7 +13846,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.5.5(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.29.0)(eslint@8.57.0))(eslint@8.57.0):
+  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.5.5)(eslint@8.57.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -13988,7 +13918,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.5.5(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.29.0)(eslint@8.57.0))(eslint@8.57.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.5.5)(eslint@8.57.0)
       hasown: 2.0.0
       is-core-module: 2.13.1
       is-glob: 4.0.3
@@ -14150,8 +14080,6 @@ snapshots:
 
   eslint-visitor-keys@2.1.0: {}
 
-  eslint-visitor-keys@3.4.1: {}
-
   eslint-visitor-keys@3.4.3: {}
 
   eslint@8.57.0:
@@ -14196,12 +14124,6 @@ snapshots:
       text-table: 0.2.0
     transitivePeerDependencies:
       - supports-color
-
-  espree@9.5.2:
-    dependencies:
-      acorn: 8.8.2
-      acorn-jsx: 5.3.2(acorn@8.8.2)
-      eslint-visitor-keys: 3.4.1
 
   espree@9.6.1:
     dependencies:
@@ -14874,7 +14796,7 @@ snapshots:
       '@babel/parser': 7.24.0
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-coverage: 3.2.0
-      semver: 7.6.0
+      semver: 7.7.3
     transitivePeerDependencies:
       - supports-color
 
@@ -15086,7 +15008,7 @@ snapshots:
   jest-message-util@29.5.0:
     dependencies:
       '@babel/code-frame': 7.23.5
-      '@jest/types': 29.5.0
+      '@jest/types': 29.6.3
       '@types/stack-utils': 2.0.1
       chalk: 4.1.2
       graceful-fs: 4.2.11
@@ -15217,13 +15139,13 @@ snapshots:
       jest-util: 29.7.0
       natural-compare: 1.4.0
       pretty-format: 29.7.0
-      semver: 7.6.0
+      semver: 7.7.3
     transitivePeerDependencies:
       - supports-color
 
   jest-util@29.5.0:
     dependencies:
-      '@jest/types': 29.5.0
+      '@jest/types': 29.6.3
       '@types/node': 18.19.21
       chalk: 4.1.2
       ci-info: 3.8.0
@@ -15321,7 +15243,7 @@ snapshots:
       whatwg-encoding: 2.0.0
       whatwg-mimetype: 3.0.0
       whatwg-url: 11.0.0
-      ws: 8.13.0
+      ws: 8.18.3
       xml-name-validator: 4.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -15352,10 +15274,10 @@ snapshots:
 
   jsonc-eslint-parser@2.3.0:
     dependencies:
-      acorn: 8.8.2
-      eslint-visitor-keys: 3.4.1
-      espree: 9.5.2
-      semver: 7.5.3
+      acorn: 8.10.0
+      eslint-visitor-keys: 3.4.3
+      espree: 9.6.1
+      semver: 7.7.3
 
   jsonc-parser@3.2.0: {}
 
@@ -15422,7 +15344,7 @@ snapshots:
       listr2: 4.0.5(enquirer@2.3.6)
       micromatch: 4.0.5
       normalize-path: 3.0.0
-      object-inspect: 1.12.3
+      object-inspect: 1.13.1
       pidtree: 0.5.0
       string-argv: 0.3.2
       supports-color: 9.3.1
@@ -15634,8 +15556,6 @@ snapshots:
 
   node-machine-id@1.1.12: {}
 
-  node-releases@2.0.10: {}
-
   node-releases@2.0.14: {}
 
   normalize-package-data@2.5.0:
@@ -15649,14 +15569,14 @@ snapshots:
     dependencies:
       hosted-git-info: 4.1.0
       is-core-module: 2.13.1
-      semver: 7.6.0
+      semver: 7.7.3
       validate-npm-package-license: 3.0.4
 
   normalize-package-data@6.0.0:
     dependencies:
       hosted-git-info: 7.0.1
       is-core-module: 2.13.1
-      semver: 7.6.0
+      semver: 7.7.3
       validate-npm-package-license: 3.0.4
 
   normalize-path@3.0.0: {}
@@ -15736,8 +15656,6 @@ snapshots:
       - debug
 
   object-assign@4.1.1: {}
-
-  object-inspect@1.12.3: {}
 
   object-inspect@1.13.1: {}
 
@@ -16281,7 +16199,7 @@ snapshots:
     dependencies:
       call-bind: 1.0.2
       get-intrinsic: 1.2.0
-      object-inspect: 1.12.3
+      object-inspect: 1.13.1
 
   signal-exit@3.0.7: {}
 
@@ -16452,7 +16370,7 @@ snapshots:
 
   strip-literal@1.0.1:
     dependencies:
-      acorn: 8.8.2
+      acorn: 8.10.0
 
   strnum@1.0.5: {}
 
@@ -16510,7 +16428,7 @@ snapshots:
   terser@5.17.3:
     dependencies:
       '@jridgewell/source-map': 0.3.3
-      acorn: 8.8.2
+      acorn: 8.10.0
       commander: 2.20.3
       source-map-support: 0.5.21
 
@@ -16730,17 +16648,11 @@ snapshots:
 
   untildify@4.0.0: {}
 
-  update-browserslist-db@1.0.11(browserslist@4.21.5):
-    dependencies:
-      browserslist: 4.21.5
-      escalade: 3.1.1
-      picocolors: 1.0.0
-
   update-browserslist-db@1.0.13(browserslist@4.23.0):
     dependencies:
       browserslist: 4.23.0
       escalade: 3.1.1
-      picocolors: 1.0.0
+      picocolors: 1.1.1
 
   uri-js@4.4.1:
     dependencies:
@@ -16798,7 +16710,7 @@ snapshots:
       '@types/chai': 4.3.5
       '@types/chai-subset': 1.3.3
       '@types/node': 18.19.21
-      acorn: 8.8.2
+      acorn: 8.10.0
       acorn-walk: 8.2.0
       chai: 4.3.7
       debug: 4.3.4(supports-color@9.3.1)
@@ -16847,9 +16759,9 @@ snapshots:
       '@webassemblyjs/ast': 1.11.6
       '@webassemblyjs/wasm-edit': 1.11.6
       '@webassemblyjs/wasm-parser': 1.11.6
-      acorn: 8.8.2
-      acorn-import-assertions: 1.8.0(acorn@8.8.2)
-      browserslist: 4.21.5
+      acorn: 8.10.0
+      acorn-import-assertions: 1.8.0(acorn@8.10.0)
+      browserslist: 4.23.0
       chrome-trace-event: 1.0.3
       enhanced-resolve: 5.14.0
       es-module-lexer: 1.2.1
@@ -16956,7 +16868,7 @@ snapshots:
       imurmurhash: 0.1.4
       signal-exit: 3.0.7
 
-  ws@8.13.0: {}
+  ws@8.18.3: {}
 
   xml-name-validator@4.0.0: {}
 
