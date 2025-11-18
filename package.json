@@ -77,5 +77,14 @@
     "*.{js,json,css,scss,md,ts,html,tsx,jsx,yaml,yml}": [
       "nx format --uncommitted"
     ]
+  },
+  "pnpm": {
+    "overrides": {
+      "semver@>=7.0.0 <7.5.2": ">=7.5.2",
+      "esbuild@<=0.24.2": ">=0.25.0",
+      "tmp@<=0.2.3": ">=0.2.4",
+      "vite@<=5.4.19": ">=5.4.20",
+      "js-yaml@>=4.0.0 <4.1.1": ">=4.1.1"
+    }
   }
 }
