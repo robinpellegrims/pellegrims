@@ -10,6 +10,7 @@ overrides:
   tmp@<=0.2.3: '>=0.2.4'
   vite@<=5.4.19: '>=5.4.20'
   js-yaml@>=4.0.0 <4.1.1: '>=4.1.1'
+  js-yaml@>=3.0.0 <3.14.2: '>=3.14.2'
 
 importers:
   .:
@@ -3807,12 +3808,6 @@ packages:
         integrity: sha512-58S9QDqG0Xx27YwPSt9fJxivjYl432YCwfDMfZ+71RAqUrZef7LrKQZ3LHLOwCS4FLNBplP533Zx895SeOCHvA==,
       }
 
-  argparse@1.0.10:
-    resolution:
-      {
-        integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==,
-      }
-
   argparse@2.0.1:
     resolution:
       {
@@ -6920,13 +6915,6 @@ packages:
         integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==,
       }
 
-  js-yaml@3.14.1:
-    resolution:
-      {
-        integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==,
-      }
-    hasBin: true
-
   js-yaml@4.1.1:
     resolution:
       {
@@ -8611,12 +8599,6 @@ packages:
         integrity: sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==,
       }
     engines: { node: '>= 10.x' }
-
-  sprintf-js@1.0.3:
-    resolution:
-      {
-        integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==,
-      }
 
   stack-utils@2.0.6:
     resolution:
@@ -11214,7 +11196,7 @@ snapshots:
       camelcase: 5.3.1
       find-up: 4.1.0
       get-package-type: 0.1.0
-      js-yaml: 3.14.1
+      js-yaml: 4.1.1
       resolve-from: 5.0.0
 
   '@istanbuljs/schema@0.1.3': {}
@@ -12575,7 +12557,7 @@ snapshots:
 
   '@yarnpkg/parsers@3.0.2':
     dependencies:
-      js-yaml: 3.14.1
+      js-yaml: 4.1.1
       tslib: 2.5.0
 
   '@zkochan/js-yaml@0.0.7':
@@ -12678,10 +12660,6 @@ snapshots:
       picomatch: 2.3.1
 
   arg@4.1.3: {}
-
-  argparse@1.0.10:
-    dependencies:
-      sprintf-js: 1.0.3
 
   argparse@2.0.1: {}
 
@@ -14163,7 +14141,7 @@ snapshots:
 
   front-matter@4.0.2:
     dependencies:
-      js-yaml: 3.14.1
+      js-yaml: 4.1.1
 
   fs-constants@1.0.0: {}
 
@@ -15073,11 +15051,6 @@ snapshots:
       - ts-node
 
   js-tokens@4.0.0: {}
-
-  js-yaml@3.14.1:
-    dependencies:
-      argparse: 1.0.10
-      esprima: 4.0.1
 
   js-yaml@4.1.1:
     dependencies:
@@ -16124,8 +16097,6 @@ snapshots:
       readable-stream: 3.6.2
 
   split2@4.2.0: {}
-
-  sprintf-js@1.0.3: {}
 
   stack-utils@2.0.6:
     dependencies:
