@@ -15,12 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@pellegrims/eslint-config-angular": [
-        "libs/eslint-config/angular/src/index.ts"
-      ],
-      "@pellegrims/eslint-config/base": [
-        "libs/eslint-config/base/src/index.ts"
-      ],
       "@pellegrims/nx-remotecache-s3": ["libs/nx-remotecache-s3/src/index.ts"],
       "@pellegrims/nx-vercel": ["libs/nx-vercel/src/index.ts"]
     },

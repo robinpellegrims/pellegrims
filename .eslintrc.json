@@ -23,17 +23,11 @@
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": [
-        "plugin:@nx/typescript",
-        "./dist/libs/eslint-config/base/src/typescript"
-      ]
+      "extends": ["plugin:@nx/typescript"]
     },
     {
       "files": ["*.js", "*.jsx"],
-      "extends": [
-        "plugin:@nx/javascript",
-        "./dist/libs/eslint-config/base/src/javascript"
-      ]
+      "extends": ["plugin:@nx/javascript"]
     },
     {
       "files": "*.json",

@@ -1,3 +1,0 @@
-export = {
-  extends: ['./javascript', './typescript'],
-};

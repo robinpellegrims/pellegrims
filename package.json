@@ -10,7 +10,7 @@
     "test": "nx test",
     "e2e": "nx e2e",
     "prepare": "husky install",
-    "postinstall": "nx run-many --target=build --projects=nx-remotecache-s3,eslint-config-base"
+    "postinstall": "nx run-many --target=build --projects=nx-remotecache-s3"
   },
   "private": true,
   "dependencies": {
