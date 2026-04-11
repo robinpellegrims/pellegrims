@@ -1,6 +1,6 @@
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
-    'scope-enum': [2, 'always', ['nx-remotecache-s3', 'nx-vercel']],
+    'scope-enum': [2, 'always', ['nx-remotecache-s3']],
   },
 };

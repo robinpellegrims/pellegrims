@@ -15,8 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@pellegrims/nx-remotecache-s3": ["libs/nx-remotecache-s3/src/index.ts"],
-      "@pellegrims/nx-vercel": ["libs/nx-vercel/src/index.ts"]
+      "@pellegrims/nx-remotecache-s3": ["libs/nx-remotecache-s3/src/index.ts"]
     },
     "strict": true,
     "noUnusedLocals": true,
