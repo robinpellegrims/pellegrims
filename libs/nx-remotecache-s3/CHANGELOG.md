@@ -2,226 +2,226 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
-# [8.1.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-8.0.0...nx-remotecache-s3-8.1.0) (2024-11-10)
+# [8.1.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-8.0.0...nx-remotecache-s3-8.1.0) (2024-11-10)
 
 ### Features
 
-- **nx-remotecache-s3:** support nx v20 ([4bccc51](https://github.com/robinpellegrims/pellegrims/commit/4bccc51f238df125779aadeddd91ea06d627732c))
+- **nx-remotecache-s3:** support nx v20 ([4bccc51](https://github.com/robinpellegrims/nx-remotecache-s3/commit/4bccc51f238df125779aadeddd91ea06d627732c))
 
-# [8.0.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-7.1.0...nx-remotecache-s3-8.0.0) (2024-09-29)
+# [8.0.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-7.1.0...nx-remotecache-s3-8.0.0) (2024-09-29)
 
 ### Bug Fixes
 
-- **nx-remotecache-s3:** remove readOnly param and env var ([ddb7051](https://github.com/robinpellegrims/pellegrims/commit/ddb70510b9ce6e8ec80b30d506fd490413f0c808))
+- **nx-remotecache-s3:** remove readOnly param and env var ([ddb7051](https://github.com/robinpellegrims/nx-remotecache-s3/commit/ddb70510b9ce6e8ec80b30d506fd490413f0c808))
 
 ### BREAKING CHANGES
 
 - **nx-remotecache-s3:** Update to `write: false` or `NXCACHE_WRITE=false` from `nx-remotecache-custom`.
 
-# [7.1.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-7.0.0...nx-remotecache-s3-7.1.0) (2024-05-30)
+# [7.1.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-7.0.0...nx-remotecache-s3-7.1.0) (2024-05-30)
 
 ### Features
 
-- add proxy support for nx-remotecache-s3 ([#267](https://github.com/robinpellegrims/pellegrims/issues/267)) ([f91742f](https://github.com/robinpellegrims/pellegrims/commit/f91742fde0a9b1b16e897aa6217cab460b9ab6ed))
+- add proxy support for nx-remotecache-s3 ([#267](https://github.com/robinpellegrims/nx-remotecache-s3/issues/267)) ([f91742f](https://github.com/robinpellegrims/nx-remotecache-s3/commit/f91742fde0a9b1b16e897aa6217cab460b9ab6ed))
 
-# [7.0.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-6.0.0...nx-remotecache-s3-7.0.0) (2024-05-23)
+# [7.0.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-6.0.0...nx-remotecache-s3-7.0.0) (2024-05-23)
 
 ### Features
 
-- update nx to v19.0.6 ([79bb766](https://github.com/robinpellegrims/pellegrims/commit/79bb766e6e9a80ebf88ded795f564a56880020c7))
+- update nx to v19.0.6 ([79bb766](https://github.com/robinpellegrims/nx-remotecache-s3/commit/79bb766e6e9a80ebf88ded795f564a56880020c7))
 
 ### BREAKING CHANGES
 
 - update nx to 19
 
-# [6.0.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-5.0.4...nx-remotecache-s3-6.0.0) (2024-03-02)
+# [6.0.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-5.0.4...nx-remotecache-s3-6.0.0) (2024-03-02)
 
 ### Features
 
-- update nx to v18 ([8adc2e1](https://github.com/robinpellegrims/pellegrims/commit/8adc2e182a041df22fd67c90fb833b0fe968b23c))
+- update nx to v18 ([8adc2e1](https://github.com/robinpellegrims/nx-remotecache-s3/commit/8adc2e182a041df22fd67c90fb833b0fe968b23c))
 
 ### BREAKING CHANGES
 
 - Update nx v18
 
-## [5.0.4](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-5.0.3...nx-remotecache-s3-5.0.4) (2024-03-02)
+## [5.0.4](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-5.0.3...nx-remotecache-s3-5.0.4) (2024-03-02)
 
-## [5.0.3](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-5.0.2...nx-remotecache-s3-5.0.3) (2024-01-02)
+## [5.0.3](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-5.0.2...nx-remotecache-s3-5.0.3) (2024-01-02)
 
 ### Bug Fixes
 
-- **nx-remotecache-s3:** add config value to provider call for role assumption ([1cae7fe](https://github.com/robinpellegrims/pellegrims/commit/1cae7fe4bd636b970ff0ebf7b4d4384d6cb154ea))
-- **nx-remotecache-s3:** update test for provider call for role assumption ([66c785d](https://github.com/robinpellegrims/pellegrims/commit/66c785d9a737a44d29d2c429404c57960c1bd81d))
+- **nx-remotecache-s3:** add config value to provider call for role assumption ([1cae7fe](https://github.com/robinpellegrims/nx-remotecache-s3/commit/1cae7fe4bd636b970ff0ebf7b4d4384d6cb154ea))
+- **nx-remotecache-s3:** update test for provider call for role assumption ([66c785d](https://github.com/robinpellegrims/nx-remotecache-s3/commit/66c785d9a737a44d29d2c429404c57960c1bd81d))
 
-## [5.0.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-5.0.1...nx-remotecache-s3-5.0.2) (2023-12-14)
+## [5.0.2](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-5.0.1...nx-remotecache-s3-5.0.2) (2023-12-14)
 
-## [5.0.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-5.0.0...nx-remotecache-s3-5.0.1) (2023-12-14)
+## [5.0.1](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-5.0.0...nx-remotecache-s3-5.0.1) (2023-12-14)
 
-# [5.0.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-4.0.0...nx-remotecache-s3-5.0.0) (2023-11-16)
+# [5.0.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-4.0.0...nx-remotecache-s3-5.0.0) (2023-11-16)
 
 ### Build System
 
-- update nx v17.1.2 and run migrations and update related deps ([ce8348e](https://github.com/robinpellegrims/pellegrims/commit/ce8348ea890c8224338cec3a514b8ecd87cb13d3))
+- update nx v17.1.2 and run migrations and update related deps ([ce8348e](https://github.com/robinpellegrims/nx-remotecache-s3/commit/ce8348ea890c8224338cec3a514b8ecd87cb13d3))
 
 ### BREAKING CHANGES
 
 - requires nx >=17.0.0
 
-# [4.0.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-3.0.1...nx-remotecache-s3-4.0.0) (2023-10-11)
+# [4.0.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-3.0.1...nx-remotecache-s3-4.0.0) (2023-10-11)
 
 ### Build System
 
-- **nx-remotecache-s3:** adjust dependencies ([f7010a3](https://github.com/robinpellegrims/pellegrims/commit/f7010a36f9134828813b9d9a4491bd4f26104adb))
+- **nx-remotecache-s3:** adjust dependencies ([f7010a3](https://github.com/robinpellegrims/nx-remotecache-s3/commit/f7010a36f9134828813b9d9a4491bd4f26104adb))
 
 ### BREAKING CHANGES
 
 - **nx-remotecache-s3:** requires nx >=16.9.0
 
-## [3.0.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-3.0.0...nx-remotecache-s3-3.0.1) (2023-08-13)
+## [3.0.1](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-3.0.0...nx-remotecache-s3-3.0.1) (2023-08-13)
 
-# [3.0.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-2.1.3...nx-remotecache-s3-3.0.0) (2023-06-01)
+# [3.0.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-2.1.3...nx-remotecache-s3-3.0.0) (2023-06-01)
 
 ### Features
 
-- update package to force version bump ([0dbdae0](https://github.com/robinpellegrims/pellegrims/commit/0dbdae01e6ad309881f91b94a0736ca5a43fc4ca))
+- update package to force version bump ([0dbdae0](https://github.com/robinpellegrims/nx-remotecache-s3/commit/0dbdae01e6ad309881f91b94a0736ca5a43fc4ca))
 
 ### BREAKING CHANGES
 
 - Minimum Nx version is now >=16.0.0
 
-## [2.1.3](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-2.1.2...nx-remotecache-s3-2.1.3) (2023-06-01)
+## [2.1.3](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-2.1.2...nx-remotecache-s3-2.1.3) (2023-06-01)
 
-## [2.1.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-2.1.1...nx-remotecache-s3-2.1.2) (2023-05-15)
+## [2.1.2](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-2.1.1...nx-remotecache-s3-2.1.2) (2023-05-15)
 
-## [2.1.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-2.1.0...nx-remotecache-s3-2.1.1) (2023-05-15)
+## [2.1.1](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-2.1.0...nx-remotecache-s3-2.1.1) (2023-05-15)
 
-# [2.1.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-2.0.3...nx-remotecache-s3-2.1.0) (2023-03-08)
+# [2.1.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-2.0.3...nx-remotecache-s3-2.1.0) (2023-03-08)
 
 ### Features
 
-- add environment variable to explicitly set custom access key ID and secret access key for AWS ([#199](https://github.com/robinpellegrims/pellegrims/issues/199)) ([dd15562](https://github.com/robinpellegrims/pellegrims/commit/dd1556228756689f2d2106498e0e7aadaef39bf0))
+- add environment variable to explicitly set custom access key ID and secret access key for AWS ([#199](https://github.com/robinpellegrims/nx-remotecache-s3/issues/199)) ([dd15562](https://github.com/robinpellegrims/nx-remotecache-s3/commit/dd1556228756689f2d2106498e0e7aadaef39bf0))
 
-## [2.0.3](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-2.0.2...nx-remotecache-s3-2.0.3) (2023-03-07)
+## [2.0.3](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-2.0.2...nx-remotecache-s3-2.0.3) (2023-03-07)
 
-## [2.0.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-2.0.1...nx-remotecache-s3-2.0.2) (2023-03-07)
+## [2.0.2](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-2.0.1...nx-remotecache-s3-2.0.2) (2023-03-07)
 
 ### Bug Fixes
 
-- **nx-remotecache-s3:** generated package.json is pinning all dependency versions ([4b6a25f](https://github.com/robinpellegrims/pellegrims/commit/4b6a25f5c1af0e1e2762369cc2364659198c1faf)), closes [#198](https://github.com/robinpellegrims/pellegrims/issues/198)
+- **nx-remotecache-s3:** generated package.json is pinning all dependency versions ([4b6a25f](https://github.com/robinpellegrims/nx-remotecache-s3/commit/4b6a25f5c1af0e1e2762369cc2364659198c1faf)), closes [#198](https://github.com/robinpellegrims/nx-remotecache-s3/issues/198)
 
-## [2.0.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-2.0.0...nx-remotecache-s3-2.0.1) (2023-02-08)
+## [2.0.1](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-2.0.0...nx-remotecache-s3-2.0.1) (2023-02-08)
 
-# [2.0.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.5.2...nx-remotecache-s3-2.0.0) (2022-12-19)
+# [2.0.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.5.2...nx-remotecache-s3-2.0.0) (2022-12-19)
 
 ### Features
 
-- **nx-remotecache-s3:** update envs to custom runner v3 format ([954b888](https://github.com/robinpellegrims/pellegrims/commit/954b8888cb4b4470b98933b9518786065c31a742))
+- **nx-remotecache-s3:** update envs to custom runner v3 format ([954b888](https://github.com/robinpellegrims/nx-remotecache-s3/commit/954b8888cb4b4470b98933b9518786065c31a742))
 
 ### BREAKING CHANGES
 
 - **nx-remotecache-s3:** ENV vars now start with `NXCACHE_` instead of `NX_CACHE_`
 
-## [1.5.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.5.1...nx-remotecache-s3-1.5.2) (2022-12-19)
+## [1.5.2](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.5.1...nx-remotecache-s3-1.5.2) (2022-12-19)
 
 ### Bug Fixes
 
-- **nx-remotecache-s3:** readonly not correctly calculated ([725dea1](https://github.com/robinpellegrims/pellegrims/commit/725dea18bafcf94d9a482892cae01ae652e768bf))
+- **nx-remotecache-s3:** readonly not correctly calculated ([725dea1](https://github.com/robinpellegrims/nx-remotecache-s3/commit/725dea18bafcf94d9a482892cae01ae652e768bf))
 
-## [1.5.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.5.0...nx-remotecache-s3-1.5.1) (2022-12-17)
+## [1.5.1](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.5.0...nx-remotecache-s3-1.5.1) (2022-12-17)
 
-# [1.5.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.4.7...nx-remotecache-s3-1.5.0) (2022-12-17)
+# [1.5.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.4.7...nx-remotecache-s3-1.5.0) (2022-12-17)
 
 ### Features
 
-- **nx-remotecache-s3:** update nx-remotecache-custom to v3 ([953494d](https://github.com/robinpellegrims/pellegrims/commit/953494d37fdd81ccd55705b41fd5e618323576f6))
+- **nx-remotecache-s3:** update nx-remotecache-custom to v3 ([953494d](https://github.com/robinpellegrims/nx-remotecache-s3/commit/953494d37fdd81ccd55705b41fd5e618323576f6))
 
-## [1.4.7](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.4.6...nx-remotecache-s3-1.4.7) (2022-12-13)
+## [1.4.7](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.4.6...nx-remotecache-s3-1.4.7) (2022-12-13)
 
-## [1.4.6](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.4.5...nx-remotecache-s3-1.4.6) (2022-12-12)
+## [1.4.6](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.4.5...nx-remotecache-s3-1.4.6) (2022-12-12)
 
 ### Bug Fixes
 
-- **nx-remotecache-s3:** options.forcePathStyle and options.readOnly are never used ([9f90d13](https://github.com/robinpellegrims/pellegrims/commit/9f90d13fefeed5d330d81d4e803a02cd214e558e)), closes [#183](https://github.com/robinpellegrims/pellegrims/issues/183)
+- **nx-remotecache-s3:** options.forcePathStyle and options.readOnly are never used ([9f90d13](https://github.com/robinpellegrims/nx-remotecache-s3/commit/9f90d13fefeed5d330d81d4e803a02cd214e558e)), closes [#183](https://github.com/robinpellegrims/nx-remotecache-s3/issues/183)
 
-## [1.4.5](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.4.4...nx-remotecache-s3-1.4.5) (2022-12-04)
-
-### Bug Fixes
-
-- **nx-remotecache-s3:** generated package.json is pinning all dependency versions ([f269201](https://github.com/robinpellegrims/pellegrims/commit/f26920146e4312b0b0e8295ea8020692d695c005)), closes [#181](https://github.com/robinpellegrims/pellegrims/issues/181)
-
-## [1.4.4](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.4.3...nx-remotecache-s3-1.4.4) (2022-11-27)
-
-## [1.4.3](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.4.2...nx-remotecache-s3-1.4.3) (2022-11-13)
-
-## [1.4.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.4.1...nx-remotecache-s3-1.4.2) (2022-11-02)
+## [1.4.5](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.4.4...nx-remotecache-s3-1.4.5) (2022-12-04)
 
 ### Bug Fixes
 
-- **nx-remotecache-s3:** fix 403 error handling for fileExists ([79b6532](https://github.com/robinpellegrims/pellegrims/commit/79b65324d36c8bd800e82bbb28dd8efb9d5255b4))
+- **nx-remotecache-s3:** generated package.json is pinning all dependency versions ([f269201](https://github.com/robinpellegrims/nx-remotecache-s3/commit/f26920146e4312b0b0e8295ea8020692d695c005)), closes [#181](https://github.com/robinpellegrims/nx-remotecache-s3/issues/181)
 
-## [1.4.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.4.0...nx-remotecache-s3-1.4.1) (2022-11-02)
+## [1.4.4](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.4.3...nx-remotecache-s3-1.4.4) (2022-11-27)
 
-### Bug Fixes
+## [1.4.3](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.4.2...nx-remotecache-s3-1.4.3) (2022-11-13)
 
-- **nx-remotecache-s3:** update env boolean handling and error handling ([#174](https://github.com/robinpellegrims/pellegrims/issues/174)) ([6ff3a4a](https://github.com/robinpellegrims/pellegrims/commit/6ff3a4ad2e44d5dae35f66fcbb11e8a8a415c334))
-
-# [1.4.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.3.0...nx-remotecache-s3-1.4.0) (2022-11-01)
-
-### Features
-
-- **nx-remotecache-s3:** add readonly option ([9cb9b37](https://github.com/robinpellegrims/pellegrims/commit/9cb9b37d8bfe6043163ed43e1bd5df48794b358d))
-
-# [1.3.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.2.3...nx-remotecache-s3-1.3.0) (2022-10-26)
-
-### Features
-
-- **nx-remotecache-s3:** add force path style capability to S3Options ([3a778c4](https://github.com/robinpellegrims/pellegrims/commit/3a778c40fb786110de569080a031d0f88ade075d))
-
-## [1.2.3](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.2.2...nx-remotecache-s3-1.2.3) (2022-10-01)
-
-## [1.2.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.2.1...nx-remotecache-s3-1.2.2) (2022-09-21)
+## [1.4.2](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.4.1...nx-remotecache-s3-1.4.2) (2022-11-02)
 
 ### Bug Fixes
 
-- **nx-remotecache-s3:** missing peer dependency on @nrwl/workspace ([585cc40](https://github.com/robinpellegrims/pellegrims/commit/585cc405efa953a90f8141da8db445821b56c4fe)), closes [#156](https://github.com/robinpellegrims/pellegrims/issues/156)
+- **nx-remotecache-s3:** fix 403 error handling for fileExists ([79b6532](https://github.com/robinpellegrims/nx-remotecache-s3/commit/79b65324d36c8bd800e82bbb28dd8efb9d5255b4))
 
-## [1.2.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.2.0...nx-remotecache-s3-1.2.1) (2022-09-14)
+## [1.4.1](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.4.0...nx-remotecache-s3-1.4.1) (2022-11-02)
 
-## [1.2.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.2.0...nx-remotecache-s3-1.2.1) (2022-09-05)
+### Bug Fixes
 
-## [1.2.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.2.0...nx-remotecache-s3-1.2.1) (2022-09-04)
+- **nx-remotecache-s3:** update env boolean handling and error handling ([#174](https://github.com/robinpellegrims/nx-remotecache-s3/issues/174)) ([6ff3a4a](https://github.com/robinpellegrims/nx-remotecache-s3/commit/6ff3a4ad2e44d5dae35f66fcbb11e8a8a415c334))
 
-# [1.2.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.1.1...nx-remotecache-s3-1.2.0) (2022-08-29)
-
-### Features
-
-- **nx-remotecache-s3:** add support for options.profile ([ba04295](https://github.com/robinpellegrims/pellegrims/commit/ba0429572c1e5b76987cc37808a483e2567ccede))
-
-## [1.1.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.1.0...nx-remotecache-s3-1.1.1) (2022-08-26)
-
-# [1.1.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.0.6...nx-remotecache-s3-1.1.0) (2022-08-26)
+# [1.4.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.3.0...nx-remotecache-s3-1.4.0) (2022-11-01)
 
 ### Features
 
-- **nx-remotecache-s3:** add custom profile option ([bdbda58](https://github.com/robinpellegrims/pellegrims/commit/bdbda58b87d8b73e27cc20604e6800796e3f12d1))
+- **nx-remotecache-s3:** add readonly option ([9cb9b37](https://github.com/robinpellegrims/nx-remotecache-s3/commit/9cb9b37d8bfe6043163ed43e1bd5df48794b358d))
 
-## [1.0.6](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.0.5...nx-remotecache-s3-1.0.6) (2022-07-10)
-
-## [1.0.5](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.0.4...nx-remotecache-s3-1.0.5) (2022-06-19)
-
-## [1.0.4](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.0.3...nx-remotecache-s3-1.0.4) (2022-06-18)
-
-## [1.0.3](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.0.2...nx-remotecache-s3-1.0.3) (2022-06-13)
-
-## [1.0.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.0.1...nx-remotecache-s3-1.0.2) (2022-06-03)
-
-## [1.0.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-1.0.0...nx-remotecache-s3-1.0.1) (2022-04-25)
-
-# [1.0.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.3.1...nx-remotecache-s3-1.0.0) (2022-04-25)
+# [1.3.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.2.3...nx-remotecache-s3-1.3.0) (2022-10-26)
 
 ### Features
 
-- **nx-remotecache-s3:** swap to standard AWS credentials ([#100](https://github.com/robinpellegrims/pellegrims/issues/100)) ([5e8038e](https://github.com/robinpellegrims/pellegrims/commit/5e8038efecfbb3485fdecf589146472bdacde937)), closes [#95](https://github.com/robinpellegrims/pellegrims/issues/95)
+- **nx-remotecache-s3:** add force path style capability to S3Options ([3a778c4](https://github.com/robinpellegrims/nx-remotecache-s3/commit/3a778c40fb786110de569080a031d0f88ade075d))
+
+## [1.2.3](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.2.2...nx-remotecache-s3-1.2.3) (2022-10-01)
+
+## [1.2.2](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.2.1...nx-remotecache-s3-1.2.2) (2022-09-21)
+
+### Bug Fixes
+
+- **nx-remotecache-s3:** missing peer dependency on @nrwl/workspace ([585cc40](https://github.com/robinpellegrims/nx-remotecache-s3/commit/585cc405efa953a90f8141da8db445821b56c4fe)), closes [#156](https://github.com/robinpellegrims/nx-remotecache-s3/issues/156)
+
+## [1.2.1](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.2.0...nx-remotecache-s3-1.2.1) (2022-09-14)
+
+## [1.2.1](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.2.0...nx-remotecache-s3-1.2.1) (2022-09-05)
+
+## [1.2.1](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.2.0...nx-remotecache-s3-1.2.1) (2022-09-04)
+
+# [1.2.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.1.1...nx-remotecache-s3-1.2.0) (2022-08-29)
+
+### Features
+
+- **nx-remotecache-s3:** add support for options.profile ([ba04295](https://github.com/robinpellegrims/nx-remotecache-s3/commit/ba0429572c1e5b76987cc37808a483e2567ccede))
+
+## [1.1.1](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.1.0...nx-remotecache-s3-1.1.1) (2022-08-26)
+
+# [1.1.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.0.6...nx-remotecache-s3-1.1.0) (2022-08-26)
+
+### Features
+
+- **nx-remotecache-s3:** add custom profile option ([bdbda58](https://github.com/robinpellegrims/nx-remotecache-s3/commit/bdbda58b87d8b73e27cc20604e6800796e3f12d1))
+
+## [1.0.6](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.0.5...nx-remotecache-s3-1.0.6) (2022-07-10)
+
+## [1.0.5](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.0.4...nx-remotecache-s3-1.0.5) (2022-06-19)
+
+## [1.0.4](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.0.3...nx-remotecache-s3-1.0.4) (2022-06-18)
+
+## [1.0.3](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.0.2...nx-remotecache-s3-1.0.3) (2022-06-13)
+
+## [1.0.2](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.0.1...nx-remotecache-s3-1.0.2) (2022-06-03)
+
+## [1.0.1](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-1.0.0...nx-remotecache-s3-1.0.1) (2022-04-25)
+
+# [1.0.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-0.3.1...nx-remotecache-s3-1.0.0) (2022-04-25)
+
+### Features
+
+- **nx-remotecache-s3:** swap to standard AWS credentials ([#100](https://github.com/robinpellegrims/nx-remotecache-s3/issues/100)) ([5e8038e](https://github.com/robinpellegrims/nx-remotecache-s3/commit/5e8038efecfbb3485fdecf589146472bdacde937)), closes [#95](https://github.com/robinpellegrims/nx-remotecache-s3/issues/95)
 
 ### BREAKING CHANGES
 
@@ -233,56 +233,56 @@ Following environment variables were removed:
 - NX_CACHE_S3_SECRET_KEY (replace by AWS_SECRET_ACCESS_KEY)
 - NX_CACHE_S3_PROFILE
 
-## [0.3.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.3.0...nx-remotecache-s3-0.3.1) (2022-04-24)
+## [0.3.1](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-0.3.0...nx-remotecache-s3-0.3.1) (2022-04-24)
 
-# [0.3.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.2.3...nx-remotecache-s3-0.3.0) (2022-04-24)
-
-### Features
-
-- **nx-remotecache-s3:** Add support for aws profile credential resolution. ([#93](https://github.com/robinpellegrims/pellegrims/issues/93)) ([c8e295b](https://github.com/robinpellegrims/pellegrims/commit/c8e295b0a1174470b93651b74b7b194012b107ea))
-
-## [0.2.3](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.2.2...nx-remotecache-s3-0.2.3) (2022-04-19)
-
-## [0.2.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.2.1...nx-remotecache-s3-0.2.2) (2022-04-19)
-
-### Bug Fixes
-
-- **nx-remotecache-s3:** add package dependencies ([c15e608](https://github.com/robinpellegrims/pellegrims/commit/c15e60834b5e6bde995e23138d487d3229957d85)), closes [#88](https://github.com/robinpellegrims/pellegrims/issues/88)
-
-## [0.2.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.2.0...nx-remotecache-s3-0.2.1) (2022-04-13)
-
-# [0.2.0](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.1.8...nx-remotecache-s3-0.2.0) (2022-02-18)
-
-### Bug Fixes
-
-- **nx-remotecache-s3:** fallback to aws-sdk-v3 credentials provider ([d6ba139](https://github.com/robinpellegrims/pellegrims/commit/d6ba139fc21f7f86a39e351cfb72b4c925c4f264))
+# [0.3.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-0.2.3...nx-remotecache-s3-0.3.0) (2022-04-24)
 
 ### Features
 
-- **nx-remotecache-s3:** add prefix path option ([bbf1727](https://github.com/robinpellegrims/pellegrims/commit/bbf172729779546d0e03eaae310c5164a231304d))
+- **nx-remotecache-s3:** Add support for aws profile credential resolution. ([#93](https://github.com/robinpellegrims/nx-remotecache-s3/issues/93)) ([c8e295b](https://github.com/robinpellegrims/nx-remotecache-s3/commit/c8e295b0a1174470b93651b74b7b194012b107ea))
 
-## [0.1.8](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.1.7...nx-remotecache-s3-0.1.8) (2022-02-04)
+## [0.2.3](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-0.2.2...nx-remotecache-s3-0.2.3) (2022-04-19)
 
-## [0.1.7](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.1.6...nx-remotecache-s3-0.1.7) (2021-12-20)
+## [0.2.2](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-0.2.1...nx-remotecache-s3-0.2.2) (2022-04-19)
 
 ### Bug Fixes
 
-- **nx-remotecache-s3:** bucket name from environment variable ([#53](https://github.com/robinpellegrims/pellegrims/issues/53)) ([21f6525](https://github.com/robinpellegrims/pellegrims/commit/21f6525d02e0a97995ffe9eaa553a88f6cdf09b5))
+- **nx-remotecache-s3:** add package dependencies ([c15e608](https://github.com/robinpellegrims/nx-remotecache-s3/commit/c15e60834b5e6bde995e23138d487d3229957d85)), closes [#88](https://github.com/robinpellegrims/nx-remotecache-s3/issues/88)
 
-## [0.1.6](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.1.5...nx-remotecache-s3-0.1.6) (2021-12-09)
+## [0.2.1](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-0.2.0...nx-remotecache-s3-0.2.1) (2022-04-13)
 
-## [0.1.5](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.1.4...nx-remotecache-s3-0.1.5) (2021-11-19)
+# [0.2.0](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-0.1.8...nx-remotecache-s3-0.2.0) (2022-02-18)
 
-## [0.1.4](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.1.3...nx-remotecache-s3-0.1.4) (2021-11-19)
+### Bug Fixes
 
-## [0.1.3](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.1.2...nx-remotecache-s3-0.1.3) (2021-11-18)
+- **nx-remotecache-s3:** fallback to aws-sdk-v3 credentials provider ([d6ba139](https://github.com/robinpellegrims/nx-remotecache-s3/commit/d6ba139fc21f7f86a39e351cfb72b4c925c4f264))
 
-## [0.1.2](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.1.1...nx-remotecache-s3-0.1.2) (2021-11-07)
+### Features
 
-## [0.1.1](https://github.com/robinpellegrims/pellegrims/compare/nx-remotecache-s3-0.1.0...nx-remotecache-s3-0.1.1) (2021-11-07)
+- **nx-remotecache-s3:** add prefix path option ([bbf1727](https://github.com/robinpellegrims/nx-remotecache-s3/commit/bbf172729779546d0e03eaae310c5164a231304d))
+
+## [0.1.8](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-0.1.7...nx-remotecache-s3-0.1.8) (2022-02-04)
+
+## [0.1.7](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-0.1.6...nx-remotecache-s3-0.1.7) (2021-12-20)
+
+### Bug Fixes
+
+- **nx-remotecache-s3:** bucket name from environment variable ([#53](https://github.com/robinpellegrims/nx-remotecache-s3/issues/53)) ([21f6525](https://github.com/robinpellegrims/nx-remotecache-s3/commit/21f6525d02e0a97995ffe9eaa553a88f6cdf09b5))
+
+## [0.1.6](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-0.1.5...nx-remotecache-s3-0.1.6) (2021-12-09)
+
+## [0.1.5](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-0.1.4...nx-remotecache-s3-0.1.5) (2021-11-19)
+
+## [0.1.4](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-0.1.3...nx-remotecache-s3-0.1.4) (2021-11-19)
+
+## [0.1.3](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-0.1.2...nx-remotecache-s3-0.1.3) (2021-11-18)
+
+## [0.1.2](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-0.1.1...nx-remotecache-s3-0.1.2) (2021-11-07)
+
+## [0.1.1](https://github.com/robinpellegrims/nx-remotecache-s3/compare/nx-remotecache-s3-0.1.0...nx-remotecache-s3-0.1.1) (2021-11-07)
 
 # 0.1.0 (2021-11-07)
 
 ### Features
 
-- **nx-remotecache-s3:** initial implementation ([b0c6244](https://github.com/robinpellegrims/pellegrims/commit/b0c6244da47cdad7aefca4329e01b366bd11abe5))
+- **nx-remotecache-s3:** initial implementation ([b0c6244](https://github.com/robinpellegrims/nx-remotecache-s3/commit/b0c6244da47cdad7aefca4329e01b366bd11abe5))

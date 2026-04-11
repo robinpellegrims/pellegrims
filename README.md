@@ -1,9 +1,7 @@
-# Pellegrims
+# @pellegrims/nx-remotecache-s3
 
-[![CI](https://github.com/robinpellegrims/pellegrims/actions/workflows/ci.yml/badge.svg)](https://github.com/robinpellegrims/pellegrims/actions/workflows/ci.yml)
+This repository contains the [@pellegrims/nx-remotecache-s3](./libs/nx-remotecache-s3) package, which is a task runner for [Nx](https://nx.dev) that uses S3 storage as a remote cache.
 
-Nx monorepo containing the following open source projects:
+## License
 
-| Project                                                   | Description                                                                       | Version                                                                                                                                        |
-| --------------------------------------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| [@pellegrims/nx-remotecache-s3](./libs/nx-remotecache-s3) | A task runner for [nx](https://nx.dev) that uses an s3 Storage as a remote cache. | [![npm package link](https://img.shields.io/npm/v/@pellegrims/nx-remotecache-s3)](https://www.npmjs.com/package/@pellegrims/nx-remotecache-s3) |
+MIT

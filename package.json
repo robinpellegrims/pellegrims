@@ -1,5 +1,5 @@
 {
-  "name": "pellegrims",
+  "name": "nx-remotecache-s3",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -11,6 +11,11 @@
     "postinstall": "nx build nx-remotecache-s3"
   },
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robinpellegrims/nx-remotecache-s3.git"
+  },
+  "homepage": "https://github.com/robinpellegrims/nx-remotecache-s3",
   "dependencies": {
     "@aws-sdk/client-s3": "^3.473.0",
     "@aws-sdk/client-sts": "^3.473.0",
